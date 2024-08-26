@@ -4,14 +4,10 @@
 const openButton = document.querySelector(".btn-company");
 const iconUp = document.querySelector(".ico-down");
 const iconTest = document.querySelector(".icon-test");
-const detail = document.getElementsByClassName("detail");
+const detail = document.querySelector(".detail");
 
 iconUp.addEventListener("click", (e) => {
-    console.log("들어옴");
     iconUp.style.transform = "rotate(-180deg)";
     iconUp.style.transition = "transform 0.5s ease";
+    detail.style.display = "";
 });
-
-// iconTest.addEventListener("click", (e) => {
-//     iconTest.style.transform = "rotate(-180deg";
-// });
