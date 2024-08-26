@@ -66,7 +66,8 @@
                             </ul>
                         </div>
                         <div class="company-box">
-                            <a href="" class="js_toggle btn-company">
+                            <!-- 버튼 누르면 클래스명 close가 사라져야 됨 -->
+                            <a href="" class="js_toggle btn-company close">
                                 사업자 정보 확인
                                 <i class="ico-down"></i>
                             </a>
@@ -90,7 +91,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="Detail" class="detail" style>
+                            <div
+                                id="detail"
+                                class="detail"
+                                style="display: none"
+                            >
                                 <ul>
                                     <li>
                                         <strong>(주)프리텔레콤</strong>
@@ -140,4 +145,5 @@
             <!-- //footer -->
         </div>
     </body>
+    <script src="../static/js/mobile-home-footer.js"></script>
 </html>

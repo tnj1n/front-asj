@@ -31,7 +31,7 @@ body {
 body {
     background-color: #fff;
 }
-::before,
+/* ::before,
 ::after {
     box-sizing: border-box;
 }
@@ -46,7 +46,7 @@ body {
 }
 ::-webkit-scrollbar-track {
     background: #e3e3e3;
-}
+} */
 
 body {
     line-height: 1.25;
@@ -172,7 +172,7 @@ header {
     width: 20px;
     height: 20px;
     vertical-align: middle;
-    background-image: url(https://www.freet.co.kr/assets/images/icon/bars.svg);
+    background-image: url(https://www.freet.co.kr/assets/images/icon/util_04.svg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
