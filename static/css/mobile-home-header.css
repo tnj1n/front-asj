@@ -1,0 +1,189 @@
+element.style {
+    --vh: 9.32px;
+}
+element.style {
+    padding-top: 59.9877px;
+}
+element.style {
+    z-index: 0;
+    transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);
+}
+
+:root {
+    --swiper-navigation-size: 44px;
+    --swiper-theme-color: #007aff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+html {
+    display: block;
+}
+body {
+    top: 0 !important;
+}
+body {
+    background-color: #fff;
+}
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-thumb {
+    background: #8a93b4;
+}
+::-webkit-scrollbar-track {
+    background: #e3e3e3;
+}
+
+body {
+    line-height: 1.25;
+    font-family: "SUIT";
+    font-size: 15px;
+    color: #111;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+address,
+caption,
+em,
+i,
+var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.wrap-main header,
+.wrap-main2 header {
+    height: 60px;
+}
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header .tool-box {
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background: #fff;
+    z-index: 101;
+}
+.wrap-main .fixed .gnb-bookmark,
+.wrap-main .gnb-wrap,
+.wrap-main2 .fixed .gnb-bookmark,
+.wrap-main2 .gnb-wrap {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo {
+    display: inline-flex;
+}
+.header .logo ~ .btn-box {
+    justify-content: flex-end;
+}
+
+.header .btn-box {
+    display: flex;
+    align-items: center;
+    flex: 1 1 1%;
+    gap: 0 20px;
+}
+.header .tool-box a {
+    display: block;
+}
+.ico-logo {
+    display: inline-block;
+    width: 89px;
+    height: 18px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/logo.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.ico-search {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/search.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ico-bars {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/bars.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.gnb-wrap {
+    display: none;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.gnb-wrap > .gnb-inner {
+    padding-bottom: 16px;
+}
