@@ -1,0 +1,9 @@
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(3 2)" fill="none" fill-rule="evenodd">
+        <ellipse fill="#FC6145" transform="rotate(45 25 11.314)" cx="25" cy="11.314" rx="10" ry="6"/>
+        <ellipse fill="#FC6145" transform="scale(-1 1) rotate(45 0 -87.669)" cx="41" cy="11.314" rx="10" ry="6"/>
+        <rect fill="#F77A66" x="5" y="23.314" width="56" height="42" rx="4"/>
+        <rect fill="#FF8C79" y="15.314" width="66" height="16" rx="4"/>
+        <path fill="#FF5A3C" d="M27 15.314h12v50H27z"/>
+    </g>
+</svg>

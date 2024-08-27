@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div.block {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+
+            div.main::before {
+                display: block;
+                content: "";
+                width: 200px;
+                height: 200px;
+                background-color: brown;
+            }
+
+            div.main.on::before {
+                background-color: black;
+            }
+
+            div.main {
+                display: flex;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="block"></div>
+        </div>
+        <div class="main">
+            <div class="block"></div>
+        </div>
+        <div class="main">
+            <div class="block"></div>
+        </div>
+        <div class="main">
+            <div class="block"></div>
+        </div>
+    </body>
+    <script>
+        const mains = document.querySelectorAll("div.main");
+        mains.forEach((main, i) => {
+            main.addEventListener("click", (e) => {
+                if (e.target.classList.contains("block")) {
+                    main.classList.toggle("on");
+                }
+            });
+        });
+    </script>
+</html>

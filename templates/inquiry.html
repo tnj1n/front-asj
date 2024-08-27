@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>목록 페이지</title>
+        <link rel="stylesheet" href="/static/css/inquiry.css" />
+    </head>
+    <body>
+        <div id="inquiry-wrap">
+            <section id="content" class="section-customer">
+                <div class="inner">
+                    <div class="page-header side">
+                        <h2 class="page-title">고객지원센터</h2>
+                        <div class="location">
+                            <a href="/" class="home"
+                                ><span class="hidden">HOME</span></a
+                            >
+                            <a href="/">고객센터</a>
+                            <strong>고객지원센터 </strong>
+                        </div>
+                    </div>
+                </div>
+                <section class="line-banner-section">
+                    <div class="content-box">
+                        <div class="line-banner">
+                            <i class="ico-customer-title"></i>
+                            <h2 class="title">
+                                언제 어디서나 간편한<br />셀프서비스를
+                                이용해보세요😀
+                            </h2>
+                            <div class="bg-img"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="quick-search-section">
+                    <div class="content-box">
+                        <div class="quick-search">
+                            <ul>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060206')"
+                                        >부가서비스 조회/신청</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060305')"
+                                        >자동납부변경</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060304')"
+                                        >청구서 변경</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060203')"
+                                        >번호변경</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060503')"
+                                        >해지신청</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060105')"
+                                        >개인정보열람</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="search-box">
+                            <h2 class="search-box-title">
+                                고객님의 궁금증을 검색해보세요
+                            </h2>
+                            <div class="search-box-input">
+                                <input
+                                    type="text"
+                                    id="schKey"
+                                    placeholder="궁금한 사항을 입력해주세요"
+                                />
+                                <button
+                                    type="button"
+                                    title="검색"
+                                    class="btn-search"
+                                >
+                                    <i class="ico-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="faq-section">
+                    <div class="content-box">
+                        <div class="section-title">
+                            <h2 class="title">자주 묻는 질문</h2>
+                            <a href="/customer/faq/list" class="more"
+                                >전체보기 <i class="ico-arrow4"></i
+                            ></a>
+                        </div>
+                        <div class="faq-accordion" id="faqListHtml">
+                            <ul id="faqList">
+                                <li class="selected">
+                                    <div class="question">
+                                        유심변경 또는 번호변경은 어떻게 하나요?
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="2"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        <p>
+                                            유심변경 및 번호변경은 온라인으로
+                                            신청하시면 접수 확인 후 처리해
+                                            드립니다.<br />아래의 해당 링크를
+                                            통해 편리하게 접수 가능합니다.<br /><br />▶
+                                            유심변경 :&nbsp;<a
+                                                href="https://www.freet.co.kr/mypage/service/simchg"
+                                                target="_self"
+                                                style="
+                                                    text-decoration-line: underline;
+                                                "
+                                                ><span
+                                                    style="
+                                                        color: rgb(26, 13, 171);
+                                                    "
+                                                    ><u
+                                                        >마이페이지 &gt; 서비스
+                                                        조회/변경 &gt;
+                                                        유심변경</u
+                                                    ></span
+                                                ></a
+                                            >
+                                        </p>
+                                        <p>
+                                            ▶ 번호변경 :&nbsp;<span
+                                                style="
+                                                    text-decoration-line: underline;
+                                                    color: rgb(26, 13, 171);
+                                                "
+                                                ><u
+                                                    ><a
+                                                        href="https://www.freet.co.kr/mypage/service/chgTelNo"
+                                                        target="_self"
+                                                        >마이페이지 &gt; 서비스
+                                                        조회/변경 &gt;
+                                                        번호변경</a
+                                                    ><br /></u></span
+                                            ><br />온라인이 아닌 서류 접수를
+                                            통한 변경 시 변경해지신청서 양식을
+                                            자필 작성하신 후 변경신청서 + 명의자
+                                            신분증을 프리티 통신사별 고객센터
+                                            이메일 또는 팩스로 보내주시고
+                                            연락주시면 됩니다.
+                                        </p>
+                                        <p>
+                                            (명의자가 미성년자인 경우 법정대리인
+                                            신분증 + 3개월 이내 발급된 가족관계
+                                            증명서를 추가로 보내주셔야
+                                            합니다.)<br /><br />변경해지신청서
+                                            양식은 당사 홈페이지 하단
+                                            '각종양식다운로드'메뉴에서 확인
+                                            가능합니다.<br />서류 발송해주신 후
+                                            필히 고객센터로 문의주셔서 명의자
+                                            본인 통화 후변경 처리 완료되오니
+                                            참고하세요.<br /><br />[서류
+                                            접수처]<br />SKT 알뜰폰 : 팩스
+                                            02-6713-2763 / 이메일
+                                            skt@freet.co.kr
+                                        </p>
+                                        KT 알뜰폰 : 팩스 02-6713-2764 / 이메일
+                                        kt@freet.co.kr<br />
+                                        <p>
+                                            LGU+ 알뜰폰 : 팩스 02-6713-2765 /
+                                            이메일 lg@freet.co.kr&nbsp;
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="question">
+                                        요금제변경을 하고 싶어요.
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="3"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        <p>
+                                            요금제 변경 신청은 온라인 또는
+                                            고객센터를 통해 가능합니다.
+                                            <br /><!--<br>온라인은 '마이페이지 &gt; 서비스 조회/변경 &gt; 요금제 변경' 메뉴를 통해 접수하시면 확인 후 처리해 드립니다.<br>-->단,
+                                            요금제 변경 시 프로모션 할인혜택
+                                            등은 소멸되며 변경하는 요금제에
+                                            적용은 불가합니다. <br /><br />또한,
+                                            월 중 변경 시 이용하는 요금제의
+                                            사용일 수에 따라 각 요금제 별로
+                                            기본료 또는 제공량이 일할 계산되어
+                                            제공됩니다. <br />기본제공량 초과 시
+                                            초과요금이 과다 청구될 수 있으니
+                                            월말, 월초에 변경신청 하는 걸
+                                            권장합니다.<br />&nbsp;
+                                        </p>
+                                        <p>
+                                            프리티 내 다른 통신망 요금제로
+                                            변경도 불가하며,
+                                            선불요금제&gt;후불요금제로 변경도
+                                            불가하니 참조하세요!
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="question">
+                                        기기변경을 하고 싶어요.
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="4"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        프리티는 유심 개통으로 서비스를 제공하고
+                                        있습니다. <br />휴대폰을 변경하여
+                                        사용하시고자 하는 휴대폰에 프리티
+                                        유심으로 교체만 하시면 사용 가능합니다.
+                                        <br />(유심 인식이 안될 경우 전원을
+                                        2~3회 껐다켜주세요) <br /><br />단,
+                                        휴대폰 분실 시 분실신고 서비스를
+                                        이용하시려면 홈페이지에서 '유심 이용
+                                        휴대폰 등록(확정기변)' 해주셔야 합니다.
+                                        <br /><u
+                                            ><span
+                                                style="color: rgb(26, 13, 171)"
+                                                ><u
+                                                    ><a
+                                                        href="https://www.freet.co.kr/mypage/service/phone_reg_by_owner"
+                                                        target="_self"
+                                                        >(마이페이지 &gt;
+                                                        서비스조회/변경 &gt;
+                                                        유심 이용 휴대폰
+                                                        등록)</a
+                                                    ></u
+                                                ></span
+                                            ></u
+                                        >에서 신청 가능합니다.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="question">
+                                        기기변경시에도 이심(eSIM) 발급 비용을
+                                        내야하나요?
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="5"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        기기가 변경되면 eSIM ID 값이 변경 되어
+                                        프로파일을 새로 발급받아 다운로드 받아야
+                                        합니다.<br />새로운 프로파일을
+                                        발급받으면 발급비용 2,750원이 청구
+                                        됩니다.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </body>
+    <script src="/static/js/inquiry.js"></script>
+</html>
