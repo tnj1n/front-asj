@@ -250,6 +250,7 @@ strong {
 }
 .footer-info .company-box .btn-company .ico-down {
     margin-left: 5px;
+    transform: rotate(-180deg);
 }
 .footer-info .company-box .detail {
     padding-top: 20px;

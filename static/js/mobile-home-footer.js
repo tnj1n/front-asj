@@ -1,24 +1,44 @@
-// detail div를 숨겼다가 나타나게 해야됨
-// div에 스타일이 style="display:none에서 눌렀을 때 style을 없애주면 됨" 해주면 됨.
-// HTMLCollection.prototype.forEach = Array.prototype.forEach;
-const openButton = document.querySelector(".btn-company.close");
-const iconUp = document.querySelector(".ico-down");
-const iconTest = document.querySelector(".icon-test");
+/* 
+문제)
+
+<a class="js_toggle btn-company close"></a>
+<a class="js_toggle btn-company"></a>
+
+ .footer-info .company-box .btn-company.close .ico-down {
+    transform: rotate(0);
+} 
+ .footer-info .company-box .btn-company .ico-down {
+     margin-left: 5px;
+     transform: rotate(-180deg);
+ }
+
+ 기본 값<div id="Detail" class="detail" style="display: none;</div>
+ <div id="detail" class="detail" style> */
+
+const toggleDiv = document.querySelector(".js_toggle.btn-company");
+const toggleButton = document.querySelector(".ico-down");
 const detail = document.querySelector(".detail");
 
-iconUp.addEventListener("click", (e) => {
-    if (e.target.classList.cotains(".btn-company.close")) {
-        iconUp.classList.toggle(".btn-company");
-        iconUp.style.transform = "rotate(-180deg)";
-    }
-    // iconUp.style.transform = "rotate(-180deg)";
-    // iconUp.style.transition = "transform 0.5s ease";
-    // detail.style.display = "";
-});
+// openButton.addEventListener("click", (e) => {
+//     iconUp.classList.toggle("rotated");
 
-// const mains = document.querySelectorAll("div.main");
-// mains.forEach((main, i) => {
-//     main.addEventListener("click", (e) => {
-//         if (e.target.classList.contains("block")) {
-//             main.classList.toggle("on");
-//         }
+//     if (detail.style.display === "none") {
+//         detail.style.display = "block";
+//     } else {
+//         detail.style.display = "none";
+//     }
+// });
+
+toggleDiv.addEventListener("click", () => {
+    // Toggle detail 보이게
+    if (detail.style.display === "none" || detail.style.display === "") {
+        detail.style.display = "block";
+        toggleDiv.classList.remove("close");
+    } else {
+        detail.style.display = "none";
+        toggleDiv.classList.add("close");
+    }
+
+    // Toggle icon rotation
+    toggleButton.classList.toggle("rotated");
+});
