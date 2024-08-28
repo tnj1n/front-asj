@@ -15,6 +15,7 @@ contents.forEach((content) => {
 
         if (start_x > end_x) {
             count++;
+            // slickDots[2].toggle
             // console.log(count);
             if (count > 1) {
                 count = 1;
