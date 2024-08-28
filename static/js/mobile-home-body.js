@@ -10,9 +10,14 @@ contents.forEach((content) => {
     });
     content.addEventListener("touchend", (e) => {
         end_x = e.changedTouches[0].pageX;
-        console.log(contentsWidth);
+        // console.log(contentsWidth);
+
         if (start_x > end_x) {
             count++;
+            // console.log(count);
+            if (count > 1) {
+                count = 1;
+            }
         } else {
             count--;
         }
