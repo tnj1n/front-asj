@@ -22,6 +22,245 @@
                                 <strong> 상담문의 </strong>
                             </div>
                         </div>
+                        <section class="inner-box">
+                            <div class="tab-wrap">
+                                <ul class="tab-type js_tab">
+                                    <li class="active">
+                                        <a href="" class="choice">상담문의</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            onclick="goView()"
+                                            class="choice"
+                                            >나의 상담내역</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <form action="" id="frm">
+                                <div class="form-table">
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            상담유형
+                                            <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd">
+                                            <div class="form-col2">
+                                                <div class="select-type2">
+                                                    <select
+                                                        id="comType"
+                                                        name="comType"
+                                                        required=""
+                                                        style="display: none"
+                                                        class="selected"
+                                                    >
+                                                        <option
+                                                            class="title"
+                                                            value=""
+                                                        >
+                                                            통신사
+                                                        </option>
+                                                        <option value="freeS">
+                                                            SKT
+                                                        </option>
+                                                        <option value="freeC">
+                                                            KT
+                                                        </option>
+                                                        <option value="freeT">
+                                                            LGU+
+                                                        </option>
+                                                    </select>
+                                                    <div
+                                                        class="nice-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >SKT</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option focus"
+                                                            >
+                                                                통신사
+                                                            </li>
+                                                            <li
+                                                                data-value="freeS"
+                                                                class="option selected"
+                                                            >
+                                                                SKT
+                                                            </li>
+                                                            <li
+                                                                data-value="freeC"
+                                                                class="option"
+                                                            >
+                                                                KT
+                                                            </li>
+                                                            <li
+                                                                data-value="freeT"
+                                                                class="option"
+                                                            >
+                                                                LGU+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="select-type2">
+                                                    <select
+                                                        id="svcType"
+                                                        name="svcType"
+                                                        required=""
+                                                        style="display: none"
+                                                        class="selected"
+                                                    >
+                                                        <option
+                                                            class="title"
+                                                            value=""
+                                                            selected=""
+                                                        >
+                                                            선/후불
+                                                        </option>
+                                                        <option value="PP">
+                                                            선불
+                                                        </option>
+                                                        <option value="DP">
+                                                            후불
+                                                        </option>
+                                                    </select>
+                                                    <div
+                                                        class="nice-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >선불</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option focus"
+                                                            >
+                                                                선/후불
+                                                            </li>
+                                                            <li
+                                                                data-value="PP"
+                                                                class="option selected"
+                                                            >
+                                                                선불
+                                                            </li>
+                                                            <li
+                                                                data-value="DP"
+                                                                class="option"
+                                                            >
+                                                                후불
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item">
+                                                <div class="select-type2">
+                                                    <select
+                                                        id="inqType"
+                                                        name="inqType"
+                                                        required=""
+                                                        style="display: none"
+                                                        class="selected"
+                                                    >
+                                                        <option
+                                                            class="title"
+                                                            value=""
+                                                            selected=""
+                                                        >
+                                                            문의유형
+                                                        </option>
+                                                        <option value="1">
+                                                            가입관련
+                                                        </option>
+                                                        <option value="2">
+                                                            요금관련
+                                                        </option>
+                                                        <option value="7">
+                                                            변경관련
+                                                        </option>
+                                                        <option value="3">
+                                                            서비스관련
+                                                        </option>
+                                                        <option value="4">
+                                                            단말기관련
+                                                        </option>
+                                                        <option value="5">
+                                                            회사관련
+                                                        </option>
+                                                        <option value="6">
+                                                            기타
+                                                        </option>
+                                                    </select>
+                                                    <div
+                                                        class="nice-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >가입관련</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option focus"
+                                                            >
+                                                                문의유형
+                                                            </li>
+                                                            <li
+                                                                data-value="1"
+                                                                class="option selected"
+                                                            >
+                                                                가입관련
+                                                            </li>
+                                                            <li
+                                                                data-value="2"
+                                                                class="option"
+                                                            >
+                                                                요금관련
+                                                            </li>
+                                                            <li
+                                                                data-value="7"
+                                                                class="option"
+                                                            >
+                                                                변경관련
+                                                            </li>
+                                                            <li
+                                                                data-value="3"
+                                                                class="option"
+                                                            >
+                                                                서비스관련
+                                                            </li>
+                                                            <li
+                                                                data-value="4"
+                                                                class="option"
+                                                            >
+                                                                단말기관련
+                                                            </li>
+                                                            <li
+                                                                data-value="5"
+                                                                class="option"
+                                                            >
+                                                                회사관련
+                                                            </li>
+                                                            <li
+                                                                data-value="6"
+                                                                class="option"
+                                                            >
+                                                                기타
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </form>
+                        </section>
                     </div>
                 </section>
             </div>
