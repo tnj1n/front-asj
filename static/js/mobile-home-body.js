@@ -3,6 +3,7 @@ let start_x, end_x;
 const contents = document.querySelectorAll(".review-item");
 const slickTrack = document.querySelector("div.slick-track");
 const contentsWidth = 430.39;
+const slickDots = document.querySelectorAll("ul.slick-dots");
 
 contents.forEach((content) => {
     content.addEventListener("touchstart", (e) => {
@@ -22,5 +23,11 @@ contents.forEach((content) => {
             count--;
         }
         slickTrack.style.transform = `translateX(-${contentsWidth * count}px)`;
+    });
+});
+
+slickDots.forEach((slickDot) => {
+    slickDot.addEventListener("click", (e) => {
+        console.log(slickDots);
     });
 });
