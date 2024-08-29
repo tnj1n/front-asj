@@ -650,6 +650,7 @@ select, input, textarea {
     background-repeat: no-repeat;
 }
 
+
 /* 위로 이동하는 버튼 */
 .quick.up {
     transform: translateY(0);
