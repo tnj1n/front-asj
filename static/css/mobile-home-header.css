@@ -187,3 +187,87 @@ header {
 .gnb-wrap > .gnb-inner {
     padding-bottom: 16px;
 }
+/* search */
+.gnb-search.active {
+    display: flex;
+    opacity: 1;
+}
+.gnb-search {
+    position: fixed;
+    left: 0;
+    z-index: 110;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    justify-content: center;
+    opacity: 0;
+}
+.gnb-menu .depth2,
+.gnb-search {
+    top: 0;
+    display: none;
+    background: #fff;
+}
+.gnb-search .search-wrap {
+    width: 100%;
+    height: 100%;
+}
+.gnb-search .search-top {
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo,
+.logo > a {
+    display: inline-flex;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+td,
+th {
+    font-weight: 400;
+}
+.logo,
+.logo > a {
+    display: inline-flex;
+}
+.ico-logo {
+    width: 83px;
+    height: 17px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/logo.svg);
+}
+.gnb-search .search-top .btn-close {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/close4.svg);
+}
+.gnb-search .search-box {
+    padding: 30px 20px;
+    height: calc(var(--vh, 1vh) * 100 - 60px);
+    overflow-y: auto;
+}
+.form-file,
+.form-search {
+    position: relative;
+}
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
