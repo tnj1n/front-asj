@@ -171,8 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     allValid = false;
                 } else if (
                     input.tagName === "TEXTAREA" &&
-                    (input.value.trim().length < 10 ||
-                        input.value.trim().length > 1500)
+                    (input.value.length < 10 || input.value.length > 1500)
                 ) {
                     allValid = false;
                 } else if (input.type === "checkbox" && !input.checked) {
@@ -212,4 +211,34 @@ moveTop.addEventListener("click", function () {
         top: 0,
         behavior: "smooth", // 부드럽게 스크롤 되도록 설정
     });
+});
+
+// modal창
+
+// 자바스크립트 코드
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("pop-alert2");
+    const cancelButton = document.querySelector(
+        "#pop-alert2 .btn-wrap .btn-type.v3"
+    );
+
+    // 모달 열기 함수
+    function openModal() {
+        modal.style.display = "flex"; // 모달 보이기
+        document.body.style.overflow = "hidden"; // 배경 스크롤 비활성화
+    }
+
+    // 모달 닫기 함수
+    function closeModal() {
+        modal.style.display = "none"; // 모달 숨기기
+        document.body.style.overflow = ""; // 배경 스크롤 복원
+    }
+
+    // 취소 버튼 클릭 시 모달 닫기
+    if (cancelButton) {
+        cancelButton.addEventListener("click", closeModal);
+    }
+
+    // 페이지 로드 시 모달 열기
+    openModal();
 });
