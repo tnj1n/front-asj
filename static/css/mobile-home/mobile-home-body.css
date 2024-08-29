@@ -768,11 +768,8 @@ strong {
     border-radius: 100%;
     font-size: 0;
 }
-/* aside */
-.quick.up {
-    transform: translateY(0);
-}
-/* aside */
+
+/* aside 위로 올라가는 버튼 */
 .quick.up {
     transform: translateY(0);
 }

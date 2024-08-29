@@ -254,6 +254,7 @@ strong {
 }
 .footer-info .company-box .detail {
     padding-top: 20px;
+    /* transition: ease-in-out 0.5s; */
 }
 .ico-down {
     display: inline-block;
