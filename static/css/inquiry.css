@@ -532,20 +532,19 @@ select, input, textarea {
 
 /* 스크롤 바************************************************************* */
 
-body::-webkit-scrollbar {
-    width: 10px;
-  }
-  body::-webkit-scrollbar-thumb {
-    background: rgb(63, 73, 112);
-    border-radius: 10px;
-    background-clip: padding-box;
-    border: 2px solid transparent;
-  }
-  body::-webkit-scrollbar-track {
+#wrap::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 2px;
+}
+#wrap::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #3f4970;
+    border-radius: 8px;
+}
+#wrap::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
     background: #e3e3e3;
-    border-radius: 2px;
-    box-shadow: inset 0px 0px 5px white;
-  }
+    border-radius: 8px;
+}
 
   .answer::-webkit-scrollbar {
     width: 7px;
@@ -651,227 +650,53 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
 }
 
-.section-customer .cs-section .quick-link-text {
+/* 위로 이동하는 버튼 */
+.quick.up {
+    transform: translateY(0);
+}
+
+.quick {
+    position: fixed;
+    right: auto;
+    left: 50%;
+    margin-left: 620px;
+    z-index: 101;
+    transition: .3s ease-out;
+}
+.quick ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.quick ul li+li {
+    margin-top: 8px;
+}
+
+.quick.up .btn-top {
+    opacity: 1;
+    border-image-source: linear-gradient(148deg, rgba(255, 255, 255, 0.71) 9%, rgba(255, 255, 255, 0.25) 95%);
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.quick ul li a {
+    width: 68px;
+    height: 68px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 0 20px;
-    margin-top: 20px;
-}
-
-.section-customer .cs-section .quick-link-text a {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.7142857143;
-    color: #94949a;
-    text-decoration: underline;
-}
-
-/* 상담센터 ********************************************************************************/
-.section-customer .cs-section .cs-guide-wrap {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 18px;
-}
-
-.section-customer .cs-section .cs-guide-box {
-    padding: 30px 40px;
-    width: 100%;
-}
-
-.section-customer .cs-section .cs-guide-box:first-child {
-    border: 1px solid #e3e3e3;
-    border-radius: 20px;
-}
-
-.section-customer .cs-section .cs-guide-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.section-customer .cs-section .cs-guide-title .title {
-    font-size: 18px;
-    line-height: 1.5555555556;
-    font-weight: 600;
-}
-
-.section-customer .cs-section .cs-guide-title .link {
-    display: inline-block;
-    padding: 4px 10px;
-    border: 1px solid #e3e3e3;
-    border-radius: 16px;
-    font-size: 13px;
-    line-height: 1.7692307692;
-    color: #94949a;
-}
-
-.section-customer .cs-section .cs-guide-list {
-    margin-top: 20px;
-}
-
-.section-customer .cs-section .cs-guide-list li {
-    display: flex;
-}
-
-.section-customer .cs-section .cs-guide-list li .title {
-    font-size: 16px;
-    line-height: 1.625;
-    flex: 0 0 85px;
-    width: 85px;
-    font-weight: 700;
-    color: #111;
-}
-
-.section-customer .cs-section .cs-guide-list li .content {
-    font-size: 14px;
-    line-height: 1.7142857143;
-    color: #111;
-}
-
-.section-customer .cs-section .cs-guide-list li .content strong {
-    font-weight: 600;
-}
-
-.section-customer .cs-section .cs-guide-list li+li {
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #efefef;
-}
-
-.section-customer .cs-section .cs-guide-time {
-    color: #343434;
-    margin-top: 40px;
-    font-size: 15px;
-    line-height: 1.6666666667;
-}
-
-.section-customer .cs-section .cs-guide-time strong {
-    color: #111;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.5555555556;
-}
-
-.section-customer .cs-section .cs-guide-time strong .em {
-    color: #3f4970;
-}
-
-.mt-3 {
-    margin-top: 30px !important;
-}
-
-.mr-1 {
-    margin-right: 10px !important;
-}
-
-.ico-quick-chat {
-    display: inline-block;
-    vertical-align: middle;
-    background-image: url(https://www.freet.co.kr/assets/images/icon/quick-chat.svg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-/* cs guide box */
-
-.section-customer .cs-section .cs-guide-box [class*=ico-] {
-    width: 40px;
-    height: 40px;
-    }
-
-
-.section-customer .cs-section .cs-guide-box:last-child {
-    margin-top: 0;
-    background-color: #ffebe8;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.ico-agency01 {
-    display: inline-block;
-    vertical-align: middle;
-    background: url(https://www.freet.co.kr/assets/images/icon/agency01.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-.section-customer .cs-section .cs-guide-title.v2 {
-    margin-top: 15px;
-    display: block;
-}
-
-
-
-.section-customer .cs-section .cs-guide-title.v2 .title {
-    font-size: 18px;
-    line-height: 1.5555555556;
-    color: #111;
-}
-
-.section-customer .cs-section .cs-guide-title .em {
-    color: #f0543a;
-}
-
-
-.section-customer .cs-section .qr-list {
-    display: flex;
     justify-content: center;
-    gap: 0 50px;
-    margin-top: 52px;
+    border-radius: 100%;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
 }
 
-
-
-.section-customer .cs-section .qr-list li {
-    flex: 0 0 130px;
-    width: 130px;
-}
-
-
-.section-customer .cs-section .qr-list .qr-link {
-    display: block;
-    text-align: center;
-}
-
-.section-customer .cs-section .qr-list .qr-img {
-    padding: 12px;
-    background-color: #fff;
-    border-radius: 14px;
-    margin-bottom: 12px;
-}
-
-img {
-    border: 0;
-    vertical-align: top;
-    width: 100%;
-}
-
-.section-customer .cs-section .qr-list .qr-link [class*=ico] {
-    width: 130px;
-    height: 39px;
-}
-
-.ico-googleplay {
+.ico-top {
     display: inline-block;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
-    background-image: url(https://www.freet.co.kr/assets/images/icon/googleplay.svg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.ico-appstore {
-    display: inline-block;
-    width: 120px;
-    height: 40px;
-    vertical-align: middle;
-    background-image: url(https://www.freet.co.kr/assets/images/icon/appstore.svg);
+    background-image: url(https://www.freet.co.kr/assets/images/icon/top.svg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;

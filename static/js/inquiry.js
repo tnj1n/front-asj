@@ -13,10 +13,7 @@ allAnswers.forEach((answer, index) => {
 questions.forEach((question, index) => {
     question.addEventListener("click", () => {
         // 모든 답변 숨기기
-        allAnswers.forEach((answer, index) => {
-            if (index === 0) {
-                answer.style.display = "block";
-            }
+        allAnswers.forEach((answer) => {
             answer.style.display = "none";
         });
 
@@ -34,5 +31,14 @@ lis.forEach((li) => {
             });
             li.classList.add("selected");
         }
+    });
+});
+
+const moveTop = document.querySelector(".btn-top");
+
+moveTop.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth", // 부드럽게 스크롤 되도록 설정
     });
 });

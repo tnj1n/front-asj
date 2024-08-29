@@ -171,16 +171,17 @@ ol, ul {
 }
 
 /* inner box */
-@media (min-width: 1200px) {
+
+@media (min-width: 769px) {
     .inner-box {
-        max-width: 852px;
+        max-width: 100%;
         margin: 0 auto;
         text-align: center;
     }
 }
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
     .inner-box {
-        max-width: 100%;
+        max-width: 852px;
         margin: 0 auto;
         text-align: center;
     }
@@ -221,15 +222,6 @@ ol, ul {
     color: #fff;
 }
 
-@media (min-width: 1200px) {
-    .tab-type li a, .tab-type li label {
-        /* 이게 맞나..? */
-        height: 60px !important;
-        border-radius: 30px;
-        font-size: 16px;
-    }
-}
-
 .tab-type li a, .tab-type li label {
     display: inline-flex;
     align-items: center;
@@ -243,8 +235,24 @@ ol, ul {
     -webkit-transition: all 150ms;
     transition: all 150ms;
 }
+@media (min-width: 1200px) {
+    .tab-type li a, .tab-type li label {
+        /* 이게 맞나..? */
+        height: 60px;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+}
 
 /* 바디(form) 내용 */
+
+
+.form-table .form-dl .form-dt {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.56;
+    margin-bottom: 20px;
+}
 @media (min-width: 1200px) {
     .form-table {
         text-align: left;
@@ -266,13 +274,6 @@ ol, ul {
     }
 }
 
-.form-table .form-dl .form-dt {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.56;
-    margin-bottom: 20px;
-}
-
 .focus {
     color: #f0543a;
 }
@@ -288,23 +289,24 @@ ol, ul {
     justify-content: space-between;
 }
 
+
+.form-table .form-col2>div {
+    width: calc(50% - 5px);
+}
 @media (min-width: 1200px) {
     .form-table .form-col2-w>div, .form-table .form-col2>div {
         width: calc(50% - 9px);
     }
 }
 
-.form-table .form-col2>div {
-    width: calc(50% - 5px);
+.select-type2 {
+    position: relative;
+    width: 100%;
 }
 @media (min-width: 1200px) {
     .select-type2 {
         height: 64px;
     }
-}
-.select-type2 {
-    position: relative;
-    width: 100%;
 }
 
 select, input, textarea {
@@ -322,15 +324,29 @@ select, input, textarea {
     font-size: 15px;
     color: inherit;
 }
+/* input, select, textarea {
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+} */
+input, select, strong {
+    font-weight: 600;
+}
 .select-type2 .title {
     display: none;
 }
-@media (min-width: 1200px) {
-    .select-type2 .nice-select {
-        font-size: 18px;
-        height: 64px;
-        line-height: 64px;
-    }
+
+.select-type2 .nice-select.open {
+    background-color: #ffebe8;
+    border-color: #ff8c79;
+}
+.nice-select.open:after {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 .select-type2 .nice-select {
     background: #f4f4f4;
@@ -339,7 +355,20 @@ select, input, textarea {
     line-height: 56px;
     border-radius: 12px;
 }
+@media (min-width: 1200px) {
+    .select-type2 .nice-select {
+        font-size: 18px;
+        height: 64px;
+        line-height: 64px;
+    }
+}
 
+.select-type2 .nice-select.open .current {
+    color: #111;
+}
+.select-type2 .nice-select .current {
+    color: #94949a; 
+}
 .nice-select {
     -webkit-tap-highlight-color: transparent;
     background-color: #fff;
@@ -370,8 +399,23 @@ select, input, textarea {
     font-weight: 600;
 }
 
-.select-type2 .selected+.nice-select .current {
-    color: #111;
+.nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+.select-type2 .nice-select .list {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
+    border: solid 1px #e3e3e3;
+}
+.select-type2 .nice-select.open .list {
+    transform: translateY(8px);
+    max-height: 240px;
+    padding: 10px 0;
+    z-index: 11;
 }
 
 @media (min-width: 1200px) {
@@ -379,13 +423,6 @@ select, input, textarea {
         max-height: 265px;
     }
 }
-
-.select-type2 .nice-select .list {
-    border-radius: 12px;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
-    border: solid 1px #e3e3e3;
-}
-
 .nice-select .list {
     background-color: #fff;
     border: 1px solid #efefef;
@@ -414,14 +451,29 @@ select, input, textarea {
     font-weight: 600;
 }
 
-.select-type2 .nice-select .option.focus {
-    color: #111;
-}
 .select-type2 .nice-select .option.selected.focus {
     color: #111;
 }
+.select-type2 .nice-select .option.focus {
+    color: #111;
+}
+
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
     color: #f0543a;
+}
+
+
+.nice-select .option {
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 34px;
+    list-style: none;
+    min-height: 34px;
+    outline: none;
+    padding: 0 20px;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 @media (min-width: 1200px) {
@@ -430,6 +482,213 @@ select, input, textarea {
         line-height: 40px;
         min-height: 40px;
     }
+}
+.select-type2 .nice-select:after {
+    width: 20px;
+    height: 20px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow8.svg);
+}
+
+.nice-select:after {
+    content: '';
+    display: block;
+    margin-top: -8px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+
+/* 스크롤 바************************************************************* */
+
+#wrap::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 2px;
+}
+#wrap::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #3f4970;
+    border-radius: 8px;
+}
+#wrap::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+
+  .select-type2 .nice-select .list::-webkit-scrollbar {
+    display: block;
+    width: 20px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-thumb {
+    background-color: #8a93b4;
+    border: 7px solid #fff;
+    border-radius: 12px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+/* *********************************************************************** */
+/* 고객정보 */
+
+.form-table .form-dl+.form-dl {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #efefef;
+}
+
+@media (min-width: 1200px) {
+    .form-table .form-dl {
+        display: flex;
+    }
+}
+
+.form-table .form-dl .form-dt {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.56;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+    .form-table .form-dl .form-dt {
+        width: 260px;
+        font-size: 20px;
+        margin-bottom: 0;
+        padding-top: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .form-table .form-col2-w {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .form-table .form-col2-w .form-item {
+        margin-top: 0;
+    }
+}
+
+.form-item:first-child {
+    margin-top: 0;
+}
+
+.form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+
+
+
+
+input[type=text], input[type=submit], input[type=password], 
+input[type=search], input[type=number], input[type=reset], 
+input[type=email], input[type=tel], input[type=search], 
+input[type=file], input[type=email], input[type=tel] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+
+@media (min-width: 1200px) {
+    input[type=text], input[type=submit], input[type=password],
+     input[type=search], input[type=number], input[type=reset], 
+     input[type=email], input[type=tel], input[type=search], 
+     input[type=file], input[type=email], input[type=tel] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+@media (min-width: 1200px) {
+    .form-item input {
+        padding-top: 17px;
+    }
+}
+.form-item input {
+    padding-top: 15px;
+}
+.form-item input:not(:placeholder-shown)+.title {
+    font-size: 11px;
+    top: 9px;
+    color: #94949a;
+}
+
+@media (min-width: 1200px) {
+    .form-item input:not(:placeholder-shown)+.title {
+        font-size: 13px;
+    }
+}
+
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    top: 19px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #94949a;
+}
+
+@media (min-width: 1200px) {
+    .form-item label.title {
+        font-size: 18px;
+        top: 21px;
+    }
+}
+
+.form-item .invalid-feedback {
+    display: block;
+    margin-top: 6px;
+    color: #f0543a;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 20px;
+    text-align: left;
+}
+
+@media (min-width: 1200px) {
+    .form-item .invalid-feedback {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+}
+
+.nice-select .option.disabled {
+    background-color: transparent;
+    color: #999;
+    cursor: default;
+}
+@media (min-width: 1200px) {
+    .select-type2 .nice-select .option {
+        font-size: 18px;
+        line-height: 40px;
+        min-height: 40px;
+    }
+}
+
+.nice-select .option.selected {
+    color: #f0543a;
 }
 
 .nice-select .option {
@@ -443,4 +702,637 @@ select, input, textarea {
     text-align: left;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+}
+
+.form-table .flex-end {
+    margin-top: 13px;
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chk-box:first-child {
+    margin-left: 0;
+}
+
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+
+.chk-box input[type=checkbox], .chk-box input[type=radio] {
+    display: none;
+}
+
+input:disabled {
+    opacity: 1;
+    color: #c3c3c9;
+}
+
+input[type=radio], input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.chk-box .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+@media (min-width: 1200px) {
+    .chk-box .checkbox {
+        margin-right: 10px;
+    }
+}
+
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.chk-box input[type=checkbox]+.checkbox:before {
+    -webkit-transform: translate(6px, 9px) rotate(45deg);
+    transform: translate(6px, 9px) rotate(45deg);
+    -webkit-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.chk-box input[type=checkbox]+.checkbox:before, .chk-box input[type=checkbox]+.checkbox:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+}
+
+.chk-box input[type=checkbox]+.checkbox:after {
+    -webkit-transform: translate(10px, 14px) rotate(-53deg);
+    transform: translate(10px, 14px) rotate(-53deg);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+
+/* 보안문자 */
+.form-table .form-security {
+    display: flex;
+}
+.form-table .form-security .security-box {
+    width: calc(100% - 132px);
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .form-table .form-security .security-box {
+        width: calc(100% - 148px);
+    }
+}
+
+.form-table .form-security .security-box p {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 10px;
+}
+
+.form-table .form-security .btn-link {
+    margin-left: 10px;
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #c3c3c9;
+    border-radius: 12px;
+}
+
+
+@media (min-width: 1200px) {
+    .form-table .form-security .btn-link {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+}
+
+.ico-reset2 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/reset2.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-sound {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/sound.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-item.ntit input {
+    padding-top: 0;
+}
+
+/* 내용 */
+.form-text-box {
+    position: relative;
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 20px 20px 40px;
+    border: 1px solid #efefef;
+}
+
+.form-text-box textarea {
+    height: 175px;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+}
+
+textarea {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 140px;
+    resize: none;
+    line-height: 1.67;
+    font-weight: 600;
+    font-size: 15px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #efefef;
+}
+
+@media (min-width: 1200px) {
+    textarea {
+        height: 160px;
+        font-size: 18px;
+    }
+}
+
+.form-text-box .maxlenth {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #94949a;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+
+@media (min-width: 1200px) {
+    .form-text-box .maxlenth {
+        font-size: 18px;
+    }
+}
+
+.form-text-box .maxlenth .max {
+    color: #111;
+}
+strong {
+    font-weight: 600;
+}
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+/* focus */
+.form-item.is-invalid input {
+    background: #ffebe8;
+    border-color: #f0543a;
+}
+
+input[type=number]:focus, input[type=password]:focus, 
+input[type=tel]:focus, input[type=text]:focus {
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+.form-item input:focus~.title {
+    font-size: 11px;
+    top: 9px;
+    color: #f0543a;
+}
+
+@media (min-width: 1200px) {
+    .form-item input:focus~.title {
+        font-size: 13px;
+    }
+}
+
+/* 파일첨부 */
+.form-item .form-flex {
+    display: flex;
+}
+
+.form-file, .form-search {
+    position: relative;
+}
+
+.form-item .form-flex input {
+    width: calc(100% - 108px);
+}
+
+@media (min-width: 1200px) {
+    .form-item .form-flex input {
+        width: calc(100% - 120px);
+    }
+}
+
+input, select {
+    border-radius: 0;
+    border: 0;
+    font-size: 15px;
+}
+
+
+.form-file .file-input:disabled {
+    background: #f4f4f4;
+    color: #111;
+}
+
+.form-item .form-flex input {
+    width: calc(100% - 108px);
+}
+
+@media (min-width: 1200px) {
+    .form-item .form-flex input {
+        width: calc(100% - 120px);
+    }
+}
+
+.form-item input:disabled {
+    background: #fff;
+}
+
+.form-file .file-input {
+    padding-top: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-file input[type=file] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+
+.form-item .form-flex .btn-form {
+    width: 98px;
+    margin-left: 10px;
+}
+@media (min-width: 1200px) {
+    .form-item .form-flex .btn-form {
+        width: 110px;
+    }
+}
+.form-file .btn-form {
+    cursor: pointer;
+}
+
+.btn-form {
+    background: #3f4970;
+    color: #fff;
+    font-size: 14px;
+}
+.btn-form, .button-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 56px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+    transition: background .2s ease;
+}
+
+@media (min-width: 1200px) {
+    .btn-form {
+        height: 64px;
+        font-size: 18px;
+        max-width: 200px;
+    }
+}
+
+.form-table .form-file+.list-type {
+    margin-top: 20px;
+}
+
+.list-type {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #343434;
+    text-align: left;
+}
+
+@media (min-width: 1200px) {
+    .list-type {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+.list-type li:first-child {
+    margin-top: 0;
+}
+.list-type li {
+    margin-top: 5px;
+    padding-left: 7px;
+}
+@media (min-width: 1200px) {
+    .list-type li {
+        margin-top: 7px;
+    }
+}
+
+.list-type li, .tooltip-guide span, .tooltip-wrap {
+    position: relative;
+}
+.list-type li::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #94949a;
+    border-radius: 100%;
+}
+@media (min-width: 1200px) {
+    .list-type li:before {
+        top: 11px;
+    }
+}
+
+/* 개인정보 수집 및 이용 동의 */
+
+.form-table .terms {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+}
+@media (min-width: 1200px) {
+    .form-table .terms {
+        font-size: 15px;
+    }
+}
+
+.form-table .terms p {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+    .form-table .terms p {
+        margin-bottom: 15px;
+    }
+}
+
+.form-table .terms .box-type2 {
+    padding: 20px 25px;
+    margin-top: 20px;
+}
+@media (min-width: 1200px) {
+    .form-table .terms .box-type2 {
+        padding: 30px;
+    }
+}
+
+.box-type2 {
+    background: 0 0;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e3e3e3;
+}
+
+.form-table .terms .box-type2 .chk-box label {
+    font-size: 15px;
+}
+
+@media (min-width: 1200px) {
+    .form-table .terms .box-type2 .chk-box label {
+        font-size: 16px;
+    }
+}
+
+.chk-box input[type=checkbox]+.checkbox:after, .chk-box input[type=checkbox]+.checkbox:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+}
+
+.chk-box.selected input[type=checkbox]+.checkbox {
+    background: #f0543a;
+    border-color: #f0543a;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:before {
+    transition-delay: 0ms;
+}
+.chk-box.selected input[type=checkbox]~.checkbox:after, 
+.chk-box.selected input[type=checkbox]~.checkbox:before {
+    background: #fff;
+}
+.chk-box input[type=checkbox]:checked~.checkbox:before {
+    width: 7px;
+}
+
+
+.chk-box.selected input[type=checkbox]~.checkbox:after {
+    transition-delay: 100ms;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:after, 
+.chk-box.selected input[type=checkbox]~.checkbox:before {
+    background: #fff;
+}
+
+.chk-box input[type=checkbox]:checked~.checkbox:after {
+    width: 10px;
+}
+
+.chk-box input[type=checkbox]:checked~.checkbox:after, 
+.chk-box input[type=checkbox]:checked~.checkbox:before {
+    background: #fff;
+}
+
+/* 버튼  */
+.btn-wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-default.disabled, .disabled.btn-form, 
+.disabled.btn-type, .disabled.btn-type-sm, 
+.disabled.btn-type2 {
+    pointer-events: none;
+    color: #fff;
+    opacity: .4;
+}
+
+.btn-wrap [class^=btn-type], .tab-type li, .tab-type2 li {
+    width: 100%;
+}
+
+
+.btn-type, .btn-type-sm{
+    background: #f0543a;
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    .btn-type, .btn-type-sm, .btn-type2, .button-default {
+        max-width: 200px;
+        height: 64px;
+        font-size: 20px;
+    }
+}
+
+.btn-type, .btn-type-sm, .btn-type2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+    transition: background .2s ease;
+}
+
+.btn-type, .btn-type2 {
+    height: 56px;
+    font-size: 16px;
+}
+
+.btn-type-sm:hover, .btn-type:hover {
+    background: #e2391d;
+}
+
+.disabled.btn-type:hover, .disabled.btn-type-sm:hover {
+    background: #f0543a; /* 비활성화 상태에서 hover 시 원래의 색상으로 유지 */
+}
+
+/* modal 창 */
+
+
+
+
+
+
+/* 위로 이동하는 버튼 */
+.quick.up {
+    transform: translateY(0);
+}
+
+.quick {
+    position: fixed;
+    right: auto;
+    left: 50%;
+    margin-left: 620px;
+    z-index: 101;
+    transition: .3s ease-out;
+}
+.quick ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.quick ul li+li {
+    margin-top: 8px;
+}
+
+.quick.up .btn-top {
+    opacity: 1;
+    border-image-source: linear-gradient(148deg, rgba(255, 255, 255, 0.71) 9%, rgba(255, 255, 255, 0.25) 95%);
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.quick ul li a {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.ico-top {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/top.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
