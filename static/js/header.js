@@ -193,3 +193,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const bubbles = document.querySelectorAll(".util-list > li");
+    const gnbMy = document.querySelector(".gnb-my"); // gnb-my 요소 선택
+
+    bubbles.forEach((liItem) => {
+        const link = liItem.querySelector("a");
+
+        link.addEventListener("mouseenter", () => {
+            // gnb-my 내부의 a태그가 아닌 다른 a태그에 마우스가 올라갔을 때만 실행
+            if (!gnbMy.contains(link)) {
+                gnbMy.classList.add("bubble-inactive");
+            }
+        });
+
+        link.addEventListener("mouseleave", () => {
+            // gnb-my 내부의 a태그가 아닌 다른 a태그에서 마우스가 떨어졌을 때만 실행
+            if (!gnbMy.contains(link)) {
+                gnbMy.classList.remove("bubble-inactive");
+            }
+        });
+    });
+});

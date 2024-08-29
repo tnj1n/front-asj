@@ -338,8 +338,14 @@ button:disabled {
 /* 슬라이더 내용 */
 /* 수거 요청 목록 */
 
+.main .article-promotion {
+    width: 390px !important;
+    float: right !important;
+}
 .promotion-area {
+   
     margin-top: 20px;
+   
 }
 
 /* 검색 밑 목록 */

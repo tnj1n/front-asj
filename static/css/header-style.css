@@ -285,8 +285,8 @@ h1, h2, h3, h4, h5 {
 }
 
     .ico-logo {
-        width: 99px;
-        height: 20px;
+        width: 120px;
+        height: 24px;
     }
 
 
@@ -343,7 +343,6 @@ ol, ul {
     }
 
 .gnb-wrap .list-depth1>li>a {
-    font-size: 15px;
     line-height: 2.2;
 }
 
