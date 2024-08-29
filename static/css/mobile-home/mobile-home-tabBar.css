@@ -128,15 +128,19 @@ var {
     font-weight: 600;
     color: #343434;
 }
-.ico-direct-lightning {
+.ico-direct-call {
     display: inline-block;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    background-image: url(https://www.freet.co.kr/assets/images/icon/util_04.svg);
+    width: 18px;
+    height: 18px;
+    color: #343434;
+    background-image: url(/static/images/mobile-home/mobile-home-tabBar/call_phone_icon.svg);
+}
+img {
+    width: 100%;
 }
 .ico-my {
     display: inline-block;
