@@ -800,7 +800,7 @@ address, caption, em, i, var {
 .promotion-area {
     margin-top: 20px;
 }
-
+/* ***************************************************************** */
 /* 검색 밑 목록 */
 .section-notice .allRequest {
     margin-top: 50px;
@@ -915,4 +915,175 @@ strong {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+/* ***************************************************************** */
+.plan-item .plan-price {
+    display: flex;
+    align-items: baseline;
+}
+
+.direct-plan-guide-wrap .cs-center-wrap span, .plan-item .plan-price .price {
+    font-size: 20px;
+}
+
+.plan-item .plan-price .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f0543a;
+}
+
+.plan-item .plan-price .price strong {
+    font-size: 26px;
+}
+
+.plan-item .plan-price .spec {
+    font-size: 15px;
+}
+
+.plan-item .plan-price .spec {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #94949a;
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-arrow.slick-next {
+    right: -64px;
+}
+
+.slick-arrow {
+    text-indent: -999em;
+    top: calc(50% - 20px);
+    width: 46px;
+    height: 46px;
+    border: 1px solid #e3e3e3;
+    border-radius: 100%;
+    display: flex;
+}
+
+.slick-arrow, .slick-dots {
+    position: absolute;
+    font-size: 0;
+}
+
+.slick-arrow, .step-wrap ol, .step-wrap ol li .num {
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-arrow.slick-next:before {
+    transform: rotate(180deg);
+    margin-left: 1px;
+}
+
+.slick-arrow:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow12.svg);
+    background-position: 50% 50%;
+    margin-left: -1px;
+}
+
+.main [class^=article] {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 80px;
+    width: 718px;
+    display: inline-block;
+    position: relative;
+}
+
+.main .article-benefit .benefit-list ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .article-benefit .benefit-list ul li {
+    width: 50%;
+}
+
+.main .article-benefit .benefit-list ul li+li {
+    margin: 0;
+}
+
+
+.main .article-benefit .benefit-list ul li:nth-of-type(n+3) {
+    margin-top: 50px;
+}
+
+.main .article-benefit .benefit-list li a, .main .article-phone .phone-item>a {
+    display: flex;
+    align-items: center;
+}
+
+.main .article-benefit .benefit-list .icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: #f1f3fb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ico-main-plan1 {
+    width: 34px;
+    height: 34px;
+    background: url(https://www.freet.co.kr/assets/images/icon/main-plan1.svg) center no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main .article-benefit .benefit-list dl {
+    width: calc(100% - 80px);
+    padding-left: 15px;
+}
+
+.main .article-benefit .benefit-list dl dt {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.main .article-benefit .benefit-list dl dd {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: #343434;
+    margin-top: 5px;
+}
+
+.main .article-plan .plan-area .plan-item:hover {
+    border-color: #94949a;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+}
+
+.ico-main-plan2 {
+    width: 34px;
+    height: 34px;
+    background: url(https://www.freet.co.kr/assets/images/icon/main-plan2.svg) center no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ico-main-plan3 {
+    width: 34px;
+    height: 34px;
+    background: url(https://www.freet.co.kr/assets/images/icon/main-plan3.svg) center no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ico-main-plan4 {
+    width: 34px;
+    height: 34px;
+    background: url(https://www.freet.co.kr/assets/images/icon/main-plan4.svg) center no-repeat;
+    display: inline-block;
+    vertical-align: middle;
 }
