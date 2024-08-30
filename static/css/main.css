@@ -1121,9 +1121,6 @@ strong {
     clear: both;
 }
 
-.main .article-promotion .main-title {
-    margin-bottom: 15px;
-}
 
 .main [class^=article] .main-title .title-type {
     font-size: 26px;
@@ -1247,12 +1244,14 @@ strong {
 
 .review-item .review-cont p {
     font-size: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 25px;
     white-space: initial;
     height: 75px;
-    max-height: 100px;
 }
 
 .review-item .review-cont .text-more {
@@ -1394,4 +1393,43 @@ strong {
 .main .article-menu .grid-wrap .grid-item-l a .ico-main-search {
     right: 40px;
     bottom: 20px;
+}
+
+.main [class^=article] .btn-wrap.pc-v {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+}
+
+.main [class^=article] .btn-wrap.pc-v .btn-type3 {
+    border: 0;
+    height: auto;
+    padding: 9px 0;
+}
+
+.main [class^=article] .btn-wrap.pc-v .btn-type3:after {
+    content: "";
+    margin-left: 5px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow7.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main [class^=article] .main-title {
+    margin-bottom: 30px;
+}
+
+.main .article-promotion .main-title {
+    margin-bottom: 15px;
+}
+
+.active .btn-type6, .btn-type6.active {
+    background: #f0543a;
+    color: #fff;
 }
