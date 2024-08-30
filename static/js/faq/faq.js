@@ -1,150 +1,198 @@
-const niceSelects = document.querySelectorAll(".nice-select");
-
-niceSelects.forEach((niceSelect) => {
-    niceSelect.addEventListener("click", (e) => {
-        const clickedOption = e.target.closest(".option");
-
-        if (clickedOption) {
-            // 현재 선택된 .nice-select 요소의 .current span을 찾습니다
-            const currentSpan = niceSelect.querySelector(".current");
-
-            // 모든 .option 요소를 찾습니다
-            const options = niceSelect.querySelectorAll(".option");
-
-            options.forEach((option) => {
-                option.classList.remove("focus");
-            });
-
-            // 선택된 li의 textContent를 .current span에 설정합니다
-            currentSpan.textContent = clickedOption.textContent;
-
-            // 선택된 .option에만 색상과 focus 클래스를 적용합니다
-            clickedOption.classList.add("focus");
-            currentSpan.style.color = "#111";
-
-            // 드롭다운 메뉴를 닫습니다 (open 클래스를 제거합니다)
-            e.target.parentElement.classList.remove("open");
-            console.log(niceSelect.classList.contains("open"));
-        }
-    });
-});
-
-// 드롭다운 클릭 시 열기/닫기 기능
-const selectAll = document.querySelectorAll(".select-type2");
-
-selectAll.forEach((select) => {
-    select.addEventListener("click", (e) => {
-        const niceSelect = e.target.closest(".nice-select");
-
-        if (niceSelect) {
-            selectAll.forEach((el) => {
-                el.querySelectorAll(".nice-select").forEach((ns) => {
-                    if (ns !== niceSelect) {
-                        ns.classList.remove("open");
-                    }
-                });
-            });
-
-            // 현재 클릭한 nice-select 요소의 open 클래스 상태를 확인
-            if (niceSelect.classList.contains("open")) {
-                niceSelect.classList.remove("open");
-            } else {
-                niceSelect.classList.add("open");
-            }
-        }
-    });
-});
-
-// 클릭 외부 영역 클릭 시 모든 nice-select 닫기
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".select-type2")) {
-        selectAll.forEach((select) => {
-            select.querySelectorAll(".nice-select").forEach((ns) => {
-                ns.classList.remove("open");
-            });
-        });
-    }
-});
-
-// clear 버튼
 document.addEventListener("DOMContentLoaded", () => {
+    const niceSelects = document.querySelectorAll(".nice-select");
+    const selectAll = document.querySelectorAll(".select-type2");
     const searchInput = document.getElementById("schKey");
     const clearButton = document.querySelector(".btn-clear");
-
-    // 입력 필드에서 값이 변경될 때마다 호출되는 함수
-    searchInput.addEventListener("input", () => {
-        if (searchInput.value.trim() !== "") {
-            // 입력 필드에 값이 있을 때 clear 버튼을 보이게 합니다
-            clearButton.classList.remove("hidden");
-        } else {
-            // 입력 필드가 비어 있을 때 clear 버튼을 숨깁니다
-            clearButton.classList.add("hidden");
-        }
-    });
-
-    // clear 버튼 클릭 시 입력 필드를 비우고 clear 버튼 숨기기
-    clearButton.addEventListener("click", () => {
-        searchInput.value = ""; // 입력 필드 비우기
-        clearButton.classList.add("hidden"); // clear 버튼 숨기기
-        searchInput.focus(); // 입력 필드에 포커스 맞추기
-    });
-});
-
-// filter 선택할 때
-document.addEventListener("DOMContentLoaded", () => {
     const listItems = document.querySelectorAll(".filter-wrap .cateVal");
     const allItem = document.getElementById("cate_all");
+    const filterWrap = document.querySelector(".filter-wrap");
+    const btnOpen = filterWrap.querySelector(".btn-open");
+    const boardItems = document.querySelectorAll(".board-item");
+    const moreBtn = document.getElementById("moreBtn");
 
-    // '전체' 항목 클릭 시 모든 항목 선택/해제
-    allItem.addEventListener("click", () => {
-        // 모든 항목에서 active 클래스를 제거하고 '전체' 항목만 활성화
-        listItems.forEach((li) => li.classList.remove("active"));
-        allItem.classList.add("active");
+    let visibleCount = 15; // 처음에 보일 항목 수
+    let filteredItems = []; // 필터링된 항목을 저장할 배열
 
-        // 선택된 카테고리들 처리
-        const activeCategories = [allItem.id.replace("cate_", "")];
-        setCateBySearch(activeCategories);
-    });
+    // 필터링 후 처음 15개 항목만 표시하는 함수
+    function showInitialItems() {
+        // 모든 항목을 먼저 숨기기
+        boardItems.forEach((item) => (item.style.display = "none"));
+        filteredItems.forEach((item, index) => {
+            if (index < visibleCount) item.style.display = "block";
+        });
+        // '더보기' 버튼의 표시 여부 조정
+        moreBtn.style.display =
+            filteredItems.length > visibleCount ? "block" : "none";
+    }
 
-    // 나머지 항목 클릭 시 active 클래스 토글
-    listItems.forEach((item) => {
-        item.addEventListener("click", (e) => {
-            const clickedItem = e.currentTarget;
+    // 더보기 버튼 클릭 시 추가 항목을 표시하는 함수
+    function showMoreItems() {
+        const nextCount = visibleCount + 10; // 한 번에 추가로 보여줄 항목 수
+        filteredItems.forEach((item, index) => {
+            if (index >= visibleCount && index < nextCount)
+                item.style.display = "block";
+        });
+        visibleCount = nextCount;
+        // 모든 항목이 표시되면 더보기 버튼을 숨김
+        if (visibleCount >= filteredItems.length)
+            moreBtn.style.display = "none";
+    }
 
-            // 클릭된 항목에 active 클래스를 추가하거나 제거
-            clickedItem.classList.toggle("active");
+    // 드롭다운에서 선택한 항목에 따라 리스트를 필터링하는 함수
+    function filterItems() {
+        const filterValue = document
+            .querySelector(".nice-select .current")
+            .textContent.trim();
+        filteredItems = Array.from(boardItems).filter((item) => {
+            const tag = item.querySelector(".tag-type2.v3");
+            const tagValue = tag ? tag.textContent.trim() : "";
+            return filterValue === "전체" || filterValue === tagValue;
+        });
+        // 필터링 후 항목 표시
+        visibleCount = 15; // '더보기' 버튼 클릭으로 인한 표시 항목 수 초기화
+        showInitialItems();
+    }
 
-            // '전체' 항목의 상태를 업데이트
-            if (clickedItem === allItem) {
-                return; // '전체' 항목 클릭 시 별도의 처리는 이미 위에서 하고 있으므로
-            }
-
-            const isAllActive = allItem.classList.contains("active");
-            const allItems = Array.from(listItems);
-            const allItemsActive = allItems.every((li) =>
-                li.classList.contains("active")
-            );
-
-            if (allItemsActive) {
-                allItem.classList.add("active");
+    // 드롭다운 기능 구현
+    niceSelects.forEach((niceSelect) => {
+        niceSelect.addEventListener("click", (e) => {
+            e.stopPropagation(); // 클릭 이벤트 전파 방지
+            const clickedOption = e.target.closest(".option");
+            if (clickedOption) {
+                const currentSpan = niceSelect.querySelector(".current");
+                const options = niceSelect.querySelectorAll(".option");
+                options.forEach((option) => option.classList.remove("focus"));
+                currentSpan.textContent = clickedOption.textContent;
+                clickedOption.classList.add("focus");
+                currentSpan.style.color = "#111";
+                niceSelect.classList.remove("open");
+                filterItems(); // 드롭다운 선택 후 필터링 적용
             } else {
-                allItem.classList.remove("active");
+                niceSelect.classList.toggle("open"); // 드롭다운 열기/닫기
             }
-
-            // 선택된 카테고리들 처리
-            const activeItems = document.querySelectorAll(
-                ".filter-wrap .cateVal.active"
-            );
-            const activeCategories = Array.from(activeItems).map((li) =>
-                li.id.replace("cate_", "")
-            );
-            setCateBySearch(activeCategories);
         });
     });
-});
 
-// 예시: setCateBySearch 함수
-function setCateBySearch(categories) {
-    // 선택된 카테고리들을 처리합니다
-    console.log("Selected categories:", categories);
-}
+    // 드롭다운 클릭 시 열기/닫기 기능 구현
+    selectAll.forEach((select) => {
+        select.addEventListener("click", (e) => {
+            const niceSelect = e.target.closest(".nice-select");
+            if (niceSelect) {
+                selectAll.forEach((el) => {
+                    el.querySelectorAll(".nice-select").forEach((ns) => {
+                        if (ns !== niceSelect) {
+                            ns.classList.remove("open");
+                        }
+                    });
+                });
+                niceSelect.classList.toggle("open");
+            }
+        });
+    });
+
+    // 클릭 외부 영역 클릭 시 모든 드롭다운 닫기
+    document.addEventListener("click", (e) => {
+        selectAll.forEach((select) => {
+            select.querySelectorAll(".nice-select").forEach((ns) => {
+                if (!ns.contains(e.target)) {
+                    ns.classList.remove("open");
+                }
+            });
+        });
+    });
+
+    // 검색 입력 필드의 값 변경 시 'clear' 버튼 표시/숨기기
+    searchInput.addEventListener("input", () => {
+        clearButton.classList.toggle("hidden", searchInput.value.trim() === "");
+    });
+
+    // 'clear' 버튼 클릭 시 입력 필드 비우기 및 포커스 맞추기
+    clearButton.addEventListener("click", () => {
+        searchInput.value = "";
+        clearButton.classList.add("hidden");
+        searchInput.focus();
+    });
+
+    // 필터 항목 클릭 시 처리
+    function handleCategoryClick() {
+        listItems.forEach((li) => li.classList.remove("active"));
+        allItem.classList.add("active");
+        const activeCategories = [allItem.id.replace("cate_", "")];
+        setCateBySearch(activeCategories);
+        filterItems(); // 필터링 적용
+    }
+
+    allItem.addEventListener("click", handleCategoryClick);
+
+    listItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("active");
+            const isAllActive =
+                listItems.length ===
+                [...listItems].filter((li) => li.classList.contains("active"))
+                    .length;
+            allItem.classList.toggle("active", isAllActive);
+            const activeCategories = Array.from(
+                document.querySelectorAll(".filter-wrap .cateVal.active")
+            ).map((li) => li.id.replace("cate_", ""));
+            setCateBySearch(activeCategories);
+            filterItems(); // 필터링 적용
+        });
+    });
+
+    // 모바일 필터 열기/닫기 버튼 기능
+    btnOpen.addEventListener("click", () => {
+        btnOpen.classList.toggle("active");
+        filterWrap.classList.toggle("open");
+    });
+
+    // 아코디언 기능(목록 상세보기)
+    document.querySelectorAll(".js_accordion").forEach((accordion) => {
+        accordion.addEventListener("click", () => {
+            const boardItem = accordion.closest(".board-item");
+            boardItem.classList.toggle("active");
+            const faqDetail = boardItem.querySelector("#faqDetail");
+            faqDetail.classList.toggle("show");
+        });
+    });
+
+    // 페이지 로드 시 초기 항목 표시 및 더보기 버튼 클릭 이벤트 리스너 등록
+    showInitialItems();
+    moreBtn.addEventListener("click", showMoreItems);
+
+    // 새 기능: cateVal active의 값으로 board-item의 스타일을 조정
+    function adjustBoardItemVisibility() {
+        // 'cateVal active' 클래스를 가진 모든 요소를 선택합니다.
+        const activeElements = document.querySelectorAll(".cateVal.active");
+
+        // 모든 'board-item' 요소를 선택합니다.
+        const allBoardItems = document.querySelectorAll(".board-item");
+
+        // 'cateVal active' 요소에서 값을 추출하여 배열에 저장합니다.
+        const activeValues = Array.from(activeElements).map((element) =>
+            element.getAttribute("data-value")
+        );
+
+        // 각 'board-item' 요소에 대해 값을 포함하고 있는지 확인하고 스타일을 적용합니다.
+        allBoardItems.forEach((item) => {
+            if (
+                activeValues.some((value) => item.textContent.includes(value))
+            ) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        // // 필터링 후 초기 항목 표시
+        // showInitialItems();
+        // 페이지 로드 시 초기 항목 표시 및 더보기 버튼 클릭 이벤트 리스너 등록
+        filterItems(); // 필터링을 통해 `filteredItems`를 초기화
+        showInitialItems(); // 필터링 후 초기 항목 표시
+        moreBtn.addEventListener("click", showMoreItems);
+    }
+
+    // 페이지 로드 시 호출하여 board-item의 스타일 조정
+
+    adjustBoardItemVisibility();
+});
