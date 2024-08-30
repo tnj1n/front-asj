@@ -245,7 +245,7 @@ textarea {
 .filter-wrap .js_toggle2 li {
     display: inline-block;
     margin-right: 4px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .filter-wrap ul li.active a {
     border-color: #ffc2b8;
@@ -334,7 +334,7 @@ body::-webkit-scrollbar {
 
 /* 총 */
 .mt-40-35 {
-    margin-top: 35px !important;
+    margin-top: 20px !important;
 }
 .f-bold {
     font-weight: 600 !important;
