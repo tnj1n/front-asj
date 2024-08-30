@@ -161,7 +161,6 @@ ul {
     background: #f4f4f4;
     padding: 20px 10px;
 }
-
 .main .article-menu .grid-wrap .grid-item-l a {
     background: #f0543a;
     font-size: 22px;
@@ -171,15 +170,13 @@ ul {
     padding: 20px;
 }
 
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-.main .article-menu .grid-wrap .grid-item-l a .ico-main-search {
-    right: 40px;
-    bottom: 20px;
-}
+
 
 
 .main .article-menu .grid-wrap .grid-item-l a .ico-main-search {
@@ -253,10 +250,6 @@ a {
     background-image: url(https://www.freet.co.kr/assets/images/icon/arrow14.svg);
 }
 
-.main .article-menu .grid-wrap .grid-item-l a {
-    font-size: 26px;
-    padding: 55px 60px;
-}
 
 .main .article-menu .grid-wrap .grid-item-m {
     margin-top: 18px;
@@ -278,7 +271,6 @@ a {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    font-weight: 500;
    
 
 }
@@ -817,7 +809,7 @@ strong {
     color: #fff;
 }
 .board-type5 li .flag-type {
-    height: 22px;
+    height: auto;
     font-size: 12px;
     font-weight: 600;
     display: inline-flex;
@@ -827,6 +819,7 @@ strong {
     border-radius: 6px;
     padding-left: 6px;
     padding-right: 6px;
+    white-space: nowrap;
 }
 .plan-top {
     display: flex;
@@ -898,7 +891,7 @@ strong {
 .board-type5 li div span {
     font-size: 14px;
     font-weight: normal;
-    line-height: 1.63;
+    line-height: 1.6322;
     color: #343434;
 }
 .board-type5 li a .ico-arrow4 {
@@ -1080,6 +1073,22 @@ strong {
     border-color: #94949a;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
+.requestList1,
+.requestList2,
+.requestList3,
+.requestList4,
+.requestList5 {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.requestList1:hover,
+.requestList2:hover,
+.requestList3:hover,
+.requestList4:hover,
+.requestList5:hover {
+    border-color: #94949a;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+}
+
 
 .ico-main-plan2 {
     width: 34px;
@@ -1112,8 +1121,8 @@ strong {
     clear: both;
 }
 
-.main [class^=article] .main-title {
-    margin-bottom: 30px;
+.main .article-promotion .main-title {
+    margin-bottom: 15px;
 }
 
 .main [class^=article] .main-title .title-type {
@@ -1343,4 +1352,46 @@ strong {
 
 .review-item .review-top [class^=star] {
     background-size: 100px 40px;
+}
+
+.main>article:last-child {
+    margin-bottom: 120px;
+}
+
+.main .article-review {
+    width: 100%;
+    display: block;
+}
+
+.body-dim, .dim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, .7);
+}
+
+.body-dim {
+    z-index: 50;
+}
+
+.main .article-review .review-area .slick-list {
+    margin: 0 -9px;
+}
+
+.btn-type3 {
+    font-size: 16px;
+    padding: 0 39px;
+}
+
+.main .article-menu .grid-wrap .grid-item-l a {
+    font-size: 26px;
+    padding: 55px 60px;
+}
+
+.main .article-menu .grid-wrap .grid-item-l a .ico-main-search {
+    right: 40px;
+    bottom: 20px;
 }
