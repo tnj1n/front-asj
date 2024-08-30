@@ -381,6 +381,7 @@ select,
 strong {
     font-weight: 600;
 }
+
 .select-type3 .nice-select {
     background: 0 0;
     font-size: 14px;
@@ -420,6 +421,9 @@ strong {
     white-space: nowrap;
     width: auto;
     font-weight: 600;
+}
+.select-type2 .nice-select.open .current {
+    color: #111;
 }
 .select-type3 .nice-select {
     background: 0 0;
