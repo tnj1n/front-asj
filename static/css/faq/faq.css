@@ -982,7 +982,7 @@ input[type=number]:focus, input[type=text]:focus {
     border: 1px solid #94949a;
     color: #94949a;
     font-size: 13px;
-    line-height: 1;
+    line-height: 2.7;
     background: #fff;
     border-radius: 19px;
     padding: 0 20px;
