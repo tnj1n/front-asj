@@ -15,7 +15,7 @@ districts.forEach((district) => {
 
         districts.forEach((d) => {
             d.parentElement.classList.remove("active");
-            console.log(d);
+            // console.log(d);
         });
         e.target.parentElement.classList.add("active");
     });
