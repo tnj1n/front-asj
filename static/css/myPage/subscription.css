@@ -85,6 +85,13 @@
     src: local("Pretendard Thin"),url(./fonts/Pretendard-Thin.woff2)format("woff2"),url(./fonts/Pretendard-Thin.woff)format("woff")
 }
 
+body {
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    color: #111;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -94,18 +101,8 @@
     word-break: break-all;
 }
 
-body {
-    line-height: 1.25;
-    font-family: "SUIT", sans-serif;
-    font-size: 15px;
-    color: #111;
-}
-
-#content.bottom {
-    padding-bottom: 120px;
-}
-
 #content {
+    padding-bottom: 120px;
     padding: 30px 0 80px;
 }
 
@@ -131,7 +128,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     position: inherit;
     text-align: center;
     padding-right: 0;
-    margin-bottom: 40px;
 }
 
 .page-header.side .page-title {
@@ -142,6 +138,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .page-header.side .location {
     margin-bottom: 0;
+}
+
+.pc-only {
+    display: block;
 }
 
 .location {
@@ -203,180 +203,87 @@ a {
     margin-top: -5px;
 }
 
-::before, ::after {
-    box-sizing: border-box;
+.location a {
+    position: relative;
+    margin-right: 25px;
 }
 
 strong {
     font-weight: 600;
 }
 
-.section-mypage .content-wrap {
-    flex-wrap: nowrap;
-    display: flex;
+::before, ::after {
+    box-sizing: border-box;
 }
 
-.content-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.page-header.side.event {
+    margin-bottom: 60px;
 }
 
-.my-chg-content .inner-box {
-    text-align: unset;
-    width: 100%;
-    margin: unset;
-}
-
-.inner-box {
-    max-width: 852px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section-mypage .box-type2#my_info1_01 {
-    padding: 30px 50px;
-}
-
-.box-type2 {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 20px;
-    padding: 25px;
-    border: 1px solid #e3e3e3;
-}
-
-.section-mypage .box-type2#my_info1_01 dl {
-    align-items: flex-start;
-    font-size: 16px;
-    line-height: 1.63;
-}
-
-.box-type2 dl {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.section-mypage .box-type2#my_info1_01 dl dt {
-    width: 210px;
-}
-.box-type2 dl dt {
-    width: 110px;
-    color: #94949a;
-}
-
-.section-mypage .box-type2#my_info1_01 dl dd {
-    width: calc(100% - 210px);
-    font-weight: 400;
-}
-
-.section-mypage .box-type2#my_info1_01 dl+dl {
-    margin-top: 20px;
-}
-
-.section-mypage .box-type2#my_info1_01 dl {
-    align-items: flex-start;
-    font-size: 16px;
-    line-height: 1.63;
-}
-
-.section-mypage .my-page-button {
-    background: unset;
-    text-align: center;
-}
-
-.btn-wrap {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-
-.btn-wrap [class^=btn-type] {
-    width: 100%;
-}
-
-
-
-.btn-type, .btn-type-sm, .kakao-plus-event-container .open-url-btn {
-    background: #f0543a;
-    color: #fff;
-}
-
-.button-default, .btn-form, .btn-type2, .btn-type, .btn-type-sm, .kakao-plus-event-container .open-url-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 56px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    width: 100%;
-    transition: background .2s ease;
-}
-.button-default, .btn-type, .kakao-plus-event-container .open-url-btn, .btn-type-sm, .btn-type2, .btn-form {
-    max-width: 200px;
-    height: 64px;
-    font-size: 20px;
-}
-
-button {
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    background: none;
-    cursor: pointer;
-    outline: none;
-    font-size: 15px;
-    font-family: "SUIT", sans-serif;
-    color: inherit;
-}
-
-.section-mypage .content-wrap .lnb {
-    width: 243px;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-.lnb .my-member-info {
-    margin: 0 0 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.lnb .my-member-info .info-select-box {
-    padding: 15px 25px 20px;
-    flex-wrap: wrap;
-    background: #f4f4f4;
-    border-radius: 20px;
-    padding: 15px 20px;
+.page-header.side {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    border: 1px solid #f4f4f4;
 }
 
-.lnb .my-member-info .info-select-box.v2 .icon-box {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 10px;
+.page-header {
+    position: inherit;
+    text-align: center;
+    padding-right: 0;
 }
 
-.ico-call5 {
+.banner-event-wrapper {
+    background: url(https://qa.freet.co.kr/assets/images/event/event_05_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-event-wrapper>.inner {
+    padding: 60px 80px;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+.ico-mail-banner {
     display: inline-block;
-    width: 30px;
-    height: 32px;
+    width: 68px;
+    height: 61px;
     vertical-align: middle;
-    background-image: url(https://qa.freet.co.kr/assets/images/icon/call5.svg);
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/mail-banner.svg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.banner-event-wrapper>.inner>.banner-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.mt-0-30 {
+    margin-top: 0px !important;
+}
+
+.banner-event-wrapper>.inner>.banner-desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    color: #343434;
+    margin-top: 10px;
+}
+
+.focus {
+    color: #f0543a;
 }
 
 address, caption, em, i, var {
@@ -384,141 +291,250 @@ address, caption, em, i, var {
     font-weight: inherit;
 }
 
-.lnb .my-member-info .info-select-box.v2 .text-box {
-    width: auto;
-    padding-left: 0;
-    display: inline;
+.banner-event-wrapper>.inner {
+    padding: 60px 80px;
 }
 
-.lnb .my-member-info .info-select-box.v2 .text-box .tit {
-    font-size: 14px;
+.event-content-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.lnb .my-member-info .info-select-box.v2 .text-box .desc {
-    margin-top: 20px;
-    padding-right: 20px;
-}
-
-.lnb .my-member-info .info-select-box .desc {
-    font-size: 14px;
-    color: #343434;
-    line-height: 1.71;
-}
-
-.lnb .my-member-info .info-select-box .btn-wrap {
-    margin-top: 15px;
+.event-content-wrap>.content {
+    max-width: 1026px;
     width: 100%;
 }
 
-.lnb .my-member-info .info-select-box .btn-wrap .btn-type {
-    height: 50px;
-    max-width: 100%;
-    font-size: 15px;
+.mt-60-50 {
+    margin-top: 60px !important;
 }
 
-.btn-type.v2, .v2.btn-type-sm, .kakao-plus-event-container .v2.open-url-btn {
-    background: #3f4970;
+.f-bold {
+    font-weight: 600 !important;
 }
 
-.lnb .my-member-info .info-select-box.v2 {
-    display: block;
+.f2-h2-20--h3-18 {
+    line-height: 1.5 !important;
+    font-size: 20px !important;
 }
 
-.lnb .my-member-info .info-select-box {
-    padding: 15px 25px 20px;
-    flex-wrap: wrap;
+.mt-4 {
+    margin-top: 40px !important;
 }
 
-.lnb-list {
-    display: block;
+.mt-20-0 {
+    margin-top: 20px !important;
+}
+
+.medal-list {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.medal-list>.medal-list-item {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 30px !important;
     border: 1px solid #e3e3e3;
     border-radius: 20px;
-    padding: 0 25px;
+    display: flex;
+}
+
+.medal-list>.medal-list-item .icon-wrap {
+    margin-right: 0px;
+}
+
+.ico-medal-silver{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/icon-medal-silver.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.medal-list>.medal-list-item>.content {
+    padding-top: 15px;
+}
+
+.medal-list>.medal-list-item>.content .medal-title-wrap>.main-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item>.content .medal-title-wrap>.desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.67;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #343434;
+}
+
+.medal-list>.medal-list-item .sub-content {
+    margin-top: 15px;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-title {
+    display: flex;
+    flex-direction: row;
+}
+
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    color: #f0543a;
+    display: flex;
+    flex-direction: row;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block+.sub-content-block {
+    margin-top: 25px;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    color: #f0543a;
+    display: flex;
+    flex-direction: row;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block+.sub-content-block {
+    margin-top: 25px;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item+.medal-list-item {
+    margin-left: 18px;
+}
+
+.ico-medal-gold {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/icon-medal-gold.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-medal-plat {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/icon-medal-plat.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mt-4 {
+    margin-top: 40px !important;
+}
+
+.list-type {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #343434;
+    text-align: left;
 }
 
 ul {
     list-style: none;
 }
 
-.lnb-list .depth>li+li {
-    border-top: 1px solid #e3e3e3;
+.list-type li:first-child {
+    margin-top: 0;
 }
 
-.lnb-list .depth>li>a {
-    padding: 20px 0;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.63;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.list-type li {
+    position: relative;
+    margin-top: 5px;
+    padding-left: 7px;
 }
 
-.lnb-list .depth2 {
-    display: none;
-    padding-bottom: 20px;
-}
-
-.lnb-list .depth>li>a:after {
+.list-type li:before {
+    top: 11px;
     content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    background-image: url(https://qa.freet.co.kr/assets/images/icon/plus.svg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #94949a;
+    border-radius: 100%;
 }
 
-.lnb-list .depth2 {
-    display: none;
-    padding-bottom: 20px;
+::before, ::after {
+    box-sizing: border-box;
 }
 
-.lnb-list .depth>li>a.active:after {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    background-image: url(https://qa.freet.co.kr/assets/images/icon/minus.svg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.lnb-list .depth2>li+li {
-    margin-top: 8px;
+.list-type li {
+    margin-top: 7px;
+    position: relative;
+    padding-left: 7px;
 }
 
-.lnb-list .depth2>li a {
-    font-size: 15px;
-    line-height: 1.67;
-    color: #343434;
-}
-
-.lnb-list .depth2>li a:hover, .lnb-list .depth2>li a.active {
-    color: #f0543a;
-}
-
-.lnb-list {
-    display: block;
-    border: 1px solid #e3e3e3;
-    border-radius: 20px;
-    padding: 0 25px;
-}
-
-.section-mypage .content-wrap .lnb {
-    width: 243px;
-}
-
-.btn-type:hover, .btn-type-sm:hover, .kakao-plus-event-container .open-url-btn:hover {
-    background: #e2391d;
-}
-
-.btn-type.v2:hover, .v2.btn-type-sm:hover, .kakao-plus-event-container .v2.open-url-btn:hover {
-    background: #293460;
-}
-
-body {
-    font-size: 16px;
+.event-content-wrap>.content {
+    max-width: 1026px;
+    width: 100%;
 }
