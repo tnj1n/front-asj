@@ -187,8 +187,9 @@ textarea {
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
 }
-/* 수거 예정/ 수고 완료 */
+/*  수거 예정/ 수거 완료 */
 .tab-wrap {
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 .tab-type {
