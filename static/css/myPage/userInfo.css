@@ -522,3 +522,9 @@ ul {
 body {
     font-size: 16px;
 }
+
+ul.depth2 {
+    display: none; /* 기본적으로 숨김 */
+    overflow: hidden;
+    transition: 0.2s ease-out; /* 스르륵 열리는 애니메이션 */
+}
