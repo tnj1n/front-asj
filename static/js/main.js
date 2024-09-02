@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     const planFilterButtons = document.querySelectorAll(
-        "#swiper-wrapper-12770ed6d1dde369 .swiper-slide"
+        "#swiper-wrapper-subscribe .swiper-slide"
     );
     const planItems = document.querySelectorAll(".plan-item");
 
