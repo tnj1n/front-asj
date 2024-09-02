@@ -13,6 +13,7 @@ const districtSelectDiv = document.querySelector(
 const districtOptions = districtSelectDiv.querySelectorAll(".list > li");
 // 전체 드롭다운 옵션 리스트
 const overallSelectLists = overallSelectDiv.querySelectorAll(".list > li");
+// 선택된 드롭다운 옵션의 태그
 const tagList = document.querySelector("#listTagHtml");
 
 // const selectLists = document.querySelectorAll(".list > li");
@@ -26,7 +27,7 @@ const tagList = document.querySelector("#listTagHtml");
 // 지역 선택 div 클릭 시 드롭다운 열고 닫기
 selectDivs.forEach((selectDiv) => {
     selectDiv.addEventListener("click", (e) => {
-        e.stopPropagation();
+        // e.stopPropagation();
         // 모든 selectDiv에서 'open' 클래스 제거
         selectDivs.forEach((div) => {
             if (div !== selectDiv) {
@@ -40,9 +41,11 @@ selectDivs.forEach((selectDiv) => {
 
 // 전체 드롭다운에서 옵션 클릭 시
 overallSelectLists.forEach((option) => {
+    // 모든 옵션에다가 이벤트리스너
     option.addEventListener("click", (e) => {
         const target = e.target;
-
+        // console.log(e.target);
+        // console.log("들어옴");
         // 클릭된 요소가 .option인지 확인
         if (
             target.classList.contains("option") &&
@@ -59,7 +62,13 @@ overallSelectLists.forEach((option) => {
                 overallSelectDiv.querySelector(".option.selected");
             overallSelectDiv.querySelector(".current").innerText =
                 selectedOption.innerText;
+            console.log(overallSelectLists);
+            overallSelectLists.forEach((overallSelectList) => {
+                seoul = overallSelectList.dataset.value;
+            });
+            console.log(seoul);
 
+            tagList.firstElementChild.firstElementChild.innerText = a;
             // '서울'이 선택되었을 때만 시/군/구 드롭다운 활성화
             if (selectedOption.dataset.value === "서울") {
                 districtSelectDiv
@@ -99,27 +108,16 @@ overallSelectLists.forEach((option) => {
                         // 선택 후 드롭다운 닫기
                         overallSelectDiv.classList.remove("open");
 
-                        // 선택된 태그를 업데이트
-                        const tagId = `tag_${selectedDistrictOption.dataset.value}`;
-                        const existingTag = document.querySelector(
-                            `#listTagHtml #${tagId}`
-                        );
-                        if (existingTag) {
-                            existingTag.remove(); // 기존 태그가 있으면 제거
-                        }
-
                         // 새로운 태그를 추가
                         text = `<li id="tag_66" class="tagVal"><a>${selectedDistrictOption.innerText}</a></li>`;
-                        // console.log(selectedOption);
-                        // console.log(tagList);
                         tagList.innerHTML += text;
                         // selectedDistrictOption.classList.add("disabled");
                         console.log(selectedDistrictOption);
-                        districtSelectDiv
-                            .querySelectorAll(".list > li:not(.disabled)")
-                            .forEach((item) => {
-                                item.classList.add("disabled");
-                            });
+                        // selectedDistrictOption
+                        //     .querySelectorAll(".list > li:not(.disabled)")
+                        //     .forEach((item) => {
+                        //         item.classList.add("disabled");
+                        //     });
 
                         // 선택 후 드롭다운 닫기
                         districtSelectDiv.classList.remove("open");
@@ -196,3 +194,13 @@ overallSelectLists.forEach((option) => {
 // newTag.innerHTML = `<a href="#">${selectedDistrictOption.innerText}</a>`;
 // // 돔트리로 닫기
 // tagList.appendChild(newTag);
+
+// // 선택된 태그를 업데이트
+// const tagId = `tag_${selectedDistrictOption.dataset.value}`;
+// const existingTag = document.querySelector(
+//     `#listTagHtml #${tagId}`
+// );
+// if (existingTag) {
+//     existingTag.remove(); // 기존 태그가 있으면 제거
+//     console.log("들어옴");
+// }
