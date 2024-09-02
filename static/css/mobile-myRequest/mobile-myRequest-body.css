@@ -645,11 +645,7 @@ strong {
 .tab-bar ul li.active a span {
     color: #f0543a;
 }
-.select-type3 .nice-select .option.focus,
-.select-type3 .nice-select .option.selected.focus,
-.tab-bar ul li.active a span {
-    color: #f0543a;
-}
+
 .select-type3 .nice-select .option + .option {
     margin-top: 8px;
 }
