@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>관리자 페이지</title>
-        <link rel="stylesheet" href="/static/css/manager/manager.css" />
+        <title>결제 관리 페이지</title>
+        <link
+            rel="stylesheet"
+            href="/static/css/admin/admin_payment_subscription .css"
+        />
     </head>
     <body>
         <div id="root">
@@ -329,7 +332,7 @@
                                     ><a
                                         class="MenuItems_submenu__3RDKb"
                                         href="/studio/reward/309473/funding/screening"
-                                        >1대1 상담</a
+                                        >1대1 문의</a
                                     ><a
                                         class="MenuItems_submenu__3RDKb"
                                         href="/studio/reward/309473/funding/story"
@@ -412,18 +415,26 @@
                             <div class="FundingLayout_container__1WSFD">
                                 <!-- Action Buttons -->
                                 <div class="action-buttons">
-                                    <button
-                                        id="openModalBtn"
-                                        class="openModalBtn"
-                                    >
-                                        회원 추가
-                                    </button>
-                                    <button
-                                        id="deleteSelectedBtn"
-                                        class="deleteSelectedBtn"
-                                    >
-                                        선택 삭제
-                                    </button>
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="Search..."
+                                        onkeyup="searchTable()"
+                                    />
+                                    <div class="actionButton">
+                                        <button
+                                            id="openModalBtn"
+                                            class="openModalBtn"
+                                        >
+                                            회원 추가
+                                        </button>
+                                        <button
+                                            id="deleteSelectedBtn"
+                                            class="deleteSelectedBtn"
+                                        >
+                                            선택 삭제
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="UserTable_container__1JHD1">
                                     <div
@@ -445,22 +456,37 @@
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            Name
+                                            이름
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            Email
+                                            이메일
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            Role
+                                            결제 방법
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            Actions
+                                            구독 날짜
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            결제 날짜
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            결제 승인
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            결제 승인
                                         </div>
                                     </div>
 
@@ -482,11 +508,88 @@
                                             john@example.com
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            Admin
+                                            신용카드
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2020-10-16
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-08-16
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            승인 대기
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
-                                                수정
+                                                승인
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상훈
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            sang@example.com
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            계좌이체
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2021-01-12
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-06-16
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            승인 대기
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                승인
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            3
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            길동
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            hello@example.com
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            신용카드
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2020-08-22
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-08-24
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            승인 완료
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                승인
                                             </button>
                                         </div>
                                     </div>
@@ -538,5 +641,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/manager/manager.js"></script>
+    <script src="/static/js/admin/admin_payment_subscription .js"></script>
 </html>

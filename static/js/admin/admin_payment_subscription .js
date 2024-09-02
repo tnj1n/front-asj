@@ -310,3 +310,29 @@ document
 
 // 초기 체크박스 설정
 updateCheckboxes();
+
+// 검색
+function searchTable() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const rows = document.getElementsByClassName("UserTable_row__1Qg9b");
+
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByClassName("UserTable_cell__3kj0K");
+        let match = false;
+
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j].innerText.toLowerCase().indexOf(filter) > -1) {
+                match = true;
+                break;
+            }
+        }
+
+        if (match) {
+            rows[i].style.display = "";
+            highlightMatch(rows[i], filter);
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
