@@ -83,7 +83,7 @@ liItems.forEach((liItem) => {
             } else {
                 noDataSaving.style.display = "block";
             }
-        } else if (targetId === "total-viewd") {
+        } else if (targetId === "total-viewed") {
             savingPointSection.style.display = "none";
             usePointSection.style.display = "block";
 

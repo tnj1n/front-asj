@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>나의 상담 내역</title>
+        <link rel="stylesheet" href="../static/css/my_counsel.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="wrap">
+                <!-- 처음 모달 창 -->
+                <div id="container">
+                    <div
+                        class="pop-layer pop-alert"
+                        id="pop-alert2"
+                        style="display: flex"
+                    >
+                        <div class="dim"></div>
+                        <div class="pop-wrap">
+                            <div class="pop-content v3">
+                                <p>
+                                    1:1 문의는 회원만 이용이 가능합니다.<br />
+                                    로그인 하시겠습니까?
+                                </p>
+                                <div class="btn-wrap">
+                                    <a
+                                        href="javascript:void(0);"
+                                        class="btn-type v3"
+                                        >취소</a
+                                    >
+                                    <a href="/login" class="btn-type"
+                                        >로그인하기</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="content" class="section-inquiry">
+                    <div class="inner">
+                        <div class="page-header side">
+                            <h2 class="page-title">1:1 상담문의</h2>
+                            <div class="location">
+                                <a href="/" class="home"
+                                    ><span class="hidden">HOME</span></a
+                                >
+                                <a href="/customer/helpDesk"> 고객센터 </a>
+                                <a href="javascript:void(0)"> 1:1 상담문의 </a>
+                                <strong> 상담문의 </strong>
+                            </div>
+                        </div>
+                        <section class="inner-box">
+                            <div class="tab-wrap">
+                                <ul class="tab-type js_tab">
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="choice"
+                                            >상담문의</a
+                                        >
+                                    </li>
+                                    <li class="active">
+                                        <a
+                                            href="javascript:void(0)"
+                                            onclick="goView()"
+                                            class="choice"
+                                            >나의 상담내역</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="noListHtml">
+                                <div class="nodata-box">
+                                    <div class="icon-box">
+                                        <i class="ico-empty"></i>
+                                    </div>
+                                    <p>등록된 상담내역이 없습니다.</p>
+                                </div>
+                            </div>
+                            <div class="btn-wrap v3">
+                                <a
+                                    href="javascript:showMore()"
+                                    class="btn-type3"
+                                    id="moreBtn"
+                                    style="display: none"
+                                    >더보기</a
+                                >
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/one-to-one/my_counsel.js"></script>
+</html>
