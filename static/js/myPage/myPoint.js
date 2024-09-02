@@ -39,11 +39,27 @@ document.querySelectorAll("ul.depth > li > a").forEach(function (anchor) {
 });
 
 const liItems = document.querySelectorAll("ul.tab-type > li");
-const tabContents = document.querySelectorAll(".tab-content");
+const savingPointSection = document.querySelector("#saving-point");
+const usePointSection = document.querySelector("#use-point");
+const noDataSaving = document.querySelector("#no-data-saving");
+const noDataUse = document.querySelector("#no-data-use");
+
+// 페이지 로드 시 초기 상태 설정
+const initialHasUsePoints = usePointSection.querySelector("li");
+const initialHasSavingPoints = savingPointSection.querySelector("li");
+
+// 적립 포인트 탭이 기본적으로 활성화되어 있기 때문에 #no-data-use 숨김
+noDataUse.style.display = "none";
+
+if (initialHasSavingPoints) {
+    noDataSaving.style.display = "none";
+} else {
+    noDataSaving.style.display = "block";
+}
 
 liItems.forEach((liItem) => {
     const addPoint = liItem.querySelector("a");
-    const targetId = addPoint.getAttribute("data-target");
+    const targetId = addPoint.getAttribute("id");
 
     addPoint.addEventListener("click", () => {
         // 모든 li에서 active 클래스 제거
@@ -54,12 +70,33 @@ liItems.forEach((liItem) => {
         // 현재 클릭된 li에 active 클래스 추가
         liItem.classList.add("active");
 
-        // 모든 탭 내용을 숨김
-        tabContents.forEach((content) => {
-            content.style.display = "none";
-        });
+        // 포인트 섹션 및 nodata-box 상태 업데이트
+        if (targetId === "total-favorite") {
+            savingPointSection.style.display = "block";
+            usePointSection.style.display = "none";
+            noDataUse.style.display = "none"; // noDataUse 숨기기
 
-        // 클릭된 탭의 데이터를 표시
-        document.getElementById(targetId).style.display = "block";
+            // 적립 포인트 확인
+            const hasSavingPoints = savingPointSection.querySelector("li");
+            if (hasSavingPoints) {
+                noDataSaving.style.display = "none";
+            } else {
+                noDataSaving.style.display = "block";
+            }
+        } else if (targetId === "total-viewd") {
+            savingPointSection.style.display = "none";
+            usePointSection.style.display = "block";
+
+            // 사용 포인트 확인
+            const hasUsePoints = usePointSection.querySelector("li");
+            if (hasUsePoints) {
+                noDataUse.style.display = "none";
+            } else {
+                noDataUse.style.display = "block";
+            }
+
+            // 적립 포인트 관련 no-data-saving를 기본적으로 숨김
+            noDataSaving.style.display = "none";
+        }
     });
 });

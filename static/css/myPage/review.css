@@ -100,3 +100,174 @@ body {
     box-sizing: border-box;
     word-break: break-all;
 }
+
+#content {
+    padding-bottom: 120px;
+    padding: 30px 0 80px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.page-header.side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header {
+    position: inherit;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 40px;
+}
+
+.page-header.side .page-title {
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.page-header.side .location {
+    margin-bottom: 0;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #343434;
+    margin-bottom: 20px;
+}
+
+.location .home {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/home.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.location a {
+    position: relative;
+    margin-right: 25px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.location a:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/arrow.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+#content {
+    padding-bottom: 120px;
+    padding: 30px 0 80px;
+}
+
+.banner-write-review {
+    border-radius: 20px;
+    max-width: 1026px;
+    margin: 0 auto;
+    padding: 30px 40px 50px;
+    background-color: #fff3e8;
+}
+
+.mb-3 {
+    margin-bottom: 30px !important;
+}
+
+select, input, textarea {
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    border: 0;
+    font-family: "SUIT", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: inherit;
+}
+
+.banner-write-review .title {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.reviewInfo {
+    padding-left: 30px !important;
+}
+
+.mb-4 {
+    margin-bottom: 40px !important;
+}
+
+.new-review-font {
+    font-size: 2.2em !important;
+}
+
+.mb-20-15 {
+    margin-bottom: 20px !important;
+}
+
+.mt-22-0 {
+    margin-top: 22px !important;
+}
+
+.f-bold {
+    font-weight: 600 !important;
+}
