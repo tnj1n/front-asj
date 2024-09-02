@@ -24,6 +24,7 @@ const tagList = document.querySelector("#listTagHtml");
 // console.log(districtSelectDiv);
 // console.log(districtOptions);
 
+let check = false;
 // 지역 선택 div 클릭 시 드롭다운 열고 닫기
 selectDivs.forEach((selectDiv) => {
     selectDiv.addEventListener("click", (e) => {
@@ -68,7 +69,7 @@ overallSelectLists.forEach((option) => {
             });
             console.log(seoul);
 
-            tagList.firstElementChild.firstElementChild.innerText = a;
+            tagList.firstElementChild.firstElementChild.innerText = seoul;
             // '서울'이 선택되었을 때만 시/군/구 드롭다운 활성화
             if (selectedOption.dataset.value === "서울") {
                 districtSelectDiv
@@ -109,8 +110,13 @@ overallSelectLists.forEach((option) => {
                         overallSelectDiv.classList.remove("open");
 
                         // 새로운 태그를 추가
+                        // 새로운 태그를 추가
+                        if (check) {
+                            tagList.removeChild(tagList.lastElementChild);
+                        }
                         text = `<li id="tag_66" class="tagVal"><a>${selectedDistrictOption.innerText}</a></li>`;
                         tagList.innerHTML += text;
+                        check = true;
                         // selectedDistrictOption.classList.add("disabled");
                         console.log(selectedDistrictOption);
                         // selectedDistrictOption
@@ -120,7 +126,11 @@ overallSelectLists.forEach((option) => {
                         //     });
 
                         // 선택 후 드롭다운 닫기
-                        districtSelectDiv.classList.remove("open");
+                        districtSelectDiv.parentElement.classList.remove(
+                            "open"
+                        );
+
+                        console.log(districtSelectDiv.classList);
                     }
                 });
             });
