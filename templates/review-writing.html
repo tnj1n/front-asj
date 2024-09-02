@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>후기작성</title>
+        <link rel="stylesheet" href="../static/css/review-writing.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="wrap">
+                <!-- 처음 모달 창 -->
+                <div id="container">
+                    <div
+                        class="pop-layer pop-alert"
+                        id="pop-alert2"
+                        style="display: flex"
+                    >
+                        <div class="dim"></div>
+                        <div class="pop-wrap">
+                            <div class="pop-content v3">
+                                <p>
+                                    후기 작성은 회원만 이용이 가능합니다.<br />
+                                    로그인 하시겠습니까?
+                                </p>
+                                <div class="btn-wrap">
+                                    <a
+                                        href="javascript:void(0);"
+                                        class="btn-type v3"
+                                        >취소</a
+                                    >
+                                    <a href="/login" class="btn-type"
+                                        >로그인하기</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="content" class="section-inquiry">
+                    <div class="inner">
+                        <div class="page-header side">
+                            <h2 class="page-title">후기 작성</h2>
+                            <div class="location">
+                                <a href="/" class="home"
+                                    ><span class="hidden">HOME</span></a
+                                >
+                                <a href="/customer/helpDesk"> 후기 </a>
+                                <strong> 후기작성 </strong>
+                            </div>
+                        </div>
+                        <section class="inner-box">
+                            <div class="tab-wrap">
+                                <ul class="tab-type js_tab">
+                                    <li class="active">
+                                        <a href="" class="choice">후기작성</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="choice"
+                                            >나의 후기내역</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <section class="content-box" id="write">
+                                <form action="" id="frm">
+                                    <div class="form-table">
+                                        <dl class="form-dl">
+                                            <dt class="form-dt">
+                                                요금제
+                                                <span class="focus">*</span>
+                                            </dt>
+                                            <dd class="form-dd">
+                                                <div class="form-item">
+                                                    <div class="select-type2">
+                                                        <select
+                                                            id="inqType"
+                                                            name="inqType"
+                                                            required=""
+                                                            style="
+                                                                display: none;
+                                                            "
+                                                            class="selected"
+                                                        >
+                                                            <option
+                                                                class="title"
+                                                                value=""
+                                                                selected=""
+                                                            >
+                                                                요금제 선택
+                                                            </option>
+                                                            <option value="1">
+                                                                가입관련
+                                                            </option>
+                                                            <option value="2">
+                                                                요금관련
+                                                            </option>
+                                                            <option value="7">
+                                                                변경관련
+                                                            </option>
+                                                        </select>
+                                                        <div
+                                                            class="nice-select"
+                                                            tabindex="0"
+                                                        >
+                                                            <span
+                                                                class="current"
+                                                                >요금제
+                                                                선택</span
+                                                            >
+                                                            <ul class="list">
+                                                                <li
+                                                                    data-value=""
+                                                                    class="option"
+                                                                >
+                                                                    라이트
+                                                                </li>
+                                                                <li
+                                                                    data-value="1"
+                                                                    class="option"
+                                                                >
+                                                                    스탠다드
+                                                                </li>
+                                                                <li
+                                                                    data-value="2"
+                                                                    class="option"
+                                                                >
+                                                                    프리미엄
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="form-dl">
+                                            <dt class="form-dt">
+                                                기사 정보
+                                                <span class="focus">*</span>
+                                            </dt>
+                                            <dd class="form-dd">
+                                                <div class="form-col2-w">
+                                                    <div class="form-item">
+                                                        <div
+                                                            class="review-description"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="content"
+                                                                >
+                                                                    <div
+                                                                        class="details"
+                                                                    ></div>
+                                                                </div>
+
+                                                                <a
+                                                                    href="javascript:void(0)"
+                                                                    class="review-toggle"
+                                                                >
+                                                                    <div
+                                                                        class="pc-only mt-3"
+                                                                    >
+                                                                        <div
+                                                                            class="photo-wrapper"
+                                                                        >
+                                                                            <div
+                                                                                class="photo-item"
+                                                                            >
+                                                                                <div
+                                                                                    class="icon-photo"
+                                                                                >
+                                                                                    <img
+                                                                                        src="https://i3n.news1.kr/system/photos/2022/4/7/5306119/high.jpg"
+                                                                                    />
+                                                                                </div>
+                                                                                <p
+                                                                                    class="photo-description"
+                                                                                >
+                                                                                    <strong
+                                                                                        >수정구</strong
+                                                                                    ><br />박명수
+                                                                                    기사님
+                                                                                </p>
+                                                                            </div>
+                                                                            <div
+                                                                                class="photo-item"
+                                                                            >
+                                                                                <div
+                                                                                    class="icon-photo"
+                                                                                >
+                                                                                    <img
+                                                                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBmWe_-dG0UCIbdIj0rbcRXjYSTeYuswrALA&s"
+                                                                                    />
+                                                                                </div>
+                                                                                <p
+                                                                                    class="photo-description"
+                                                                                >
+                                                                                    <strong
+                                                                                        >서구</strong
+                                                                                    ><br />강동원
+                                                                                    기사님
+                                                                                </p>
+                                                                            </div>
+                                                                            <div
+                                                                                class="photo-item"
+                                                                            >
+                                                                                <div
+                                                                                    class="icon-photo"
+                                                                                >
+                                                                                    <img
+                                                                                        src="https://cdn.snakorea.com/news/photo/201409/108083_67098_5531.jpg"
+                                                                                    />
+                                                                                </div>
+                                                                                <p
+                                                                                    class="photo-description"
+                                                                                >
+                                                                                    <strong
+                                                                                        >부평구</strong
+                                                                                    ><br />유재석
+                                                                                    기사님
+                                                                                </p>
+                                                                            </div>
+                                                                            <div
+                                                                                class="photo-item"
+                                                                            >
+                                                                                <div
+                                                                                    class="icon-photo"
+                                                                                >
+                                                                                    <img
+                                                                                        src="https://gangnam.koreaisacademy.com/2023/img/tch/teacher007.png"
+                                                                                    />
+                                                                                </div>
+                                                                                <p
+                                                                                    class="photo-description"
+                                                                                >
+                                                                                    <strong
+                                                                                        >연수구</strong
+                                                                                    ><br />한동석
+                                                                                    기사님
+                                                                                </p>
+                                                                            </div>
+                                                                            <div
+                                                                                class="photo-item"
+                                                                            >
+                                                                                <div
+                                                                                    class="icon-photo"
+                                                                                >
+                                                                                    <img
+                                                                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU3NXZSA-HNxu0pU2EoDpGtFisf9Ujj5ZZ4A&s"
+                                                                                    />
+                                                                                </div>
+                                                                                <p
+                                                                                    class="photo-description"
+                                                                                >
+                                                                                    <strong
+                                                                                        >종로구</strong
+                                                                                    ><br />고창석
+                                                                                    기사님
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-item">
+                                                    <span
+                                                        class="invalid-feedback"
+                                                    ></span>
+                                                </div>
+
+                                                <div class="flex-end">
+                                                    <div class="chk-box"></div>
+                                                </div>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="form-dl">
+                                            <dt class="form-dt">
+                                                제목
+                                                <span class="focus">*</span>
+                                            </dt>
+                                            <dd class="form-dd">
+                                                <div class="form-item ntit">
+                                                    <input
+                                                        type="text"
+                                                        class="title"
+                                                        name="title"
+                                                        placeholder="제목을 최대 50자 이내로 등록하세요."
+                                                        maxlength="50"
+                                                        required=""
+                                                        data-gtm-form-interact-field-id="2"
+                                                    />
+                                                    <span
+                                                        class="invalid-feedback"
+                                                    ></span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="form-dl">
+                                            <dt class="form-dt">
+                                                내용
+                                                <span class="focus">*</span>
+                                            </dt>
+                                            <dd class="form-dd">
+                                                <div class="form-text-box">
+                                                    <textarea
+                                                        id="contents"
+                                                        name="contents"
+                                                        placeholder="내용을 입력해주세요.(최소 10자 이상/1500자 이내)"
+                                                        minlength="10"
+                                                        maxlength="1500"
+                                                        required=""
+                                                        data-gtm-form-interact-field-id="1"
+                                                    ></textarea>
+                                                    <span class="maxlenth"
+                                                        ><strong class="max"
+                                                            ><em id="memoCnt"
+                                                                >0</em
+                                                            ></strong
+                                                        >
+                                                        / 1500</span
+                                                    >
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <!-- 파일 -->
+
+                                        <!-- 개인정보 수집 및 이용 동의 -->
+                                        <dl class="form-dl">
+                                            <dt class="form-dt">
+                                                개인정보 수집 및<br
+                                                    class="pc-only"
+                                                />
+                                                이용 동의
+                                                <span class="focus">*</span>
+                                            </dt>
+                                            <dd class="form-dd terms">
+                                                <p>
+                                                    상담문의를 희망하는 개인을
+                                                    대상으로 아래와 같이
+                                                    개인정보를 수집하고
+                                                    있습니다.
+                                                </p>
+                                                <p>
+                                                    - 목적 : 문의처리를 위한
+                                                    본인확인<br />
+                                                    - 항목 : 성명, 연락처<br />
+                                                    - 보유기간 : 문의처리
+                                                    완료시까지
+                                                </p>
+                                                <ul class="list-type">
+                                                    <li>
+                                                        상담문의 처리를 위해
+                                                        필요한 최소한의
+                                                        개인정보이므로 동의해
+                                                        주셔야 상담답변이
+                                                        가능합니다.
+                                                    </li>
+                                                    <li>
+                                                        동의안함을 선택할 경우,
+                                                        상담/문의게시판 이용이
+                                                        제한됩니다.
+                                                    </li>
+                                                </ul>
+                                                <div class="box-type2">
+                                                    <div class="chk-box">
+                                                        <input
+                                                            type="checkbox"
+                                                            id="check02"
+                                                        />
+                                                        <label
+                                                            class="checkbox"
+                                                            for="check02"
+                                                        ></label>
+                                                        <label for="check02"
+                                                            ><strong
+                                                                >개인정보 수집에
+                                                                동의합니다.</strong
+                                                            ></label
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <!-- 버튼 -->
+                                        <div class="btn-wrap">
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="btn-type disabled"
+                                                id="procBtn"
+                                                >후기 작성하기</a
+                                            >
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </section>
+                        <section class="content-box" id="view-my-review">
+                            <div class="divider--type7"></div>
+                            <ul class="review-item-wrap" id="listReviewHtml">
+                                <li class="review-item">
+                                    <div
+                                        class="review-top justify-start-between mb-0"
+                                    >
+                                        <div class="box mr-2">
+                                            <div class="star-grade">
+                                                <span
+                                                    class="star"
+                                                    style="width: 60%"
+                                                    >60%</span
+                                                >
+                                            </div>
+                                            <div class="info">
+                                                <span class="name">강*중</span>
+                                                <span class="date"
+                                                    >2023.07.22</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review-description">
+                                        <div>
+                                            <div class="content">
+                                                <a href="javascript:void(0)">
+                                                    <p class="pc-only">
+                                                        요금제 정말 마음에
+                                                        듭니다.<br />타사
+                                                        요금제까지 비교해봤는데
+                                                        이런 요금제는 그 어떤
+                                                        통신사도 제공하지
+                                                        않더군요.
+                                                        <span class="text-more"
+                                                            >더보기</span
+                                                        >
+                                                    </p>
+                                                </a>
+
+                                                <div class="details">
+                                                    <div
+                                                        class="layout-rc width-100"
+                                                    >
+                                                        <span
+                                                            class="flag-type status-light"
+                                                            >라이트</span
+                                                        >
+
+                                                        <p
+                                                            class="f2-h4-16--body2 f-bold ml-10-0 mt-0-5"
+                                                        >
+                                                            박명수 기사님
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pc-only mt-3">
+                                                <div
+                                                    class="photo"
+                                                    id="photoThumb100002848"
+                                                >
+                                                    <div class="icon-photo">
+                                                        <img
+                                                            src="https://i3n.news1.kr/system/photos/2022/4/7/5306119/high.jpg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="review-item">
+                                    <div
+                                        class="review-top justify-start-between mb-0"
+                                    >
+                                        <div class="box mr-2">
+                                            <div class="star-grade">
+                                                <span
+                                                    class="star"
+                                                    style="width: 80%"
+                                                    >80%</span
+                                                >
+                                            </div>
+                                            <div class="info">
+                                                <span class="name">강*중</span>
+                                                <span class="date"
+                                                    >2023.08.22</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review-description">
+                                        <div>
+                                            <div class="content">
+                                                <a href="javascript:void(0)">
+                                                    <p class="pc-only">
+                                                        덩실덩실
+                                                        <span class="text-more"
+                                                            >더보기</span
+                                                        >
+                                                    </p>
+                                                </a>
+
+                                                <div class="details">
+                                                    <div
+                                                        class="layout-rc width-100"
+                                                    >
+                                                        <span
+                                                            class="flag-type status-light"
+                                                            >라이트</span
+                                                        >
+
+                                                        <p
+                                                            class="f2-h4-16--body2 f-bold ml-10-0 mt-0-5"
+                                                        >
+                                                            박명수 기사님
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pc-only mt-3">
+                                                <div
+                                                    class="photo"
+                                                    id="photoThumb100002848"
+                                                >
+                                                    <div class="icon-photo">
+                                                        <img
+                                                            src="https://i3n.news1.kr/system/photos/2022/4/7/5306119/high.jpg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <aside id="quick" class="quick up" style="bottom: 20px">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="btn-top">
+                        <i class="ico-top"></i>
+                        <span class="hidden">상단으로 이동</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </body>
+    <script src="../static/js/review-writing.js"></script>
+</html>

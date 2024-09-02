@@ -249,3 +249,51 @@ document.addEventListener("DOMContentLoaded", function () {
     // 페이지 로드 시 모달 열기
     openModal();
 });
+
+// 기사 선택
+const photoItems = document.querySelectorAll(".photo-item");
+
+if (photoItems) {
+    photoItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            // 다른 항목에서 'selected' 클래스를 제거
+            photoItems.forEach((photo) => {
+                photo.classList.remove("selected");
+            });
+
+            // 클릭된 항목에 'selected' 클래스 추가
+            item.classList.add("selected");
+        });
+    });
+}
+
+// 탭 클릭 시 동작할 코드
+const tabs = document.querySelectorAll(".tab-type li");
+const writeSection = document.querySelector("section.content-box#write");
+const reviewSection = document.querySelector(
+    "section.content-box#view-my-review"
+);
+
+// 탭을 클릭했을 때 동작할 함수
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        // 모든 탭에서 active 클래스 제거
+        tabs.forEach((t) => t.classList.remove("active"));
+
+        // 클릭된 탭에 active 클래스 추가
+        tab.classList.add("active");
+
+        // 후기 작성 탭 클릭 시
+        if (tab.querySelector(".choice").textContent.trim() === "후기작성") {
+            writeSection.style.display = "block";
+            reviewSection.style.display = "none";
+        }
+        // 나의 후기내역 탭 클릭 시
+        else if (
+            tab.querySelector(".choice").textContent.trim() === "나의 후기내역"
+        ) {
+            writeSection.style.display = "none";
+            reviewSection.style.display = "block";
+        }
+    });
+});
