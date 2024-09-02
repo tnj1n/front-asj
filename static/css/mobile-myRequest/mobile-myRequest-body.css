@@ -362,7 +362,114 @@ body::-webkit-scrollbar {
         #fff 31%
     );
 } */
+/* 지역 선택 */
 
+.container .form-flex-wrap2 {
+    margin-top: 30px;
+}
+.container .form-flex-wrap2 .select-type2 {
+    display: inline-block;
+    width: calc(50% - 5px);
+}
+.select-type,
+.select-type2 {
+    position: relative;
+    width: 100%;
+}
+.select-type2 .nice-select {
+    background: #f4f4f4;
+    font-size: 15px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 12px;
+}
+.select-type2 .nice-select .option.focus,
+.select-type2 .nice-select .option.selected.focus,
+.select-type2 .selected + .nice-select .current,
+.select-type2.disabled select,
+.select-type2.is-invalid .nice-select .current,
+.select-type2.selected select {
+    color: #111;
+}
+
+.nice-select .option.disabled {
+    background-color: transparent;
+    color: #999;
+    cursor: default;
+}
+.nice-select .option {
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 34px;
+    list-style: none;
+    min-height: 34px;
+    outline: none;
+    padding: 0 20px;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.select-type2 .nice-select:after {
+    width: 20px;
+    height: 20px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow8.svg);
+}
+.nice-select:after {
+    content: "";
+    display: block;
+    margin-top: -8px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+.select-type2 .nice-select:after {
+    width: 20px;
+    height: 20px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow8.svg);
+}
+.nice-select.open:after {
+    transform: rotate(-180deg);
+}
+.nice-select:after {
+    content: "";
+    display: block;
+    margin-top: -8px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+/*  */
+.container .form-flex-wrap2 .select-type2 + .select-type2 {
+    margin-left: 6px;
+}
+
+.select-type2 .nice-select.open {
+    background-color: #ffebe8;
+    border-color: #ff8c79;
+}
+
+.select-type2 .nice-select.open .list {
+    transform: translateY(8px);
+    max-height: 240px;
+    padding: 10px 0;
+    z-index: 11;
+}
+.select-type2 .nice-select .list {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #e3e3e3;
+}
+
+.nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+}
 /* 총 */
 .mt-40-35 {
     margin-top: 20px !important;
@@ -636,6 +743,18 @@ strong {
     font-weight: 600;
 }
 .status-light {
+    background-color: #664af1;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.status-standard {
+    background-color: #ec464d;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.status-premium {
     background-color: #f251ab;
     margin-right: 4px;
     color: #fff;
