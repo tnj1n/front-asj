@@ -1,21 +1,42 @@
 const selectDivs = document.querySelectorAll(".nice-select");
 const selectLists = document.querySelectorAll(".list > li");
 const selectButtons = document.querySelectorAll(".tab-type li");
+const pickupYet = document.querySelector(".pickupYet");
+const pickedup = document.querySelector(".pickedup");
+// 목록이 존재하지 않을 때 나와야 하는 div
+const noData = document.querySelector(".nodata-box");
 console.log(selectButtons);
+console.log(pickupYet);
 
+//탭이 기본적으로 활성화되어 있기 때문에 #no-data-use 숨김
+noData.style.display = "none";
+
+// 수거 예정/ 수거 완료 버튼
 selectButtons.forEach((selectButton) => {
-    console.log(selectButton);
+    // console.log(selectButton);
     selectButton.addEventListener("click", (e) => {
-        console.log(e.target);
+        // console.log(e.target);
 
         selectButtons.forEach((selectButton) => {
             // console.log(selectButton);
             selectButton.classList.remove("active");
         });
         selectButton.classList.add("active");
+
+        if (selectButtons[0].classList.contains("active")) {
+            if (pickupYet) {
+                pickupYet.style.display = "block";
+                pickedup.style.display = "none";
+            } else {
+                noData.style.display = "block";
+            }
+        } else {
+            pickupYet.style.display = "none";
+            pickedup.style.display = "block";
+        }
     });
 });
-// 지역 선택 큰 div
+// 정렬 순서 버튼
 selectDivs.forEach((selectDiv) => {
     selectDiv.addEventListener("click", (e) => {
         const target = e.target;
@@ -29,33 +50,9 @@ selectDivs.forEach((selectDiv) => {
         }
     });
 });
-// 지역 선택 세부 div
-// .option.focus : 주황색으로 폰트 바뀜
-// .nice-select .option.disabled : 회색으로 바뀜
-// .select-type2.disabled select : 검은색으로 선택됨
-selectLists.forEach((selectList) => {
-    selectList.addEventListener("click", (e) => {
-        const target = e.target;
 
-        if (target.classList.contains("disabled")) {
-            return; // 비활성화된 항목 클릭 시 아무 동작도 하지 않음
-        }
-
-        // `focus` 클래스 처리
-        selectLists.forEach((item) => {
-            item.classList.remove("focus");
-        });
-        target.classList.add("focus");
-
-        // `selected` 클래스 처리
-        selectLists.forEach((item) => {
-            item.classList.remove("selected");
-        });
-        target.classList.add("selected");
-
-        // `nice-select`의 선택된 옵션 업데이트
-        const parentDiv = target.closest(".nice-select");
-        const selectedOption = parentDiv.querySelector(".selected-option");
-        selectedOption.textContent = target.textContent;
-    });
-});
+// if (pickupYet) {
+//     noData.style.display = "none";
+// } else {
+//     pickupYet.style.display = "block";
+// }

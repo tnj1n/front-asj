@@ -11,14 +11,17 @@ const districtSelectDiv = document.querySelector(
 
 // 시/군/구 드롭다운의 옵션 리스트
 const districtOptions = districtSelectDiv.querySelectorAll(".list > li");
+// 전체 드롭다운 옵션 리스트
 const overallSelectLists = overallSelectDiv.querySelectorAll(".list > li");
+const tagList = document.querySelector("#listTagHtml");
 
 // const selectLists = document.querySelectorAll(".list > li");
 // const selectedLists = document.querySelectorAll("#listTagHtml > li");
 // const parentList = document.querySelectorAll("#listTagHtml");
-console.log(overallSelectDiv);
-console.log(districtSelectDiv);
-console.log(districtOptions);
+
+// console.log(overallSelectDiv);
+// console.log(districtSelectDiv);
+// console.log(districtOptions);
 
 // 지역 선택 div 클릭 시 드롭다운 열고 닫기
 selectDivs.forEach((selectDiv) => {
@@ -93,6 +96,8 @@ overallSelectLists.forEach((option) => {
                             districtSelectDiv.querySelector(".option.selected");
                         districtSelectDiv.querySelector(".current").innerText =
                             selectedDistrictOption.innerText;
+                        // 선택 후 드롭다운 닫기
+                        overallSelectDiv.classList.remove("open");
 
                         // 선택된 태그를 업데이트
                         const tagId = `tag_${selectedDistrictOption.dataset.value}`;
@@ -104,22 +109,23 @@ overallSelectLists.forEach((option) => {
                         }
 
                         // 새로운 태그를 추가
-                        const newTag = document.createElement("li");
-                        newTag.id = tagId;
-                        newTag.className = "tagVal";
-                        newTag.innerHTML = `<a href="#">${selectedDistrictOption.innerText}</a>`;
-                        document
-                            .querySelector("#listTagHtml")
-                            .appendChild(newTag);
+                        text = `<li id="tag_66" class="tagVal"><a>${selectedDistrictOption.innerText}</a></li>`;
+                        // console.log(selectedOption);
+                        // console.log(tagList);
+                        tagList.innerHTML += text;
+                        // selectedDistrictOption.classList.add("disabled");
+                        console.log(selectedDistrictOption);
+                        districtSelectDiv
+                            .querySelectorAll(".list > li:not(.disabled)")
+                            .forEach((item) => {
+                                item.classList.add("disabled");
+                            });
 
                         // 선택 후 드롭다운 닫기
                         districtSelectDiv.classList.remove("open");
                     }
                 });
             });
-
-            // 선택 후 드롭다운 닫기
-            overallSelectDiv.classList.remove("open");
         }
     });
 });
@@ -183,3 +189,10 @@ overallSelectLists.forEach((option) => {
 //         // selectDivs[0].innerText = selectedOption.innerText;
 //     });
 // });
+
+// const newTag = document.createElement("li");
+// newTag.id = tagId;
+// newTag.className = "tagVal";
+// newTag.innerHTML = `<a href="#">${selectedDistrictOption.innerText}</a>`;
+// // 돔트리로 닫기
+// tagList.appendChild(newTag);

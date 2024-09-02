@@ -34,10 +34,10 @@
                         <div class="tab-wrap">
                             <ul class="tab-type js_tab">
                                 <li class="active">
-                                    <a>상담문의</a>
+                                    <a>수거 예정</a>
                                 </li>
                                 <li>
-                                    <a>나의 상담내역</a>
+                                    <a>수거 완료</a>
                                 </li>
                             </ul>
                         </div>
@@ -84,7 +84,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="promotion-area">
+                        <div
+                            class="promotion-area pickupYet"
+                            style="display: block"
+                        >
                             <!-- 수거 요청 목록 레이아웃 -->
                             <section class="contet-box">
                                 <div class="allRequest">
@@ -106,7 +109,7 @@
                                                             >강남구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거 예정</span
                                                         >
                                                     </div>
                                                 </div>
@@ -140,7 +143,7 @@
                                                             >송파구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거 예정</span
                                                         >
                                                     </div>
                                                 </div>
@@ -171,7 +174,7 @@
                                                             >서대문구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거 예정</span
                                                         >
                                                     </div>
                                                 </div>
@@ -205,7 +208,7 @@
                                                             >강남구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거 예정</span
                                                         >
                                                     </div>
                                                 </div>
@@ -239,7 +242,7 @@
                                                             >마포구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거 예정</span
                                                         >
                                                     </div>
                                                 </div>
@@ -267,6 +270,201 @@
                             <div class="btn-wrap">
                                 <a class="btn-type3">더보기</a>
                             </div>
+                        </div>
+                        <!-- 수거 완료 목록 -->
+                        <div
+                            class="promotion-area pickedup"
+                            style="display: none"
+                        >
+                            <!-- 수거 요청 목록 레이아웃 -->
+                            <section class="contet-box">
+                                <div class="allRequest">
+                                    <!-- 총 -->
+                                    <ul class="board-type5">
+                                        <div id="requestAllList">
+                                            <li class="requestList1">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-light"
+                                                    >
+                                                        라이트
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >강남구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거 완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList2">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-premium"
+                                                    >
+                                                        프리미엄
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >송파구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거 완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 송파구
+                                                            올림픽로 25
+                                                        </p>
+                                                        <span>5번 출구</span>
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList3">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-standard"
+                                                    >
+                                                        스탠다드
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >서대문구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거 완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList4">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-standard"
+                                                    >
+                                                        스탠다드
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >강남구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거 완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList5">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-light"
+                                                    >
+                                                        라이트
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >마포구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거 완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 마포구
+                                                            동교로 247
+                                                        </p>
+                                                        <span
+                                                            >1층
+                                                            랜디스도넛</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <ul class="board-type5"></ul>
+                            </section>
+                            <!-- 수거 요청 목록 레이아웃 -->
+                            <div class="btn-wrap">
+                                <a class="btn-type3">더보기</a>
+                            </div>
+                        </div>
+                        <!-- 요청 목록이 없을 시 -->
+                        <div class="nodata-box v2" id="no-data" style="">
+                            <div class="icon-box">
+                                <i class="ico-empty"></i>
+                            </div>
+                            <p>찜한 상품이 없습니다.</p>
                         </div>
                     </article>
                 </main>
