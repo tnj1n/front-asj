@@ -38,25 +38,28 @@ document.querySelectorAll("ul.depth > li > a").forEach(function (anchor) {
     });
 });
 
-document.querySelectorAll("ul.tab-type > li").forEach(function (tab) {
-    tab.addEventListener("click", function () {
-        // 현재 active 상태의 탭에서 active 클래스 제거
-        document
-            .querySelector("ul.tab-type > li.active")
-            .classList.remove("active");
+const liItems = document.querySelectorAll("ul.tab-type > li");
+const tabContents = document.querySelectorAll(".tab-content");
 
-        // 클릭된 탭에 active 클래스 추가
-        tab.classList.add("active");
+liItems.forEach((liItem) => {
+    const addPoint = liItem.querySelector("a");
+    const targetId = addPoint.getAttribute("data-target");
 
-        // 모든 tab-content 숨기기
-        document
-            .querySelectorAll(".tab-type2.js_tab")
-            .forEach(function (content) {
-                content.style.display = "none";
-            });
+    addPoint.addEventListener("click", () => {
+        // 모든 li에서 active 클래스 제거
+        liItems.forEach((item) => {
+            item.classList.remove("active");
+        });
 
-        // 클릭된 탭과 관련된 tab-content 보이기
-        let targetId = tab.getAttribute("data-target");
+        // 현재 클릭된 li에 active 클래스 추가
+        liItem.classList.add("active");
+
+        // 모든 탭 내용을 숨김
+        tabContents.forEach((content) => {
+            content.style.display = "none";
+        });
+
+        // 클릭된 탭의 데이터를 표시
         document.getElementById(targetId).style.display = "block";
     });
 });
