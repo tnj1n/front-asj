@@ -84,7 +84,35 @@
     font-display: swap;
     src: local("Pretendard Thin"),url(./fonts/Pretendard-Thin.woff2)format("woff2"),url(./fonts/Pretendard-Thin.woff)format("woff")
 }
+/* 스크롤 바************************************************************* */
 
+#wrap::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 2px;
+}
+#wrap::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #3f4970;
+    border-radius: 8px;
+}
+#wrap::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+
+  .select-type2 .nice-select .list::-webkit-scrollbar {
+    display: block;
+    width: 20px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-thumb {
+    background-color: #8a93b4;
+    border: 7px solid #fff;
+    border-radius: 12px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+/* *********************************************************************** */
 body {
     font-size: 16px;
     line-height: 1.25;

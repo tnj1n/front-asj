@@ -44,59 +44,65 @@ const usePointSection = document.querySelector("#use-point");
 const noDataSaving = document.querySelector("#no-data-saving");
 const noDataUse = document.querySelector("#no-data-use");
 
-// 페이지 로드 시 초기 상태 설정
-const initialHasUsePoints = usePointSection.querySelector("li");
-const initialHasSavingPoints = savingPointSection.querySelector("li");
+const tabs = document.querySelectorAll(".tab-type li");
+const writeSection = document.getElementById("write");
+const reviewSection = document.getElementById("view-my-review");
 
-// 적립 포인트 탭이 기본적으로 활성화되어 있기 때문에 #no-data-use 숨김
-noDataUse.style.display = "none";
-
-if (initialHasSavingPoints) {
-    noDataSaving.style.display = "none";
-} else {
-    noDataSaving.style.display = "block";
-}
-
+// 탭 클릭 시 적립 포인트 및 사용 포인트 섹션을 전환하는 기능
 liItems.forEach((liItem) => {
-    const addPoint = liItem.querySelector("a");
-    const targetId = addPoint.getAttribute("id");
+    // 탭 내의 링크 요소를 선택하고, ID 값을 가져옴
+    const linkElement = liItem.querySelector("a");
+    const targetId = linkElement.getAttribute("id");
 
-    addPoint.addEventListener("click", () => {
-        // 모든 li에서 active 클래스 제거
+    linkElement.addEventListener("click", () => {
+        // 모든 탭에서 active 클래스를 제거
         liItems.forEach((item) => {
             item.classList.remove("active");
         });
 
-        // 현재 클릭된 li에 active 클래스 추가
+        // 현재 클릭된 탭에 active 클래스 추가
         liItem.classList.add("active");
 
-        // 포인트 섹션 및 nodata-box 상태 업데이트
+        // 선택된 탭의 ID에 따라 섹션 및 no-data 박스를 업데이트
         if (targetId === "total-favorite") {
+            // 적립 포인트 섹션을 보여주고, 사용 포인트 섹션은 숨김
             savingPointSection.style.display = "block";
             usePointSection.style.display = "none";
-            noDataUse.style.display = "none"; // noDataUse 숨기기
+            noDataUse.style.display = "none"; // noDataUse는 숨김
 
-            // 적립 포인트 확인
+            // 적립 포인트가 있는지 확인하고, 없으면 noDataSaving을 보여줌
             const hasSavingPoints = savingPointSection.querySelector("li");
-            if (hasSavingPoints) {
-                noDataSaving.style.display = "none";
-            } else {
-                noDataSaving.style.display = "block";
-            }
+            noDataSaving.style.display = hasSavingPoints ? "none" : "block";
         } else if (targetId === "total-viewed") {
+            // 사용 포인트 섹션을 보여주고, 적립 포인트 섹션은 숨김
             savingPointSection.style.display = "none";
             usePointSection.style.display = "block";
 
-            // 사용 포인트 확인
+            // 사용 포인트가 있는지 확인하고, 없으면 noDataUse를 보여줌
             const hasUsePoints = usePointSection.querySelector("li");
-            if (hasUsePoints) {
-                noDataUse.style.display = "none";
-            } else {
-                noDataUse.style.display = "block";
-            }
+            noDataUse.style.display = hasUsePoints ? "none" : "block";
 
-            // 적립 포인트 관련 no-data-saving를 기본적으로 숨김
+            // 적립 포인트 관련 no-data-saving은 기본적으로 숨김
             noDataSaving.style.display = "none";
+        }
+    });
+});
+
+// 탭 클릭 시 후기 작성 및 나의 후기내역 섹션을 전환하는 기능
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        // 모든 탭에서 active 클래스를 제거
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // 탭의 텍스트 내용을 기반으로 섹션 전환
+        const tabText = tab.textContent.trim();
+        if (tabText === "후기작성") {
+            writeSection.style.display = "block";
+            reviewSection.style.display = "none";
+        } else if (tabText === "나의 후기내역") {
+            writeSection.style.display = "none";
+            reviewSection.style.display = "block";
         }
     });
 });

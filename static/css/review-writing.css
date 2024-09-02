@@ -1730,3 +1730,34 @@ img {
     max-width: 852px;
         margin: 0 auto;
 }
+
+/* 기본적으로 나의 후기내역 섹션 숨기기 */
+#view-my-review {
+    display: none;
+}
+#no-data-review{
+    display: none;
+}
+
+.nodata-box.v2, .v2.nodata-box-brd {
+    margin-top: 120px;
+}
+
+.nodata-box, .nodata-box-brd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ico-empty {
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/empty.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

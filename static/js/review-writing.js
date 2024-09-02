@@ -267,33 +267,55 @@ if (photoItems) {
     });
 }
 
-// 탭 클릭 시 동작할 코드
+// 탭 요소들을 선택하여 변수 tabs에 저장
 const tabs = document.querySelectorAll(".tab-type li");
-const writeSection = document.querySelector("section.content-box#write");
-const reviewSection = document.querySelector(
-    "section.content-box#view-my-review"
-);
 
-// 탭을 클릭했을 때 동작할 함수
+// 후기 작성 섹션과 나의 후기 내역 섹션을 각각 선택하여 변수에 저장
+const writeSection = document.getElementById("write");
+const reviewSection = document.getElementById("view-my-review");
+const noDataReview = document.getElementById("no-data-review");
+
+// 각 탭에 대해 클릭 이벤트를 추가
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-        // 모든 탭에서 active 클래스 제거
+        // 모든 탭에서 'active' 클래스를 제거
         tabs.forEach((t) => t.classList.remove("active"));
 
-        // 클릭된 탭에 active 클래스 추가
+        // 클릭된 탭에 'active' 클래스를 추가
         tab.classList.add("active");
 
-        // 후기 작성 탭 클릭 시
-        if (tab.querySelector(".choice").textContent.trim() === "후기작성") {
+        // 현재 클릭된 탭의 텍스트 내용을 얻어서 "후기작성" 또는 "나의 후기내역" 부분을 추출
+        const tabText = tab.textContent.slice(
+            // "후기작성"이라는 텍스트가 있으면 그 위치를 indexOf로 찾아 시작 위치를 설정
+            tab.textContent.indexOf("후기작성") !== -1
+                ? tab.textContent.indexOf("후기작성")
+                : // 그렇지 않으면 "나의 후기내역" 텍스트의 위치를 찾아 시작 위치로 설정
+                  tab.textContent.indexOf("나의 후기내역"),
+            // "후기작성" 텍스트가 있을 때는 그 끝 위치까지 슬라이스, 없으면 "나의 후기내역" 텍스트를 슬라이스
+            tab.textContent.indexOf("후기작성") !== -1
+                ? tab.textContent.indexOf("후기작성") + "후기작성".length
+                : tab.textContent.indexOf("나의 후기내역") +
+                      "나의 후기내역".length
+        );
+
+        // 추출한 텍스트가 "후기작성"이면 후기 작성 섹션을 보이게 하고, 나의 후기 내역 섹션은 숨김
+        if (tabText === "후기작성") {
             writeSection.style.display = "block";
             reviewSection.style.display = "none";
+            noDataReview.style.display = "none"; // 후기 작성 탭에서는 #no-data-review를 숨김
         }
-        // 나의 후기내역 탭 클릭 시
-        else if (
-            tab.querySelector(".choice").textContent.trim() === "나의 후기내역"
-        ) {
+        // 추출한 텍스트가 "나의 후기내역"이면 나의 후기 내역 섹션을 보이게 하고, 후기 작성 섹션은 숨김
+        else if (tabText === "나의 후기내역") {
             writeSection.style.display = "none";
             reviewSection.style.display = "block";
+
+            // review-item이 있는지 확인하여 #no-data-review 표시 여부 결정
+            const hasReviewItems = reviewSection.querySelector(".review-item");
+            if (hasReviewItems) {
+                noDataReview.style.display = "none";
+            } else {
+                noDataReview.style.display = "block";
+            }
         }
     });
 });
