@@ -605,6 +605,18 @@ strong {
     font-weight: 600;
 }
 .status-light {
+    background-color: #664af1;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.status-standard {
+    background-color: #ec464d;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.status-premium {
     background-color: #f251ab;
     margin-right: 4px;
     color: #fff;
