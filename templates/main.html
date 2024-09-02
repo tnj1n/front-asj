@@ -269,7 +269,7 @@
                                     <a
                                         href="javascript:void(0)"
                                         class="btn-type6"
-                                        >수거 요청</a
+                                        >수거요청</a
                                     >
                                 </li>
 
@@ -282,7 +282,7 @@
                                     <a
                                         href="javascript:void(0)"
                                         class="btn-type6"
-                                        >수거 완료</a
+                                        >수거완료</a
                                     >
                                 </li>
                             </ul>
@@ -337,7 +337,7 @@
                                                             >강남구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거완료</span
                                                         >
                                                     </div>
                                                 </div>
@@ -371,7 +371,7 @@
                                                             >송파구</span
                                                         >
                                                         <span class="tag-type2"
-                                                            >수거요청</span
+                                                            >수거완료</span
                                                         >
                                                     </div>
                                                 </div>
@@ -1154,5 +1154,92 @@
             </div>
         </div>
     </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const banner = document.querySelector(".banner");
+            console.log("Banner element:", banner);
+            if (banner) {
+                banner.style.transition = "transform 0.5s ease";
+            } else {
+                console.error("Banner element not found");
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const banner = document.querySelector(".banner");
+            const banners = document.querySelectorAll(".banner-inner");
+            const leftArrow = document.querySelector(".arrows.left");
+            const rightArrow = document.querySelector(".arrows.right");
+            const buttons = document.querySelectorAll(".buttons button");
+
+            let currentIndex = 0;
+            const bannerCount = banners.length;
+            const bannerWidth = 520; // 각 배너의 너비와 동일해야 합니다.
+            const autoSlideInterval = 2000; // 2초마다 자동 슬라이드
+            let slideInterval;
+
+            // 배너 위치를 업데이트하는 함수
+            function updateBannerPosition() {
+                banner.style.transition = "transform 0.5s ease";
+                banner.style.transform = `translateX(${
+                    -currentIndex * bannerWidth
+                }px)`;
+                updateButtons();
+            }
+
+            // 현재 활성화된 버튼을 업데이트하는 함수
+            function updateButtons() {
+                buttons.forEach((button, index) => {
+                    button.style.backgroundColor =
+                        index === currentIndex ? "#000" : "#fff";
+                });
+            }
+
+            // 슬라이드 재설정 함수
+            function resetSlideInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(autoSlide, autoSlideInterval);
+            }
+
+            // 왼쪽 화살표 클릭 이벤트
+            leftArrow.addEventListener("click", () => {
+                currentIndex =
+                    currentIndex > 0 ? currentIndex - 1 : bannerCount - 1;
+                updateBannerPosition();
+                resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
+            });
+
+            // 오른쪽 화살표 클릭 이벤트
+            rightArrow.addEventListener("click", () => {
+                currentIndex =
+                    currentIndex < bannerCount - 1 ? currentIndex + 1 : 0;
+                updateBannerPosition();
+                resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
+            });
+
+            // 하단 버튼 클릭 이벤트
+            buttons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    currentIndex = index;
+                    updateBannerPosition();
+                    resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
+                });
+            });
+
+            // 자동 슬라이드 함수
+            function autoSlide() {
+                currentIndex = (currentIndex + 1) % bannerCount;
+                updateBannerPosition();
+            }
+
+            // 초기 2초마다 자동으로 슬라이드 시작
+            slideInterval = setInterval(autoSlide, autoSlideInterval);
+
+            // 초기 상태에서 버튼 색상 업데이트
+            updateButtons();
+        });
+    </script>
+
     <script src="../static/js/main.js"></script>
 </html>

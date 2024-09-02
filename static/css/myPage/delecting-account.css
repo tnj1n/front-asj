@@ -681,3 +681,25 @@ ul.depth2 {
     overflow: hidden;
     transition: 0.2s ease-out; /* 스르륵 열리는 애니메이션 */
 }
+
+.nice-select .list {
+    background-color: #fff;
+    border: 1px solid #efefef;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    box-sizing: content-box;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    transform-origin: 50% 0;
+    -ms-transform: translateY(-21px);
+    transform: translateY(-21px);
+    transition: all .2s cubic-bezier(.5,0,0,1.25), opacity .15s ease-out;
+    z-index: 9;
+    width: 100%;
+    overflow-y: auto;
+    font-weight: 600;
+}

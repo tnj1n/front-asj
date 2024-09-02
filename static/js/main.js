@@ -42,148 +42,126 @@ document.addEventListener("DOMContentLoaded", function () {
     handleSlideClick(planList);
 });
 
-// ******** 요금제 슬라이드 *******
-const slides = document.querySelector(".slick-initialized slick-slider");
-const slideContent = document.querySelectorAll(
-    ".slick-initialized slick-slider li"
-);
+document.addEventListener("DOMContentLoaded", () => {
+    const planFilterButtons = document.querySelectorAll(
+        "#swiper-wrapper-12770ed6d1dde369 .swiper-slide"
+    );
+    const planItems = document.querySelectorAll(".plan-item");
 
-let currentIdx = 0; //현재 슬라이드 index
-const slideCount = slideContent.length; //슬라이드 개수
-const prev = document.querySelector(".slick-prev slick-arrow"); //이전 버튼
-const next = document.querySelector(".slick-next slick-arrow"); //다음 버튼
-const slideWidth = 350; //슬라이드 하나의 가로 너비
-const slideMargin = 18; //슬라이드 간 사이의 margin
+    planFilterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.textContent.trim(); // 버튼 텍스트를 기준으로 필터 결정
 
-slides.style.width = (slideWidth + slideMargin) * slideCount + "px";
+            planItems.forEach((item) => {
+                const carrier = item
+                    .querySelector(".flag-type")
+                    .textContent.trim(); // plan-item 내의 통신사 정보
+                if (filter === "전체" || carrier === filter) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
 
-function moveSlide(num) {
-    slides.style.left = -num * 368 + "px";
-    currentIdx = num;
-}
-
-prev.addEventListener("click", function () {
-    if (currentIdx !== 0) moveSlide(currentIdx - 1);
+            // 모든 버튼에서 active 클래스 제거하고, 클릭된 버튼에 추가
+            planFilterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+        });
+    });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const requestFilterButtons = document.querySelectorAll(
+        "#promotion-tags-container .swiper-slide"
+    );
+    const requestItems = document.querySelectorAll(
+        ".allRequest .requestList1, .allRequest .requestList2, .allRequest .requestList3, .allRequest .requestList4, .allRequest .requestList5"
+    );
 
-next.addEventListener("click", function () {
-    if (currentIdx !== slideCount - 1) {
-        moveSlide(currentIdx + 1);
-    }
-});
+    requestFilterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.textContent.trim(); // 버튼 텍스트를 기준으로 필터 결정
 
-// ********* 배너 **********
-const arrows = document.querySelectorAll("div.arrows");
-const firstBanner = document.createElement("div.banner-inner");
-const lastBanner = document.createElement("div.banner-inner");
-const banner = document.querySelector("div.banner");
-const buttons = document.querySelectorAll("div.buttons button");
+            requestItems.forEach((item) => {
+                const tags = item.querySelectorAll(".tag-box .tag-type2");
+                let matched = false;
 
-let tempButton = buttons[0];
-let autoSlideInterval = null;
-let count = 1;
-let arrowCheck = true;
-let buttonCheck = true;
+                tags.forEach((tag) => {
+                    if (
+                        filter === "전체" ||
+                        tag.textContent.trim() === filter
+                    ) {
+                        matched = true;
+                    }
+                });
 
-tempButton.style.backgroundColor = "black";
+                if (matched) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
 
-firstBanner.innerHTML = document.querySelector(".inner1");
-banner.appendChild(firstBanner);
-
-lastBanner.innerHTML = document.querySelector(".inner6");
-banner.prepend(lastBanner);
-
-banner.style.transform = `translate(-520px)`;
-
-const autoSlide = () => {
-    count++;
-    banner.style.transition = `transform 0.5s`;
-    banner.style.transform = `translate(-${520 * count}px)`;
-    if (count == 7) {
-        setTimeout(() => {
-            banner.style.transition = `transform 0s`;
-            banner.style.transform = `translate(-520px)`;
-        }, 500);
-        count = 1;
-    }
-
-    tempButton.style.backgroundColor = "white";
-    buttons[count - 1].style.backgroundColor = "black";
-    tempButton = buttons[count - 1];
-};
-
-autoSlideInterval = setInterval(autoSlide, 1000);
-
-arrows.forEach((arrow) => {
-    arrow.addEventListener("click", (e) => {
-        if (!arrowCheck) {
-            return;
-        }
-        arrowCheck = false;
-        clearInterval(autoSlideInterval);
-
-        let arrowType = e.target.classList[1];
-
-        if (arrowType === "left") {
-            count--;
-            banner.style.transition = `transform 0.5s`;
-            banner.style.transform = `translate(-${520 * count}px)`;
-
-            if (count == 0) {
-                setTimeout(() => {
-                    banner.style.transition = `transform 0s`;
-                    banner.style.transform = `translate(-3120px)`;
-                }, 500);
-
-                count = 6;
-            }
-        } else {
-            count++;
-
-            banner.style.transition = `transform 0.5s`;
-            banner.style.transform = `translate(-${520 * count}px)`;
-
-            if (count == 7) {
-                setTimeout(() => {
-                    banner.style.transition = `transform 0s`;
-                    banner.style.transform = `translate(-520px)`;
-                }, 500);
-
-                count = 1;
-            }
-        }
-
-        tempButton.style.backgroundColor = "white";
-        buttons[count - 1].style.backgroundColor = "black";
-        tempButton = buttons[count - 1];
-
-        autoSlideInterval = setInterval(autoSlide, 1000);
-
-        setTimeout(() => {
-            arrowCheck = true;
-        }, 500);
+            // 모든 버튼에서 active 클래스 제거하고, 클릭된 버튼에 추가
+            requestFilterButtons.forEach((btn) =>
+                btn.classList.remove("active")
+            );
+            button.classList.add("active");
+        });
     });
 });
 
-buttons.forEach((button, i) => {
-    button.addEventListener("click", (e) => {
-        if (!buttonCheck) {
-            return;
+// ******** 요금제 슬라이드 *******
+
+document.addEventListener("DOMContentLoaded", () => {
+    const planList = document.querySelector(".slick-track");
+    const leftArrow = document.querySelector(".slick-prev.slick-arrow");
+    const rightArrow = document.querySelector(".slick-next.slick-arrow");
+    const planItems = document.querySelectorAll(".plan-item");
+
+    let currentIndex = 0;
+    const planItemWidth = 350; // 각 plan-item의 너비
+    const planItemMargin = 15; // 각 plan-item의 margin
+    const totalItemWidth = planItemWidth + planItemMargin; // 슬라이드 요소의 전체 너비 (너비 + 마진)
+    const maxIndex = planItems.length - 1;
+
+    // 슬라이드 위치 업데이트
+    function updateSlidePosition() {
+        planList.style.transition = "transform 0.5s ease"; // 부드럽게 이동
+        planList.style.transform = `translateX(${
+            -currentIndex * totalItemWidth
+        }px)`;
+
+        // 왼쪽 버튼 숨김 처리
+        if (currentIndex === 0) {
+            leftArrow.style.display = "none";
+        } else {
+            leftArrow.style.display = "inline-block";
         }
-        clearInterval(autoSlideInterval);
 
-        tempButton.style.backgroundColor = "white";
-        count = i + 1;
+        // 오른쪽 버튼 숨김 처리
+        if (currentIndex === maxIndex) {
+            rightArrow.style.display = "none";
+        } else {
+            rightArrow.style.display = "inline-block";
+        }
+    }
 
-        banner.style.transition = `transform 0.5s`;
-        banner.style.transform = `translate(-${520 * count}px)`;
+    // 초기 버튼 상태 설정
+    updateSlidePosition();
 
-        buttons[i].style.backgroundColor = "black";
-        tempButton = buttons[i];
+    // 오른쪽 화살표 클릭 이벤트
+    rightArrow.addEventListener("click", () => {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateSlidePosition();
+        }
+    });
 
-        autoSlideInterval = setInterval(autoSlide, 1000);
-        setTimeout(() => {
-            buttonCheck = true;
-        }, 500);
+    // 왼쪽 화살표 클릭 이벤트
+    leftArrow.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlidePosition();
+        }
     });
 });
