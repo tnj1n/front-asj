@@ -1761,3 +1761,9 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.button-default, .btn-type, .kakao-plus-event-container .open-url-btn, .btn-type-sm, .btn-type2, .btn-form {
+    max-width: 200px;
+    height: 64px;
+    font-size: 20px;
+}
