@@ -109,3 +109,204 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// 회원 정보 관련 JS
+// 사용자 목록 데이터를 저장하는 변수
+let users = [
+    { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
+];
+
+let editingUserId = null; // 수정 중인 사용자 ID를 저장할 변수
+
+// 전체 선택/해제 기능
+function updateCheckboxes() {
+    const checkboxes = document.querySelectorAll(".userCheckbox");
+    const selectAll = document.getElementById("selectAll");
+
+    selectAll.removeEventListener("change", handleSelectAllChange);
+    selectAll.addEventListener("change", handleSelectAllChange);
+
+    function handleSelectAllChange(e) {
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = e.target.checked;
+        });
+    }
+
+    checkboxes.forEach((checkbox) => {
+        checkbox.removeEventListener("change", handleCheckboxChange);
+        checkbox.addEventListener("change", handleCheckboxChange);
+    });
+
+    function handleCheckboxChange() {
+        const checkedCount = Array.from(checkboxes).filter(
+            (checkbox) => checkbox.checked
+        ).length;
+        selectAll.checked = checkedCount === checkboxes.length;
+    }
+}
+
+// 모달 창 열기
+const modal = document.getElementById("userModal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeBtn = document.getElementsByClassName("closeBtn")[0];
+const modalTitle = document.getElementById("modalTitle");
+const userActionBtn = document.querySelector(".userActionBtn");
+
+openModalBtn.addEventListener("click", function () {
+    editingUserId = null;
+    modalTitle.textContent = "회원 추가";
+    userActionBtn.textContent = "회원 추가";
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("role").value = "";
+    modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// 회원 추가 및 수정 기능 (모달에서)
+document.getElementById("userForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const role = document.getElementById("role").value;
+
+    if (name && email && role) {
+        if (editingUserId === null) {
+            // 회원 추가
+            const id = users.length ? users[users.length - 1].id + 1 : 1;
+            const newUser = { id, name, email, role };
+            users.push(newUser);
+
+            addRowToTable(newUser);
+        } else {
+            // 회원 수정
+            const user = users.find((user) => user.id === editingUserId);
+            if (user) {
+                user.name = name;
+                user.email = email;
+                user.role = role;
+                updateRowInTable(user);
+            }
+        }
+
+        modal.style.display = "none";
+        updateCheckboxes(); // 체크박스 업데이트
+    } else {
+        alert("모든 필드를 입력하세요.");
+    }
+});
+
+function addRowToTable(user) {
+    const newRow = document.createElement("div");
+    newRow.className = "UserTable_row__1Qg9b";
+    newRow.innerHTML = `
+        <div class="UserTable_cell__3kj0K">
+            <input type="checkbox" class="userCheckbox" />
+        </div>
+        <div class="UserTable_cell__3kj0K">${user.id}</div>
+        <div class="UserTable_cell__3kj0K">${user.name}</div>
+        <div class="UserTable_cell__3kj0K">${user.email}</div>
+        <div class="UserTable_cell__3kj0K">${user.role}</div>
+        <div class="UserTable_cell__3kj0K">
+            <button class="editBtn">수정</button>
+        </div>
+    `;
+
+    document.querySelector(".UserTable_container__1JHD1").appendChild(newRow);
+    attachEditEvent(newRow);
+    updateCheckboxes(); // 체크박스 업데이트
+}
+
+function updateRowInTable(user) {
+    const rows = document.querySelectorAll(".UserTable_row__1Qg9b");
+    rows.forEach((row) => {
+        const userId = parseInt(
+            row.querySelector(".UserTable_cell__3kj0K:nth-child(2)").textContent
+        );
+        if (userId === user.id) {
+            row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(3)"
+            ).textContent = user.name;
+            row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(4)"
+            ).textContent = user.email;
+            row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(5)"
+            ).textContent = user.role;
+        }
+    });
+}
+
+// 수정 버튼 클릭 시, 모달 창 열기 및 데이터 채우기
+function attachEditEvent(row) {
+    const editBtn = row.querySelector(".editBtn");
+    if (editBtn) {
+        editBtn.addEventListener("click", function () {
+            const row = this.closest(".UserTable_row__1Qg9b");
+            editingUserId = parseInt(
+                row.querySelector(".UserTable_cell__3kj0K:nth-child(2)")
+                    .textContent
+            );
+            const name = row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(3)"
+            ).textContent;
+            const email = row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(4)"
+            ).textContent;
+            const role = row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(5)"
+            ).textContent;
+
+            document.getElementById("name").value = name;
+            document.getElementById("email").value = email;
+            document.getElementById("role").value = role;
+
+            modalTitle.textContent = "회원 수정";
+            userActionBtn.textContent = "수정 완료";
+            modal.style.display = "block";
+        });
+    }
+}
+
+// 기존 데이터에 대한 수정 이벤트 추가
+document.querySelectorAll(".UserTable_row__1Qg9b").forEach((row) => {
+    attachEditEvent(row);
+});
+
+// 선택된 항목 삭제
+document
+    .getElementById("deleteSelectedBtn")
+    .addEventListener("click", function () {
+        const selectedCheckboxes = document.querySelectorAll(
+            ".userCheckbox:checked"
+        );
+        selectedCheckboxes.forEach((checkbox) => {
+            const row = checkbox.closest(".UserTable_row__1Qg9b");
+            if (row) {
+                const userId = parseInt(
+                    row.querySelector(".UserTable_cell__3kj0K:nth-child(2)")
+                        .textContent
+                );
+
+                // 사용자 목록에서 삭제
+                users = users.filter((user) => user.id !== userId);
+
+                // 테이블에서 행 삭제
+                row.remove();
+            }
+        });
+        updateCheckboxes(); // 체크박스 업데이트
+    });
+
+// 초기 체크박스 설정
+updateCheckboxes();
