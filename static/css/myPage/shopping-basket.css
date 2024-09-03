@@ -649,3 +649,490 @@ strong {
 #no-data-saving, #no-data-use {
     display: none; /* 기본적으로 숨김 처리 */
 }
+
+.btn-wrap-col, .btn-wrap.v2, .tab-wrap.v3 .tab-type+.tab-type2 {
+    margin-top: 30px;
+}
+
+.tab-type2 {
+    display: flex;
+    width: 100%;
+}
+
+.tab-type2 li {
+    width: 100%;
+}
+
+.tab-type2 li.active a {
+    font-weight: 600;
+}
+
+.tab-type2 li.active a {
+    color: #111;
+    border-color: #3f4970;
+}
+
+.tab-type2 li a {
+    font-size: 18px;
+    padding-bottom: 15px;
+    border-width: 3px;
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid #efefef;
+    color: #94949a;
+
+}
+
+.tab-type2 li.active .tab-count {
+    background-color: #3f4970;
+}
+
+.tab-type2 li .tab-count {
+    color: #fff;
+    background-color: #c3c3c9;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.tab-type2 li a {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    border-width: 3px;
+}
+.tab-type li .tab-count, .tab-type2 li .tab-count {
+    display: inline-block;
+    color: #3f4970;
+    padding: 1px 5px;
+    background-color: #fff;
+    border-radius: 1em;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+.tab-type2 li .tab-count {
+    color: #fff;
+    background-color: #c3c3c9;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.list-selector, .product-list .product-item {
+    margin-bottom: 15px;
+}
+
+.list-selector ul {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+
+.chk-box:first-child {
+    margin-left: 0;
+}
+
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+
+.chk-box input[type=checkbox], .chk-box input[type=radio] {
+    display: none;
+}
+
+input[type=checkbox], input[type=radio] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.list-selector ul li .btn-text, .list-selector ul li .chk-box label {
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.7142857143;
+}
+
+.chk-box input[type=checkbox]+.checkbox:before {
+    transform: translate(6px, 9px) rotate(45deg);
+    transition-delay: 100ms;
+}
+
+.chk-box input[type=checkbox]+.checkbox:after, .chk-box input[type=checkbox]+.checkbox:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    transform-origin: left;
+    transition: all 150ms;
+}
+
+.list-selector ul li .btn-text, .list-selector ul li .chk-box label {
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.7142857143;
+}
+
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.list-selector ul li+li::before {
+    height: 16px;
+    background-color: #e3e3e3;
+}
+
+.box-type11 .box-item+.box-item::before, .list-selector ul li+li::before {
+    content: "";
+    display: block;
+    width: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.list-selector ul li .btn-text[disabled] {
+    color: #c3c3c9;
+}
+.focus {
+    color: #f0543a;
+}
+
+.medal-list {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.medal-list>.medal-list-item {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 30px !important;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    display: flex;
+}
+
+.medal-list>.medal-list-item .icon-wrap {
+    margin-right: 0px;
+}
+
+.ico-medal-silver{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/icon-medal-silver.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.medal-list>.medal-list-item>.content {
+    padding-top: 15px;
+}
+
+.medal-list>.medal-list-item>.content .medal-title-wrap>.main-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item>.content .medal-title-wrap>.desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.67;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #343434;
+}
+
+.medal-list>.medal-list-item .sub-content {
+    margin-top: 15px;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-title {
+    display: flex;
+    flex-direction: row;
+}
+
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    color: #f0543a;
+    display: flex;
+    flex-direction: row;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block+.sub-content-block {
+    margin-top: 25px;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    color: #f0543a;
+    display: flex;
+    flex-direction: row;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block+.sub-content-block {
+    margin-top: 25px;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.medal-list>.medal-list-item .sub-content>.sub-content-block>.sub-desc {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.56;
+}
+
+.medal-list>.medal-list-item+.medal-list-item {
+    margin-left: 18px;
+}
+
+.ico-medal-gold {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/icon-medal-gold.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-medal-plat {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/icon-medal-plat.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mt-4 {
+    margin-top: 40px !important;
+}
+
+.list-type {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #343434;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+}
+
+.list-type li:first-child {
+    margin-top: 0;
+}
+
+.list-type li {
+    position: relative;
+    margin-top: 5px;
+    padding-left: 7px;
+}
+
+.list-type li:before {
+    top: 11px;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #94949a;
+    border-radius: 100%;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.list-type li {
+    margin-top: 7px;
+    position: relative;
+    padding-left: 7px;
+}
+
+.event-content-wrap>.content {
+    max-width: 1026px;
+    width: 100%;
+}
+
+.medal-title-wrap {
+    text-align: center;
+}
+
+.desc {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon-user {
+    background-image: url('../../images/ico-user.svg');
+    width: 18px;
+    height: 19px;
+    margin-right: 5px; /* 아이콘과 텍스트 사이의 간격을 조절 */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.desc > span {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px; /* 줄 간격 조절 */
+}
+
+.medal-list-item{
+    max-width: 272px;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.list-selector ul li+li {
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: 0 0;
+    cursor: pointer;
+    outline: 0;
+    font-size: 15px;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+}
+
+.chk-box .checkbox {
+    margin-right: 10px;
+}
+
+.chk-box .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:after {
+    transition-delay: 100ms;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:after, .chk-box.selected input[type=checkbox]~.checkbox:before {
+    background: #fff;
+}
+
+.chk-box input[type=checkbox]:checked~.checkbox:after {
+    width: 10px;
+}
+
+.chk-box.selected input[type=checkbox]+.checkbox {
+    background: #f0543a;
+    border-color: #f0543a;
+}
+.nodata-box, .nodata-box-brd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    text-align: center;
+}
+
+.nodata-box {
+    height: auto;
+    margin-top: 80px;
+}
+
+.nodata-box.v2, .v2.nodata-box-brd {
+    margin-top: 120px;
+}
+
+.ico-empty {
+    width: 46px;
+    height: 41px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/empty.svg);
+}
+
+.nodata-box p, .nodata-box-brd p {
+    margin-top: 29px;
+    font-size: 16px;
+    color: #343434;
+    line-height: 1.71;
+}

@@ -255,7 +255,7 @@ ol, ul {
 @media (min-width: 1200px) {
     .section-inquiry .tab-wrap {
         max-width: 852px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 }
 @media (min-width: 1200px) {
@@ -603,8 +603,8 @@ input, select, strong {
 /* 고객정보 */
 
 .form-table .form-dl+.form-dl {
-    margin-top: 40px;
-    padding-top: 40px;
+    margin-top: 30px;
+    padding-top: 30px;
     border-top: 1px solid #efefef;
 }
 
@@ -1568,6 +1568,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 3px;
     margin-right: 20px; /* 사진 간 간격 설정 */
 }
 
@@ -1582,13 +1583,16 @@ img {
 
 .photo-description {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
 }
 
 .photo-item.selected {
     background-color: #ffc2b8; /* 선택된 상태에서 배경색 적용 */
     border-radius: 12px;
     transition: 0.2s;
+    padding-top: 3px; 
 }
 
 

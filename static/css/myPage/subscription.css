@@ -568,3 +568,31 @@ ul {
     max-width: 1026px;
     width: 100%;
 }
+
+.medal-title-wrap {
+    text-align: center;
+}
+
+.desc {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon-user {
+    background-image: url('../../images/ico-user.svg');
+    width: 18px;
+    height: 19px;
+    margin-right: 5px; /* 아이콘과 텍스트 사이의 간격을 조절 */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.desc > span {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px; /* 줄 간격 조절 */
+}
+

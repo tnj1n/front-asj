@@ -1,3 +1,4 @@
+// =================================================오른쪽 메뉴====================================================================
 document.querySelectorAll("ul.depth > li > a").forEach(function (anchor) {
     anchor.addEventListener("click", function (event) {
         event.preventDefault(); // 기본 동작 막기
@@ -37,16 +38,18 @@ document.querySelectorAll("ul.depth > li > a").forEach(function (anchor) {
         }
     });
 });
-
+// ====================================================================================================================================================
 const liItems = document.querySelectorAll("ul.tab-type > li");
-const savingPointSection = document.querySelector("#saving-point");
-const usePointSection = document.querySelector("#use-point");
+const wishPlanList = document.querySelector("#lst-plan"); // 나의 찜- 요금제
+const wishProductList = document.querySelector("#lst-product"); //나의 찜 - 상품
+const viewedPlanList = document.querySelector("#lst-viewed-plan"); //최근 본 상품-요금제
+const viewedProductLIst = document.querySelector("lst-viewed-product"); //최근 본 상품-상품
 const noDataSaving = document.querySelector("#no-data-saving");
 const noDataUse = document.querySelector("#no-data-use");
 
 const tabs = document.querySelectorAll(".tab-type li");
-const writeSection = document.getElementById("write");
-const reviewSection = document.getElementById("view-my-review");
+const wishSection = document.getElementById("write");
+const viewedSection = document.getElementById("view-my-review");
 
 // 탭 클릭 시 적립 포인트 및 사용 포인트 섹션을 전환하는 기능
 liItems.forEach((liItem) => {
@@ -64,22 +67,22 @@ liItems.forEach((liItem) => {
         liItem.classList.add("active");
 
         // 선택된 탭의 ID에 따라 섹션 및 no-data 박스를 업데이트
-        if (targetId === "total-favorite") {
+        if (targetId === "total-wish") {
             // 적립 포인트 섹션을 보여주고, 사용 포인트 섹션은 숨김
-            savingPointSection.style.display = "block";
-            usePointSection.style.display = "none";
+            wishPlanList.style.display = "block";
+            wishProductList.style.display = "none";
             noDataUse.style.display = "none"; // noDataUse는 숨김
 
             // 적립 포인트가 있는지 확인하고, 없으면 noDataSaving을 보여줌
-            const hasSavingPoints = savingPointSection.querySelector("li");
+            const hasSavingPoints = wishPlanList.querySelector("li");
             noDataSaving.style.display = hasSavingPoints ? "none" : "block";
         } else if (targetId === "total-viewed") {
             // 사용 포인트 섹션을 보여주고, 적립 포인트 섹션은 숨김
-            savingPointSection.style.display = "none";
-            usePointSection.style.display = "block";
+            wishPlanList.style.display = "none";
+            wishProductList.style.display = "block";
 
             // 사용 포인트가 있는지 확인하고, 없으면 noDataUse를 보여줌
-            const hasUsePoints = usePointSection.querySelector("li");
+            const hasUsePoints = wishProductList.querySelector("li");
             noDataUse.style.display = hasUsePoints ? "none" : "block";
 
             // 적립 포인트 관련 no-data-saving은 기본적으로 숨김
@@ -98,11 +101,11 @@ tabs.forEach((tab) => {
         // 탭의 텍스트 내용을 기반으로 섹션 전환
         const tabText = tab.textContent.trim();
         if (tabText === "후기작성") {
-            writeSection.style.display = "block";
-            reviewSection.style.display = "none";
+            wishSection.style.display = "block";
+            viewedSection.style.display = "none";
         } else if (tabText === "나의 후기내역") {
-            writeSection.style.display = "none";
-            reviewSection.style.display = "block";
+            wishSection.style.display = "none";
+            viewedSection.style.display = "block";
         }
     });
 });
