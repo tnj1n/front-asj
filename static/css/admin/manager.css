@@ -625,9 +625,6 @@ iframe, img, video {
 }
 
 /* Modal Content */
-.modal-wrap{
-
-}
 .modal-content {
     background-color: #ffffff;
     padding: 30px;
@@ -644,8 +641,6 @@ iframe, img, video {
     font-weight: 700;
 }
 .modal-content.vibration{
-    border-color: #ff002f; /* 빨간색 테두리 */
-    
     animation: vibration 0.1s infinite;
 }
 

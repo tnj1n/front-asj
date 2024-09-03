@@ -415,19 +415,111 @@
                             <div class="FundingLayout_container__1WSFD">
                                 <!-- Action Buttons -->
                                 <div class="action-buttons">
-                                    <input
-                                        type="text"
-                                        id="searchInput"
-                                        placeholder="Search..."
-                                        onkeyup="searchTable()"
-                                    />
+                                    <div class="form-flex-wrap">
+                                        <div class="select-type2">
+                                            <select
+                                                id="filter-comType"
+                                                style="display: none"
+                                            >
+                                                <option
+                                                    class="title"
+                                                    value=""
+                                                    selected=""
+                                                >
+                                                    전체
+                                                </option>
+                                                <option value="PCO">
+                                                    공통
+                                                </option>
+                                                <option value="PPR">
+                                                    선불
+                                                </option>
+                                                <option value="PPT">
+                                                    후불
+                                                </option>
+                                            </select>
+                                            <div
+                                                class="nice-select"
+                                                tabindex="0"
+                                            >
+                                                <span class="current"
+                                                    >전체</span
+                                                >
+                                                <ul class="list">
+                                                    <li
+                                                        data-value=""
+                                                        class="option"
+                                                    >
+                                                        전체
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        이름
+                                                    </li>
+                                                    <li
+                                                        data-value="PPR"
+                                                        class="option"
+                                                    >
+                                                        이메일
+                                                    </li>
+                                                    <li
+                                                        data-value="PPT"
+                                                        class="option"
+                                                    >
+                                                        결제 방법
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        구독 날짜
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        결제 날짜
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        결제 승인
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-search">
+                                            <input
+                                                id="schKey"
+                                                type="text"
+                                                placeholder="검색어를 입력하세요"
+                                                maxlength="20"
+                                            />
+                                            <button
+                                                class="btn-search"
+                                                id="btn-search"
+                                            >
+                                                <i class="ico-search"></i
+                                                ><span class="hidden"
+                                                    >검색</span
+                                                >
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn-clear hidden"
+                                            >
+                                                <i class="ico-input-delete"></i
+                                                ><span class="hidden"
+                                                    >지우기</span
+                                                >
+                                            </button>
+                                        </div>
+                                    </div>
+
                                     <div class="actionButton">
-                                        <button
-                                            id="openModalBtn"
-                                            class="openModalBtn"
-                                        >
-                                            회원 추가
-                                        </button>
                                         <button
                                             id="deleteSelectedBtn"
                                             class="deleteSelectedBtn"
@@ -481,7 +573,7 @@
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            결제 승인
+                                            결제 상태
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
@@ -597,6 +689,25 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 승인 버튼 모달 -->
+                    <div id="authModal" class="modal">
+                        <div class="dim"></div>
+                        <div class="modal-wrap">
+                            <div class="modal-content">
+                                <p id="modalMessage">
+                                    결제 승인을 하시겠습니까?
+                                </p>
+                                <div class="button-container">
+                                    <button id="verifyBtn" class="verify-btn">
+                                        확인
+                                    </button>
+                                    <button id="cancelBtn" class="cancel-btn">
+                                        취소
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- User Add/Edit Modal -->
                     <div id="userModal" class="modal">
@@ -630,6 +741,7 @@
                             </form>
                         </div>
                     </div>
+
                     <!-- 사이드바 버튼(click하면 사이드바 들어감) -->
                     <button
                         type="button"

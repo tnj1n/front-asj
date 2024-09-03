@@ -4,48 +4,38 @@ const menuItems = document.querySelectorAll(
 );
 
 menuItems.forEach((menuToggle) => {
-    // 각각의 메뉴 아이템에 대한 클릭 이벤트 리스너를 추가합니다.
     menuToggle.addEventListener("click", function () {
-        // 서브메뉴와 아이콘을 해당 메뉴 아이템 기준으로 선택합니다.
         const submenuContainer = menuToggle.nextElementSibling;
         const downIcon = menuToggle.querySelector(
             ".withIcon_icon__2IQiS.MenuItems_downIcon__2GVY9"
         );
 
-        // toggle 메서드를 사용하여 클래스 추가/제거를 처리합니다.
+        // 서브메뉴의 표시/숨김을 토글합니다.
         submenuContainer.classList.toggle("MenuItems_show__1ldUA");
         downIcon.classList.toggle("MenuItems_open__2VtAS");
     });
 });
 
-// 버튼 요소를 선택합니다.
+// 정보 버튼 클릭 시 정보 박스 표시/숨김
 const infoButton = document.querySelector(".ProjectInfo_infoButton__2bg95");
 
-// 버튼에 클릭 이벤트 리스너를 추가합니다.
 infoButton.addEventListener("click", function () {
-    // 현재 aria-expanded의 값을 가져옵니다.
     const isExpanded = infoButton.getAttribute("aria-expanded") === "true";
-
-    // aria-expanded의 값을 토글합니다.
     infoButton.setAttribute("aria-expanded", !isExpanded);
 
-    // ProjectInfo_container__3jAST 컨테이너를 선택합니다.
     const container = document.querySelector(".ProjectInfo_container__3jAST");
+    const existingInfoBox = document.querySelector(
+        ".ProjectInfo_infoBox__2x8RL"
+    );
 
-    if (isExpanded) {
-        // infoBox가 이미 존재하면 제거합니다.
-        const infoBox = document.querySelector(".ProjectInfo_infoBox__2x8RL");
-        if (infoBox) {
-            container.removeChild(infoBox);
-        }
-    } else {
-        // infoBox 요소를 동적으로 생성합니다.
+    if (isExpanded && existingInfoBox) {
+        container.removeChild(existingInfoBox);
+    } else if (!isExpanded) {
         const infoBox = document.createElement("div");
         infoBox.className = "ProjectInfo_infoBox__2x8RL";
         infoBox.setAttribute("role", "region");
         infoBox.setAttribute("aria-labelledby", "project-info");
 
-        // infoBox 내부에 넣을 HTML 구조를 추가합니다.
         infoBox.innerHTML = `
             <dl>
                 <dt class="BlindText_textHidden__1W0aB">메이커 명</dt>
@@ -71,31 +61,26 @@ infoButton.addEventListener("click", function () {
                 </span>
             </button>
         `;
-
-        // container에 infoBox를 추가합니다.
         container.appendChild(infoBox);
     }
 });
 
-// 버튼 누르면 사이드바 사라짐
+// 사이드바 사라짐
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector(
         "button.AppLayout_expandNavButton__2AQMd"
     );
     const nav = document.getElementById("AppNavbarLayout_Nav");
     const mainDiv = document.querySelector("div.AppLayout_main__3h4EB");
-    let dividerAdded = false; // divider가 추가되었는지 추적하기 위한 변수
+    let dividerAdded = false;
 
     button.addEventListener("click", function () {
-        // button과 nav의 클래스 토글
         button.classList.toggle("AppLayout_expand__3TNUI");
         nav.classList.toggle("AppNavbarLayout_expand__12bTj");
 
-        // divider가 추가되지 않은 상태에서 버튼을 클릭하면 nav 위에 추가, 그렇지 않으면 제거
         if (!dividerAdded) {
             const newDivider = document.createElement("div");
             newDivider.className = "AppNavbarLayout_divider__KAkAr";
-            // nav 요소 앞에 newDivider 추가
             mainDiv.insertBefore(newDivider, nav);
             dividerAdded = true;
         } else {
@@ -110,229 +95,281 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 회원 정보 관련 JS
-// 사용자 목록 데이터를 저장하는 변수
-let users = [
-    { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
-];
-
-let editingUserId = null; // 수정 중인 사용자 ID를 저장할 변수
-
-// 전체 선택/해제 기능
+// 체크박스 전체 선택/해제 기능
 function updateCheckboxes() {
     const checkboxes = document.querySelectorAll(".userCheckbox");
     const selectAll = document.getElementById("selectAll");
 
-    selectAll.removeEventListener("change", handleSelectAllChange);
-    selectAll.addEventListener("change", handleSelectAllChange);
-
-    function handleSelectAllChange(e) {
+    selectAll.addEventListener("change", function (e) {
         checkboxes.forEach((checkbox) => {
             checkbox.checked = e.target.checked;
         });
-    }
+    });
 
     checkboxes.forEach((checkbox) => {
-        checkbox.removeEventListener("change", handleCheckboxChange);
-        checkbox.addEventListener("change", handleCheckboxChange);
-    });
-
-    function handleCheckboxChange() {
-        const checkedCount = Array.from(checkboxes).filter(
-            (checkbox) => checkbox.checked
-        ).length;
-        selectAll.checked = checkedCount === checkboxes.length;
-    }
-}
-
-// 모달 창 열기
-const modal = document.getElementById("userModal");
-const openModalBtn = document.getElementById("openModalBtn");
-const closeBtn = document.getElementsByClassName("closeBtn")[0];
-const modalTitle = document.getElementById("modalTitle");
-const userActionBtn = document.querySelector(".userActionBtn");
-
-openModalBtn.addEventListener("click", function () {
-    editingUserId = null;
-    modalTitle.textContent = "회원 추가";
-    userActionBtn.textContent = "회원 추가";
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("role").value = "";
-    modal.style.display = "block";
-});
-
-closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-});
-
-window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-});
-
-// 회원 추가 및 수정 기능 (모달에서)
-document.getElementById("userForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const role = document.getElementById("role").value;
-
-    if (name && email && role) {
-        if (editingUserId === null) {
-            // 회원 추가
-            const id = users.length ? users[users.length - 1].id + 1 : 1;
-            const newUser = { id, name, email, role };
-            users.push(newUser);
-
-            addRowToTable(newUser);
-        } else {
-            // 회원 수정
-            const user = users.find((user) => user.id === editingUserId);
-            if (user) {
-                user.name = name;
-                user.email = email;
-                user.role = role;
-                updateRowInTable(user);
-            }
-        }
-
-        modal.style.display = "none";
-        updateCheckboxes(); // 체크박스 업데이트
-    } else {
-        alert("모든 필드를 입력하세요.");
-    }
-});
-
-function addRowToTable(user) {
-    const newRow = document.createElement("div");
-    newRow.className = "UserTable_row__1Qg9b";
-    newRow.innerHTML = `
-        <div class="UserTable_cell__3kj0K">
-            <input type="checkbox" class="userCheckbox" />
-        </div>
-        <div class="UserTable_cell__3kj0K">${user.id}</div>
-        <div class="UserTable_cell__3kj0K">${user.name}</div>
-        <div class="UserTable_cell__3kj0K">${user.email}</div>
-        <div class="UserTable_cell__3kj0K">${user.role}</div>
-        <div class="UserTable_cell__3kj0K">
-            <button class="editBtn">수정</button>
-        </div>
-    `;
-
-    document.querySelector(".UserTable_container__1JHD1").appendChild(newRow);
-    attachEditEvent(newRow);
-    updateCheckboxes(); // 체크박스 업데이트
-}
-
-function updateRowInTable(user) {
-    const rows = document.querySelectorAll(".UserTable_row__1Qg9b");
-    rows.forEach((row) => {
-        const userId = parseInt(
-            row.querySelector(".UserTable_cell__3kj0K:nth-child(2)").textContent
-        );
-        if (userId === user.id) {
-            row.querySelector(
-                ".UserTable_cell__3kj0K:nth-child(3)"
-            ).textContent = user.name;
-            row.querySelector(
-                ".UserTable_cell__3kj0K:nth-child(4)"
-            ).textContent = user.email;
-            row.querySelector(
-                ".UserTable_cell__3kj0K:nth-child(5)"
-            ).textContent = user.role;
-        }
+        checkbox.addEventListener("change", function () {
+            const checkedCount = Array.from(checkboxes).filter(
+                (checkbox) => checkbox.checked
+            ).length;
+            selectAll.checked = checkedCount === checkboxes.length;
+        });
     });
 }
 
-// 수정 버튼 클릭 시, 모달 창 열기 및 데이터 채우기
-function attachEditEvent(row) {
-    const editBtn = row.querySelector(".editBtn");
-    if (editBtn) {
-        editBtn.addEventListener("click", function () {
-            const row = this.closest(".UserTable_row__1Qg9b");
-            editingUserId = parseInt(
-                row.querySelector(".UserTable_cell__3kj0K:nth-child(2)")
-                    .textContent
+// 페이지 로드 시 초기화 및 이벤트 리스너 추가
+document.addEventListener("DOMContentLoaded", () => {
+    updateCheckboxes();
+
+    const editButtons = document.querySelectorAll(".editBtn");
+    const authModal = document.getElementById("authModal");
+    const modalWrap = document.querySelector(".modal-wrap");
+    const verifyBtn = document.getElementById("verifyBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+    const deleteSelectedBtn = document.getElementById("deleteSelectedBtn");
+    const searchInput = document.getElementById("schKey");
+    const clearButton = document.querySelector(".btn-clear");
+    const searchBtn = document.getElementById("btn-search");
+    const niceSelects = document.querySelectorAll(".nice-select");
+
+    const userRows = document.querySelectorAll(".UserTable_row__1Qg9b");
+    const tableHeader = document.querySelector(
+        ".UserTable_row__1Qg9b.UserTable_header__2WvXj"
+    );
+
+    let selectedRow = null;
+    let searchQuery = "";
+    let selectedFilter = "전체";
+    let filteredItems = [];
+
+    // 모달을 여는 함수
+    const openModal = () => {
+        authModal.style.display = "flex";
+        modalWrap.style.animation = "popUp 0.5s";
+    };
+
+    // 모달을 닫는 함수
+    const closeModal = () => {
+        modalWrap.style.animation = "popDown 0.5s";
+        setTimeout(() => {
+            authModal.style.display = "none";
+        }, 450);
+    };
+
+    // 편집 버튼 클릭 시 모달창 열기 및 상태 변경
+    editButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const row = event.target.closest(".UserTable_row__1Qg9b");
+            const statusCell = row.querySelector(
+                ".UserTable_cell__3kj0K:nth-child(8)"
             );
-            const name = row.querySelector(
-                ".UserTable_cell__3kj0K:nth-child(3)"
-            ).textContent;
-            const email = row.querySelector(
-                ".UserTable_cell__3kj0K:nth-child(4)"
-            ).textContent;
-            const role = row.querySelector(
-                ".UserTable_cell__3kj0K:nth-child(5)"
-            ).textContent;
 
-            document.getElementById("name").value = name;
-            document.getElementById("email").value = email;
-            document.getElementById("role").value = role;
+            if (
+                statusCell.textContent.trim() === "승인 대기" ||
+                statusCell.textContent.trim() === "승인 완료"
+            ) {
+                selectedRow = row;
 
-            modalTitle.textContent = "회원 수정";
-            userActionBtn.textContent = "수정 완료";
-            modal.style.display = "block";
-        });
-    }
-}
+                // 상태에 따라 모달 메시지 설정
+                if (statusCell.textContent.trim() === "승인 대기") {
+                    modalMessage.textContent = "승인 하시겠습니까?";
+                    actionToPerform = () => {
+                        const statusCell = selectedRow.querySelector(
+                            ".UserTable_cell__3kj0K:nth-child(8)"
+                        );
+                        statusCell.textContent = "승인 완료";
+                    };
+                } else if (statusCell.textContent.trim() === "승인 완료") {
+                    modalMessage.textContent = "승인 대기로 변경합니다.";
+                    actionToPerform = () => {
+                        const statusCell = selectedRow.querySelector(
+                            ".UserTable_cell__3kj0K:nth-child(8)"
+                        );
+                        statusCell.textContent = "승인 대기";
+                    };
+                }
 
-// 기존 데이터에 대한 수정 이벤트 추가
-document.querySelectorAll(".UserTable_row__1Qg9b").forEach((row) => {
-    attachEditEvent(row);
-});
-
-// 선택된 항목 삭제
-document
-    .getElementById("deleteSelectedBtn")
-    .addEventListener("click", function () {
-        const selectedCheckboxes = document.querySelectorAll(
-            ".userCheckbox:checked"
-        );
-        selectedCheckboxes.forEach((checkbox) => {
-            const row = checkbox.closest(".UserTable_row__1Qg9b");
-            if (row) {
-                const userId = parseInt(
-                    row.querySelector(".UserTable_cell__3kj0K:nth-child(2)")
-                        .textContent
-                );
-
-                // 사용자 목록에서 삭제
-                users = users.filter((user) => user.id !== userId);
-
-                // 테이블에서 행 삭제
-                row.remove();
+                openModal();
             }
         });
-        updateCheckboxes(); // 체크박스 업데이트
     });
 
-// 초기 체크박스 설정
-updateCheckboxes();
+    // 삭제 버튼 클릭 시 모달창 열기
+    deleteSelectedBtn.addEventListener("click", () => {
+        modalMessage.textContent = "삭제하시겠습니까?";
+        actionToPerform = () => {
+            const selectedCheckboxes = document.querySelectorAll(
+                ".userCheckbox:checked"
+            );
+            selectedCheckboxes.forEach((checkbox) => {
+                const row = checkbox.closest(".UserTable_row__1Qg9b");
+                row.parentNode.removeChild(row);
+            });
+        };
 
-// 검색
-function searchTable() {
-    const input = document.getElementById("searchInput");
-    const filter = input.value.toLowerCase();
-    const rows = document.getElementsByClassName("UserTable_row__1Qg9b");
+        openModal();
+    });
 
-    for (let i = 0; i < rows.length; i++) {
-        const cells = rows[i].getElementsByClassName("UserTable_cell__3kj0K");
-        let match = false;
-
-        for (let j = 0; j < cells.length; j++) {
-            if (cells[j].innerText.toLowerCase().indexOf(filter) > -1) {
-                match = true;
-                break;
-            }
+    // 확인 버튼 클릭 시 작업 수행
+    verifyBtn.addEventListener("click", () => {
+        if (actionToPerform) {
+            actionToPerform();
+            actionToPerform = null; // 작업 수행 후 초기화
         }
+        closeModal();
+    });
 
-        if (match) {
-            rows[i].style.display = "";
-            highlightMatch(rows[i], filter);
+    // 닫기 버튼 클릭 시 모달 닫기
+    cancelBtn.addEventListener("click", () => {
+        closeModal();
+    });
+
+    // 필터링된 항목 표시 함수
+    function showFilteredItems() {
+        userRows.forEach((row) => {
+            row.classList.add("hidden");
+        });
+
+        if (filteredItems.length > 0) {
+            tableHeader.classList.remove("hidden");
+            tableHeader.classList.add("visible");
+            filteredItems.forEach((row) => {
+                row.classList.remove("hidden");
+                row.classList.add("visible");
+            });
         } else {
-            rows[i].style.display = "none";
+            tableHeader.classList.add("hidden");
+            alert("검색 결과가 없습니다.");
         }
     }
-}
+
+    // 검색 및 필터링 함수
+    function filterBoardItems() {
+        filteredItems = Array.from(userRows).filter((row) => {
+            let cellToSearch;
+
+            switch (selectedFilter) {
+                case "이름":
+                    cellToSearch = row.querySelector(
+                        ".UserTable_cell__3kj0K:nth-child(3)"
+                    );
+                    break;
+                case "이메일":
+                    cellToSearch = row.querySelector(
+                        ".UserTable_cell__3kj0K:nth-child(4)"
+                    );
+                    break;
+                case "결제 방법":
+                    cellToSearch = row.querySelector(
+                        ".UserTable_cell__3kj0K:nth-child(5)"
+                    );
+                    break;
+                case "구독 날짜":
+                    cellToSearch = row.querySelector(
+                        ".UserTable_cell__3kj0K:nth-child(6)"
+                    );
+                    break;
+                case "결제 날짜":
+                    cellToSearch = row.querySelector(
+                        ".UserTable_cell__3kj0K:nth-child(7)"
+                    );
+                    break;
+                case "결제 승인":
+                    cellToSearch = row.querySelector(
+                        ".UserTable_cell__3kj0K:nth-child(8)"
+                    );
+                    break;
+                default:
+                    cellToSearch = row.querySelectorAll(
+                        ".UserTable_cell__3kj0K"
+                    );
+            }
+
+            if (selectedFilter === "전체") {
+                const rowText = Array.from(cellToSearch)
+                    .map((cell) => cell.textContent.trim())
+                    .join(" ");
+                return searchQuery === "" || rowText.includes(searchQuery);
+            } else {
+                return (
+                    searchQuery === "" ||
+                    cellToSearch.textContent.trim().includes(searchQuery)
+                );
+            }
+        });
+
+        if (searchQuery === "") {
+            filteredItems = Array.from(userRows);
+        }
+
+        showFilteredItems();
+    }
+
+    // 드롭다운에서 선택한 항목에 따라 필터링하는 함수
+    function filterItems() {
+        const filterValue = document
+            .querySelector(".nice-select .current")
+            .textContent.trim();
+        selectedFilter = filterValue;
+        filterBoardItems();
+    }
+
+    // 검색어 입력 시 처리
+    searchInput.addEventListener("keyup", (e) => {
+        if (e.key === "Enter") {
+            searchQuery = searchInput.value.trim();
+            filterBoardItems();
+        }
+    });
+
+    // 검색 버튼 클릭 시 처리
+    searchBtn.addEventListener("click", () => {
+        searchQuery = searchInput.value.trim();
+        filterBoardItems();
+    });
+
+    // 드롭다운 기능 구현
+    niceSelects.forEach((niceSelect) => {
+        niceSelect.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const clickedOption = e.target.closest(".option");
+            if (clickedOption) {
+                const currentSpan = niceSelect.querySelector(".current");
+                const options = niceSelect.querySelectorAll(".option");
+                options.forEach((option) => option.classList.remove("focus"));
+                currentSpan.textContent = clickedOption.textContent;
+                clickedOption.classList.add("focus");
+                currentSpan.style.color = "#111";
+                niceSelect.classList.remove("open");
+                filterItems();
+            } else {
+                niceSelect.classList.toggle("open");
+            }
+        });
+    });
+
+    // 페이지의 다른 영역 클릭 시 모든 드롭다운 닫기
+    document.addEventListener("click", (e) => {
+        selectAll.forEach((select) => {
+            select.querySelectorAll(".nice-select").forEach((ns) => {
+                if (!ns.contains(e.target)) {
+                    ns.classList.remove("open");
+                }
+            });
+        });
+    });
+
+    // 검색 입력 필드의 값 변경 시 'clear' 버튼 표시/숨기기
+    searchInput.addEventListener("input", () => {
+        clearButton.classList.toggle("hidden", searchInput.value.trim() === "");
+    });
+
+    // 'clear' 버튼 클릭 시 입력 필드 비우기 및 포커스 맞추기
+    clearButton.addEventListener("click", () => {
+        searchInput.value = "";
+        clearButton.classList.add("hidden");
+        searchInput.focus();
+    });
+
+    // 페이지 로드 시 초기 항목 표시 및 필터링 적용
+    filterItems(); // 드롭다운 선택에 따라 필터링된 항목 초기화
+});

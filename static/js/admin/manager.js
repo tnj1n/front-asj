@@ -146,14 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // 백스페이스 키 입력 처리
+        // 키다운 이벤트 처리
         input.addEventListener("keydown", (e) => {
             if (
-                e.key === "Backspace" && // 백스페이스 키가 눌렸을 때
-                input.value.length === 0 && // 현재 입력 필드에 값이 없고
-                index > 0 // 첫 번째 입력 필드가 아닐 때
+                e.key === "Backspace" &&
+                input.value.length === 0 &&
+                index > 0
             ) {
-                inputs[index - 1].focus(); // 이전 입력 필드로 포커스를 이동
+                // 백스페이스 키가 눌렸을 때 이전 입력 필드로 포커스를 이동
+                inputs[index - 1].focus();
+            } else if (e.key === "Enter") {
+                // 엔터 키가 눌렸을 때 확인 버튼 클릭
+                verifyButton.click();
             }
         });
     });
