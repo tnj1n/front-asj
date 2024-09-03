@@ -1121,3 +1121,12 @@ i{
     height: 20px;
     background-image: url(https://www.freet.co.kr/assets/images/icon/logout.svg);
 } */
+
+.gnb-wrap {
+    box-shadow: none;
+    border-bottom: 1px solid #e3e3e3;
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
