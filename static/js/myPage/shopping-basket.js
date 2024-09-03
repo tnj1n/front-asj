@@ -39,73 +39,119 @@ document.querySelectorAll("ul.depth > li > a").forEach(function (anchor) {
     });
 });
 // ====================================================================================================================================================
-const liItems = document.querySelectorAll("ul.tab-type > li");
-const wishPlanList = document.querySelector("#lst-plan"); // 나의 찜- 요금제
-const wishProductList = document.querySelector("#lst-product"); //나의 찜 - 상품
-const viewedPlanList = document.querySelector("#lst-viewed-plan"); //최근 본 상품-요금제
-const viewedProductLIst = document.querySelector("lst-viewed-product"); //최근 본 상품-상품
-const noDataSaving = document.querySelector("#no-data-saving");
-const noDataUse = document.querySelector("#no-data-use");
 
-const tabs = document.querySelectorAll(".tab-type li");
-const wishSection = document.getElementById("write");
-const viewedSection = document.getElementById("view-my-review");
+// 상단 탭 (나의 찜, 최근 본 상품) 선택
+const bigTabs = document.querySelectorAll("#parentWrap > li");
 
-// 탭 클릭 시 적립 포인트 및 사용 포인트 섹션을 전환하는 기능
-liItems.forEach((liItem) => {
-    // 탭 내의 링크 요소를 선택하고, ID 값을 가져옴
-    const linkElement = liItem.querySelector("a");
-    const targetId = linkElement.getAttribute("id");
+// 하위 탭 (요금제, 상품) 선택
+const smallTabsWish = document.querySelectorAll("#tab-wish > li");
+const smallTabsViewed = document.querySelectorAll("#tab-viewed > li");
 
-    linkElement.addEventListener("click", () => {
-        // 모든 탭에서 active 클래스를 제거
-        liItems.forEach((item) => {
-            item.classList.remove("active");
-        });
+// 각 리스트와 no-data 선택
+const wishPlanList = document.querySelector("#lst-plan");
+const wishProductList = document.querySelector("#lst-product");
+const viewedPlanList = document.querySelector("#lst-viewed-plan");
+const viewedProductList = document.querySelector("#lst-viewed-product");
+const noData = document.querySelector("#no-data");
 
-        // 현재 클릭된 탭에 active 클래스 추가
-        liItem.classList.add("active");
+// 페이지가 처음 로드될 때 초기 상태 설정
+window.onload = () => {
+    document.querySelector("#tab-wish").style.display = "flex";
+    document.querySelector("#tab-viewed").style.display = "none";
+    wishPlanList.style.display = "block";
+    wishProductList.style.display = "none";
+    viewedPlanList.style.display = "none";
+    viewedProductList.style.display = "none";
+    noData.style.display =
+        wishPlanList.querySelectorAll("div.medal-list-item").length > 0
+            ? "none"
+            : "block";
 
-        // 선택된 탭의 ID에 따라 섹션 및 no-data 박스를 업데이트
-        if (targetId === "total-wish") {
-            // 적립 포인트 섹션을 보여주고, 사용 포인트 섹션은 숨김
+    bigTabs.forEach((t) => t.classList.remove("active"));
+    bigTabs[0].classList.add("active");
+
+    smallTabsWish.forEach((t) => t.classList.remove("active"));
+    smallTabsWish[0].classList.add("active");
+};
+
+// '나의 찜'과 '최근 본 상품' 탭 클릭 이벤트 처리
+bigTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        bigTabs.forEach((t) => t.classList.remove("active")); // 모든 탭의 active 클래스 제거
+        tab.classList.add("active"); // 클릭된 탭에 active 클래스 추가
+
+        if (tab.querySelector("a").id === "total-wish") {
+            document.querySelector("#tab-wish").style.display = "flex";
+            document.querySelector("#tab-viewed").style.display = "none";
             wishPlanList.style.display = "block";
             wishProductList.style.display = "none";
-            noDataUse.style.display = "none"; // noDataUse는 숨김
+            viewedPlanList.style.display = "none";
+            viewedProductList.style.display = "none";
 
-            // 적립 포인트가 있는지 확인하고, 없으면 noDataSaving을 보여줌
-            const hasSavingPoints = wishPlanList.querySelector("li");
-            noDataSaving.style.display = hasSavingPoints ? "none" : "block";
-        } else if (targetId === "total-viewed") {
-            // 사용 포인트 섹션을 보여주고, 적립 포인트 섹션은 숨김
+            // 하위 탭 초기화 및 no-data 표시 업데이트
+            smallTabsWish.forEach((t) => t.classList.remove("active"));
+            smallTabsWish[0].classList.add("active");
+            noData.style.display =
+                wishPlanList.querySelectorAll("div.medal-list-item").length > 0
+                    ? "none"
+                    : "block";
+        } else {
+            document.querySelector("#tab-wish").style.display = "none";
+            document.querySelector("#tab-viewed").style.display = "flex";
+            viewedPlanList.style.display = "block";
+            viewedProductList.style.display = "none";
             wishPlanList.style.display = "none";
-            wishProductList.style.display = "block";
+            wishProductList.style.display = "none";
 
-            // 사용 포인트가 있는지 확인하고, 없으면 noDataUse를 보여줌
-            const hasUsePoints = wishProductList.querySelector("li");
-            noDataUse.style.display = hasUsePoints ? "none" : "block";
-
-            // 적립 포인트 관련 no-data-saving은 기본적으로 숨김
-            noDataSaving.style.display = "none";
+            // 하위 탭 초기화 및 no-data 표시 업데이트
+            smallTabsViewed.forEach((t) => t.classList.remove("active"));
+            smallTabsViewed[0].classList.add("active");
+            noData.style.display =
+                viewedPlanList.querySelectorAll("div").length > 0
+                    ? "none"
+                    : "block";
         }
     });
 });
 
-// 탭 클릭 시 후기 작성 및 나의 후기내역 섹션을 전환하는 기능
-tabs.forEach((tab) => {
+// 하위 탭 클릭 이벤트 처리
+[...smallTabsWish, ...smallTabsViewed].forEach((tab) => {
     tab.addEventListener("click", () => {
-        // 모든 탭에서 active 클래스를 제거
-        tabs.forEach((t) => t.classList.remove("active"));
+        const parentUl = tab.closest("ul");
+
+        parentUl
+            .querySelectorAll("li")
+            .forEach((t) => t.classList.remove("active"));
         tab.classList.add("active");
 
-        // 탭의 텍스트 내용을 기반으로 섹션 전환
-        const tabText = tab.textContent.trim();
-        if (tabText === "후기작성") {
-            wishSection.style.display = "block";
-            viewedSection.style.display = "none";
-        } else if (tabText === "나의 후기내역") {
-            wishSection.style.display = "none";
-            viewedSection.style.display = "block";
+        if (tab.querySelector("a").id === "total-wish-plan") {
+            wishPlanList.style.display = "block";
+            wishProductList.style.display = "none";
+            noData.style.display =
+                wishPlanList.querySelectorAll("div.medal-list-item").length > 0
+                    ? "none"
+                    : "block";
+        } else if (tab.querySelector("a").id === "total-wish-product") {
+            wishPlanList.style.display = "none";
+            wishProductList.style.display = "block";
+            noData.style.display =
+                wishProductList.querySelectorAll("div").length > 0
+                    ? "none"
+                    : "block";
+        } else if (tab.querySelector("a").id === "total-viewed-plan") {
+            viewedPlanList.style.display = "block";
+            viewedProductList.style.display = "none";
+            noData.style.display =
+                viewedPlanList.querySelectorAll("div").length > 0
+                    ? "none"
+                    : "block";
+        } else if (tab.querySelector("a").id === "total-viewed-product") {
+            viewedPlanList.style.display = "none";
+            viewedProductList.style.display = "block";
+            noData.style.display =
+                viewedProductList.querySelectorAll("div").length > 0
+                    ? "none"
+                    : "block";
         }
     });
 });
