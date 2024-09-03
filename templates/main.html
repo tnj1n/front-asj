@@ -16,7 +16,65 @@
                             <ul>
                                 <li class="grid-item-l">
                                     <section class="banner-container">
-                                        <div class="arrows-left">&lt;</div>
+                                        <!-- <div class="arrows-left">&lt;</div> -->
+                                        <aside
+                                            class="CarouselHeader_CarouselHeader__5VBaX"
+                                        >
+                                            <h4
+                                                class="Typography_Typography__root__RdAI1 Typography_Typography__heading1__N9Asv Typography_Typography__weightBold__KkJEY CarouselHeader_CarouselHeader__title__O_txS"
+                                            >
+                                                테마로 모아보기
+                                            </h4>
+                                            <div
+                                                class="CarouselHeader_CarouselHeader__action__nal5g"
+                                            >
+                                                <div
+                                                    class="CarouselNavigation_CarouselNavigation__Llibu"
+                                                >
+                                                    <button
+                                                        class="IconButton_IconButton__root__IJlt6 IconButton_IconButton__normal__Twwsf CarouselNavigation_CarouselNavigation__left__ZzsPB"
+                                                        aria-label="이전"
+                                                        style="font-size: 15px"
+                                                    >
+                                                        <span
+                                                            class="IconButton_IconButton__label__o4AtY"
+                                                            ><span
+                                                                class="SvgIcon_SvgIcon__root__OHiSO"
+                                                                ><svg
+                                                                    class="SvgIcon_SvgIcon__root__svg__ohdSc"
+                                                                    viewBox="0 0 24 24"
+                                                                >
+                                                                    <path
+                                                                        d="M7.5812 3.08022C7.07352 3.58791 7.07352 4.41102 7.5812 4.9187L14.662 11.9995L7.5812 19.0802C7.07352 19.5879 7.07352 20.411 7.5812 20.9187C8.08888 21.4264 8.912 21.4264 9.41968 20.9187L17.4197 12.9187C17.9274 12.411 17.9274 11.5879 17.4197 11.0802L9.41968 3.08022C8.912 2.57254 8.08888 2.57254 7.5812 3.08022Z"
+                                                                        fill="#70737C"
+                                                                    ></path></svg></span></span
+                                                        ><span
+                                                            class="IconButton_IconButton__interaction__7RjPt"
+                                                        ></span></button
+                                                    ><button
+                                                        class="IconButton_IconButton__root__IJlt6 IconButton_IconButton__normal__Twwsf CarouselNavigation_CarouselNavigation__right__lB17m"
+                                                        aria-label="다음"
+                                                        style="font-size: 15px"
+                                                    >
+                                                        <span
+                                                            class="IconButton_IconButton__label__o4AtY"
+                                                            ><span
+                                                                class="SvgIcon_SvgIcon__root__OHiSO"
+                                                                ><svg
+                                                                    class="SvgIcon_SvgIcon__root__svg__ohdSc"
+                                                                    viewBox="0 0 24 24"
+                                                                >
+                                                                    <path
+                                                                        d="M7.5812 3.08022C7.07352 3.58791 7.07352 4.41102 7.5812 4.9187L14.662 11.9995L7.5812 19.0802C7.07352 19.5879 7.07352 20.411 7.5812 20.9187C8.08888 21.4264 8.912 21.4264 9.41968 20.9187L17.4197 12.9187C17.9274 12.411 17.9274 11.5879 17.4197 11.0802L9.41968 3.08022C8.912 2.57254 8.08888 2.57254 7.5812 3.08022Z"
+                                                                        fill="#70737C"
+                                                                    ></path></svg></span></span
+                                                        ><span
+                                                            class="IconButton_IconButton__interaction__7RjPt"
+                                                        ></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </aside>
                                         <div class="banner">
                                             <div class="banner-inner">
                                                 <a href="" class="inner1">
@@ -169,7 +227,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="arrows-right">&gt;</div>
+                                        <!-- <div class="arrows-right">&gt;</div> -->
                                         <div class="buttons">
                                             <button></button>
                                             <button></button>
@@ -1272,90 +1330,59 @@
         </div>
     </body>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const banner = document.querySelector(".banner");
-            console.log("Banner element:", banner);
-            if (banner) {
-                banner.style.transition = "transform 0.5s ease";
-            } else {
-                console.error("Banner element not found");
-            }
+        const banner = document.querySelector(".banner"); // 배너 전체 컨테이너
+        const banners = document.querySelectorAll(".banner-inner"); // 각 배너 요소들
+        const leftArrow = document.querySelector(
+            ".CarouselNavigation_CarouselNavigation__left__ZzsPB"
+        ); // 왼쪽 화살표
+        const rightArrow = document.querySelector(
+            ".CarouselNavigation_CarouselNavigation__right__lB17m"
+        ); // 오른쪽 화살표
+
+        let currentIndex = 0; // 현재 배너 인덱스
+        const bannerCount = banners.length; // 배너의 총 개수
+        const bannerWidth = banners[0].offsetWidth; // 각 배너의 너비
+        const autoSlideInterval = 2000; // 2초마다 자동 슬라이드
+        let slideInterval;
+
+        // 배너 위치를 업데이트하는 함수
+        const updateBannerPosition = () => {
+            banner.style.transition = "transform 0.5s ease"; // 슬라이드 애니메이션
+            banner.style.transform = `translateX(${
+                -currentIndex * bannerWidth
+            }px)`; // 현재 인덱스에 맞게 이동
+        };
+
+        // 슬라이드 재설정 함수
+        const resetSlideInterval = () => {
+            clearInterval(slideInterval); // 기존 타이머 초기화
+            slideInterval = setInterval(autoSlide, autoSlideInterval); // 새로운 타이머 시작
+        };
+
+        // 왼쪽 화살표 클릭 이벤트
+        leftArrow?.addEventListener("click", () => {
+            currentIndex =
+                currentIndex > 0 ? currentIndex - 1 : bannerCount - 1; // 왼쪽으로 이동
+            updateBannerPosition();
+            resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
         });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const banner = document.querySelector(".banner");
-            const banners = document.querySelectorAll(".banner-inner");
-            const leftArrow = document.querySelector(".arrows-left");
-            const rightArrow = document.querySelector(".arrows-right");
-            const buttons = document.querySelectorAll(".buttons button");
 
-            let currentIndex = 0;
-            const bannerCount = banners.length;
-            const bannerWidth = 520; // 각 배너의 너비와 동일해야 합니다.
-            const autoSlideInterval = 2000; // 2초마다 자동 슬라이드
-            let slideInterval;
-
-            // 배너 위치를 업데이트하는 함수
-            function updateBannerPosition() {
-                banner.style.transition = "transform 0.5s ease";
-                banner.style.transform = `translateX(${
-                    -currentIndex * bannerWidth
-                }px)`;
-                updateButtons();
-            }
-
-            // 현재 활성화된 버튼을 업데이트하는 함수
-            function updateButtons() {
-                buttons.forEach((button, index) => {
-                    button.style.backgroundColor =
-                        index === currentIndex ? "#000" : "#fff";
-                });
-            }
-
-            // 슬라이드 재설정 함수
-            function resetSlideInterval() {
-                clearInterval(slideInterval);
-                slideInterval = setInterval(autoSlide, autoSlideInterval);
-            }
-
-            // 왼쪽 화살표 클릭 이벤트
-            leftArrow.addEventListener("click", () => {
-                currentIndex =
-                    currentIndex > 0 ? currentIndex - 1 : bannerCount - 1;
-                updateBannerPosition();
-                resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
-            });
-
-            // 오른쪽 화살표 클릭 이벤트
-            rightArrow.addEventListener("click", () => {
-                currentIndex =
-                    currentIndex < bannerCount - 1 ? currentIndex + 1 : 0;
-                updateBannerPosition();
-                resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
-            });
-
-            // 하단 버튼 클릭 이벤트
-            buttons.forEach((button, index) => {
-                button.addEventListener("click", () => {
-                    currentIndex = index;
-                    updateBannerPosition();
-                    resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
-                });
-            });
-
-            // 자동 슬라이드 함수
-            function autoSlide() {
-                currentIndex = (currentIndex + 1) % bannerCount;
-                updateBannerPosition();
-            }
-
-            // 초기 2초마다 자동으로 슬라이드 시작
-            slideInterval = setInterval(autoSlide, autoSlideInterval);
-
-            // 초기 상태에서 버튼 색상 업데이트
-            updateButtons();
+        // 오른쪽 화살표 클릭 이벤트
+        rightArrow?.addEventListener("click", () => {
+            currentIndex =
+                currentIndex < bannerCount - 1 ? currentIndex + 1 : 0; // 오른쪽으로 이동
+            updateBannerPosition();
+            resetSlideInterval(); // 클릭 후 자동 슬라이드 타이머 재설정
         });
+
+        // 자동 슬라이드 함수
+        const autoSlide = () => {
+            currentIndex = (currentIndex + 1) % bannerCount; // 자동으로 다음 배너로 이동
+            updateBannerPosition();
+        };
+
+        // 초기 2초마다 자동으로 슬라이드 시작
+        slideInterval = setInterval(autoSlide, autoSlideInterval);
     </script>
 
     <script src="../static/js/main.js"></script>
