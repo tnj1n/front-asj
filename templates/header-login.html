@@ -3,26 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../static/css/header-style.css" />
+        <link rel="stylesheet" href="../static/css/header-login.css" />
         <title>헤더-로그인</title>
     </head>
     <body>
         <header id="header" class="header">
-            <div class="tool-box">
-                <h1 class="logo">
-                    <a href=""
-                        ><i class="ico-logo"></i
-                        ><span class="hidden">프리티</span></a
-                    >
-                </h1>
-                <div class="btn-box">
-                    <a href="javascript:void(0)" class="btn-menu">
-                        <i class="ico-bars"></i>
-                        <span class="hidden">메뉴</span>
-                    </a>
-                </div>
-            </div>
-
             <section
                 class="gnb-wrap"
                 style="transform: matrix(1, 0, 0, 1, 0, 0)"
@@ -36,47 +21,60 @@
                     </h1>
                     <div class="gnb-nav">
                         <ul class="list-depth1">
-                            <li>
-                                <a class="link-depth1" href="javascript:void(0)"
+                            <li class="">
+                                <a
+                                    class="link-depth1"
+                                    href="javascript:void(0)"
+                                    onclick="menuInfo.go('0101');return false;"
                                     >요금제</a
                                 >
                                 <div class="gnb-sub-wrap">
                                     <div class="gnb-inner">
                                         <ul class="list-depth2">
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0101');return false;"
                                                     >요금제</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0105');return false;"
                                                     >선불요금제</a
                                                 >
                                             </li>
-                                            <li>
-                                                <a href="javascript:void(0)"
+                                            <li class="">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0102');return false;"
                                                     >제휴요금제</a
                                                 >
                                             </li>
                                             <li class="wide">
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0103');return false;"
                                                     >내게 맞는 요금제 찾기</a
                                                 >
                                             </li>
-                                            <li>
-                                                <a href="javascript:void(0)"
+                                            <li class="">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0104');return false;"
                                                     >부가서비스</a
                                                 >
                                             </li>
                                         </ul>
-
+                                        <!-- 2024-01-04 -->
                                         <button
                                             type="button"
                                             class="gnb-nav-opener"
                                         >
                                             <i class="ico-arrow8"></i>
                                         </button>
-
+                                        <!-- // 2024-01-04 -->
                                         <div class="banner-wrap">
                                             <ul
                                                 class="slick-initialized slick-slider"
@@ -99,15 +97,20 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <a class="link-depth1" href="javascript:void(0)"
+                            <li class="">
+                                <a
+                                    class="link-depth1"
+                                    href="javascript:void(0)"
+                                    onclick="menuInfo.go('0201');return false;"
                                     >유심·eSIM</a
                                 >
                                 <div class="gnb-sub-wrap">
                                     <div class="gnb-inner">
                                         <ul class="list-depth2">
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="return false;"
                                                     >유심 구매</a
                                                 >
                                                 <div class="gnb-inner">
@@ -115,18 +118,21 @@
                                                         <li>
                                                             <a
                                                                 href="javascript:void(0)"
+                                                                onclick="menuInfo.go('0201');return false;"
                                                                 >유심 구매</a
                                                             >
                                                         </li>
                                                         <li>
                                                             <a
                                                                 href="javascript:void(0)"
+                                                                onclick="menuInfo.go('020101');return false;"
                                                                 >U+ 지금배송</a
                                                             >
                                                         </li>
                                                         <li>
                                                             <a
                                                                 href="javascript:void(0)"
+                                                                onclick="menuInfo.go('020102');return false;"
                                                                 >KT 바로배송</a
                                                             >
                                                         </li>
@@ -134,25 +140,32 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0202');return false;"
                                                     >유심 개통</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0203');return false;"
                                                     >eSIM 개통</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="return false;"
                                                     >유심 개통 안내</a
                                                 >
-
+                                                <!-- 2024-01-04 list-depth3 을 gnb-inner 로 감싸줌 -->
                                                 <div class="gnb-inner">
                                                     <ul class="list-depth3">
                                                         <li>
                                                             <a
                                                                 href="javascript:void(0)"
+                                                                onclick="menuInfo.go('020401');return false;"
                                                                 >유심 이용
                                                                 안내</a
                                                             >
@@ -160,6 +173,7 @@
                                                         <li>
                                                             <a
                                                                 href="javascript:void(0)"
+                                                                onclick="menuInfo.go('020402');return false;"
                                                                 >유심 개통
                                                                 안내</a
                                                             >
@@ -167,6 +181,7 @@
                                                         <li>
                                                             <a
                                                                 href="javascript:void(0)"
+                                                                onclick="menuInfo.go('020403');return false;"
                                                                 >eSIM 개통
                                                                 안내</a
                                                             >
@@ -181,21 +196,25 @@
                                                         ></i>
                                                     </button>
                                                 </div>
+                                                <!-- // 2024-01-04 -->
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0205');return false;"
                                                     >유심 인식 오류 접수</a
                                                 >
                                             </li>
                                         </ul>
-
+                                        <!-- 2024-01-04 -->
                                         <button
                                             type="button"
                                             class="gnb-nav-opener"
                                         >
                                             <i class="ico-arrow8"></i>
                                         </button>
-
+                                        <!-- // 2024-01-04 -->
+                                        <!-- 배너 -->
                                         <div class="banner-wrap">
                                             <ul
                                                 class="slick-initialized slick-slider"
@@ -218,37 +237,46 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <a class="link-depth1" href="javascript:void(0)"
+                            <li class="">
+                                <a
+                                    class="link-depth1"
+                                    href="javascript:void(0)"
+                                    onclick="menuInfo.go('0301');return false;"
                                     >휴대폰</a
                                 >
                                 <div class="gnb-sub-wrap">
                                     <div class="gnb-inner">
                                         <ul class="list-depth2">
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0301');return false;"
                                                     >휴대폰 구매</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0303');return false;"
                                                     >액세서리 몰</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0302');return false;"
                                                     >단말지원금 공시</a
                                                 >
                                             </li>
                                         </ul>
-
+                                        <!-- 2024-01-04 -->
                                         <button
                                             type="button"
                                             class="gnb-nav-opener"
                                         >
                                             <i class="ico-arrow8"></i>
                                         </button>
-
+                                        <!-- // 2024-01-04 -->
                                         <div class="banner-wrap">
                                             <ul
                                                 class="slick-initialized slick-slider"
@@ -271,21 +299,27 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <a class="link-depth1" href="javascript:void(0)"
+                            <li class="">
+                                <a
+                                    class="link-depth1"
+                                    href="javascript:void(0)"
+                                    onclick="menuInfo.go('0401');return false;"
                                     >이벤트·혜택</a
                                 >
                                 <div class="gnb-sub-wrap">
                                     <div class="gnb-inner">
                                         <ul class="list-depth2">
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0401');return false;"
                                                     >진행중 이벤트</a
                                                 >
                                             </li>
                                             <li>
                                                 <a
                                                     href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0406');return false;"
                                                     style="text-align: center"
                                                     >결합혜택</a
                                                 >
@@ -293,6 +327,7 @@
                                             <li>
                                                 <a
                                                     href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0407');return false;"
                                                     style="text-align: center"
                                                     >추천혜택</a
                                                 >
@@ -300,34 +335,41 @@
                                             <li>
                                                 <a
                                                     href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0403');return false;"
                                                     style="text-align: center"
                                                     >제휴카드</a
                                                 >
                                             </li>
-                                            <li>
-                                                <a href="javascript:void(0)"
+                                            <li class="">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0404');return false;"
                                                     >평생회원 혜택</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0405');return false;"
                                                     >이용후기</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0402');return false;"
                                                     >당첨자 발표</a
                                                 >
                                             </li>
                                         </ul>
-
+                                        <!-- 2024-01-04 -->
                                         <button
                                             type="button"
                                             class="gnb-nav-opener"
                                         >
                                             <i class="ico-arrow8"></i>
                                         </button>
-
+                                        <!-- // 2024-01-04 -->
                                         <div class="banner-wrap">
                                             <ul
                                                 class="slick-initialized slick-slider"
@@ -350,7 +392,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="">
                                 <a
                                     class="link-depth1"
                                     href="javascript:void(0)"
@@ -401,8 +443,15 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <a class="link-depth1" href="javascript:void(0)"
+                            <li class="">
+                                <!-- <a href="javascript:void(0)" onclick="menuInfo.go('15');return false;" class="no-line">
+                          <img th:src="@{${assetsPath+ '/images/icon/direct_shop.png'}}" alt="" class="pc-only ic-menu">
+                          <span class="mobile-only">다이렉트샵</span>
+                      </a> -->
+                                <a
+                                    class="link-depth1"
+                                    href="javascript:void(0)"
+                                    onclick="menuInfo.go('15');return false;"
                                     ><i class="ico-lgu3"></i>5G 요금제</a
                                 >
                                 <div class="gnb-sub-wrap">
@@ -427,9 +476,11 @@
                                 </div>
                             </li>
                         </ul>
+                        <!-- 2024-01-04 -->
                         <button type="button" class="gnb-nav-opener">
                             <i class="ico-arrow8"></i>
                         </button>
+                        <!-- // 2024-01-04 -->
                     </div>
                     <div class="util-wrap">
                         <ul class="util-guide">
@@ -447,8 +498,17 @@
                                     >고객지원</a
                                 >
                             </li>
+                            <!-- <li>
+                      <a href="javascript:void(0)" onclick="menuInfo.go('16');return false;">이용자피해예방가이드</a>
+                    </li> -->
                         </ul>
                         <ul class="util-list">
+                            <li>
+                                <a href="javascript:void(0)" class="btn-srch"
+                                    ><i class="ico-util01"></i
+                                    ><span class="hidden">검색</span></a
+                                >
+                            </li>
                             <li>
                                 <a
                                     href="javascript:void(0)"
@@ -461,125 +521,145 @@
                                 >
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class=""
+                                <a
+                                    href="javascript:void(0)"
+                                    onclick="menuInfo.go('13');return false;"
+                                    class=""
                                     ><i class="ico-util03"></i
                                     ><span class="bubble">관심상품</span></a
                                 >
                             </li>
-                            <li class="gnb-my">
-                                <a href="javascript:void(0)" class="btn-mypage">
+                            <li class="gnb-my active">
+                                <a
+                                    href="javascript:void(0)"
+                                    onclick="goMypageByAuth();return false;"
+                                    class="btn-mypage"
+                                >
                                     <i class="ico-util04"></i>
 
-                                    <span class="bubble">마이페이지</span>
                                     <!-- 비회원인 경우 -->
+                                    <span class="bubble">마이페이지</span>
                                     <!-- 준회원인 경우 -->
                                     <!-- 정회원인 경우 -->
                                 </a>
-                                <div class="gnb-inner">
-                                    <ul class="list-depth2">
-                                        <li>
-                                            <a
-                                                href="javascript:void(0)"
-                                                onclick="return false;"
-                                                >나의 기본정보</a
-                                            >
-                                            <ul class="list-depth3">
-                                                <li>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        onclick="menuInfo.go('060101');return false;"
-                                                        >회원정보</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        onclick="menuInfo.go('060103');return false;"
-                                                        >회선 등록</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        onclick="menuInfo.go('060106');return false;"
-                                                        >나의 혜택 조회</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        onclick="menuInfo.go('060107');return false;"
-                                                        >나의 추천현황</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="javascript:void(0)"
-                                                onclick="return false;"
-                                                >선불 요금충전/관리</a
-                                            >
-                                            <ul class="list-depth3">
-                                                <li>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        onclick="menuInfo.go('060401');return false;"
-                                                        >선불요금 충전</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        onclick="menuInfo.go('060402');return false;"
-                                                        >선불 데이터 충전</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="javascript:void(0)"
-                                                onclick="menuInfo.go('0607');return false;"
-                                                >내가 본 상품</a
-                                            >
-                                        </li>
-                                    </ul>
-                                    <div class="member-info">
-                                        <div class="title-wrap">
-                                            <h3 class="title-type2">
+                                <div class="gnb-sub-wrap">
+                                    <!-- 비회원(S) -->
+
+                                    <!-- 비회원(E) -->
+                                    <!-- 준회원(S) -->
+                                    <div class="gnb-inner">
+                                        <ul class="list-depth2">
+                                            <li>
                                                 <a
                                                     href="javascript:void(0)"
-                                                    onclick="menuInfo.go('0601');return false;"
-                                                    class="link"
-                                                    ><span class="name"
-                                                        >안*진</span
-                                                    >님</a
+                                                    onclick="return false;"
+                                                    >나의 기본정보</a
                                                 >
-                                                반가워요👋🏻
-                                            </h3>
-                                            <p>프리티 회선이 있으신가요?</p>
-                                        </div>
-                                        <div class="btn-wrap">
+                                                <ul class="list-depth3">
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0)"
+                                                            onclick="menuInfo.go('060101');return false;"
+                                                            >회원정보</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0)"
+                                                            onclick="menuInfo.go('060103');return false;"
+                                                            >회선 등록</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0)"
+                                                            onclick="menuInfo.go('060106');return false;"
+                                                            >나의 혜택 조회</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0)"
+                                                            onclick="menuInfo.go('060107');return false;"
+                                                            >나의 추천현황</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="return false;"
+                                                    >선불 요금충전/관리</a
+                                                >
+                                                <ul class="list-depth3">
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0)"
+                                                            onclick="menuInfo.go('060401');return false;"
+                                                            >선불요금 충전</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0)"
+                                                            onclick="menuInfo.go('060402');return false;"
+                                                            >선불 데이터 충전</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('0607');return false;"
+                                                    >내가 본 상품</a
+                                                >
+                                            </li>
+                                        </ul>
+                                        <div class="member-info">
+                                            <div class="title-wrap">
+                                                <h3 class="title-type2">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('0601');return false;"
+                                                        class="link"
+                                                        ><span class="name"
+                                                            >안*진</span
+                                                        >님</a
+                                                    >
+                                                    반가워요👋🏻
+                                                </h3>
+                                                <p>프리티 회선이 있으신가요?</p>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    onclick="menuInfo.go('060103');return false;"
+                                                    class="btn-type hs"
+                                                    >회선등록하기</a
+                                                >
+                                            </div>
                                             <a
                                                 href="javascript:void(0)"
-                                                onclick="menuInfo.go('060103');return false;"
-                                                class="btn-type hs"
-                                                >회선등록하기</a
+                                                onclick="logout();return false;"
+                                                class="btn-logout"
+                                                ><i class="ico-logout"></i
+                                                >로그아웃</a
                                             >
                                         </div>
-                                        <a
-                                            href="javascript:void(0)"
-                                            onclick="logout();return false;"
-                                            class="btn-logout"
-                                            ><i class="ico-logout"></i
-                                            >로그아웃</a
-                                        >
                                     </div>
+                                    <!-- 준회원(E) -->
+                                    <!-- 정회원(S) -->
+
+                                    <!-- 정회원(E) -->
                                 </div>
                             </li>
                             <li class="btn-gnb-menu">
-                                <a href="javascript:void(0)" class=""
+                                <a
+                                    href="javascript:void(0)"
+                                    onclick="return false;"
+                                    class=""
                                     ><i class="ico-bars"></i
                                     ><span class="bubble">전체메뉴</span></a
                                 >
@@ -590,5 +670,5 @@
             </section>
         </header>
     </body>
-    <script src="../static/js/header.js"></script>
+    <script src="../static/js/header-login.js"></script>
 </html>
