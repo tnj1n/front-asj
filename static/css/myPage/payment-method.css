@@ -1,0 +1,577 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "SUIT";
+    font-weight: 300;
+    src: local("SUIT-Light"),url(../fonts/SUIT-Light.woff2)format("woff2"),url(../fonts/SUIT-Light.otf)format("wopentypeoff")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(../fonts/SUIT-Regular.woff2)format("woff2"),url(../fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(../fonts/SUIT-SemiBold.woff2)format("woff2"),url(../fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(../fonts/SUIT-Bold.woff2)format("woff2"),url(../fonts/SUIT-Bold.otf)format("opentype")
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    font-display: swap;
+    src: local("Pretendard Black"),url(../fonts/Pretendard-Black.woff2)format("woff2"),url(../fonts/Pretendard-Black.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    font-display: swap;
+    src: local("Pretendard ExtraBold"),url(../fonts/Pretendard-ExtraBold.woff2)format("woff2"),url(../fonts/Pretendard-ExtraBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),url(../fonts/Pretendard-Bold.woff2)format("woff2"),url(../fonts/Pretendard-Bold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),url(../fonts/Pretendard-SemiBold.woff2)format("woff2"),url(../fonts/Pretendard-SemiBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: swap;
+    src: local("Pretendard Medium"),url(../fonts/Pretendard-Medium.woff2)format("woff2"),url(../fonts/Pretendard-Medium.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),url(../fonts/Pretendard-Regular.woff2)format("woff2"),url(../fonts/Pretendard-Regular.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    font-display: swap;
+    src: local("Pretendard Light"),url(../fonts/Pretendard-Light.woff2)format("woff2"),url(../fonts/Pretendard-Light.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    font-display: swap;
+    src: local("Pretendard ExtraLight"),url(../fonts/Pretendard-ExtraLight.woff2)format("woff2"),url(../fonts/Pretendard-ExtraLight.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    font-display: swap;
+    src: local("Pretendard Thin"),url(../fonts/Pretendard-Thin.woff2)format("woff2"),url(../fonts/Pretendard-Thin.woff)format("woff")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+body {
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    font-size: 16px;
+    color: #111;
+}
+/* 스크롤 바************************************************************* */
+
+#wrap::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 2px;
+}
+#wrap::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #3f4970;
+    border-radius: 8px;
+}
+#wrap::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+
+  .select-type2 .nice-select .list::-webkit-scrollbar {
+    display: block;
+    width: 20px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-thumb {
+    background-color: #8a93b4;
+    border: 7px solid #fff;
+    border-radius: 12px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+/* *********************************************************************** */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ol, ul {
+    list-style: none;
+}
+
+#content, #content.bottom {
+    padding-bottom: 120px;
+}
+
+#content {
+    padding: 30px 0 80px;
+}
+
+section{
+    display: block;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .page-header.side {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-header {
+        position: inherit;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+.page-header {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .page-header.side .page-title {
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1200px) {
+    .location a {
+        position: relative;
+        margin-right: 25px;
+    }
+}
+
+.hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+@media (min-width: 1200px) {
+    .location .home, .location a:after {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background-image: url(https://www.freet.co.kr/assets/images/icon/home.svg);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width: 1200px) {
+    .location a:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url(https://www.freet.co.kr/assets/images/icon/arrow.svg);
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -18px;
+        top: 50%;
+        margin-top: -5px;
+        vertical-align: middle;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+input, select, strong {
+    font-weight: 600;
+}
+
+
+
+@media (min-width: 1200px) {
+    .location a {
+        position: relative;
+        margin-right: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .location {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #343434;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-header.side .location {
+        margin-bottom: 0;
+    }
+}
+
+/* ***********************배너*********************** */
+@media (min-width: 1200px) {
+    .bg-banner-wrap {
+        padding: 0;
+        background: #eaf8f2;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg-banner-wrap .inner2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 1200px) {
+    .inner2 {
+        max-width: 1026px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.inner2 {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .bg-banner-wrap .icon-box {
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg-icon01 {
+        width: 296px;
+        height: 202px;
+        background-image: url(https://www.freet.co.kr/assets/images/prepaid/bg01.png);
+    }
+}
+
+.bg-icon01, .ico-agency01 {
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+}
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+@media (min-width: 1200px) {
+    .title-wrap .title-type2 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg-banner-wrap .title-wrap .desc {
+        font-size: 18px;
+    }
+}
+
+.bg-banner-wrap .title-wrap .desc {
+    margin-top: 10px;
+    font-weight: 500;
+    line-height: 1.67;
+    color: #343434;
+}
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .title-box {
+        position: relative;
+    }
+}
+.section-prepaid .prepaid-list .title-box .title-type {
+    font-weight: 600;
+    line-height: 1.56;
+    display: flex;
+    align-items: center;
+}
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .title-box .title-type {
+        font-size: 22px;
+    }
+}
+
+
+/* *************결제 수단들************* */
+@media (min-width: 1200px) {
+    .section-appdownload .content-box, .section-phoneguide .content-box, .section-prepaid .content-box {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-box {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-box, .content-box2 {
+        width: 1026px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .title-box {
+        position: relative;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .title-box .title-type {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-box {
+        text-align: left;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .box07 .flex-box li p, .section-prepaid .prepaid-list .box08 .flex-box li p, .section-prepaid .prepaid-list .title-box p {
+        font-size: 16px;
+    }
+}
+
+.section-prepaid .prepaid-list .title-box p {
+    margin-top: 10px;
+    font-weight: 500;
+    line-height: 1.67;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .title-box .btn-type10 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+        height: 48px;
+        padding: 0 20px;
+        border-radius: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn-type10 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .title-box+.flex-box {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .box01 .flex-box ul, .section-prepaid .prepaid-list .box04 .flex-box ul, .terms-privacy .terms-guide .flex-box ul {
+        flex-wrap: nowrap;
+    }
+}
+
+.card-list, .section-customer .quick-menu ul, .section-prepaid .prepaid-list .box01 .flex-box ul, .section-prepaid .prepaid-list .box04 .flex-box ul {
+    display: flex;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li {
+        border: 1px solid #e3e3e3;
+        border-radius: 20px;
+        padding: 30px 10px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li>i {
+        display: block;
+        margin: 0 auto 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+.section-prepaid .prepaid-list .title-box .title-type {
+    font-size: 22px;
+}
+
+@media (min-width: 1200px) {
+    .section-appdownload .content-box, .section-phoneguide .content-box, .section-prepaid .content-box {
+        padding: 0;
+    }
+}
+/* 온라인 즉시 결제 */
+.section-prepaid .prepaid-list .box01 .flex-box ul li, .section-prepaid .prepaid-list .box04 .flex-box ul li {
+    width: 50%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li {
+        border: 1px solid #e3e3e3;
+        border-radius: 20px;
+        padding: 30px 10px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .box01 .flex-box ul li+li, .section-prepaid .prepaid-list .box04 .flex-box ul li+li {
+        margin-left: 10px;
+    }
+}
+
+.section-prepaid .prepaid-list .box01 .flex-box ul li, .section-prepaid .prepaid-list .box04 .flex-box ul li {
+    width: 50%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li {
+        border: 1px solid #e3e3e3;
+        border-radius: 20px;
+        padding: 30px 10px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .box01 .flex-box ul li:nth-of-type(n+3), .section-prepaid .prepaid-list .box04 .flex-box ul li:nth-of-type(n+3) {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .box01 .flex-box ul li+li, .section-prepaid .prepaid-list .box04 .flex-box ul li+li {
+        margin-left: 10px;
+    }
+}
+
+.section-prepaid .prepaid-list .box01 .flex-box ul li, .section-prepaid .prepaid-list .box04 .flex-box ul li {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.ico-visa{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/visa.svg);
+}
+
+.ico-kakaopay{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/kakaopay.svg);
+}
+
+.ico-payco{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/payco.svg);
+}
+
+.ico-pay{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/pay.svg);
+}
+
+.ico-paypal{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/paypal.svg);
+}
+
+.ico-wechat-pay{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/wechat-pay.svg);
+}
+
+.btn-type10 {
+    background: #3f4970;
+    color: #fff;
+}
+
+.btn-type10, .btn-type11 {
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 16px;
+    font-weight: 600;
+}
+
+.btn-type10, .btn-type11, .btn-type9 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ico-kakaopay, .ico-pay, .ico-payco, .ico-paypal, .ico-visa, .ico-wechat-pay {
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
