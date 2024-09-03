@@ -137,9 +137,7 @@
     color: #8a93b4;
     background-image: url(/static/images/mobile-detatilRequest/ico-user2.svg);
 }
-.box-title {
-    margin-top: 4px;
-}
+
 .ico-message2 {
     width: 18px;
     height: 18px;
@@ -178,11 +176,13 @@
     font-weight: 600;
     line-height: 1.56;
 }
-.box-type3 .box-item .box-content h3 {
+/* .box-type3 .box-item .box-content .caption a {
+    margin-top: 10px;
     font-size: 16px;
     font-weight: 600;
     text-align: left;
-}
+} */
+
 .plan-detail .plan-infomation .plan-box .box-type3 .box-item .box-content p {
     margin-top: 5px;
     font-size: 14px;
@@ -213,10 +213,17 @@
 }
 .plan-detail .plan-infomation .bottom-box .box-type2 {
     background: #fff;
-    padding: 15px 20px;
+    padding: 5px 20px 20px 20px;
     border-radius: 20px;
     border: 0;
 }
+.boxTitle {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+}
+
 .box-type2 dl {
     display: flex;
     align-items: center;
@@ -287,7 +294,7 @@
 .btn-fixed-wrap .bottom-gra {
     position: relative;
 }
-.btn-fixed-wrap .bottom-gra:before {
+/* .btn-fixed-wrap .bottom-gra:before {
     content: "";
     position: absolute;
     left: 0;
@@ -297,7 +304,7 @@
     width: 100%;
     height: 40px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 100%);
-}
+} */
 .plan-detail .plan-content .btn-fixed-wrap .btn-wrap,
 .plan-detail .plan-content .plan-benefit .box-type3 .box-item .box-content {
     position: relative;
@@ -356,10 +363,10 @@
     height: 56px;
     font-size: 16px;
 }
-.plan-detail .plan-content .plan-benefit-wrap {
+/* .plan-detail .plan-content .plan-benefit-wrap {
     display: flex;
     align-items: center;
-}
+} */
 .plan-detail .plan-content .plan-benefit-wrap .plan-benefit:first-child {
     order: 5;
 }
@@ -382,8 +389,10 @@
     align-items: center;
 }
 /* 여기서부터 보기 */
-.box-item .box-content {
+.call-service {
     margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 5px;
 }
 .plan-detail .plan-content .btn-fixed-wrap .btn-wrap,
 .plan-detail .plan-content .plan-benefit .box-type3 .box-item .box-content {
