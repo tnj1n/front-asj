@@ -596,6 +596,10 @@ address, caption, em, i, var {
 }
 
 /* filter */
+.section-faq {
+    display: flex;
+    justify-content: center;
+}
 .section-faq .filter-wrap {
     margin: 40px 0 30px;
 }
@@ -606,9 +610,11 @@ address, caption, em, i, var {
     }
 }
 .filter-wrap {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: -20px;
-    position: relative;
+    /* position: relative; */
 }
 @media (min-width: 1200px) {
     .filter-wrap {
@@ -616,6 +622,10 @@ address, caption, em, i, var {
     }
 }
 .filter-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
     overflow: hidden;
     overflow-x: auto;
     white-space: nowrap;
@@ -657,8 +667,9 @@ address, caption, em, i, var {
 
 @media (min-width: 1200px) {
     .filter-wrap ul li a {
+        width: 130px;
         border-radius: 20px;
-        height: 38px;
+        height: 60px;
         padding: 6px 18px 4px;
         font-size: 15px;
         font-weight: 500;
@@ -675,8 +686,7 @@ address, caption, em, i, var {
 
 .filter-wrap .btn-open {
     position: absolute;
-    top: 6px;
-    right: 0;
+    right: 18px;
     z-index: 1;
     display: inline-block;
     width: 20px;
@@ -696,7 +706,6 @@ address, caption, em, i, var {
 
 .filter-wrap:after {
     content: "";
-    position: absolute;
     right: 0;
     top: 0;
     width: 50px;

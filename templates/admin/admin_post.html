@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>게시글 관리 페이지</title>
+        <link rel="stylesheet" href="/static/css/admin/manager.css" />
+        <link rel="stylesheet" href="/static/css/admin/admin_post.css">
+    </head>
+    <body>
+        <!-- Modal Structure -->
+        <div id="authModal" class="modal">
+            <div class="dim"></div>
+            <div class="modal-wrap">
+                <div class="modal-content">
+                    <p>관리자 인증번호 입력</p>
+                    <div class="auth-container">
+                        <input
+                            type="text"
+                            id="input1"
+                            maxlength="1"
+                            class="auth-input"
+                        />
+                        <input
+                            type="text"
+                            id="input2"
+                            maxlength="1"
+                            class="auth-input"
+                        />
+                        <input
+                            type="text"
+                            id="input3"
+                            maxlength="1"
+                            class="auth-input"
+                        />
+                        <input
+                            type="text"
+                            id="input4"
+                            maxlength="1"
+                            class="auth-input"
+                        />
+                        <input
+                            type="text"
+                            id="input5"
+                            maxlength="1"
+                            class="auth-input"
+                        />
+                        <input
+                            type="text"
+                            id="input6"
+                            maxlength="1"
+                            class="auth-input"
+                        />
+                    </div>
+                    <button id="verifyBtn" class="verify-btn">확인</button>
+                </div>
+            </div>
+        </div>
+        <div id="root">
+            <div id="AppLayout_Container" class="AppLayout_container__2g11i">
+                <div class="AppGNBbar_container__3aaiG">
+                    <div class="AppGNBbar_flex__-H9Qf">
+                        <div class="StudioLogo_container__2u4Eb">
+                            <button
+                                class="StudioLogo_logo__pXI-Y"
+                                type="button"
+                                aria-label="로고 버튼"
+                            ></button>
+                            <div class="StudioLogo_type__2Sksn">
+                                펀딩·프리오더
+                            </div>
+                        </div>
+                        <div class="StudioStatus_stateBox__21QpO">
+                            <span class="StudioStatus_state__2OMTs"
+                                >작성 중</span
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="AppGNBbar_flex__-H9Qf AppGNBbar_rightBox__we5_g"
+                    >
+                        <div class="ProjectInfo_container__3jAST">
+                            <button
+                                type="button"
+                                class="ProjectInfo_infoButton__2bg95"
+                                aria-controls="project-info-box"
+                                aria-expanded="false"
+                            >
+                                관리자 ID:
+                                <span class="ProjectInfo_emphasis__1i34c"
+                                    >309473</span
+                                >
+                                <span class="ProjectInfo_text__3evR-">정보</span
+                                ><svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="withIcon_icon__2IQiS"
+                                    aria-hidden="true"
+                                    style="width: 12px; height: 12px"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                    ></path>
+                                </svg>
+                            </button>
+                            <!-- <div
+                                class="ProjectInfo_infoBox__2x8RL"
+                                role="region"
+                                aria-labelledby="project-info"
+                            >
+                                <dl>
+                                    <dt class="BlindText_textHidden__1W0aB">
+                                        메이커 명
+                                    </dt>
+                                    <dd class="ProjectInfo_content__1VmXE">
+                                        <span
+                                            class="Avatar_avatar__1mOG5 Avatar_sm__V_6km ProjectInfo_profileImage__1PLV0"
+                                            ><span class="Avatar_inner__hN779"
+                                                ><img
+                                                    src="https://static.wadiz.kr/studio/funding/static/media/default-zingugi.de76a099.svg" /></span></span
+                                        ><span
+                                            class="ProjectInfo_makerName__KIDrd"
+                                            >석상훈</span
+                                        >
+                                    </dd>
+                                    <dt class="BlindText_textHidden__1W0aB">
+                                        상태
+                                    </dt>
+                                    <dd
+                                        class="ProjectInfo_content__1VmXE ProjectInfo_stateBox__705_4"
+                                    >
+                                        <span class="ProjectInfo_state__1Aqkt"
+                                            >작성 중</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <button
+                                    class="Button_button__35X6_ Button_primary__1vdas Button_contained__1XlJQ Button_sm__3vobZ Button_startIcon__7ZEht Button_block__3y0pW"
+                                    type="button"
+                                >
+                                    <span
+                                        ><svg
+                                            viewBox="0 0 40 40"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS Button_icon__2I54k"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M33.6 5.2a9 9 0 0 1 0 12.7L29 22.5l-.6.5a11 11 0 0 0-.4-2.4l4.1-4.1a7 7 0 0 0-9.9-9.9l-4.6 4.6a7 7 0 0 0 4.7 11.9 5 5 0 0 1-.2 2 8.9 8.9 0 0 1-7.8-5.4 9.1 9.1 0 0 1-.3-6.5 8.9 8.9 0 0 1 2.1-3.4l4.6-4.6a9 9 0 0 1 12.9 0zm-15.7 9.5a5 5 0 0 0-.2 2 6.9 6.9 0 0 1 6.3 4.2 7 7 0 0 1-1.5 7.7l-5.7 5.7a7 7 0 0 1-9.9-9.9l5.2-5.2a11 11 0 0 1-.4-2.4l-.6.5-5.6 5.6a9 9 0 1 0 12.7 12.8l5.7-5.7a8.9 8.9 0 0 0 2.1-3.4 9.1 9.1 0 0 0-.3-6.5 8.9 8.9 0 0 0-7.8-5.4z"
+                                            ></path></svg>
+                                        <span class="Button_children__1TD4r"
+                                            >URL 복사</span
+                                        ></span
+                                    >
+                                </button>
+                            </div> -->
+                        </div>
+                        <div
+                            class="AnnouncementButton_container__1p1gr"
+                            role="button"
+                        >
+                            <img
+                                class="AnnouncementButton_icon__29AtY"
+                                src="https://static.wadiz.kr/studio/funding/static/media/announcement.56f4b8e3.svg"
+                                alt=""
+                                aria-hidden="true"
+                            /><span
+                                class="Badge_container__3exWO Badge_visible__1Zpvc AnnouncementButton_badge__2Jq25"
+                                ><span
+                                    class="Badge_badge__3-2fx Badge_dot__vTBB0 Badge_md__2iPBs"
+                                ></span
+                            ></span>
+                        </div>
+                        <div class="PreviewExitButtons_container__1R35v">
+                            <button
+                                class="Button_button__35X6_ PreviewExitButtons_button__2tixf"
+                                type="button"
+                            >
+                                <span
+                                    ><span class="Button_children__1TD4r"
+                                        >비워드림</span
+                                    ></span
+                                ></button
+                            ><button
+                                class="Button_button__35X6_ PreviewExitButtons_button__2tixf"
+                                type="button"
+                            >
+                                <span
+                                    ><span class="Button_children__1TD4r"
+                                        >로그아웃</span
+                                    ></span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="AppLayout_main__3h4EB">
+                    <nav
+                        id="AppNavbarLayout_Nav"
+                        class="AppNavbarLayout_container__1zFQR AppNavbarLayout_expand__12bTj"
+                    >
+                        <div class="AppNavbarLayout_content__2agCV">
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        회원 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >일발 회원 정보</a
+                                    >
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >기사 정보</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        결제 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >구독료 결제</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/screening"
+                                        >포인트 결제</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        후기 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >기사님 후기</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        문의 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >FAQ</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/screening"
+                                        >1대1 문의</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/story"
+                                        >취소/교환/환불</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/condition"
+                                        >배송문의</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/policy"
+                                        >결제 문의</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/makerInfo"
+                                        >서비스 문의</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        상품 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >상품 목록</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- BODY 내용 -->
+                                            
+                        <div
+                            id="AppLayout_Contents"
+                            class="AppLayout_contents_mainContent"
+                        >
+                            <!-- 게시글 목록 조회 -->
+                            <div class="RecommendedPostsPage_container">
+                                <div class="RecommendedPostsPage-inner">
+                                    <div class="Posts-list-container">
+                                        <div class="Posts-list-wrapper">
+                                            <div class="posts-list-header">
+                                                <div class="postList-title">
+                                                    게시글 목록
+                                                </div>
+                                                <div class="PostFilter_wrapper">
+                                                    <input
+                                                        type="text"
+                                                        class="PostFilter_searchInput"
+                                                        placeholder="검색어 입력"
+                                                    />
+                                                    <button
+                                                        class="Button_button PostsFilter_filterButton PostsFilter_selected"
+                                                        type="button"
+                                                    >
+                                                        <span>
+                                                            <span
+                                                                class="Button_children"
+                                                                >수정</span
+                                                            >
+                                                        </span>
+                                                    </button>
+                                                    <button
+                                                        class="Button_button PostsFilter_filterButton"
+                                                        type="button"
+                                                    >
+                                                        <span>
+                                                            <span
+                                                                class="Button_children"
+                                                                >삭제</span
+                                                            >
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr
+                                                class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"
+                                            />
+                                            <div class="Allselect_Toggle">
+                                                <div class="SettingsToggle_toggle">
+                                                    <label
+                                                        for="funding_allow"
+                                                        class="SettingToggle_switch SettingToggle_switch_all"
+                                                    >
+                                                    </label>
+                                                    <input
+                                                        type="checkbox"
+                                                        id="funding_allow"
+                                                        name="funding_allow"
+                                                        class="SettingToggle_input"
+                                                    />
+                                                </div>
+                                                <div class="AllSettingToggle_title">
+                                                    전체 선택
+                                                </div>
+                                                <div class="SortFilterOptions">
+                                                    <span id="sort-by-date" class="sort-filter-option selected">등록</span> /
+                                                    <span id="sort-by-views" class="sort-filter-option">조회</span> /
+                                                    <span id="sort-by-replies" class="sort-filter-option">댓글</span>
+                                                </div>
+                                            </div>
+                                            <hr class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"/>
+                                            <div class="list_wrapper">
+                                                <div class="background" style="background-color: white">
+                                                    <div class="list-bordered">
+                                                    <div class="bg-white" id="page-container">
+                                                        <div
+                                                            class="FAQ_container align-items-center">
+                                                            <div
+                                                                class="articlelist row"
+                                                                id="section-anchor-25448181617305"
+                                                                style="display: flex;" >
+                                                                <div class="section_container">
+    
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        소금빵
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                소금빵은 소금이 빵빵
+                                                                                
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        12
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">23</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.08.30
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        피자빵
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                인상을 피자
+                                                                                
+                                                                                </span>
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        302
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">89</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.08.29
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        asd235
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                안녕하세요
+                                                                                
+                                                                                </span>
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        4
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">2</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.06.31
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        123비둘기
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                9999
+                                                            
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        9
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">9</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.07.30
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        ABDC
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                AABBCCDD
+                                                                                
+                                                                                </span>
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        12
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">23</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.08.30
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        ZXC
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                QWER
+                                                                               
+                                                                                </span>
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        12
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">23</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.08.30
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        JAVA
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                Spring
+                                                                                
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        34
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">24</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            2024.01.01
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        노네임
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                1목제
+                                                                                
+                                                                                </span>
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        66
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">55</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            1시간 전
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex">
+                                                                        <div
+                                                                            class="ydsfooter_munu_bar section_document"
+                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
+                                                                            <div class="SettingsToggle_toggle">
+                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
+                                                                                </label>
+                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
+                                                                            </div>
+                                                                            <div style="margin-top: 10px;">
+                                                                                <div class="sc-73fafee5-0 ejqkLc">
+                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
+                                                                                </div>
+                                                                                <div class="FAQ_card_title">
+                                                                                    <div
+                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
+                                                                                        하하
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="writetitle">
+                                                                                무한도전
+                                                                                
+                                                                                <div class="writecontent">
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                    내용내용내용내용내용
+                                                                                </div>
+                                                                                <div class="write_footer">
+                                                                                    <span>조회수:
+                                                                                        <span class="views-ctn">
+                                                                                        132
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        댓글:
+                                                                                        <span class="reply">53</span>
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        작성일
+                                                                                        <span class="Post_joinDate">
+                                                                                            24분 전
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        </div>
+    
+                                        <!-- 페이지 네이션 -->
+                                        <nav class="pagination">
+                                            <ul class="pagination-list">
+                                                <!-- 처음 페이지로 이동하는 버튼 -->
+                                                <li class="pagination-first">
+                                                    <a href="#" class="pagination-first-link" rel="nofollow">
+                                                        <span class="pagination-first-icon" aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <!-- 이전 페이지로 이동하는 버튼 -->
+                                                <li class="pagination-prev">
+                                                    <a href="#" class="pagination-prev-link" rel="prev nofollow">
+                                                        <span class="pagination-prev-icon" aria-hidden="true">‹</span>
+                                                    </a>
+                                                </li>
+                                                <!-- 페이지 번호 버튼 -->
+                                                <li class="pagination-page active"><a href="#" class="pagination-page-link">1</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">2</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">3</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">4</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">5</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">6</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">7</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">8</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">9</a></li>
+                                                <li class="pagination-page"><a href="#" class="pagination-page-link">10</a></li>
+                                                <!-- 다음 페이지로 이동하는 버튼 -->
+                                                <li class="pagination-next">
+                                                    <a href="#" class="pagination-next-link" rel="next nofollow">
+                                                        <span class="pagination-next-icon" aria-hidden="true">›</span>
+                                                    </a>
+                                                </li>
+                                                <!-- 마지막 페이지로 이동하는 버튼 -->
+                                                <li class="pagination-last">
+                                                    <a href="#" class="pagination-last-link" rel="nofollow">
+                                                        <span class="pagination-last-icon" aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <!-- 사이드바 버튼(click하면 사이드바 들어감) -->
+                    <button
+                        type="button"
+                        class="AppLayout_expandNavButton__2AQMd AppLayout_expand__3TNUI"
+                    >
+                        <i class="AppLayout_icon__1_YzF"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/admin/manager.js"></script>
+    <script src="/static/js/admin/admin_post.js"></script>
+    
+</html>

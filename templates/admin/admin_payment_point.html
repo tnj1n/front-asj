@@ -3,58 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>관리자 페이지</title>
-        <link rel="stylesheet" href="/static/css/admin/manager.css" />
+        <title>포인트 관리 페이지</title>
+        <link
+            rel="stylesheet"
+            href="/static/css/admin/admin_payment/admin_payment_subscription .css"
+        />
     </head>
     <body>
-        <!-- Modal Structure -->
-        <div id="authModal" class="modal">
-            <div class="dim"></div>
-            <div class="modal-wrap">
-                <div class="modal-content">
-                    <p>관리자 인증번호 입력</p>
-                    <div class="auth-container">
-                        <input
-                            type="text"
-                            id="input1"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input2"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input3"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input4"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input5"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input6"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                    </div>
-                    <button id="verifyBtn" class="verify-btn">확인</button>
-                </div>
-            </div>
-        </div>
         <div id="root">
             <div id="AppLayout_Container" class="AppLayout_container__2g11i">
                 <div class="AppGNBbar_container__3aaiG">
@@ -440,7 +395,352 @@
                             </div>
                         </div>
                     </nav>
-                    <!-- BODY내용 -->
+                    <!-- body (메인 내용) -->
+                    <div
+                        id="AppLayout_Contents"
+                        class="AppLayout_contents__1VFab"
+                    >
+                        <div class="Funding_wrapper__ZB-2b">
+                            <!-- body_header -->
+                            <div class="FundingHeader_container__wQrCW">
+                                <h2 class="FundingHeader_title__27dCX">
+                                    결제 목록 관리
+                                </h2>
+                                <p class="FundingHeader_description__2IFl4">
+                                    결제 정보를 조회합니다.
+                                </p>
+                            </div>
+
+                            <!-- body_layout -->
+                            <div class="FundingLayout_container__1WSFD">
+                                <!-- Action Buttons -->
+                                <div class="action-buttons">
+                                    <div class="form-flex-wrap">
+                                        <div class="select-type2">
+                                            <select
+                                                id="filter-comType"
+                                                style="display: none"
+                                            >
+                                                <option
+                                                    class="title"
+                                                    value=""
+                                                    selected=""
+                                                >
+                                                    전체
+                                                </option>
+                                                <option value="PCO">
+                                                    공통
+                                                </option>
+                                                <option value="PPR">
+                                                    선불
+                                                </option>
+                                                <option value="PPT">
+                                                    후불
+                                                </option>
+                                            </select>
+                                            <div
+                                                class="nice-select"
+                                                tabindex="0"
+                                            >
+                                                <span class="current"
+                                                    >전체</span
+                                                >
+                                                <ul class="list">
+                                                    <li
+                                                        data-value=""
+                                                        class="option"
+                                                    >
+                                                        전체
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        이름
+                                                    </li>
+                                                    <li
+                                                        data-value="PPR"
+                                                        class="option"
+                                                    >
+                                                        이메일
+                                                    </li>
+                                                    <li
+                                                        data-value="PPT"
+                                                        class="option"
+                                                    >
+                                                        결제 방법
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        사용한 포인트
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        결제 날짜
+                                                    </li>
+                                                    <li
+                                                        data-value="PCO"
+                                                        class="option"
+                                                    >
+                                                        포인트 잔액
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-search">
+                                            <input
+                                                id="schKey"
+                                                type="text"
+                                                placeholder="검색어를 입력하세요"
+                                                maxlength="20"
+                                            />
+                                            <button
+                                                class="btn-search"
+                                                id="btn-search"
+                                            >
+                                                <i class="ico-search"></i
+                                                ><span class="hidden"
+                                                    >검색</span
+                                                >
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn-clear hidden"
+                                            >
+                                                <i class="ico-input-delete"></i
+                                                ><span class="hidden"
+                                                    >지우기</span
+                                                >
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="actionButton">
+                                        <button
+                                            id="deleteSelectedBtn"
+                                            class="deleteSelectedBtn"
+                                        >
+                                            선택 삭제
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="UserTable_container__1JHD1">
+                                    <div
+                                        class="UserTable_row__1Qg9b UserTable_header__2WvXj"
+                                    >
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell selectAllCell"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="selectAll"
+                                            />
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            ID
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            이름
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            이메일
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            결제 방법
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            사용한 포인트
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            결제 날짜
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            포인트 잔액
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            결제 승인
+                                        </div>
+                                    </div>
+
+                                    <!-- Example row (Initial data) -->
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            1
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            John Doe
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            john@example.com
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            신용카드
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2020-10-16
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-08-16
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            승인 대기
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                승인
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상훈
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            sang@example.com
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            계좌이체
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2021-01-12
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-06-16
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            승인 대기
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                승인
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            3
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            길동
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            hello@example.com
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            신용카드
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2020-08-22
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-08-24
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            승인 완료
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                승인
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 승인 버튼 모달 -->
+                    <div id="authModal" class="modal">
+                        <div class="dim"></div>
+                        <div class="modal-wrap">
+                            <div class="modal-content">
+                                <p id="modalMessage">
+                                    결제 승인을 하시겠습니까?
+                                </p>
+                                <div class="button-container">
+                                    <button id="verifyBtn" class="verify-btn">
+                                        확인
+                                    </button>
+                                    <button id="cancelBtn" class="cancel-btn">
+                                        취소
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Add/Edit Modal -->
+                    <div id="userModal" class="modal">
+                        <div class="modal-content">
+                            <span class="closeBtn">&times;</span>
+                            <h3 class="UserForm_title__1NFiQ" id="modalTitle">
+                                회원 추가
+                            </h3>
+                            <form id="userForm">
+                                <div class="UserForm_group__2PlQs">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" required />
+                                </div>
+                                <div class="UserForm_group__2PlQs">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" required />
+                                </div>
+                                <div class="UserForm_group__2PlQs">
+                                    <label for="role">Role:</label>
+                                    <select id="role" required>
+                                        <option value="" disabled selected>
+                                            Select a role
+                                        </option>
+                                        <option value="user">User</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="userActionBtn">
+                                    회원 추가
+                                </button>
+                            </form>
+                        </div>
+                    </div>
 
                     <!-- 사이드바 버튼(click하면 사이드바 들어감) -->
                     <button
@@ -453,5 +753,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/admin/manager.js"></script>
+    <script src="/static/js/admin/admin_payment/admin_payment_subscription .js"></script>
 </html>

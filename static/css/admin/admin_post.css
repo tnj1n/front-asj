@@ -1,0 +1,671 @@
+/* 초기화 및 공통 스타일 */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+button,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background-repeat: no-repeat;
+    appearance: none;
+}
+
+html {
+   
+    line-height: 1.15;
+   
+    text-size-adjust: 100%;
+   
+}
+
+body {
+    line-height: normal;
+    background-color: white;
+    font-family: Pretendard !important;
+    
+    color: #333;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+}
+
+/* 공통 요소 스타일 */
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+ol,
+ul {
+    list-style: none;
+    
+}
+
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+li{
+    height: inherit;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    height: 45px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+}
+ol ol, ol ul, ul ol, ul ul {
+    margin-bottom: 0;
+}
+
+ /* 최신 업데이트 순 버튼 스타일링 */
+
+
+.selected-value {
+    margin-right: 8px;
+    color: #666;
+}
+
+img.rotate {
+    transition: transform 0.3s;
+}
+
+.rotate.open {
+    transform: rotate(180deg);
+}
+   .align-items-center {
+    align-items: center;
+}.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}.section_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1024px;
+    height: auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 16px;
+}.section_container a {
+    text-align: left;
+}.section_document {
+    
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    width: 330px;
+    height: 95px;
+    padding: 20px;
+}.transition {
+    transition: 0.3s;
+}.pb-4, .py-4 {
+    padding-bottom: 1rem;
+}.mb-0, .my-0 {
+    margin-bottom: 0;
+    margin-top: 0;
+}.justify-content-space {
+    justify-content: space-evenly;
+}.align-items-center {
+    align-items: center;
+}.flex {
+    display: flex !important;
+}.ydsfooter_munu_bar {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    flex-direction: row;
+}
+   a {
+  
+    text-decoration: none;
+    background-color: transparent;
+}.FAQ_card_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+   margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 9px;
+}
+.FAQ_card_answers {
+    font-size: 14px;
+    color: #a9a9a9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* 글 제목의 최대 너비 설정 */
+}
+.FAQ_card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.font-medium {
+    font-weight: 500;
+}.font-size-sm {
+    
+    font-size: 9px;
+ 
+}
+.section_document {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    justify-content: flex-start
+}
+
+.section_document:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #40e0d0;
+}
+.floating-button {
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+   
+   text-align: center;
+    background-color: #00C4C4;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    align-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+}
+.ejqkLc {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(0, 122, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* 이미지와 텍스트 사이의 간격 */
+}
+.ejqkLc img {
+    width: 24px; /* 이미지 아이콘 크기 */
+    height: 24px;
+    object-fit: cover;
+}
+.writetitle{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.writecontent{
+    font-size: 12px;
+    color: #a9a9a9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+hr {
+    margin: 0;
+    border: 0;
+    background-color: #f2f4f6;
+    width: 100%;
+    height: 8px;
+}
+
+.Divider_divider {
+    margin: 0;
+    border: 0;
+    position: relative;
+}
+
+.Divider_divider.Divider_horizontal {
+    margin: 16px 0;
+    background-color: #f2f4f6;
+    height: 1px;
+}
+
+.Divider_divider.Divider_horizontal.Divider_lightBG {
+    background-color: #f2f4f6;
+    opacity: 1;
+}
+
+.Divider_divider.Divider_horizontal.Divider_spacing3 {
+    margin: 8px 0;
+}
+
+.RecommendedPostsPage_container {
+    display: flex;
+    justify-content: center;
+    /* background-color: #f9fafb; */
+    height: calc(100% - 56px);
+    width: 100%;
+    padding: 20px 66px;
+}
+.AppLayout_container__2g11i .AppLayout_main__3h4EB .AppLayout_contents_mainContent {
+    position: relative;
+    flex: 1 1;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .06);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.AppLayout_contents_mainContent .RecommendedPostsPage-inner {
+    width: 100%;
+    position: relative;
+    padding: 0 16px 40px;
+    background-color: #fff;
+}
+
+.posts-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.Posts-list-container {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.Posts-list-wrapper .postList-title {
+    color: #212529;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.PostFilter_wrapper {
+    position: sticky;
+    z-index: 8;
+    top: 0;
+    background-color: #fff;
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: center;
+}
+
+.PostFilter_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+    width: 400px;
+}
+
+.PostFilter_searchInput {
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    min-width: 0;
+    transition: border-color 0.3s;
+}
+
+.PostsFilter_filterButton {
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #f5f7fa;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.PostFilter_wrapper .PostsFilter_filterButton {
+    height: 40px;
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #f9fafb;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.write_footer{
+    font-weight: 400;
+    margin-top: 7px;
+    font-size: 10px;
+    color: #a9a9a9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.views{
+    font-size: 12px;
+    font-weight: 400;
+    color: #a9a9a9;;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.background{
+    min-width: 1013px;
+}
+
+.PostsFilter_filterButton:hover {
+    background-color: #e2e8f0;
+}
+
+.AllSettingToggle_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 8px;
+    width: 100%;
+    color: #212529;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.PostFilter_searchInput:focus {
+    border-color: #00c4c4;
+}
+
+.section_document{
+    cursor: pointer;
+}
+
+.Allselect_Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.SettingsToggle_toggle .SettingToggle_input {
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+}
+
+.SettingsToggle_toggle {
+    display: flex;
+    margin-right: 16px;
+}
+
+.SettingsToggle_toggle .SettingToggle_switch {
+    display: block;
+    top: 0px;
+    position: relative;
+    opacity: 1;
+    border: solid 2px rgba(0, 0, 0, .06);
+    border-radius: 16px;
+    background-color: #f5f7fa;
+    cursor: pointer;
+    width: 24px;
+    height: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active {
+    border-color: #00c4c4;
+    background-color: #00c4c4;
+}
+
+.SettingsToggle_toggle .SettingToggle_switch:after {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    transition: .3s all;
+    border-radius: 12px;
+    box-shadow: 0 6px 6px -1px rgba(10, 22, 70, .1), 0 0 5px rgba(10, 22, 70, .06);
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    content: "";
+}
+
+.SettingsToggle_toggle .SettingToggle_switch.SettingToggle_active:after {
+    left: 9px; /* 가상 요소가 오른쪽으로 이동 */
+}
+
+.Allselect_Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* 필요시 % 값을 더 늘려주세요 */
+}
+
+.Allselect_Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* 필요시 % 값을 더 늘려주세요 */
+}
+
+.SettingsToggle_toggle .SettingToggle_switch_all {
+    top: 0px;
+}
+
+input, textarea {
+    background: none;
+}
+
+.SortFilterOptions {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.sort-filter-option {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sort-filter-option.selected {
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pagination {
+    margin: auto;
+    text-align: center;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    height: auto;
+}
+
+.pagination-list li {
+    margin: 0 2px;
+}
+
+.pagination-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px; /* 아이콘과 숫자 크기를 조절 */
+    text-decoration: none;
+    color: black; /* 필요에 따라 색상을 변경하세요 */
+    border: 1px solid #ccc; /* 필요에 따라 테두리 스타일을 변경하세요 */
+    border-radius: 3px; /* 필요에 따라 버튼 모양을 변경하세요 */
+}
+
+.pagination-list a:hover {
+    background-color: #f0f0f0; /* 마우스를 올렸을 때 배경색 */
+}
+
+.pagination-first-icon,
+.pagination-prev-icon,
+.pagination-next-icon,
+.pagination-last-icon {
+    font-size: 14px; /* 아이콘 크기를 숫자와 일치하도록 조절 */
+    height: 20px;
+}
+
+.pagination-first,
+.pagination-prev,
+.pagination-next,
+.pagination-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 현재 페이지를 나타내는 버튼의 스타일 */
+.pagination-list .active a {
+    background-color: #000000; /* 배경을 검정색으로 */
+    color: #ffffff; /* 글자를 하얀색으로 */
+}
+
+/* 마우스를 올렸을 때 배경색을 검정색으로 설정 */
+.pagination-list a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.row {
+    justify-content: flex-start;
+    margin-left: -10px;
+}
+
+.section_container{
+    justify-content: flex-start;
+}

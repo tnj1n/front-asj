@@ -218,114 +218,114 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModal();
     });
 
-    // 닫기 버튼 클릭 시 모달 닫기
-    cancelBtn.addEventListener("click", () => {
-        closeModal();
-    });
+    // // 닫기 버튼 클릭 시 모달 닫기
+    // cancelBtn.addEventListener("click", () => {
+    //     closeModal();
+    // });
 
-    // 필터링된 항목 표시 함수
-    function showFilteredItems() {
-        userRows.forEach((row) => {
-            row.classList.add("hidden");
-        });
+    // // 필터링된 항목 표시 함수
+    // function showFilteredItems() {
+    //     userRows.forEach((row) => {
+    //         row.classList.add("hidden");
+    //     });
 
-        if (filteredItems.length > 0) {
-            tableHeader.classList.remove("hidden");
-            tableHeader.classList.add("visible");
-            filteredItems.forEach((row) => {
-                row.classList.remove("hidden");
-                row.classList.add("visible");
-            });
-        } else {
-            tableHeader.classList.add("hidden");
-            alert("검색 결과가 없습니다.");
-        }
-    }
+    //     if (filteredItems.length > 0) {
+    //         tableHeader.classList.remove("hidden");
+    //         tableHeader.classList.add("visible");
+    //         filteredItems.forEach((row) => {
+    //             row.classList.remove("hidden");
+    //             row.classList.add("visible");
+    //         });
+    //     } else {
+    //         tableHeader.classList.add("hidden");
+    //         alert("검색 결과가 없습니다.");
+    //     }
+    // }
 
-    // 검색 및 필터링 함수
-    function filterBoardItems() {
-        filteredItems = Array.from(userRows).filter((row) => {
-            let cellToSearch;
+    // // 검색 및 필터링 함수
+    // function filterBoardItems() {
+    //     filteredItems = Array.from(userRows).filter((row) => {
+    //         let cellToSearch;
 
-            switch (selectedFilter) {
-                case "이름":
-                    cellToSearch = row.querySelector(
-                        ".UserTable_cell__3kj0K:nth-child(3)"
-                    );
-                    break;
-                case "이메일":
-                    cellToSearch = row.querySelector(
-                        ".UserTable_cell__3kj0K:nth-child(4)"
-                    );
-                    break;
-                case "결제 방법":
-                    cellToSearch = row.querySelector(
-                        ".UserTable_cell__3kj0K:nth-child(5)"
-                    );
-                    break;
-                case "구독 날짜":
-                    cellToSearch = row.querySelector(
-                        ".UserTable_cell__3kj0K:nth-child(6)"
-                    );
-                    break;
-                case "결제 날짜":
-                    cellToSearch = row.querySelector(
-                        ".UserTable_cell__3kj0K:nth-child(7)"
-                    );
-                    break;
-                case "결제 승인":
-                    cellToSearch = row.querySelector(
-                        ".UserTable_cell__3kj0K:nth-child(8)"
-                    );
-                    break;
-                default:
-                    cellToSearch = row.querySelectorAll(
-                        ".UserTable_cell__3kj0K"
-                    );
-            }
+    //         switch (selectedFilter) {
+    //             case "이름":
+    //                 cellToSearch = row.querySelector(
+    //                     ".UserTable_cell__3kj0K:nth-child(3)"
+    //                 );
+    //                 break;
+    //             case "이메일":
+    //                 cellToSearch = row.querySelector(
+    //                     ".UserTable_cell__3kj0K:nth-child(4)"
+    //                 );
+    //                 break;
+    //             case "결제 방법":
+    //                 cellToSearch = row.querySelector(
+    //                     ".UserTable_cell__3kj0K:nth-child(5)"
+    //                 );
+    //                 break;
+    //             case "구독 날짜":
+    //                 cellToSearch = row.querySelector(
+    //                     ".UserTable_cell__3kj0K:nth-child(6)"
+    //                 );
+    //                 break;
+    //             case "결제 날짜":
+    //                 cellToSearch = row.querySelector(
+    //                     ".UserTable_cell__3kj0K:nth-child(7)"
+    //                 );
+    //                 break;
+    //             case "결제 승인":
+    //                 cellToSearch = row.querySelector(
+    //                     ".UserTable_cell__3kj0K:nth-child(8)"
+    //                 );
+    //                 break;
+    //             default:
+    //                 cellToSearch = row.querySelectorAll(
+    //                     ".UserTable_cell__3kj0K"
+    //                 );
+    //         }
 
-            if (selectedFilter === "전체") {
-                const rowText = Array.from(cellToSearch)
-                    .map((cell) => cell.textContent.trim())
-                    .join(" ");
-                return searchQuery === "" || rowText.includes(searchQuery);
-            } else {
-                return (
-                    searchQuery === "" ||
-                    cellToSearch.textContent.trim().includes(searchQuery)
-                );
-            }
-        });
+    //         if (selectedFilter === "전체") {
+    //             const rowText = Array.from(cellToSearch)
+    //                 .map((cell) => cell.textContent.trim())
+    //                 .join(" ");
+    //             return searchQuery === "" || rowText.includes(searchQuery);
+    //         } else {
+    //             return (
+    //                 searchQuery === "" ||
+    //                 cellToSearch.textContent.trim().includes(searchQuery)
+    //             );
+    //         }
+    //     });
 
-        if (searchQuery === "") {
-            filteredItems = Array.from(userRows);
-        }
+    //     if (searchQuery === "") {
+    //         filteredItems = Array.from(userRows);
+    //     }
 
-        showFilteredItems();
-    }
+    //     showFilteredItems();
+    // }
 
-    // 드롭다운에서 선택한 항목에 따라 필터링하는 함수
-    function filterItems() {
-        const filterValue = document
-            .querySelector(".nice-select .current")
-            .textContent.trim();
-        selectedFilter = filterValue;
-        filterBoardItems();
-    }
+    // // 드롭다운에서 선택한 항목에 따라 필터링하는 함수
+    // function filterItems() {
+    //     const filterValue = document
+    //         .querySelector(".nice-select .current")
+    //         .textContent.trim();
+    //     selectedFilter = filterValue;
+    //     filterBoardItems();
+    // }
 
-    // 검색어 입력 시 처리
-    searchInput.addEventListener("keyup", (e) => {
-        if (e.key === "Enter") {
-            searchQuery = searchInput.value.trim();
-            filterBoardItems();
-        }
-    });
+    // // 검색어 입력 시 처리
+    // searchInput.addEventListener("keyup", (e) => {
+    //     if (e.key === "Enter") {
+    //         searchQuery = searchInput.value.trim();
+    //         filterBoardItems();
+    //     }
+    // });
 
-    // 검색 버튼 클릭 시 처리
-    searchBtn.addEventListener("click", () => {
-        searchQuery = searchInput.value.trim();
-        filterBoardItems();
-    });
+    // // 검색 버튼 클릭 시 처리
+    // searchBtn.addEventListener("click", () => {
+    //     searchQuery = searchInput.value.trim();
+    //     filterBoardItems();
+    // });
 
     // 드롭다운 기능 구현
     niceSelects.forEach((niceSelect) => {

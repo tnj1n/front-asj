@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원 목록 페이지</title>
+        <link rel="stylesheet" href="/static/css/admin/admin_user.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div id="AppLayout_Container" class="AppLayout_container__2g11i">
+                <div class="AppGNBbar_container__3aaiG">
+                    <div class="AppGNBbar_flex__-H9Qf">
+                        <div class="StudioLogo_container__2u4Eb">
+                            <button
+                                class="StudioLogo_logo__pXI-Y"
+                                type="button"
+                                aria-label="로고 버튼"
+                            ></button>
+                            <div class="StudioLogo_type__2Sksn">
+                                펀딩·프리오더
+                            </div>
+                        </div>
+                        <div class="StudioStatus_stateBox__21QpO">
+                            <span class="StudioStatus_state__2OMTs"
+                                >작성 중</span
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="AppGNBbar_flex__-H9Qf AppGNBbar_rightBox__we5_g"
+                    >
+                        <div class="ProjectInfo_container__3jAST">
+                            <button
+                                type="button"
+                                class="ProjectInfo_infoButton__2bg95"
+                                aria-controls="project-info-box"
+                                aria-expanded="false"
+                            >
+                                관리자 ID:
+                                <span class="ProjectInfo_emphasis__1i34c"
+                                    >309473</span
+                                >
+                                <span class="ProjectInfo_text__3evR-">정보</span
+                                ><svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="withIcon_icon__2IQiS"
+                                    aria-hidden="true"
+                                    style="width: 12px; height: 12px"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                    ></path>
+                                </svg>
+                            </button>
+                            <!-- <div
+                                class="ProjectInfo_infoBox__2x8RL"
+                                role="region"
+                                aria-labelledby="project-info"
+                            >
+                                <dl>
+                                    <dt class="BlindText_textHidden__1W0aB">
+                                        메이커 명
+                                    </dt>
+                                    <dd class="ProjectInfo_content__1VmXE">
+                                        <span
+                                            class="Avatar_avatar__1mOG5 Avatar_sm__V_6km ProjectInfo_profileImage__1PLV0"
+                                            ><span class="Avatar_inner__hN779"
+                                                ><img
+                                                    src="https://static.wadiz.kr/studio/funding/static/media/default-zingugi.de76a099.svg" /></span></span
+                                        ><span
+                                            class="ProjectInfo_makerName__KIDrd"
+                                            >석상훈</span
+                                        >
+                                    </dd>
+                                    <dt class="BlindText_textHidden__1W0aB">
+                                        상태
+                                    </dt>
+                                    <dd
+                                        class="ProjectInfo_content__1VmXE ProjectInfo_stateBox__705_4"
+                                    >
+                                        <span class="ProjectInfo_state__1Aqkt"
+                                            >작성 중</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <button
+                                    class="Button_button__35X6_ Button_primary__1vdas Button_contained__1XlJQ Button_sm__3vobZ Button_startIcon__7ZEht Button_block__3y0pW"
+                                    type="button"
+                                >
+                                    <span
+                                        ><svg
+                                            viewBox="0 0 40 40"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS Button_icon__2I54k"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M33.6 5.2a9 9 0 0 1 0 12.7L29 22.5l-.6.5a11 11 0 0 0-.4-2.4l4.1-4.1a7 7 0 0 0-9.9-9.9l-4.6 4.6a7 7 0 0 0 4.7 11.9 5 5 0 0 1-.2 2 8.9 8.9 0 0 1-7.8-5.4 9.1 9.1 0 0 1-.3-6.5 8.9 8.9 0 0 1 2.1-3.4l4.6-4.6a9 9 0 0 1 12.9 0zm-15.7 9.5a5 5 0 0 0-.2 2 6.9 6.9 0 0 1 6.3 4.2 7 7 0 0 1-1.5 7.7l-5.7 5.7a7 7 0 0 1-9.9-9.9l5.2-5.2a11 11 0 0 1-.4-2.4l-.6.5-5.6 5.6a9 9 0 1 0 12.7 12.8l5.7-5.7a8.9 8.9 0 0 0 2.1-3.4 9.1 9.1 0 0 0-.3-6.5 8.9 8.9 0 0 0-7.8-5.4z"
+                                            ></path></svg>
+                                        <span class="Button_children__1TD4r"
+                                            >URL 복사</span
+                                        ></span
+                                    >
+                                </button>
+                            </div> -->
+                        </div>
+                        <div
+                            class="AnnouncementButton_container__1p1gr"
+                            role="button"
+                        >
+                            <img
+                                class="AnnouncementButton_icon__29AtY"
+                                src="https://static.wadiz.kr/studio/funding/static/media/announcement.56f4b8e3.svg"
+                                alt=""
+                                aria-hidden="true"
+                            /><span
+                                class="Badge_container__3exWO Badge_visible__1Zpvc AnnouncementButton_badge__2Jq25"
+                                ><span
+                                    class="Badge_badge__3-2fx Badge_dot__vTBB0 Badge_md__2iPBs"
+                                ></span
+                            ></span>
+                        </div>
+                        <div class="PreviewExitButtons_container__1R35v">
+                            <button
+                                class="Button_button__35X6_ PreviewExitButtons_button__2tixf"
+                                type="button"
+                            >
+                                <span
+                                    ><span class="Button_children__1TD4r"
+                                        >비워드림</span
+                                    ></span
+                                ></button
+                            ><button
+                                class="Button_button__35X6_ PreviewExitButtons_button__2tixf"
+                                type="button"
+                            >
+                                <span
+                                    ><span class="Button_children__1TD4r"
+                                        >로그아웃</span
+                                    ></span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="AppLayout_main__3h4EB">
+                    <nav
+                        id="AppNavbarLayout_Nav"
+                        class="AppNavbarLayout_container__1zFQR AppNavbarLayout_expand__12bTj"
+                    >
+                        <div class="AppNavbarLayout_content__2agCV">
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        회원 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >일발 회원 정보</a
+                                    >
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >기사 정보</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        결제 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >구독료 결제</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/screening"
+                                        >포인트 결제</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        후기 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >기사님 후기</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        문의 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >FAQ</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/screening"
+                                        >1대1 문의</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/story"
+                                        >취소/교환/환불</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/condition"
+                                        >배송문의</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/policy"
+                                        >결제 문의</a
+                                    ><a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/makerInfo"
+                                        >서비스 문의</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="MenuItems_section__qApp6">
+                                <a
+                                    aria-current="page"
+                                    class="MenuItems_menu__QgJck MenuItems_hasSubmenu__1EhTS MenuItems_active__tDqWg"
+                                    ><span class="MenuItems_label__2ceJf"
+                                        ><svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.656 3.944a1.4 1.4 0 0 1 .92-.344h9.448c.375 0 .735.15.998.417l2.84 2.883H3.258l3.398-2.956zM2.6 8.1V19A1.4 1.4 0 0 0 4 20.4h16a1.4 1.4 0 0 0 1.4-1.4V8.1H2.6zm4.976-5.7a2.6 2.6 0 0 0-1.706.638L2.293 6.15a2.6 2.6 0 0 0-.894 1.962V19A2.6 2.6 0 0 0 4 21.6h16a2.6 2.6 0 0 0 2.6-2.6V8.02a2.6 2.6 0 0 0-.747-1.825l-2.976-3.02a2.6 2.6 0 0 0-1.852-.775h-9.45zM9.4 12a.6.6 0 0 1 .6-.6h4a.6.6 0 1 1 0 1.2h-4a.6.6 0 0 1-.6-.6z"
+                                            ></path>
+                                        </svg>
+                                        상품 관리<svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2IQiS MenuItems_downIcon__2GVY9"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                            ></path></svg></span
+                                ></a>
+                                <div class="MenuItems_submenuContainer__3sALs">
+                                    <a
+                                        class="MenuItems_submenu__3RDKb"
+                                        href="/studio/reward/309473/funding/plan"
+                                        >상품 목록</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- BODY 내용 -->
+                    <div
+                        id="AppLayout_Contents"
+                        class="AppLayout_contents_mainContent"
+                    >
+                        <div class="RecommendedUsersPage_container">
+                            <div class="RecommendedUsersPage-inner">
+                                <div class="Users-list-container">
+                                    <div class="users-list-wrapper">
+                                        <div class="users-list-header">
+                                            <div class="userList-title">
+                                                회원 목록
+                                            </div>
+                                            <div class="UserFilter_wrapper">
+                                                <input
+                                                    type="text"
+                                                    class="UserFilter_searchInput"
+                                                    placeholder="검색어 입력"
+                                                />
+                                                <button
+                                                    class="Button_button UsersFilter_filterButton UsersFilter_selected"
+                                                    type="button"
+                                                >
+                                                    <span>
+                                                        <span
+                                                            class="Button_children"
+                                                            >정보 변경</span
+                                                        >
+                                                    </span>
+                                                </button>
+                                                <button
+                                                    class="Button_button UsersFilter_filterButton"
+                                                    type="button"
+                                                >
+                                                    <span>
+                                                        <span
+                                                            class="Button_children"
+                                                            >회원 탈퇴</span
+                                                        >
+                                                    </span>
+                                                </button>
+                                                <!-- <button
+                                                    class="Button_button UsersFilter_filterButton"
+                                                    type="button"
+                                                >
+                                                    <span>
+                                                        <span class="Button_children"
+                                                            >탈퇴한 회원</span
+                                                        >
+                                                    </span>
+                                                </button> -->
+                                            </div>
+                                        </div>
+                                        <hr
+                                            class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"
+                                        />
+                                        <!-- 전체 토글 스위치 -->
+                                        <div class="Allselect_Toggle">
+                                            <div class="SettingsToggle_toggle">
+                                                <label
+                                                    for="funding_allow"
+                                                    class="SettingToggle_switch SettingToggle_switch_all"
+                                                >
+                                                </label>
+                                                <input
+                                                    type="checkbox"
+                                                    id="funding_allow"
+                                                    name="funding_allow"
+                                                    class="SettingToggle_input"
+                                                />
+                                            </div>
+                                            <div class="AllSettingToggle_title">
+                                                전체 선택
+                                            </div>
+                                            <div class="SortFilterOptions">
+                                                <span
+                                                    class="sort-filter-option selected"
+                                                    >가입일 순</span
+                                                >/
+                                                <span class="sort-filter-option"
+                                                    >이름 순</span
+                                                >/
+                                                <span class="sort-filter-option"
+                                                    >활동 회원 순</span
+                                                >/
+                                                <span class="sort-filter-option"
+                                                    >탈퇴 회원 순</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <!--  여기까지 전체 토글 스위치 -->
+                                        <hr
+                                            class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"
+                                        />
+                                        <!-- 회원 리스트 -->
+                                        <div class="UserList_userList">
+                                            <div
+                                                class="UserItem_container"
+                                                style="display: flex"
+                                            >
+                                                <div class="UserItem_content">
+                                                    <div
+                                                        class="SettingsToggle_toggle"
+                                                    >
+                                                        <label
+                                                            for="funding_allow"
+                                                            class="SettingToggle_switch"
+                                                        >
+                                                        </label>
+                                                        <input
+                                                            type="checkbox"
+                                                            id="funding_allow"
+                                                            name="funding_allow"
+                                                            class="SettingToggle_input"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="UserItem_avatarWrapper"
+                                                    >
+                                                        <a
+                                                            class="Avatar_avatar Avatar_xs UserItem_avatar"
+                                                            role="button"
+                                                            href=""
+                                                            target="_blank"
+                                                            rel="nofollow noopener noreferrer"
+                                                        >
+                                                            <span
+                                                                class="Avatar_inner"
+                                                            >
+                                                                <img
+                                                                    src="https://img.freepik.com/free-photo/cute-ai-generated-cartoon-bunny_23-2150288873.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725235200&semt=ais_hybrid"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="UserItem_info">
+                                                        <div
+                                                            class="UserItem_innerWrapper"
+                                                        >
+                                                            <div
+                                                                class="UserItem_nickName"
+                                                            >
+                                                                <span
+                                                                    class="UserItem_name"
+                                                                    >소금빵</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="UserItem_email"
+                                                            >
+                                                                <span
+                                                                    >회원@이메일</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="UserItem_etcInfo">
+                                                    <div
+                                                        class="User_status"
+                                                        style="
+                                                            color: rgb(
+                                                                0,
+                                                                196,
+                                                                196
+                                                            );
+                                                        "
+                                                    >
+                                                        활동중
+                                                    </div>
+                                                    <div
+                                                        class="UserItem_spacer"
+                                                    ></div>
+                                                    <div class="User_joinDate">
+                                                        가입 일자
+                                                        <b>2024.08.31</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="UserItem_container"
+                                                style="display: flex"
+                                            >
+                                                <div class="UserItem_content">
+                                                    <div
+                                                        class="SettingsToggle_toggle"
+                                                    >
+                                                        <label
+                                                            for="funding_allow"
+                                                            class="SettingToggle_switch"
+                                                        >
+                                                        </label>
+                                                        <input
+                                                            type="checkbox"
+                                                            id="funding_allow"
+                                                            name="funding_allow"
+                                                            class="SettingToggle_input"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="UserItem_avatarWrapper"
+                                                    >
+                                                        <a
+                                                            class="Avatar_avatar Avatar_xs UserItem_avatar"
+                                                            role="button"
+                                                            href=""
+                                                            target="_blank"
+                                                            rel="nofollow noopener noreferrer"
+                                                        >
+                                                            <span
+                                                                class="Avatar_inner"
+                                                            >
+                                                                <img
+                                                                    src="/static/images/adminPage/userProfile/005.png"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="UserItem_info">
+                                                        <div
+                                                            class="UserItem_innerWrapper"
+                                                        >
+                                                            <div
+                                                                class="UserItem_nickName"
+                                                            >
+                                                                <span
+                                                                    class="UserItem_name"
+                                                                    >123피자빵</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="UserItem_email"
+                                                            >
+                                                                <span
+                                                                    >회원@이메일</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="UserItem_etcInfo">
+                                                    <div
+                                                        class="User_status"
+                                                        style="color: red"
+                                                    >
+                                                        탈퇴함
+                                                    </div>
+                                                    <div
+                                                        class="UserItem_spacer"
+                                                    ></div>
+                                                    <div class="User_joinDate">
+                                                        가입 일자
+                                                        <b>2024.08.28</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="UserItem_container"
+                                                style="display: flex"
+                                            >
+                                                <div class="UserItem_content">
+                                                    <div
+                                                        class="SettingsToggle_toggle"
+                                                    >
+                                                        <label
+                                                            for="funding_allow"
+                                                            class="SettingToggle_switch"
+                                                        >
+                                                        </label>
+                                                        <input
+                                                            type="checkbox"
+                                                            id="funding_allow"
+                                                            name="funding_allow"
+                                                            class="SettingToggle_input"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="UserItem_avatarWrapper"
+                                                    >
+                                                        <a
+                                                            class="Avatar_avatar Avatar_xs UserItem_avatar"
+                                                            role="button"
+                                                            href=""
+                                                            target="_blank"
+                                                            rel="nofollow noopener noreferrer"
+                                                        >
+                                                            <span
+                                                                class="Avatar_inner"
+                                                            >
+                                                                <img
+                                                                    src="/static/images/adminPage/userProfile/004.png"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="UserItem_info">
+                                                        <div
+                                                            class="UserItem_innerWrapper"
+                                                        >
+                                                            <div
+                                                                class="UserItem_nickName"
+                                                            >
+                                                                <span
+                                                                    class="UserItem_name"
+                                                                    >a참이슬b</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="UserItem_email"
+                                                            >
+                                                                <span
+                                                                    >회원@이메일</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="UserItem_etcInfo">
+                                                    <div
+                                                        class="User_status"
+                                                        style="color: red"
+                                                    >
+                                                        탈퇴함
+                                                    </div>
+                                                    <div
+                                                        class="UserItem_spacer"
+                                                    ></div>
+                                                    <div class="User_joinDate">
+                                                        가입 일자
+                                                        <b>2024.08.27</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="UserItem_container"
+                                                style="display: flex"
+                                            >
+                                                <div class="UserItem_content">
+                                                    <!-- 토글 스위치 -->
+                                                    <div
+                                                        class="SettingsToggle_toggle"
+                                                    >
+                                                        <label
+                                                            for="funding_allow"
+                                                            class="SettingToggle_switch"
+                                                        >
+                                                        </label>
+                                                        <input
+                                                            type="checkbox"
+                                                            id="funding_allow"
+                                                            name="funding_allow"
+                                                            class="SettingToggle_input"
+                                                        />
+                                                    </div>
+                                                    <!-- 여기까지 토글 스위치 -->
+
+                                                    <div
+                                                        class="UserItem_avatarWrapper"
+                                                    >
+                                                        <a
+                                                            class="Avatar_avatar Avatar_xs UserItem_avatar"
+                                                            role="button"
+                                                            href=""
+                                                            target="_blank"
+                                                            rel="nofollow noopener noreferrer"
+                                                        >
+                                                            <span
+                                                                class="Avatar_inner"
+                                                            >
+                                                                <img
+                                                                    src="/static/images/adminPage/userProfile/001.png"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="UserItem_info">
+                                                        <div
+                                                            class="UserItem_innerWrapper"
+                                                        >
+                                                            <div
+                                                                class="UserItem_nickName"
+                                                            >
+                                                                <span
+                                                                    class="UserItem_name"
+                                                                    >가나다</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="UserItem_email"
+                                                            >
+                                                                <span
+                                                                    >123@이메일</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="UserItem_etcInfo">
+                                                    <div
+                                                        class="User_status"
+                                                        style="
+                                                            color: rgb(
+                                                                0,
+                                                                196,
+                                                                196
+                                                            );
+                                                        "
+                                                    >
+                                                        활동중
+                                                    </div>
+                                                    <div
+                                                        class="UserItem_spacer"
+                                                    ></div>
+                                                    <div class="User_joinDate">
+                                                        가입 일자
+                                                        <b>2024.08.24</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="UserItem_container"
+                                                style="display: flex"
+                                            >
+                                                <div class="UserItem_content">
+                                                    <div
+                                                        class="SettingsToggle_toggle"
+                                                    >
+                                                        <label
+                                                            for="funding_allow"
+                                                            class="SettingToggle_switch"
+                                                        >
+                                                        </label>
+                                                        <input
+                                                            type="checkbox"
+                                                            id="funding_allow"
+                                                            name="funding_allow"
+                                                            class="SettingToggle_input"
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="UserItem_avatarWrapper"
+                                                    >
+                                                        <a
+                                                            class="Avatar_avatar Avatar_xs UserItem_avatar"
+                                                            role="button"
+                                                            href=""
+                                                            target="_blank"
+                                                            rel="nofollow noopener noreferrer"
+                                                        >
+                                                            <span
+                                                                class="Avatar_inner"
+                                                            >
+                                                                <img
+                                                                    src="/static/images/adminPage/userProfile/002.png"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="UserItem_info">
+                                                        <div
+                                                            class="UserItem_innerWrapper"
+                                                        >
+                                                            <div
+                                                                class="UserItem_nickName"
+                                                            >
+                                                                <span
+                                                                    class="UserItem_name"
+                                                                    >다나카</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="UserItem_email"
+                                                            >
+                                                                <span
+                                                                    >234@이메일</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="UserItem_etcInfo">
+                                                    <div
+                                                        class="User_status"
+                                                        style="
+                                                            color: rgb(
+                                                                0,
+                                                                196,
+                                                                196
+                                                            );
+                                                        "
+                                                    >
+                                                        활동중
+                                                    </div>
+                                                    <div
+                                                        class="UserItem_spacer"
+                                                    ></div>
+                                                    <div class="User_joinDate">
+                                                        가입 일자
+                                                        <b>2024.08.20</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 페이지네이션 -->
+                                    <nav class="pagination">
+                                        <ul class="pagination-list">
+                                            <!-- 처음 페이지로 이동하는 버튼 -->
+                                            <li class="pagination-first">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-first-link"
+                                                    rel="nofollow"
+                                                >
+                                                    <span
+                                                        class="pagination-first-icon"
+                                                        aria-hidden="true"
+                                                        >«</span
+                                                    >
+                                                </a>
+                                            </li>
+                                            <!-- 이전 페이지로 이동하는 버튼 -->
+                                            <li class="pagination-prev">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-prev-link"
+                                                    rel="prev nofollow"
+                                                >
+                                                    <span
+                                                        class="pagination-prev-icon"
+                                                        aria-hidden="true"
+                                                        >‹</span
+                                                    >
+                                                </a>
+                                            </li>
+                                            <!-- 페이지 번호 버튼 -->
+                                            <li class="pagination-page active">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >1</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >2</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >3</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >4</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >5</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >6</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >7</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >8</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >9</a
+                                                >
+                                            </li>
+                                            <li class="pagination-page">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-page-link"
+                                                    >10</a
+                                                >
+                                            </li>
+                                            <!-- 다음 페이지로 이동하는 버튼 -->
+                                            <li class="pagination-next">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-next-link"
+                                                    rel="next nofollow"
+                                                >
+                                                    <span
+                                                        class="pagination-next-icon"
+                                                        aria-hidden="true"
+                                                        >›</span
+                                                    >
+                                                </a>
+                                            </li>
+                                            <!-- 마지막 페이지로 이동하는 버튼 -->
+                                            <li class="pagination-last">
+                                                <a
+                                                    href="#"
+                                                    class="pagination-last-link"
+                                                    rel="nofollow"
+                                                >
+                                                    <span
+                                                        class="pagination-last-icon"
+                                                        aria-hidden="true"
+                                                        >»</span
+                                                    >
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <section
+                                        id="userModal"
+                                        class="modal SupporterProfile_supporterProfile"
+                                        style="display: none"
+                                    >
+                                        <div class="SupporterProfile_inner">
+                                            <div
+                                                class="SupporterProfileInfo_container"
+                                            >
+                                                <h3
+                                                    class="BlindText_textHidden"
+                                                ></h3>
+                                                <span
+                                                    aria-hidden="true"
+                                                    class="Avatar_avatar Avatar_lg SupporterProfileInfo_avatar"
+                                                >
+                                                    <span
+                                                        class="Avatar_inner Avatar_noBorder"
+                                                        ><img
+                                                            src="https://static.wadiz.kr/assets/icon/profile-icon-1.png"
+                                                        /> </span
+                                                ></span>
+                                                <div
+                                                    class="SupporterProfileInfo_supporterInfo"
+                                                >
+                                                    <dl
+                                                        class="SupporterProfileInfo_infoBox"
+                                                        aria-label="회원 정보"
+                                                    >
+                                                        <dt
+                                                            class="BlindText_textHidden"
+                                                        >
+                                                            회원 닉네임
+                                                        </dt>
+                                                        <dd
+                                                            class="SupporterProfileInfo_nickname"
+                                                        >
+                                                            닉네임
+                                                        </dd>
+                                                        <dt
+                                                            class="BlindText_textHidden"
+                                                        >
+                                                            회원이름
+                                                        </dt>
+                                                        <dd
+                                                            class="SupporterProfileInfo_accntTypeName UserItem_name"
+                                                        >
+                                                            회원본명
+                                                        </dd>
+                                                    </dl>
+                                                    <strong
+                                                        class="BlindText_textHidden"
+                                                    >
+                                                        관심 카테고리
+                                                    </strong>
+                                                    <ul
+                                                        class="SupporterProfileInterestKeyword_interestList"
+                                                    ></ul>
+                                                    <dl
+                                                        class="SupporterProfileActivityInfo_infoCountBox"
+                                                    >
+                                                        <div>
+                                                            <dt>회원등급</dt>
+                                                            <dd>
+                                                                라이트
+                                                                <span
+                                                                    class="BlindText_textHidden"
+                                                                >
+                                                                    등급
+                                                                </span>
+                                                            </dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt>보유포인트</dt>
+                                                            <dd>
+                                                                25000<span
+                                                                    class="BlindText_textHidden"
+                                                                    >pt</span
+                                                                >
+                                                            </dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt>거주 지역</dt>
+                                                            <dd>
+                                                                강남<span
+                                                                    class="BlindText_textHidden"
+                                                                    >구</span
+                                                                >
+                                                                <a
+                                                                    href="/web/social/follower/350884801"
+                                                                >
+                                                                    <span
+                                                                        class="BlindText_textHidden"
+                                                                    >
+                                                                        상세
+                                                                        페이지
+                                                                    </span>
+                                                                </a>
+                                                            </dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt>문의내역</dt>
+                                                            <dd>
+                                                                0<span
+                                                                    class="BlindText_textHidden"
+                                                                    >명</span
+                                                                >
+                                                                <a
+                                                                    href="/web/social/following/350884801"
+                                                                >
+                                                                    <span
+                                                                        class="BlindText_textHidden"
+                                                                    >
+                                                                        상세
+                                                                        페이지
+                                                                    </span>
+                                                                </a>
+                                                            </dd>
+                                                        </div>
+                                                    </dl>
+                                                </div>
+                                                <span class="modal-close"
+                                                    >×</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 사이드바 버튼(click하면 사이드바 들어감) -->
+                    <button
+                        type="button"
+                        class="AppLayout_expandNavButton__2AQMd AppLayout_expand__3TNUI"
+                    >
+                        <i class="AppLayout_icon__1_YzF"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/admin/admin_user.js"></script>
+</html>
