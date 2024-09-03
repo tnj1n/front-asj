@@ -40,14 +40,41 @@ selectButtons.forEach((selectButton) => {
 selectDivs.forEach((selectDiv) => {
     selectDiv.addEventListener("click", (e) => {
         const target = e.target;
-        // 'open' 클래스가 있는지 확인
-        if (target.classList.contains("open")) {
-            // 클래스가 있으면 제거
-            target.classList.toggle("open");
-        } else {
-            // 클래스가 없으면 추가
-            target.classList.add("open");
-        }
+        // // 'open' 클래스가 있는지 확인
+        // if (target.classList.contains("open", "selected", "focus")) {
+        //     console.log(target);
+        //     // 클래스가 있으면 제거
+        //     // target.forEach((selectDiv) => {
+        //     target.forEach((li) => {
+        //         li.classList.remove("selected", "focus");
+        //     });
+        //     console.log(target);
+        //     // });
+        // } else {
+        //     // 클래스가 없으면 추가
+        //     target.classList.add("open", "selected", "focus");
+        // }
+        // 'open', 'selected', 'focus' 클래스 중 하나라도 있으면 제거
+        //     if (
+        //         target.classList.contains("open") ||
+        //         target.classList.contains("selected") ||
+        //         target.classList.contains("focus")
+        //     ) {
+        //         selectDivs.forEach((target) => {
+        //             // 클래스를 제거
+        //             console.log(selectDiv);
+        //             selectDiv.classList.remove("open.selected.focus");
+        //             console.log(target);
+        //             target.classList.add("open", "selected", "focus");
+        //         });
+        //         //  overallSelectDiv.querySelectorAll(".list > li").forEach((item) => {
+        //         // item.classList.remove("focus", "selected");
+        //         // });
+        //         // target.classList.add("focus", "selected");
+        //     } else {
+        //         // 클래스를 추가
+        //         target.classList.add("open", "selected", "focus");
+        //     }
     });
 });
 

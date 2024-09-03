@@ -16,14 +16,6 @@ const overallSelectLists = overallSelectDiv.querySelectorAll(".list > li");
 // 선택된 드롭다운 옵션의 태그
 const tagList = document.querySelector("#listTagHtml");
 
-// const selectLists = document.querySelectorAll(".list > li");
-// const selectedLists = document.querySelectorAll("#listTagHtml > li");
-// const parentList = document.querySelectorAll("#listTagHtml");
-
-// console.log(overallSelectDiv);
-// console.log(districtSelectDiv);
-// console.log(districtOptions);
-
 let check = false;
 // 지역 선택 div 클릭 시 드롭다운 열고 닫기
 selectDivs.forEach((selectDiv) => {
@@ -143,12 +135,12 @@ overallSelectLists.forEach((option) => {
 //     selectDiv.addEventListener("click", (e) => {
 //         const target = e.target;
 //         // 'open' 클래스가 있는지 확인
-//         if (target.classList.contains("open")) {
+//         if (target.classList.contains("select","focus")) {
 //             // 클래스가 있으면 제거
-//             target.classList.toggle("open");
+//             target.classList.toggle("select","focus");
 //         } else {
 //             // 클래스가 없으면 추가
-//             target.classList.add("open");
+//             target.classList.add("select","focus");
 //         }
 //     });
 // });
