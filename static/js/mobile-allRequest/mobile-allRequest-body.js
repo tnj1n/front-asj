@@ -102,20 +102,16 @@ overallSelectLists.forEach((option) => {
                         overallSelectDiv.classList.remove("open");
 
                         // 새로운 태그를 추가
-                        // 새로운 태그를 추가
+                        // 서울 태그 옆에 추가되는 태그
                         if (check) {
                             tagList.removeChild(tagList.lastElementChild);
                         }
+                        //태그 추가
                         text = `<li id="tag_66" class="tagVal"><a>${selectedDistrictOption.innerText}</a></li>`;
                         tagList.innerHTML += text;
                         check = true;
-                        // selectedDistrictOption.classList.add("disabled");
-                        console.log(selectedDistrictOption);
-                        // selectedDistrictOption
-                        //     .querySelectorAll(".list > li:not(.disabled)")
-                        //     .forEach((item) => {
-                        //         item.classList.add("disabled");
-                        //     });
+
+                        // console.log(selectedDistrictOption);
 
                         // 선택 후 드롭다운 닫기
                         districtSelectDiv.parentElement.classList.remove(
