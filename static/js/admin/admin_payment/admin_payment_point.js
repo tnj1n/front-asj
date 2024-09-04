@@ -171,6 +171,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // 클릭 시 색상 변경 기능
+    function addTemporaryClass(element) {
+        element.classList.add("clicked");
+        setTimeout(function () {
+            element.classList.remove("clicked");
+        }, 300); // 0.3초 후에 원래 색으로 돌아옴
+    }
+
     // 모달을 여는 함수
     const openModal = (type) => {
         modalWraps.forEach((wrap) => {
@@ -204,6 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     addServiceBtn.addEventListener("click", function () {
+        addTemporaryClass(addServiceBtn);
         modalMessage.textContent = "결제 취소하시겠습니까?";
         openModal("auth");
     });
@@ -217,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 삭제 버튼 클릭 시 모달창 열기
     deleteSelectedBtn.addEventListener("click", () => {
+        addTemporaryClass(deleteSelectedBtn);
         modalMessage.textContent = "삭제하시겠습니까?";
         actionToPerform = () => {
             const selectedCheckboxes = document.querySelectorAll(

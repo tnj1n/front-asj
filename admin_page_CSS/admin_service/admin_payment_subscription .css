@@ -599,85 +599,6 @@ iframe, img, video {
 }
 
 /* body */
-.SortFilterOptions {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    white-space: nowrap;
-    margin-right: 20px;
-}
-
-.sort-filter-option.selected {
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.sort-filter-option {
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.filter_wrap{
-    justify-content: space-between;
-    display: flex;
-    border-top: 1px solid #e2e8f0;
-    border-bottom: 1px solid #e2e8f0;
-    margin: 10px;
-    padding: 10px;
-}
-
-.addServiceBtn, .deleteSelectedBtn{
-    height: 40px;
-    border-radius: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
-    background-color: #f9fafb;
-    border: none;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.addServiceBtn, .deleteSelectedBtn {
-    white-space: nowrap; /* 버튼 텍스트가 한 줄에 표시되도록 설정 */
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 8px;
-    background-color: #f5f7fa; /* 배경색 조정 */
-    border: 1px solid #e2e8f0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.addServiceBtn:hover, .deleteSelectedBtn:hover {
-    background-color: #e2e8f0; /* 버튼에 호버 효과 추가 */
-}
-
-.addServiceBtn.clicked, .deleteSelectedBtn.clicked {
-    background-color: rgb(0, 196, 196) !important;
-}
-
-
-
-.Filter_searchInput {
-    flex-grow: 1;
-    padding: 8px 12px;
-    font-size: 14px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    outline: none;
-    min-width: 0;
-    transition: border-color 0.3s;
-}
-
-.Filter_searchInput:focus {
-    border-color: #00c4c4;
-}
-/* ********************************************************************************************** */
-/* ********************************************************************************************** */
-/* ********************************************************************************************** */
-/* ********************************************************************************************** */
-/* ********************************************************************************************** */
 .AppLayout_container__2g11i .AppLayout_main__3h4EB .AppLayout_contents__1VFab {
     position: relative;
     -ms-flex: 1 1;
@@ -689,8 +610,6 @@ iframe, img, video {
 
 .Funding_wrapper__ZB-2b {
     padding: 40px 66px;
-    display: flex;
-    flex-direction: column;
 }
 
 .FundingHeader_container__wQrCW {
@@ -712,32 +631,47 @@ iframe, img, video {
     margin: 0 0 32px;
 }
 
+/* search */
+/* Search Input */
+#searchInput {
+    margin-right: auto; /* Pushes the input to the left */
+    padding: 5px;
+    width: 300px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
 
-/* 버튼 */
+/* Action Buttons Styles */
+.action-buttons {
+    display: flex;
+    align-items: center; /* Centers the items vertically */
+    justify-content: space-between; /* Puts space between the input and buttons */
+    margin-bottom: 20px;
+    width: 100%;
+}
 
-button {
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    background: 0 0;
+.actionButton {
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+}
+
+.openModalBtn, .deleteSelectedBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    outline: 0;
-    font-size: 15px;
-    font-family: "SUIT", sans-serif;
-    color: inherit;
+    font-size: 16px;
 }
 
-.hidden {
-    display: none;
-    position: absolute;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-    visibility: hidden;
+.deleteSelectedBtn {
+    background-color: #dc3545;
 }
 
+.openModalBtn:hover, .deleteSelectedBtn:hover {
+    opacity: 0.8;
+}
 /* User Table Styles */
 .FundingLayout_container__1WSFD{
     width: 1400px;
@@ -754,7 +688,6 @@ button {
 .UserTable_row__1Qg9b {
     display: table-row;
     width: 100%;
-    border: 1px solid #dee2e6;
 }
 
 .UserTable_cell__3kj0K {
@@ -762,15 +695,11 @@ button {
     box-sizing: border-box; /* padding과 border를 포함한 크기 조정 */
     padding: 8px; /* 셀 내용과 셀 경계 사이의 간격 */
     vertical-align: middle; /* 내용이 수직으로 가운데 정렬되도록 */
-    border-bottom: 1px solid #dee2e6; /* 셀 아래 테두리 */
 }
 .UserTable_header__2WvXj {
     background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6; /*헤더 아래 테두리*/
-    font-size: 17px;
-    font-weight: 600;
+    font-weight: bold;
 }
-
 
 .UserTable_cell__3kj0K input[type="checkbox"] {
     margin: 0 auto;
@@ -785,49 +714,49 @@ button {
     width: 3%;
 }
 
-/* 첫번째 열 */
+/* ID 열 */
 .headerCell:nth-child(2),
 .UserTable_cell__3kj0K:nth-child(2) {
-    width: 10%;
+    width: 3%;
 }
 
-/* 두번째 열 */
+/* 이름 열 */
 .headerCell:nth-child(3),
 .UserTable_cell__3kj0K:nth-child(3) {
-    width: 18%;
+    width: 15%;
 }
 
-/* 세번째 열 */
+/* 이메일 열 */
 .headerCell:nth-child(4),
 .UserTable_cell__3kj0K:nth-child(4) {
-    width: 14%;
+    width: 15%;
 }
 
-/* 네번째 열 */
+/* 결제 방법 열 */
 .headerCell:nth-child(5),
 .UserTable_cell__3kj0K:nth-child(5) {
-    width: 14%;
+    width: 15%;
 }
 
-/* 다섯번째 열 */
+/* 구독 날짜 열 */
 .headerCell:nth-child(6),
 .UserTable_cell__3kj0K:nth-child(6) {
-    width: 10%;
+    width: 15%;
 }
 
-/* 여섯번째 열 */
+/* 결제 날짜 열 */
 .headerCell:nth-child(7),
 .UserTable_cell__3kj0K:nth-child(7) {
-    width: 10%;
+    width: 15%;
 }
 
-/* 일곱 열 */
+/* 결제 승인 열 */
 .headerCell:nth-child(8),
 .UserTable_cell__3kj0K:nth-child(8) {
     width: 10%;
 }
 
-/* 마지막 열*/
+/* 결제 승일 버튼 */
 .headerCell:nth-child(9),
 .UserTable_cell__3kj0K:nth-child(9) {
     width: 9%;
@@ -852,211 +781,78 @@ button {
 
 
 
-
-/* modal 창 */
-
 /* Modal Styles */
-@keyframes popUp {
-    from {scale: 0;}
-    to {scale: 1;}
-}
-
-@keyframes popDown {
-    from {scale: 1;}
-    to {scale: 0;}
-}
-
-/* Modal Background */
 .modal {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
     left: 0;
-    z-index: 103;
-    width: 100%;
-    height: 100%;
-}
-.modal .dim {
-    display: block;
-}
-.dim {
-    display: none;
-    z-index: -1;
-    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(17, 17, 17, .7);
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-.modal-content p{
-    font-size: 20px;
-    color: #343a40;
-    font-weight: 700;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
 }
 
-/* modal Verify Button */
-.verify-btn {
-    margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 16px;
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.verify-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.verify-btn:active {
-    background-color: #004080;
-}
-
-/* modal 취소 버튼 */
-.cancel-btn {
-    margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #6c757d;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cancel-btn:hover {
-    background-color: #5a6268;
-    transform: scale(1.05);
-}
-
-.cancel-btn:active {
-    background-color: #4e555b;
-}
-
-/* 모달2 - 수정 */
-.modal-content h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-}
-
-.modal-content label {
-    display: block;
-    margin-bottom: 6px;
-    margin-top: 15px;
-}
-
-.modal-content input[type="text"],
-.modal-content input[type="date"],
-.modal-content select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-.modal-content input[readonly] {
-    background-color: #f9f9f9;
-    color: #999;
-}
-
-.modal-content select {
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.close-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 24px;
-    color: #999;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    color: #666;
-}
-
-
-.pagination {
-    margin: auto;
-    margin-top: 20px;
-    text-align: center;
-}
-
-ul {
-    display: block;
-    list-style-type: disc;
-    height: 45px;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 10px;
-}
-
-.pagination-list {
-    list-style: none;
-    display: flex;
-    padding-left: 0;
-    height: auto;
-}
-
-.pagination-first, .pagination-prev, .pagination-next, .pagination-last {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pagination-list li {
-    margin: 0 2px;
-}
-
-.pagination-list a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    font-size: 14px; /* 아이콘과 숫자 크기를 조절 */
+.closeBtn:hover, .closeBtn:focus {
+    color: black;
     text-decoration: none;
-    color: black; /* 필요에 따라 색상을 변경하세요 */
-    border: 1px solid #ccc; /* 필요에 따라 테두리 스타일을 변경하세요 */
-    border-radius: 3px; /* 필요에 따라 버튼 모양을 변경하세요 */
+    cursor: pointer;
 }
 
-.pagination-list a:hover {
-    background-color: #000000;
-    color: #ffffff;
+#role{
+    width: 150px;
+    height: 45px;
+    font-size:18px;
 }
 
-.pagination-list .active a {
-    background-color: #000000; /* 배경을 검정색으로 */
-    color: #ffffff; /* 글자를 하얀색으로 */
+/* User Form Styles */
+.UserForm_group__2PlQs {
+    margin-bottom: 15px;
 }
 
+.UserForm_group__2PlQs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
 
+.UserForm_group__2PlQs input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.userActionBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.userActionBtn:hover {
+    opacity: 0.8;
+}

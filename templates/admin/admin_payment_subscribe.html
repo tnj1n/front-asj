@@ -404,7 +404,7 @@
                             <!-- body_header -->
                             <div class="FundingHeader_container__wQrCW">
                                 <h2 class="FundingHeader_title__27dCX">
-                                    결제 목록 관리
+                                    구독 결제 관리
                                 </h2>
                                 <p class="FundingHeader_description__2IFl4">
                                     결제 정보를 조회합니다.
@@ -413,118 +413,37 @@
 
                             <!-- body_layout -->
                             <div class="FundingLayout_container__1WSFD">
-                                <!-- Action Buttons -->
-                                <div class="action-buttons">
-                                    <div class="form-flex-wrap">
-                                        <div class="select-type2">
-                                            <select
-                                                id="filter-comType"
-                                                style="display: none"
-                                            >
-                                                <option
-                                                    class="title"
-                                                    value=""
-                                                    selected=""
-                                                >
-                                                    전체
-                                                </option>
-                                                <option value="PCO">
-                                                    공통
-                                                </option>
-                                                <option value="PPR">
-                                                    선불
-                                                </option>
-                                                <option value="PPT">
-                                                    후불
-                                                </option>
-                                            </select>
-                                            <div
-                                                class="nice-select"
-                                                tabindex="0"
-                                            >
-                                                <span class="current"
-                                                    >전체</span
-                                                >
-                                                <ul class="list">
-                                                    <li
-                                                        data-value=""
-                                                        class="option"
-                                                    >
-                                                        전체
-                                                    </li>
-                                                    <li
-                                                        data-value="PCO"
-                                                        class="option"
-                                                    >
-                                                        이름
-                                                    </li>
-                                                    <li
-                                                        data-value="PPR"
-                                                        class="option"
-                                                    >
-                                                        이메일
-                                                    </li>
-                                                    <li
-                                                        data-value="PPT"
-                                                        class="option"
-                                                    >
-                                                        결제 방법
-                                                    </li>
-                                                    <li
-                                                        data-value="PCO"
-                                                        class="option"
-                                                    >
-                                                        구독 날짜
-                                                    </li>
-                                                    <li
-                                                        data-value="PCO"
-                                                        class="option"
-                                                    >
-                                                        결제 날짜
-                                                    </li>
-                                                    <li
-                                                        data-value="PCO"
-                                                        class="option"
-                                                    >
-                                                        결제 승인
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="form-search">
-                                            <input
-                                                id="schKey"
-                                                type="text"
-                                                placeholder="검색어를 입력하세요"
-                                                maxlength="20"
-                                            />
-                                            <button
-                                                class="btn-search"
-                                                id="btn-search"
-                                            >
-                                                <i class="ico-search"></i
-                                                ><span class="hidden"
-                                                    >검색</span
-                                                >
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn-clear hidden"
-                                            >
-                                                <i class="ico-input-delete"></i
-                                                ><span class="hidden"
-                                                    >지우기</span
-                                                >
-                                            </button>
-                                        </div>
+                                <div class="filter_wrap">
+                                    <div class="SortFilterOptions">
+                                        <span
+                                            class="sort-filter-option selected"
+                                            >결제일 순</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >결제 수단</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >결제 상태</span
+                                        >
                                     </div>
-
-                                    <div class="actionButton">
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons">
+                                        <input
+                                            type="text"
+                                            class="Filter_searchInput"
+                                            placeholder="검색어 입력"
+                                        />
+                                        <button
+                                            id="addServiceBtn"
+                                            class="addServiceBtn"
+                                        >
+                                            결제 취소
+                                        </button>
                                         <button
                                             id="deleteSelectedBtn"
                                             class="deleteSelectedBtn"
                                         >
-                                            선택 삭제
+                                            내역 삭제
                                         </button>
                                     </div>
                                 </div>
@@ -543,42 +462,42 @@
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            ID
+                                            주문번호
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            이름
+                                            아이디
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            이메일
+                                            결제일
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            결제 방법
+                                            상품명
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            구독 날짜
+                                            금액
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            결제 날짜
+                                            결제 수단
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            결제 상태
+                                            상태
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            결제 승인
+                                            Action
                                         </div>
                                     </div>
 
@@ -591,29 +510,29 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            1
+                                            123456
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            John Doe
+                                            John Doe@naver.com
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            john@example.com
+                                            2024-04-24
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            신용카드
+                                            상품1
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2020-10-16
+                                            10,000
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2024-08-16
+                                            카드
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            승인 대기
+                                            완료
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
-                                                승인
+                                                수정
                                             </button>
                                         </div>
                                     </div>
@@ -625,29 +544,29 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2
+                                            123456
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            상훈
+                                            John Doe@naver.com
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            sang@example.com
+                                            2024-04-24
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            계좌이체
+                                            상품1
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2021-01-12
+                                            10,000
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2024-06-16
+                                            카드
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            승인 대기
+                                            완료
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
-                                                승인
+                                                수정
                                             </button>
                                         </div>
                                     </div>
@@ -659,34 +578,179 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            3
+                                            123456
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            길동
+                                            John Doe@naver.com
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            hello@example.com
+                                            2024-04-24
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            신용카드
+                                            상품1
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2020-08-22
+                                            10,000
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            2024-08-24
+                                            카드
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            승인 완료
+                                            실패
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
-                                                승인
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            123456
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            John Doe@naver.com
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-04-24
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상품1
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            10,000
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            카드
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            실패
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                수정
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <nav class="pagination">
+                                <ul class="pagination-list">
+                                    <!-- 처음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-first">
+                                        <a
+                                            href="#"
+                                            class="pagination-first-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-first-icon"
+                                                aria-hidden="true"
+                                                >«</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 이전 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-prev">
+                                        <a
+                                            href="#"
+                                            class="pagination-prev-link"
+                                            rel="prev nofollow"
+                                        >
+                                            <span
+                                                class="pagination-prev-icon"
+                                                aria-hidden="true"
+                                                >‹</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 페이지 번호 버튼 -->
+                                    <li class="pagination-page active">
+                                        <a href="#" class="pagination-page-link"
+                                            >1</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >2</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >3</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >4</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >5</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >6</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >7</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >8</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >9</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >10</a
+                                        >
+                                    </li>
+                                    <!-- 다음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-next">
+                                        <a
+                                            href="#"
+                                            class="pagination-next-link"
+                                            rel="next nofollow"
+                                        >
+                                            <span
+                                                class="pagination-next-icon"
+                                                aria-hidden="true"
+                                                >›</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 마지막 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-last">
+                                        <a
+                                            href="#"
+                                            class="pagination-last-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-last-icon"
+                                                aria-hidden="true"
+                                                >»</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <!-- 승인 버튼 모달 -->
@@ -701,44 +765,65 @@
                                     <button id="verifyBtn" class="verify-btn">
                                         확인
                                     </button>
-                                    <button id="cancelBtn" class="cancel-btn">
-                                        취소
-                                    </button>
+                                    <button class="cancel-btn">취소</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- User Add/Edit Modal -->
-                    <div id="userModal" class="modal">
-                        <div class="modal-content">
-                            <span class="closeBtn">&times;</span>
-                            <h3 class="UserForm_title__1NFiQ" id="modalTitle">
-                                회원 추가
-                            </h3>
-                            <form id="userForm">
-                                <div class="UserForm_group__2PlQs">
-                                    <label for="name">Name:</label>
-                                    <input type="text" id="name" required />
-                                </div>
-                                <div class="UserForm_group__2PlQs">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" required />
-                                </div>
-                                <div class="UserForm_group__2PlQs">
-                                    <label for="role">Role:</label>
-                                    <select id="role" required>
-                                        <option value="" disabled selected>
-                                            Select a role
+                    <div id="editModal" class="modal">
+                        <div class="dim"></div>
+                        <div class="modal-wrap">
+                            <div class="modal-content">
+                                <h2>결제 수정</h2>
+                                <form id="editForm">
+                                    <label for="editUserName">구매자</label>
+                                    <input
+                                        type="text"
+                                        id="editUserName"
+                                        name="editUserName"
+                                        readonly=""
+                                    />
+                                    <label for="editJoinDate">결제일</label>
+                                    <input
+                                        type="date"
+                                        id="editJoinDate"
+                                        name="editJoinDate"
+                                        readonly=""
+                                    />
+                                    <label for="editPaymentMethod"
+                                        >결제 수단</label
+                                    >
+                                    <select
+                                        id="editPaymentMethod"
+                                        name="editPaymentMethod"
+                                    >
+                                        <option value="카드">카드</option>
+                                        <option value="무통장입금">
+                                            무통장입금
                                         </option>
-                                        <option value="user">User</option>
-                                        <option value="admin">Admin</option>
+                                        <option value="휴대폰소액">
+                                            휴대폰소액
+                                        </option>
                                     </select>
-                                </div>
-                                <button type="submit" class="userActionBtn">
-                                    회원 추가
-                                </button>
-                            </form>
+                                    <label for="editPaymentStatus"
+                                        >결제 상태</label
+                                    >
+                                    <select
+                                        id="editPaymentStatus"
+                                        name="editPaymentStatus"
+                                    >
+                                        <option value="완료">완료</option>
+                                        <option value="실패">실패</option>
+                                    </select>
+                                    <button
+                                        type="button"
+                                        class="verify-btn save"
+                                    >
+                                        저장
+                                    </button>
+                                    <button class="cancel-btn">취소</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
