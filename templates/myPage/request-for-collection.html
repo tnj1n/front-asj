@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="../../static/css/myPage/request-for-collection.css"
+        />
+        <title>수거 요청 목록</title>
+    </head>
+    <body style="position: relative; min-height: 100%; top: 0px">
+        <div class="container">
+            <section id="content" class="section-mypage">
+                <div class="inner">
+                    <div class="">
+                        <div class="page-header side">
+                            <h2 class="page-title">수거 요청 목록</h2>
+                            <div class="location">
+                                <a href="javascript:void(0)" class="home"
+                                    ><span class="hidden">HOME</span></a
+                                >
+                                <a href="javascript:void(0)">마이페이지</a>
+                                <strong>수거 요청 목록</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="content-wrap">
+                        <div class="inner-box">
+                            <div class="tab-wrap v3">
+                                <ul class="tab-type" id="parentWrap">
+                                    <li class="active">
+                                        <a
+                                            href="javascript:void(0)"
+                                            id="total-favorite"
+                                            >수거 요청 목록<span
+                                                class="tab-count"
+                                                >5</span
+                                            ></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            id="total-completed"
+                                            >완료된 요청 목록
+                                            <span class="tab-count">0</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul
+                                    class="tab-type2 js_tab"
+                                    id="tab-request"
+                                    style="display: flex"
+                                >
+                                    <li class="active">
+                                        <a
+                                            href="javascript:void(0)"
+                                            id="total-request"
+                                            >수거 요청
+                                            <span class="tab-count">0</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a
+                                            href="javascript:void(0)"
+                                            id="total-request-planned"
+                                            >수거 예정
+                                            <span class="tab-count">0</span></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <section class="contet-box" id="request">
+                                <div class="allRequest">
+                                    <!-- <span>
+                                            <strong id="count">총</strong>
+                                            <strong id="totalCount">617</strong>
+                                            개
+                                        </span> -->
+                                    <ul class="board-type5">
+                                        <div id="requestAllList">
+                                            <li class="requestList1">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-light"
+                                                    >
+                                                        라이트
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >2024-09-02</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >강남구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"> </i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList2">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-premium"
+                                                    >
+                                                        프리미엄
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >2024-09-02</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >송파구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 송파구
+                                                            올림픽로 25
+                                                        </p>
+                                                        <span>5번 출구</span>
+                                                    </div>
+                                                    <i class="ico-arrow4"> </i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList3">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-standard"
+                                                    >
+                                                        스탠다드
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >2024-09-02</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >서대문구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"> </i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList4">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-standard"
+                                                    >
+                                                        스탠다드
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >2024-09-02</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >강남구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"> </i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList5">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-light"
+                                                    >
+                                                        라이트
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >2024-09-02</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >마포구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거완료</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 마포구
+                                                            동교로 247
+                                                        </p>
+                                                        <span
+                                                            >1층
+                                                            랜디스도넛</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"> </i>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="contet-box" id="completed-request">
+                                <div class="allRequest">
+                                    <ul class="board-type5">
+                                        <div id="requestAllList"></div>
+                                    </ul>
+                                </div>
+                            </section>
+                            <div class="nodata-box v2" id="no-data-request">
+                                <div class="icon-box">
+                                    <i class="ico-empty"></i>
+                                </div>
+                                <p>수거 예정된 요청 사항이 없습니다.</p>
+                            </div>
+                            <div class="nodata-box v2" id="no-data-completed">
+                                <div class="icon-box">
+                                    <i class="ico-empty"></i>
+                                </div>
+                                <p>완료된 요청 사항이 없습니다.</p>
+                            </div>
+                        </div>
+                        <aside class="lnb">
+                            <nav class="lnb-list">
+                                <ul class="depth">
+                                    <li>
+                                        <a href="javascript:void(0)" class=""
+                                            >나의 기본정보</a
+                                        >
+                                        <ul
+                                            class="depth2"
+                                            style="display: none"
+                                        >
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060105"
+                                                    >개인정보열람</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060106"
+                                                    >나의 혜택 조회</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060107"
+                                                    >나의 추천현황</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class=""
+                                            >서비스 조회/변경</a
+                                        >
+                                        <ul
+                                            class="depth2"
+                                            style="display: none"
+                                        >
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060201"
+                                                    >유심 이용 휴대폰 등록</a
+                                                >
+                                            </li>
+
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060203"
+                                                    >번호 변경</a
+                                                >
+                                            </li>
+
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060205"
+                                                    >유심 변경</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060206"
+                                                    >부가서비스 조회/신청</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            >요금조회 및 납부</a
+                                        >
+                                        <ul class="depth2" id="feeMenuMypage">
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060301"
+                                                    >실시간 요금조회</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060302"
+                                                    >청구요금조회</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060303"
+                                                    >납부금액/미납 조회</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060304"
+                                                    >청구서 관리</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060305"
+                                                    >납부방법변경</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060306"
+                                                    >휴대폰 소액결제</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060307"
+                                                    >미환급금 조회</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            >선불 요금충전/관리</a
+                                        >
+                                        <ul class="depth2">
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060401"
+                                                    >선불요금 충전</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060402"
+                                                    >선불 데이터 충전</a
+                                                >
+                                            </li>
+                                            <li class="dp-no-show">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060403"
+                                                    >가상계좌충전확인</a
+                                                >
+                                            </li>
+                                            <li class="dp-no-show">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060404"
+                                                    >요금충전내역</a
+                                                >
+                                            </li>
+                                            <li class="dp-no-show">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060405"
+                                                    >적립금변경이력</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            >일시정지/분실</a
+                                        >
+                                        <ul class="depth2">
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060501"
+                                                    >일시정지 신청/해제</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060502"
+                                                    >분실신고</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_060503"
+                                                    >해지신청</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0)" class=""
+                                            >나의 관심 상품</a
+                                        >
+                                        <ul
+                                            class="depth2"
+                                            style="display: none"
+                                        >
+                                            <li>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    id="menu_0607"
+                                                    >나의 관심 상품</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="../../static/js/myPage/request-for-collection.js"></script>
+</html>
