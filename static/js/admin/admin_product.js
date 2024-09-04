@@ -143,13 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const statusText = statusCell.textContent.trim();
 
             switch (statusText) {
-                case "수거 완료":
+                case "배송 완료":
                     statusCell.style.color = "green";
                     break;
-                case "수거 요청":
+                case "배송 요청":
                     statusCell.style.color = "red";
                     break;
-                case "수거 예정":
+                case "배송 중":
                     statusCell.style.color = "#FF7E00";
                     break;
                 default:

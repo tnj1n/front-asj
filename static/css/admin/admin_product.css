@@ -805,7 +805,7 @@ button {
 /* 세번째 열 */
 .headerCell:nth-child(4),
 .UserTable_cell__3kj0K:nth-child(4) {
-    width: 18%;
+    width: 12%;
 }
 
 /* 네번째 열 */
@@ -1015,6 +1015,18 @@ button {
     border-radius: 4px;
     font-size: 14px;
     box-sizing: border-box;
+}
+.modal-content img{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+
 }
 
 .modal-content input[readonly] {
