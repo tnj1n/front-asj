@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/css/common/common.css" />
+        <link
+            rel="stylesheet"
+            href="/static/css/web-collectRequest/web-collectRequest-body.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="https://www.freet.co.kr/static/assets/favicons/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://www.freet.co.kr/assets/css/font.css?v=20240726"
+        />
+        <title>수거 신청</title>
+    </head>
+    <body>
+        <div id="wrap" class="wrap-main">
+            <div class="container">
+                <section id="contnet" class="section-usim bottom">
+                    <div class="inner">
+                        <div class="page-header side pc-only">
+                            <h2 class="page-title"></h2>
+                            <div class="location">
+                                <a href="" class="home">
+                                    <span class="hidden">HOME</span>
+                                </a>
+                                <a href=""> "유심·eSIM" </a>
+                                <strong>유심구매</strong>
+                            </div>
+                        </div>
+                        <!-- 배출 품목선택 -->
+                        <section class="content-wrap" id="section-step1">
+                            <section class="usim-wrap">
+                                <div class="step-wrap">
+                                    <ol>
+                                        <li>
+                                            <i class="num">
+                                                1
+                                                <em class="max">/5</em>
+                                            </i>
+                                            <strong>유심선택</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num">
+                                                2
+                                                <em class="max">/5</em>
+                                            </i>
+                                            <strong>약관동의</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num">
+                                                3
+                                                <em class="max">/5</em>
+                                            </i>
+                                            <strong>배송정보 입력</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num">
+                                                4
+                                                <em class="max">/5</em>
+                                            </i>
+                                            <strong>결제</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num">
+                                                5
+                                                <em class="max">/5</em>
+                                            </i>
+                                            <strong>주문 완료</strong>
+                                        </li>
+                                    </ol>
+                                    <span class="bar" style="width: 20%"></span>
+                                </div>
+                                <ul class="form-wrap">
+                                    <li>
+                                        <div class="title-wrap">
+                                            <h3 class="title-type">
+                                                통신사를 선택해주세요
+                                            </h3>
+                                        </div>
+                                        <div class="chk-list-custom v2">
+                                            <ul>
+                                                <!-- 기본 상태는 아무것도 select 되어 있지 않아야됨 -->
+                                                <li
+                                                    class="select-telco active"
+                                                    id="freeS-button"
+                                                >
+                                                    <label
+                                                        for="item1"
+                                                        id="labelFreeS"
+                                                    >
+                                                        <div class="detail">
+                                                            <i
+                                                                class="ico-skt"
+                                                            ></i>
+                                                            <p class="tit">
+                                                                SKT망
+                                                            </p>
+                                                        </div>
+                                                        <div
+                                                            class="chk-box selected"
+                                                        >
+                                                            <input
+                                                                type="radio"
+                                                                name="telco"
+                                                                checked=""
+                                                            />
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li
+                                                    class="select-telco"
+                                                    id="freeC-button"
+                                                >
+                                                    <!-- 여기서부터 -->
+                                                    <label
+                                                        for="item2"
+                                                        id="labelFreeC"
+                                                    >
+                                                        <div class="detail">
+                                                            <i
+                                                                class="ico-kt"
+                                                            ></i>
+                                                            <p class="tit">
+                                                                KT망
+                                                            </p>
+                                                        </div>
+                                                        <div class="chk-box">
+                                                            <input
+                                                                type="radio"
+                                                                name="telco"
+                                                            />
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li
+                                                    class="select-telco"
+                                                    id="freeT-button"
+                                                >
+                                                    <label
+                                                        for="item3"
+                                                        id="labelFreeT"
+                                                    >
+                                                        <div class="detail">
+                                                            <i
+                                                                class="ico-lgu"
+                                                            ></i>
+                                                            <p class="tit">
+                                                                LGU+망
+                                                            </p>
+                                                        </div>
+                                                        <div class="chk-box">
+                                                            <input
+                                                                type="radio"
+                                                                name="telco"
+                                                            />
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="usim-area"></li>
+                                </ul>
+                            </section>
+                            <aside class="aside-usim"></aside>
+                        </section>
+                        <!-- 약관동의 -->
+                        <section
+                            class="content-wrap"
+                            id="section-step2"
+                            style="display: none"
+                        ></section>
+                        <!-- 수거 시간선택 -->
+                        <section
+                            class="content-wrap"
+                            id="section-step3"
+                            style="display: none"
+                        ></section>
+                        <!-- 수거지정보 입력 -->
+                        <section
+                            class="content-wrap"
+                            id="section-step4"
+                            style="display: none"
+                        ></section>
+                        <!-- 수거 시간 -->
+                        <section
+                            class="content-wrap"
+                            id="section-step5"
+                            style="display: none"
+                        ></section>
+                        <!-- 기타 요청사항 -->
+                        <section
+                            class="content-wrap"
+                            id="section-step6"
+                            style="display: none"
+                        ></section>
+                        <!--주문 완료 -->
+                        <section
+                            class="content-wrap"
+                            id="section-step7"
+                            style="display: none"
+                        ></section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/web-collectRequest/web-collectRequest-body.js"></script>
+</html>
