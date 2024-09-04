@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>문의 목록 관리 페이지</title>
-        <link rel="stylesheet" href="/static/css/admin/admin_post.css" />
+        <title>후기 관리 페이지</title>
+        <link rel="stylesheet" href="/static/css/admin/admin_review.css" />
     </head>
     <body>
         <div id="root">
@@ -401,10 +401,10 @@
                             <!-- body_header -->
                             <div class="FundingHeader_container__wQrCW">
                                 <h2 class="FundingHeader_title__27dCX">
-                                    문의 관리
+                                    후기 관리
                                 </h2>
                                 <p class="FundingHeader_description__2IFl4">
-                                    문의 목록을 조회합니다.
+                                    후기 목록을 조회합니다.
                                 </p>
                             </div>
 
@@ -480,12 +480,12 @@
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            유형
+                                            기사
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            성별
+                                            점수
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
@@ -522,10 +522,10 @@
                                             곳인가요?ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            회원 서비스
+                                            홍길동
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            남
+                                            90
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             작성중
@@ -777,7 +777,7 @@
                         <div class="dim"></div>
                         <div class="modal-wrap">
                             <div class="modal-content edit">
-                                <h2>문의 상세 정보</h2>
+                                <h2>후기 상세 정보</h2>
                                 <form id="editForm">
                                     <label for="editUserName">작성자</label>
                                     <input
@@ -798,6 +798,14 @@
                                         id="editEmail"
                                         name="editEmail"
                                     />
+                                    <label for="editDeliveryName"
+                                        >기사이름</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="editDeliveryName"
+                                        name="editDeliveryName"
+                                    />
                                     <label for="editTitle">제목</label>
                                     <input
                                         type="text"
@@ -809,6 +817,12 @@
                                         id="editContent"
                                         name="editContent"
                                     ></textarea>
+                                    <label for="editScore">점수</label>
+                                    <input
+                                        type="text"
+                                        id="editScore"
+                                        name="editScore"
+                                    />
 
                                     <label for="editFile">파일</label>
                                     <input
@@ -849,5 +863,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/admin/admin_post.js"></script>
+    <script src="/static/js/admin/admin_review.js"></script>
 </html>

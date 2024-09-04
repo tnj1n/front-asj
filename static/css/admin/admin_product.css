@@ -904,7 +904,7 @@ button {
 }
 .modal-content.edit{
     padding: 30px 18px 30px 30px;
-    width: 150%;
+    width: 600px;
 }
 /* 스크롤바의 전체 컨테이너 */
 .modal-content::-webkit-scrollbar {

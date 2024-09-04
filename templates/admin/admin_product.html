@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>문의 목록 관리 페이지</title>
-        <link rel="stylesheet" href="/static/css/admin/admin_post.css" />
+        <title>상품 관리 페이지</title>
+        <link rel="stylesheet" href="/static/css/admin/admin_collection.css" />
     </head>
     <body>
         <div id="root">
@@ -401,10 +401,10 @@
                             <!-- body_header -->
                             <div class="FundingHeader_container__wQrCW">
                                 <h2 class="FundingHeader_title__27dCX">
-                                    문의 관리
+                                    상품 관리
                                 </h2>
                                 <p class="FundingHeader_description__2IFl4">
-                                    문의 목록을 조회합니다.
+                                    상품 목록을 조회합니다.
                                 </p>
                             </div>
 
@@ -420,7 +420,7 @@
                                             >이름 순</span
                                         >/
                                         <span class="sort-filter-option"
-                                            >작성 상태</span
+                                            >수거 상태</span
                                         >
                                     </div>
                                     <!-- Action Buttons -->
@@ -459,12 +459,12 @@
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            작성자
+                                            접수 번호
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            작성 날짜
+                                            수거 신청일
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
@@ -475,17 +475,17 @@
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            제목
+                                            주소
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            유형
+                                            기사
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
                                         >
-                                            성별
+                                            등급
                                         </div>
                                         <div
                                             class="UserTable_cell__3kj0K headerCell"
@@ -508,27 +508,26 @@
                                             />
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            상훈
+                                            1241231
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             2024-01-01
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            sang@google.com
+                                            sa22ng@google.com
                                         </div>
 
                                         <div class="UserTable_cell__3kj0K">
-                                            비워드림이란 어떤
-                                            곳인가요?ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                            서울특별시 강남구 태헤란로 144-1243
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            회원 서비스
+                                            홍길동
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            남
+                                            라이트
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            작성중
+                                            수거 요청
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
@@ -563,7 +562,7 @@
                                             남
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            작성중
+                                            수거 예정
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
@@ -598,7 +597,7 @@
                                             남
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
-                                            작성완료
+                                            수거 완료
                                         </div>
                                         <div class="UserTable_cell__3kj0K">
                                             <button class="editBtn">
@@ -777,51 +776,103 @@
                         <div class="dim"></div>
                         <div class="modal-wrap">
                             <div class="modal-content edit">
-                                <h2>문의 상세 정보</h2>
+                                <h2>수거 상세 정보</h2>
                                 <form id="editForm">
-                                    <label for="editUserName">작성자</label>
+                                    <label for="editNumber">접수번호</label>
                                     <input
                                         type="text"
-                                        id="editUserName"
-                                        name="editUserName"
+                                        id="editNumber"
+                                        name="editNumber"
                                         readonly=""
                                     />
-                                    <label for="editJoinDate">작성날짜</label>
-                                    <input
-                                        type="date"
-                                        id="editJoinDate"
-                                        name="editJoinDate"
-                                    />
+
                                     <label for="editEmail">이메일</label>
                                     <input
                                         type="email"
                                         id="editEmail"
                                         name="editEmail"
                                     />
-                                    <label for="editTitle">제목</label>
+                                    <label for="editAddress">주소</label>
                                     <input
                                         type="text"
-                                        id="editTitle"
-                                        name="editTitle"
+                                        id="editAddress"
+                                        name="editAddress"
                                     />
-                                    <label for="editContent">내용</label>
-                                    <textarea
-                                        id="editContent"
-                                        name="editContent"
-                                    ></textarea>
 
-                                    <label for="editFile">파일</label>
+                                    <label for="editGrade">등급</label>
+                                    <select id="editGrade" name="editGrade">
+                                        <option value="라이트">라이트</option>
+                                        <option value="스탠다드">
+                                            스탠다드
+                                        </option>
+                                        <option value="프리미엄">
+                                            프리미엄
+                                        </option>
+                                    </select>
+                                    <label for="editDeliveryName">기사</label>
                                     <input
-                                        type="file"
-                                        id="editFile"
-                                        name="editFile"
+                                        type="text"
+                                        id="editDeliveryName"
+                                        name="editDeliveryName"
+                                    />
+                                    <label for="editDistance">수거 거리</label>
+                                    <input
+                                        type="text"
+                                        id="editDistance"
+                                        name="editDistance"
+                                    />
+
+                                    <label for="editCharge">배달료</label>
+                                    <select id="editCharge" name="editCharge">
+                                        <option value="2,500원">2,500원</option>
+                                        <option value="3,000원">3,000원</option>
+                                        <option value="3,500원">3,500원</option>
+                                    </select>
+                                    <label for="editItem">배출 품목</label>
+                                    <input
+                                        type="text"
+                                        id="editItem"
+                                        name="editItem"
+                                    />
+                                    <label for="editRequestDate"
+                                        >수거 신청일</label
+                                    >
+                                    <input
+                                        type="date"
+                                        id="editRequestDate"
+                                        name="editRequestDate"
+                                    />
+                                    <label for="editGetDate">수거 일정</label>
+                                    <input
+                                        type="text"
+                                        id="editGetDate"
+                                        name="editGetDate"
+                                    />
+                                    <label for="editEntry">출입 방법</label>
+                                    <input
+                                        type="text"
+                                        id="editEntry"
+                                        name="editEntry"
+                                    />
+                                    <label for="editRequest"
+                                        >기타 요청 사항</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="editRequest"
+                                        name="editRequest"
                                     />
 
                                     <label for="editStatus">상태</label>
                                     <select id="editStatus" name="editStatus">
-                                        <option value="작성중">작성중</option>
-                                        <option value="작성완료">
-                                            작성완료
+                                        <option value="수거 요청">
+                                            수거 요청
+                                        </option>
+                                        <option value="수거 예정">
+                                            수거 예정
+                                        </option>
+                                        <option value="수거 완료">
+                                            수거 완료
                                         </option>
                                     </select>
                                     <div class="editButtonWrap">
@@ -849,5 +900,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/admin/admin_post.js"></script>
+    <script src="/static/js/admin/admin_collection.js"></script>
 </html>
