@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             rel="stylesheet"
-            href="../static/css/mobile-myDetailRequest-body.css"
+            href="../../static/css/myPage/detail-request.css"
         />
 
         <link rel="stylesheet" href="/static/css/common/common.css" />
@@ -25,18 +25,21 @@
         <!-- 전체를 감싸고 있는 div -->
         <div id="wrap" class="wrap-main">
             <div class="contents">
-                <div class="header-page">
-                    <div class="btn-box">
-                        <a href="" class="btn-back">
-                            <i class="ico-back"></i>
-                            <span class="hidden">뒤로가기</span>
-                        </a>
-                    </div>
-                    <h1 class="page-title v2" id="header_title">
-                        수거 요청 상세 페이지
-                    </h1>
-                </div>
                 <div class="container">
+                    <div class="">
+                        <div class="inner">
+                            <div class="page-header side">
+                                <h2 class="page-title">수거 요청 목록</h2>
+                                <div class="location">
+                                    <a href="javascript:void(0)" class="home"
+                                        ><span class="hidden">HOME</span></a
+                                    >
+                                    <a href="javascript:void(0)">마이페이지</a>
+                                    <strong>수거 요청 목록</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <section id="content" class="section-plan bottom">
                         <article class="plan-detail" id="detail-plan-render">
                             <div class="plan-infomation">
@@ -145,19 +148,6 @@
                                                     <dd>-</dd>
                                                 </dl>
                                             </div>
-                                            <div class="box-content">
-                                                <div class="call-service">
-                                                    <a
-                                                        href="010*1234*1234"
-                                                        class="caption"
-                                                    >
-                                                        <strong>
-                                                            파트너 지원센터에
-                                                            전화
-                                                        </strong>
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -169,9 +159,7 @@
                                         class="btn-wrap"
                                         id="detail-plan-mobile-render"
                                     >
-                                        <a href="" class="btn-type"
-                                            >수거 완료</a
-                                        >
+                                        <a href="" class="btn-type">수정</a>
                                     </div>
                                 </div>
                             </div>
