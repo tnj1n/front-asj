@@ -90,14 +90,7 @@
 .content-wrap > section {
     width: 852px;
 }
-.section-usim .aside-usim {
-    min-height: 0;
-    position: sticky;
-    top: 100px;
-}
-.content-wrap > aside {
-    width: 243px;
-}
+
 .step-wrap {
     max-width: 852px;
     margin: 0 auto 60px;
@@ -606,6 +599,7 @@ input[type="radio"] {
 .list-type li:first-child {
     margin-top: 0;
 }
+
 .list-type li {
     padding-left: 7px;
 }
@@ -633,7 +627,8 @@ input[type="radio"] {
     padding: 0;
     border-radius: 0;
 }
-.section-usim .usim-cart .btn-toggle {
+
+/* .section-usim .usim-cart .btn-toggle {
     display: none;
 }
 .section-usim .usim-cart .btn-toggle {
@@ -647,7 +642,7 @@ input[type="radio"] {
     background-size: cover;
     border-radius: 24px 24px 0 0;
     justify-content: center;
-}
+} */
 .section-usim .usim-cart .cart-wrap {
     display: block;
 }
@@ -709,7 +704,154 @@ input[type="radio"] {
     display: block;
 }
 .ico-close2 {
+    display: inline-block;
     width: 16px;
     height: 16px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url(https://www.freet.co.kr/assets/images/icon/close2.svg);
+}
+.cart-list .cart-item .bottom {
+    align-items: center;
+    margin-top: 10px;
+}
+.box-type5 .box-btm,
+.box-type5 .box-btm .left span,
+.cart-list .cart-item > div {
+    display: flex;
+    justify-content: space-between;
+}
+.quantity-box {
+    display: flex;
+    align-items: center;
+}
+.quantity-box button {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    background: #fff;
+    justify-content: center;
+}
+.chk-list-custom .detail,
+.quantity-box button {
+    display: inline-flex;
+    align-items: center;
+}
+.quantity-box button.btn-minus:before,
+.quantity-box button.btn-plus:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/quantity-minus.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.quantity-box input {
+    font-size: 14px;
+}
+.quantity-box input {
+    width: 48px;
+    border: 0;
+    height: 28px;
+    text-align: center;
+    padding: 0;
+    background: 0 0;
+}
+.quantity-box input {
+    width: 48px;
+    border: 0;
+    height: 28px;
+    text-align: center;
+    padding: 0;
+    background: 0 0;
+}
+.quantity-box input {
+    width: 48px;
+    border: 0;
+    height: 28px;
+    text-align: center;
+    padding: 0;
+    background: 0 0;
+}
+input[type="number"] {
+    color: #111;
+    border-radius: 12px;
+}
+.quantity-box button.btn-plus:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/quantity-plus.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cart-list .cart-item .bottom .price {
+    font-size: 15px;
+    font-weight: 600;
+}
+.section-usim .usim-cart .total-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+}
+.box-type4 .box-content .box-footer .title span.price,
+.chk-box label em.focus,
+.focus,
+.select-type.disabled select,
+.select-type.selected select {
+    color: #f0543a;
+}
+.section-usim .usim-cart > .btn-wrap,
+.step-wrapper.v2 > .step.v2 > p {
+    margin-top: 20px;
+}
+.button-default.full,
+.full.btn-form,
+.full.btn-type,
+.full.btn-type-sm,
+.full.btn-type2,
+.kakao-plus-event-container .full.open-url-btn {
+    max-width: 100%;
+}
+.button-default.disabled,
+.disabled.btn-form,
+.disabled.btn-type,
+.disabled.btn-type-sm,
+.disabled.btn-type2,
+.kakao-plus-event-container .disabled.open-url-btn {
+    pointer-events: none;
+    color: #fff;
+    opacity: 0.4;
+}
+.btn-wrap [class^="btn-type"],
+.tab-type li,
+.tab-type2 li {
+    width: 100%;
+}
+.btn-type {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    font-size: 20px;
+    background: #f0543a;
+    color: #fff;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+.btn-wrap [class^="btn-type"]:nth-child(n + 2) {
+    margin-left: 10px;
 }

@@ -9,6 +9,10 @@
             href="/static/css/web-collectRequest/web-collectRequest-body.css"
         />
         <link
+            rel="stylesheet"
+            href="/static/css/web-collectRequest/web-collectRequest-section2.css"
+        />
+        <link
             rel="shortcut icon"
             href="https://www.freet.co.kr/static/assets/favicons/favicon.png"
             type="image/x-icon"
@@ -48,7 +52,7 @@
                                                 1
                                                 <em class="max">/5</em>
                                             </i>
-                                            <strong>유심선택</strong>
+                                            <strong>배출 품목선택</strong>
                                         </li>
                                         <li>
                                             <i class="num">
@@ -85,7 +89,7 @@
                                     <li>
                                         <div class="title-wrap">
                                             <h3 class="title-type">
-                                                통신사를 선택해주세요
+                                                구독 중인 상품을 선택해 주세요
                                             </h3>
                                         </div>
                                         <div class="chk-list-custom v2">
@@ -104,7 +108,7 @@
                                                                 class="ico-skt"
                                                             ></i>
                                                             <p class="tit">
-                                                                SKT망
+                                                                라이트
                                                             </p>
                                                         </div>
                                                         <div
@@ -132,7 +136,7 @@
                                                                 class="ico-kt"
                                                             ></i>
                                                             <p class="tit">
-                                                                KT망
+                                                                스탠다드
                                                             </p>
                                                         </div>
                                                         <div class="chk-box">
@@ -156,7 +160,7 @@
                                                                 class="ico-lgu"
                                                             ></i>
                                                             <p class="tit">
-                                                                LGU+망
+                                                                프리미엄
                                                             </p>
                                                         </div>
                                                         <div class="chk-box">
@@ -173,11 +177,11 @@
                                     <li id="usim-area">
                                         <div class="title-wrap">
                                             <h3 class="title-type">
-                                                유심을 선택해주세요
+                                                배출 품목을 확인해 주세요
                                             </h3>
                                         </div>
                                         <a href="" class="info-text2">
-                                            내 휴대폰에 맞는 유심은
+                                            나에게 맞는 구독제는
                                             <i class="icon-question"></i>
                                         </a>
                                         <div class="chk-type">
@@ -187,19 +191,19 @@
                                                         <div class="detail">
                                                             <p class="tit">
                                                                 <strong
-                                                                    >일반유심
-                                                                    (3in1)</strong
+                                                                    >1호 박스
+                                                                    (30L)</strong
                                                                 >
                                                             </p>
                                                             <p class="price">
                                                                 <strong
-                                                                    >2,200원</strong
+                                                                    >10,000원</strong
                                                                 >
                                                             </p>
                                                         </div>
                                                     </a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="">
                                                         <div class="detail">
                                                             <p class="tit">
@@ -215,7 +219,7 @@
                                                             </p>
                                                         </div>
                                                     </a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </li>
@@ -314,41 +318,463 @@
                                 </div>
                             </aside>
                         </section>
-                        <!-- 약관동의 -->
+                        <!--******************** 약관동의 *************************-->
                         <section
                             class="content-wrap"
                             id="section-step2"
-                            style="display: none"
-                        ></section>
+                            style="display: _"
+                        >
+                            <section class="usim-wrap">
+                                <div class="step-wrap">
+                                    <ol>
+                                        <li class="done">
+                                            <i class="num"
+                                                >1<em class="max">/5</em></i
+                                            >
+                                            <strong>유심선택</strong>
+                                        </li>
+                                        <li class="active">
+                                            <i class="num"
+                                                >2<em class="max">/5</em></i
+                                            >
+                                            <strong>약관동의</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num"
+                                                >3<em class="max">/5</em></i
+                                            >
+                                            <strong>배송정보 입력</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num"
+                                                >4<em class="max">/5</em></i
+                                            >
+                                            <strong>결제</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num"
+                                                >5<em class="max">/5</em></i
+                                            >
+                                            <strong>주문 완료</strong>
+                                        </li>
+                                    </ol>
+                                    <span class="bar" style="width: 40%"></span>
+                                </div>
+                                <div class="title-wrap">
+                                    <h3 class="title-type">
+                                        유심 구매를 위한 이용 안내 및 동의
+                                    </h3>
+                                </div>
+                                <div class="agree-wrap">
+                                    <div class="all-chk">
+                                        <div class="chk-box">
+                                            <input
+                                                type="checkbox"
+                                                id="terms-check-all"
+                                            />
+                                            <label
+                                                class="checkbox"
+                                                for="terms-check-all"
+                                            ></label>
+                                            <label for="terms-check-all"
+                                                ><strong
+                                                    >전체 동의합니다.</strong
+                                                ></label
+                                            >
+                                        </div>
+                                        <p class="info-text">
+                                            <i class="ico-info3"></i
+                                            ><strong
+                                                >유심 수령 후 개통 시 주의
+                                                사항</strong
+                                            >
+                                        </p>
+                                        <ul class="list-type">
+                                            <li>
+                                                개통 시 본인인증이 필요하며
+                                                인증이 불가한 경우 개통이
+                                                불가합니다.<br />(본인인증 수단:
+                                                신용카드, 네이버인증, 토스인증,
+                                                공동인증서, 단, 선불개통 시
+                                                네이버/토스인증은 불가)
+                                            </li>
+                                            <li>
+                                                각 통신사별 회선 제한으로 개통이
+                                                불가할 수 있으니 고객센터를 통해
+                                                고객님의 가용 회선을 미리 확인해
+                                                주시기 바랍니다.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="agree-list">
+                                        <ul>
+                                            <li>
+                                                <div class="chk-box">
+                                                    <input
+                                                        type="checkbox"
+                                                        class="terms-check"
+                                                        id="terms-check-1"
+                                                    />
+                                                    <label
+                                                        class="checkbox"
+                                                        for="terms-check-1"
+                                                    ></label>
+                                                    <label for="terms-check-1"
+                                                        ><strong
+                                                            id="terms-title-1"
+                                                            >개인정보 수집/활용
+                                                            동의<em
+                                                                class="focus"
+                                                                >(필수)</em
+                                                            ></strong
+                                                        ></label
+                                                    >
+                                                </div>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="btn-arrow"
+                                                    ><i class="ico-arrow4"></i
+                                                    ><span class="hidden"
+                                                        >팝업보기</span
+                                                    ></a
+                                                >
+                                            </li>
+                                            <li>
+                                                <div class="chk-box">
+                                                    <input
+                                                        type="checkbox"
+                                                        class="terms-check"
+                                                        id="terms-check-2"
+                                                    />
+                                                    <label
+                                                        class="checkbox"
+                                                        for="terms-check-2"
+                                                    ></label>
+                                                    <label for="terms-check-2"
+                                                        ><strong
+                                                            id="terms-title-2"
+                                                            >결제취소/반품
+                                                            조건에 대한 동의<em
+                                                                class="focus"
+                                                                >(필수)</em
+                                                            ></strong
+                                                        ></label
+                                                    >
+                                                </div>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="btn-arrow"
+                                                    ><i class="ico-arrow4"></i
+                                                    ><span class="hidden"
+                                                        >팝업보기</span
+                                                    ></a
+                                                >
+                                            </li>
+                                            <li
+                                                id="terms-box-3"
+                                                style="display: none"
+                                            >
+                                                <div class="chk-box">
+                                                    <input
+                                                        type="checkbox"
+                                                        class="terms-check"
+                                                        id="terms-check-3"
+                                                    />
+                                                    <label
+                                                        class="checkbox"
+                                                        for="terms-check-3"
+                                                    ></label>
+                                                    <label for="terms-check-3"
+                                                        ><strong
+                                                            id="terms-title-3"
+                                                            >이벤트·혜택
+                                                            정보/광고정보 제공을
+                                                            위한 개인정보 제3자
+                                                            제공 동의<em
+                                                                class="focus"
+                                                                >(선택)</em
+                                                            ></strong
+                                                        ></label
+                                                    >
+                                                </div>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="btn-arrow"
+                                                    ><i class="ico-arrow4"></i
+                                                    ><span class="hidden"
+                                                        >팝업보기</span
+                                                    ></a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="btn-fixed-wrap">
+                                    <div class="bottom-gra"></div>
+                                    <div class="btn-wrap">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="btn-type disabled"
+                                            id="step2-next-btn"
+                                            >다음</a
+                                        >
+                                    </div>
+                                </div>
+                            </section>
+                            <aside class="aside-usim-order pc-only">
+                                <div class="title-bg">
+                                    <h3>주문상품</h3>
+                                </div>
+                                <div class="usim-order-list">
+                                    <ul class="order-list-container">
+                                        <li class="order-item">
+                                            <div class="row">
+                                                <p class="name">
+                                                    SKT 일반유심 (3in1)
+                                                </p>
+                                                <p class="num">1개</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="price">2,200원</p>
+                                                <p class="total">2,200원</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="total-wrap">
+                                        <p class="t-r">
+                                            총
+                                            <span class="cart-total-amt"
+                                                >2,200원</span
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </aside>
+                        </section>
+                        <!--******************** 수거 시간선택 *************************-->
                         <!-- 수거 시간선택 -->
                         <section
                             class="content-wrap"
                             id="section-step3"
-                            style="display: none"
+                            style="display: _"
                         ></section>
                         <!-- 수거지정보 입력 -->
                         <section
                             class="content-wrap"
                             id="section-step4"
-                            style="display: none"
-                        ></section>
+                            style="display: _"
+                        >
+                            <section class="usim-wrap">
+                                <div class="step-wrap">
+                                    <ol>
+                                        <li class="done">
+                                            <i class="num"
+                                                >1<em class="max">/5</em></i
+                                            >
+                                            <strong>유심선택</strong>
+                                        </li>
+                                        <li class="done">
+                                            <i class="num"
+                                                >2<em class="max">/5</em></i
+                                            >
+                                            <strong>약관동의</strong>
+                                        </li>
+                                        <li class="active">
+                                            <i class="num"
+                                                >3<em class="max">/5</em></i
+                                            >
+                                            <strong>배송정보 입력</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num"
+                                                >4<em class="max">/5</em></i
+                                            >
+                                            <strong>결제</strong>
+                                        </li>
+                                        <li>
+                                            <i class="num"
+                                                >5<em class="max">/5</em></i
+                                            >
+                                            <strong>주문 완료</strong>
+                                        </li>
+                                    </ol>
+                                    <span class="bar" style="width: 60%"></span>
+                                </div>
+                                <div class="title-wrap">
+                                    <h3 class="title-type step4-type-0">
+                                        배송지 주소를 입력해주세요
+                                    </h3>
+                                    <h3
+                                        class="title-type step4-type-1"
+                                        style="display: none"
+                                    >
+                                        아래 주소로 배송해 드릴까요?
+                                    </h3>
+                                </div>
+                                <div class="form-wrap">
+                                    <div class="form-box">
+                                        <div class="form-item">
+                                            <div class="form-flex">
+                                                <input
+                                                    type="text"
+                                                    id="step4-zip"
+                                                    placeholder="&nbsp;"
+                                                    disabled=""
+                                                />
+                                                <label for="" class="title"
+                                                    >우편번호</label
+                                                >
+                                                <button
+                                                    type="submit"
+                                                    class="btn-form"
+                                                >
+                                                    주소찾기
+                                                </button>
+                                            </div>
+                                            <span
+                                                class="invalid-feedback"
+                                            ></span>
+                                        </div>
+                                        <div class="form-item">
+                                            <input
+                                                type="text"
+                                                id="step4-addr1"
+                                                placeholder="&nbsp;"
+                                                disabled=""
+                                            />
+                                            <label for="" class="title"
+                                                >기본주소</label
+                                            >
+                                            <span
+                                                class="invalid-feedback"
+                                            ></span>
+                                        </div>
+                                        <div class="form-item">
+                                            <input
+                                                type="text"
+                                                class="step4-addr-input"
+                                                id="step4-addr2"
+                                                placeholder="&nbsp;"
+                                            />
+                                            <label for="" class="title"
+                                                >상세주소</label
+                                            >
+                                            <span
+                                                class="invalid-feedback"
+                                            ></span>
+                                        </div>
+                                        <input
+                                            type="hidden"
+                                            id="step4-addressType"
+                                            value="R"
+                                        />
+                                        <div
+                                            id="findZipLayer2"
+                                            style="
+                                                display: none;
+                                                position: fixed;
+                                                overflow: hidden;
+                                                z-index: 999;
+                                                width: 480px;
+                                                height: 520px;
+                                                border: 5px solid;
+                                                left: 505px;
+                                                top: 47.1714px;
+                                            "
+                                        >
+                                            <img
+                                                src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png"
+                                                id="btnCloseLayer"
+                                                style="
+                                                    cursor: pointer;
+                                                    position: absolute;
+                                                    right: -3px;
+                                                    top: -3px;
+                                                    z-index: 1;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                "
+                                                onclick="closeDaumPostcode()"
+                                                alt="닫기 버튼"
+                                            />
+                                        </div>
+                                        <div
+                                            class="btn-wrap step4-type-1"
+                                            style="display: none"
+                                        >
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="btn-type4"
+                                                >주소 다시 확인해볼래요<i
+                                                    class="ico-arrow5"
+                                                ></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-fixed-wrap">
+                                        <div class="btn-wrap">
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="btn-type step4-type-0"
+                                                >다음</a
+                                            >
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="btn-type step4-type-1"
+                                                style="display: none"
+                                                >이 주소로 받을게요</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <aside class="aside-usim-order pc-only">
+                                <div class="title-bg">
+                                    <h3>주문상품</h3>
+                                </div>
+                                <div class="usim-order-list">
+                                    <ul class="order-list-container">
+                                        <li class="order-item">
+                                            <div class="row">
+                                                <p class="name">
+                                                    SKT 일반유심 (3in1)
+                                                </p>
+                                                <p class="num">1개</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="price">2,200원</p>
+                                                <p class="total">2,200원</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="total-wrap">
+                                        <p class="t-r">
+                                            총
+                                            <span class="cart-total-amt"
+                                                >2,200원</span
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </aside>
+                        </section>
                         <!-- 수거 시간 -->
                         <section
                             class="content-wrap"
                             id="section-step5"
-                            style="display: none"
+                            style="display: _"
                         ></section>
                         <!-- 기타 요청사항 -->
                         <section
                             class="content-wrap"
                             id="section-step6"
-                            style="display: none"
+                            style="display: _"
                         ></section>
                         <!--주문 완료 -->
                         <section
                             class="content-wrap"
                             id="section-step7"
-                            style="display: none"
+                            style="display: _"
                         ></section>
                     </div>
                 </section>

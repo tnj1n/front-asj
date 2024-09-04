@@ -1,0 +1,605 @@
+/* ************section2************** */
+
+.step-wrap ol {
+    border-radius: 3px;
+}
+
+.step-wrap ol li.done {
+    display: inline-flex;
+    color: #111;
+}
+
+.step-wrap ol li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+}
+/* .step-wrap ol li {
+    position: relative;
+    color: #c3c3c9;
+    padding-bottom: 11px;
+    font-size: 14px;
+    display: none;
+} */
+.step-wrap ol li.active:before,
+.step-wrap ol li.done:before {
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow2.svg);
+    background-size: cover;
+}
+.step-wrap ol li:not(:last-child):before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow3.svg);
+    background-size: cover;
+    margin-top: -6px;
+}
+.step-wrap ol li.done .num {
+    border-color: #f0543a;
+    background-color: #fff;
+    font-size: 0;
+    opacity: 1;
+}
+.step-wrap ol li .num {
+    font-size: 13px;
+    width: 22px;
+    border-radius: 100%;
+}
+.step-wrap ol li .num {
+    display: inline-flex;
+    width: 29px;
+    height: 22px;
+    border-radius: 11px;
+    border: 2px solid #c3c3c9;
+    background: #c3c3c9;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 8px;
+    line-height: 1;
+    opacity: 0.7;
+}
+/* .slick-arrow,
+.step-wrap ol,
+.step-wrap ol li .num {
+    align-items: center;
+    justify-content: center;
+} */
+.step-wrap .bar,
+.step-wrap ol li .num .max {
+    display: none;
+}
+.step-wrap ol li .num .max {
+    opacity: 0.6;
+}
+.step-wrap ol li.done .num:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/check.svg);
+    background-size: cover;
+}
+.plan-item.v2 .plan-drop .plan-cont li .text-box,
+.review-item .review-bottom .plan p,
+.step-wrap ol li.active,
+.step-wrap ol li.done {
+    display: inline-flex;
+}
+.step-wrap ol li:not(:last-child) {
+    padding-right: 39px;
+}
+.step-wrap ol li.active {
+    color: #f0543a;
+}
+.board-type3.v4 dl dt a p,
+.board-type5 li a,
+.board-type5 li div p,
+.step-wrap ol li.active {
+    display: flex;
+    align-items: center;
+}
+.step-wrap ol li.active .num {
+    border-color: #f0543a;
+    background: #f0543a;
+    opacity: 1;
+}
+.step-wrap ol li .num {
+    font-size: 13px;
+    width: 22px;
+    border-radius: 100%;
+}
+.step-wrap ol li .num .max {
+    opacity: 0.6;
+}
+/* title */
+.title-wrap {
+    margin-bottom: 49px;
+    text-align: center;
+}
+.section-usim .usim-wrap .title-wrap .title-type {
+    padding-right: 0;
+    font-size: 24px;
+}
+.title-wrap .title-type,
+.title-wrap .title-type2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+.agree-wrap {
+    text-align: left;
+}
+.agree-wrap .all-chk {
+    padding-bottom: 40px;
+    margin-bottom: 26px;
+}
+.agree-wrap .all-chk {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 30px;
+}
+.chk-box:first-child {
+    margin-left: 0;
+}
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+.chk-box input[type="checkbox"],
+.chk-box input[type="radio"] {
+    display: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+input,
+input[type="checkbox"],
+input[type="radio"],
+select,
+textarea {
+    appearance: none;
+}
+.section-usim .agree-wrap .all-chk .chk-box label,
+.section-usim .agree-wrap .chk-box label {
+    font-size: 18px;
+}
+.chk-box .checkbox {
+    margin-right: 10px;
+}
+.chk-box .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.chk-box input[type="checkbox"] + .checkbox:before {
+    transform: translate(6px, 9px) rotate(45deg);
+    transition-delay: 100ms;
+}
+.chk-box input[type="checkbox"] + .checkbox:after,
+.chk-box input[type="checkbox"] + .checkbox:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    transform-origin: left;
+    transition: all 150ms;
+}
+.chk-box input[type="checkbox"] + .checkbox:after {
+    transform: translate(10px, 14px) rotate(-53deg);
+    transition-delay: 0ms;
+}
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+.section-usim .agree-wrap .info-text,
+.section-usim .usim-order-fin .box-type2 dl {
+    font-size: 16px;
+}
+.section-usim .usim-wrap .info-text {
+    margin-top: 30px;
+}
+.section-usim .agree-wrap .info-text {
+    margin-bottom: 10px;
+}
+.info-text {
+    position: relative;
+    line-height: 1.67;
+    padding-left: 21px;
+    text-align: left;
+}
+.info-text,
+.info-text2 {
+    color: #343434;
+}
+.section-usim .agree-wrap .info-text .ico-info3 {
+    top: 6px;
+}
+.info-text i {
+    position: absolute;
+    left: 0;
+}
+.ico-info3,
+.ico-plus,
+.ico-plus2,
+.ico-plus3 {
+    background-image: url(https://www.freet.co.kr/assets/images/icon/info3.svg);
+}
+.ico-info,
+.ico-info2,
+.ico-info3,
+.ico-plus,
+.ico-plus2,
+.ico-plus3 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.list-type {
+    font-size: 15px;
+    line-height: 1.7;
+}
+.list-type {
+    color: #343434;
+    text-align: left;
+}
+.list-type li:first-child {
+    margin-top: 0;
+}
+.list-type li,
+.tooltip-guide span,
+.tooltip-wrap {
+    position: relative;
+}
+.list-type li:before {
+    top: 11px;
+}
+.list-type li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #94949a;
+    border-radius: 100%;
+}
+.list-type li {
+    margin-top: 7px;
+    padding-left: 7px;
+}
+.list-type li,
+.tooltip-guide span,
+.tooltip-wrap {
+    position: relative;
+}
+.agree-wrap .agree-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chk-box:first-child {
+    margin-left: 0;
+}
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+/* .chk-box input[type="checkbox"],
+.chk-box input[type="radio"] {
+    display: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+} */
+input,
+input[type="checkbox"],
+input[type="radio"],
+select,
+textarea {
+    appearance: none;
+}
+.chk-box .checkbox {
+    margin-right: 10px;
+}
+.chk-box .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+    /* font-size: 16px; */
+}
+
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.box-type4 .box-content .box-footer .title span.price,
+.chk-box label em.focus,
+.focus,
+.select-type.disabled select,
+.select-type.selected select {
+    color: #f0543a;
+}
+.agree-wrap .agree-list ul li a {
+    display: flex;
+    padding: 5px;
+}
+.ico-arrow4,
+.ico-arrow5,
+.ico-arrow6,
+.ico-arrow7,
+.ico-arrow8 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow4.svg);
+}
+.agree-wrap .agree-list ul li + li {
+    margin-top: 30px;
+}
+
+.agree-wrap .agree-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chk-box:first-child {
+    margin-left: 0;
+}
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+/* .chk-box input[type="checkbox"],
+.chk-box input[type="radio"] {
+    display: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+} */
+input,
+input[type="checkbox"],
+input[type="radio"],
+select,
+textarea {
+    appearance: none;
+}
+
+.chk-box .checkbox {
+    margin-right: 10px;
+}
+.chk-box .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+.chk-box input[type="checkbox"] + .checkbox:before {
+    transform: translate(6px, 9px) rotate(45deg);
+    transition-delay: 100ms;
+}
+.chk-box input[type="checkbox"] + .checkbox:after,
+.chk-box input[type="checkbox"] + .checkbox:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    transform-origin: left;
+    transition: all 150ms;
+}
+.chk-box input[type="checkbox"] + .checkbox:after {
+    transform: translate(10px, 14px) rotate(-53deg);
+    transition-delay: 0ms;
+}
+/* .section-usim .agree-wrap .all-chk .chk-box label,
+.section-usim .agree-wrap .chk-box label {
+    font-size: 18px;
+} */
+.agree-wrap .agree-list ul li a {
+    display: flex;
+    padding: 5px;
+}
+.agree-wrap .agree-list ul li + li {
+    margin-top: 30px;
+}
+.agree-wrap .agree-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chk-box:first-child {
+    margin-left: 0;
+}
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+/* .chk-box input[type="checkbox"],
+.chk-box input[type="radio"] {
+    display: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+} */
+.agree-wrap .agree-list ul li + li {
+    margin-top: 30px;
+}
+.btn-fixed-wrap {
+    position: inherit;
+    background: #fff;
+}
+.btn-fixed-wrap .bottom-gra {
+    display: none;
+}
+.btn-fixed-wrap .bottom-gra {
+    position: relative;
+}
+.btn-fixed-wrap .btn-wrap {
+    margin-top: 50px;
+    padding: 0;
+}
+.button-default.disabled,
+.disabled.btn-form,
+.disabled.btn-type,
+.disabled.btn-type-sm,
+.disabled.btn-type2,
+.kakao-plus-event-container .disabled.open-url-btn {
+    pointer-events: none;
+    color: #fff;
+    opacity: 0.4;
+}
+.btn-wrap [class^="btn-type"],
+.tab-type li,
+.tab-type2 li {
+    width: 100%;
+}
+.btn-type,
+.btn-type-sm,
+.btn-type2,
+.button-default,
+.kakao-plus-event-container .open-url-btn {
+    max-width: 200px;
+    height: 64px;
+    font-size: 20px;
+}
+.btn-type,
+.btn-type-sm,
+.kakao-plus-event-container .open-url-btn {
+    background: #f0543a;
+    color: #fff;
+}
+.btn-type,
+.btn-type-sm,
+.btn-type2,
+.kakao-plus-event-container .open-url-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.2s ease;
+}
+
+.content-wrap > aside {
+    width: 243px;
+}
+.pc-only {
+    display: block;
+}
+.content-wrap > aside .title-bg {
+    width: 100%;
+    height: 35px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: #3f4970;
+}
+.content-wrap > aside .title-bg h3,
+.footer-cs .cs-ars dl dt {
+    font-size: 15px;
+}
+.section-usim .usim-order-list {
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    padding: 15px 20px 20px;
+}
+.section-usim .usim-order-list .order-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.section-usim .loding-wrap,
+.section-usim .usim-order-list .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row {
+    flex-direction: row !important;
+}
+.section-usim .usim-order-fin .box-type2 dl + dl,
+.section-usim .usim-order-list .row + .row {
+    margin-top: 10px;
+}
+.section-usim .loding-wrap,
+.section-usim .usim-order-list .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-usim .usim-order-list .total-wrap {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f0543a;
+}
+.section-usim .usim-order-list .total-wrap .t-r {
+    text-align: right;
+}
