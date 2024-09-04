@@ -755,6 +755,7 @@ button {
     display: table-row;
     width: 100%;
     border: 1px solid #dee2e6;
+    cursor: pointer;
 }
 
 .UserTable_cell__3kj0K {
@@ -851,7 +852,6 @@ button {
 
 
 
-
 /* modal 창 */
 
 /* Modal Styles */
@@ -893,7 +893,7 @@ button {
 
 .modal-content {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 30px 18px 30px 30px;
     border-radius: 10px;
     width: 150%;
     max-height: 80vh; /* 화면 높이의 80%로 설정 */

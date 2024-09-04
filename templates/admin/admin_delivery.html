@@ -776,7 +776,7 @@
                         <div class="dim"></div>
                         <div class="modal-wrap">
                             <div class="modal-content">
-                                <h2>회원 정보 수정</h2>
+                                <h2>기사 상세 정보</h2>
                                 <form id="editForm">
                                     <label for="editUserName">이름</label>
                                     <input
@@ -797,13 +797,7 @@
                                         id="editEmail"
                                         name="editEmail"
                                     />
-                                    <label for="editPassword">비밀번호</label>
-                                    <input
-                                        type="text"
-                                        id="editPassword"
-                                        name="editPassword"
-                                    />
-                                    <label for="editAdderss">거주지</label>
+                                    <label for="editAdderss">주소</label>
                                     <input
                                         type="text"
                                         id="editAdderss"
@@ -817,17 +811,57 @@
                                         id="editPhoneNumber"
                                         name="editPhoneNumber"
                                     />
-                                    <!-- <label for="editAge">나이</label>
+                                    <label for="editBank">은행</label>
+                                    <select id="editBank" name="editBank">
+                                        <option value="" disabled selected>
+                                            은행을 선택해주세요
+                                        </option>
+                                        <option value="KEB하나은행">
+                                            KEB하나은행
+                                        </option>
+                                        <option value="SC제일은행">
+                                            SC제일은행
+                                        </option>
+                                        <option value="국민은행">
+                                            국민은행
+                                        </option>
+                                        <option value="신한은행">
+                                            신한은행
+                                        </option>
+                                        <option value="외한은행">
+                                            외한은행
+                                        </option>
+                                        <option value="우리은행">
+                                            우리은행
+                                        </option>
+                                        <option value="한국시티은행">
+                                            한국시티은행
+                                        </option>
+                                        <option value="기업은행">
+                                            기업은행
+                                        </option>
+                                        <option value="농협">농협</option>
+                                        <option value="수협">수협</option>
+                                    </select>
+                                    <label for="editdepositor">예금주</label>
                                     <input
                                         type="text"
-                                        id="editAge"
-                                        name="editAge"
-                                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
-                                    /> -->
+                                        id="editdepositor"
+                                        name="editdepositor"
+                                    />
+                                    <label for="editAccountNumber"
+                                        >계좌번호</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="editAccountNumber"
+                                        name="editAccountNumber"
+                                    />
+
                                     <label for="editGender">성별</label>
                                     <select id="editGender" name="editGender">
-                                        <option value="활동중">남</option>
-                                        <option value="탈퇴함">여</option>
+                                        <option value="남">남</option>
+                                        <option value="여">여</option>
                                     </select>
                                     <label for="editStatus">상태</label>
                                     <select id="editStatus" name="editStatus">

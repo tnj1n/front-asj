@@ -129,6 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const deleteSelectedBtn = document.getElementById("deleteSelectedBtn"); // 내역 삭제 버튼
     const saveBtn = document.querySelector(".verify-btn.save"); //수정하기 저장 버튼
     const sortFilterOptions = document.querySelectorAll(".sort-filter-option"); //결제일 순/ 결제 수단 선택
+    const viewBtn = document.querySelector(".viewDetail"); // 상세보기 버튼
+    const viewDetail = document.querySelectorAll(".UserTable_row__1Qg9b"); //데이터 행을 누르면
 
     let actionToPerform = null; // 전역 변수로 초기화
 
@@ -153,6 +155,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+    // 체크박스 클릭 시 이벤트 전파 방지
+    const checkboxes = document.querySelectorAll(
+        ".UserTable_cell__3kj0K:nth-child(1)"
+    );
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("click", (event) => {
+            // 이벤트 전파를 막아 체크박스 클릭 시 행 클릭 이벤트가 실행되지 않도록 합니다.
+            event.stopPropagation();
+        });
+    });
 
     // 페이지네이션 기능
     document.querySelectorAll(".pagination-page-link").forEach(function (link) {
@@ -175,6 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const openModal = (type) => {
         modalWraps.forEach((wrap) => {
             const modal = wrap.closest(".modal");
+            // 모달 내용의 스크롤 위치를 맨 위로 설정
+            modal.querySelector(".modal-content").scrollTop = 0;
             if (type === "auth" && authModal === modal) {
                 modal.style.display = "flex";
                 wrap.style.animation = "popUp 0.5s";
@@ -187,8 +201,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 모달을 닫는 함수
     const closeModal = (type) => {
-        console.log(type);
         modalWraps.forEach((wrap) => {
+            const modal = wrap.closest(".modal");
+            // 모달 내용의 스크롤 위치를 맨 위로 설정
+            modal.querySelector(".modal-content").scrollTop = 0;
             wrap.style.animation = "popDown 0.5s";
             setTimeout(() => {
                 if (type === "auth" && authModal.style.display === "flex") {
@@ -208,13 +224,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //     openModal("edit");
     // });
 
-    // 수정 버튼
-    editButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            openModal("auth");
-        });
-    });
-
     // 문자 전송 버튼 클릭 시 모달창 열기
     // deleteSelectedBtn.addEventListener("click", () => {
     //     modalMessage.textContent = "삭제하시겠습니까?";
@@ -230,6 +239,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //     openModal("auth");
     // });
+
+    // 수정 버튼
+    editButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            // 행 클릭 이벤트로 이벤트가 전파되는 것을 막기 위해 event.stopPropagation() 사용
+            event.stopPropagation();
+
+            // 모달 메시지를 설정하고, 모달을 엽니다.
+            modalMessage.textContent = "상태를 변경 하시겠습니까?";
+            openModal("auth");
+        });
+    });
+    // 행 선택시 상세보기
+    // 테이블의 모든 행을 선택
+    document.querySelectorAll(".UserTable_row__1Qg9b").forEach((row) => {
+        // 각 행에 클릭 이벤트 리스너 추가
+        row.addEventListener("click", () => {
+            // 클릭한 대상이 헤더가 아니라면 모달을 엽니다.
+            if (!row.classList.contains("UserTable_header__2WvXj")) {
+                openModal("edit");
+            }
+        });
+    });
 
     // 확인 버튼 클릭 시 모달 닫기
     verifyBtn.addEventListener("click", () => {
@@ -248,7 +280,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 수정-저장버튼 클릭시 모달 닫기
     saveBtn.addEventListener("click", () => {
-        modalMessage.textContent = "상태를 변경 하시겠습니까?";
         closeModal("edit");
     });
 

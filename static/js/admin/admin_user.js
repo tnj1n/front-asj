@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 수정 버튼
     editButtons.forEach((button) => {
+        modalMessage.textContent = "상태를 변경 하시겠습니까?";
         button.addEventListener("click", () => {
             openModal("auth");
         });
@@ -248,7 +249,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 수정-저장버튼 클릭시 모달 닫기
     saveBtn.addEventListener("click", () => {
-        modalMessage.textContent = "상태를 변경 하시겠습니까?";
         closeModal("edit");
     });
 

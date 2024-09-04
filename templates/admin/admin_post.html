@@ -3,59 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>게시글 관리 페이지</title>
-        <link rel="stylesheet" href="/static/css/admin/manager.css" />
-        <link rel="stylesheet" href="/static/css/admin/admin_post.css">
+        <title>문의 목록 관리 페이지</title>
+        <link rel="stylesheet" href="/static/css/admin/admin_post.css" />
     </head>
     <body>
-        <!-- Modal Structure -->
-        <div id="authModal" class="modal">
-            <div class="dim"></div>
-            <div class="modal-wrap">
-                <div class="modal-content">
-                    <p>관리자 인증번호 입력</p>
-                    <div class="auth-container">
-                        <input
-                            type="text"
-                            id="input1"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input2"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input3"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input4"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input5"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                        <input
-                            type="text"
-                            id="input6"
-                            maxlength="1"
-                            class="auth-input"
-                        />
-                    </div>
-                    <button id="verifyBtn" class="verify-btn">확인</button>
-                </div>
-            </div>
-        </div>
         <div id="root">
             <div id="AppLayout_Container" class="AppLayout_container__2g11i">
                 <div class="AppGNBbar_container__3aaiG">
@@ -441,591 +392,452 @@
                             </div>
                         </div>
                     </nav>
-                    <!-- BODY 내용 -->
-                                            
-                        <div
-                            id="AppLayout_Contents"
-                            class="AppLayout_contents_mainContent"
-                        >
-                            <!-- 게시글 목록 조회 -->
-                            <div class="RecommendedPostsPage_container">
-                                <div class="RecommendedPostsPage-inner">
-                                    <div class="Posts-list-container">
-                                        <div class="Posts-list-wrapper">
-                                            <div class="posts-list-header">
-                                                <div class="postList-title">
-                                                    게시글 목록
-                                                </div>
-                                                <div class="PostFilter_wrapper">
-                                                    <input
-                                                        type="text"
-                                                        class="PostFilter_searchInput"
-                                                        placeholder="검색어 입력"
-                                                    />
-                                                    <button
-                                                        class="Button_button PostsFilter_filterButton PostsFilter_selected"
-                                                        type="button"
-                                                    >
-                                                        <span>
-                                                            <span
-                                                                class="Button_children"
-                                                                >수정</span
-                                                            >
-                                                        </span>
-                                                    </button>
-                                                    <button
-                                                        class="Button_button PostsFilter_filterButton"
-                                                        type="button"
-                                                    >
-                                                        <span>
-                                                            <span
-                                                                class="Button_children"
-                                                                >삭제</span
-                                                            >
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <hr
-                                                class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"
+                    <!-- body (메인 내용) -->
+                    <div
+                        id="AppLayout_Contents"
+                        class="AppLayout_contents__1VFab"
+                    >
+                        <div class="Funding_wrapper__ZB-2b">
+                            <!-- body_header -->
+                            <div class="FundingHeader_container__wQrCW">
+                                <h2 class="FundingHeader_title__27dCX">
+                                    문의 관리
+                                </h2>
+                                <p class="FundingHeader_description__2IFl4">
+                                    문의 목록을 조회합니다.
+                                </p>
+                            </div>
+
+                            <!-- body_layout -->
+                            <div class="FundingLayout_container__1WSFD">
+                                <div class="filter_wrap">
+                                    <div class="SortFilterOptions">
+                                        <span
+                                            class="sort-filter-option selected"
+                                            >작성 날짜 순</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >이름 순</span
+                                        >/
+                                        <span class="sort-filter-option"
+                                            >작성 상태</span
+                                        >
+                                    </div>
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons">
+                                        <input
+                                            type="text"
+                                            class="Filter_searchInput"
+                                            placeholder="검색어 입력"
+                                        />
+                                        <button
+                                            id="addServiceBtn"
+                                            class="addServiceBtn"
+                                        >
+                                            메일 전송
+                                        </button>
+                                        <button
+                                            id="deleteSelectedBtn"
+                                            class="deleteSelectedBtn"
+                                        >
+                                            문자 전송
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="UserTable_container__1JHD1">
+                                    <div
+                                        class="UserTable_row__1Qg9b UserTable_header__2WvXj"
+                                    >
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell selectAllCell"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="selectAll"
                                             />
-                                            <div class="Allselect_Toggle">
-                                                <div class="SettingsToggle_toggle">
-                                                    <label
-                                                        for="funding_allow"
-                                                        class="SettingToggle_switch SettingToggle_switch_all"
-                                                    >
-                                                    </label>
-                                                    <input
-                                                        type="checkbox"
-                                                        id="funding_allow"
-                                                        name="funding_allow"
-                                                        class="SettingToggle_input"
-                                                    />
-                                                </div>
-                                                <div class="AllSettingToggle_title">
-                                                    전체 선택
-                                                </div>
-                                                <div class="SortFilterOptions">
-                                                    <span id="sort-by-date" class="sort-filter-option selected">등록</span> /
-                                                    <span id="sort-by-views" class="sort-filter-option">조회</span> /
-                                                    <span id="sort-by-replies" class="sort-filter-option">댓글</span>
-                                                </div>
-                                            </div>
-                                            <hr class="Divider_divider Divider_horizontal Divider_lightBG Divider_spacing3 Divider_caption2 FriendsList_divider"/>
-                                            <div class="list_wrapper">
-                                                <div class="background" style="background-color: white">
-                                                    <div class="list-bordered">
-                                                    <div class="bg-white" id="page-container">
-                                                        <div
-                                                            class="FAQ_container align-items-center">
-                                                            <div
-                                                                class="articlelist row"
-                                                                id="section-anchor-25448181617305"
-                                                                style="display: flex;" >
-                                                                <div class="section_container">
-    
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        소금빵
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                소금빵은 소금이 빵빵
-                                                                                
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        12
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">23</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.08.30
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        피자빵
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                인상을 피자
-                                                                                
-                                                                                </span>
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        302
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">89</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.08.29
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        asd235
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                안녕하세요
-                                                                                
-                                                                                </span>
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        4
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">2</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.06.31
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        123비둘기
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                9999
-                                                            
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        9
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">9</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.07.30
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        ABDC
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                AABBCCDD
-                                                                                
-                                                                                </span>
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        12
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">23</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.08.30
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        ZXC
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                QWER
-                                                                               
-                                                                                </span>
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        12
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">23</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.08.30
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        JAVA
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                Spring
-                                                                                
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        34
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">24</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            2024.01.01
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        노네임
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                1목제
-                                                                                
-                                                                                </span>
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        66
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">55</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            1시간 전
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex">
-                                                                        <div
-                                                                            class="ydsfooter_munu_bar section_document"
-                                                                            href="/hc/ko/articles/17845227566745-%EC%95%8C%EB%A6%BC-%EC%8B%A0%EC%B2%AD%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%99%95%EC%9D%B8%ED%95%98%EB%82%98%EC%9A%94">
-                                                                            <div class="SettingsToggle_toggle">
-                                                                                <label for="funding_allow" class="SettingToggle_switch SettingToggle_switch">
-                                                                                </label>
-                                                                                <input type="checkbox" id="funding_allow" name="funding_allow" class="SettingToggle_input">
-                                                                            </div>
-                                                                            <div style="margin-top: 10px;">
-                                                                                <div class="sc-73fafee5-0 ejqkLc">
-                                                                                    <img src="https://image.wanted.co.kr/gigs/www/wanted/icon-business-bag.svg"/>
-                                                                                </div>
-                                                                                <div class="FAQ_card_title">
-                                                                                    <div
-                                                                                        class="font-size-sm font-medium FAQ_card_answers" style="width: 40px; text-align: center; margin-top: 4px;">
-                                                                                        하하
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="writetitle">
-                                                                                무한도전
-                                                                                
-                                                                                <div class="writecontent">
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                    내용내용내용내용내용
-                                                                                </div>
-                                                                                <div class="write_footer">
-                                                                                    <span>조회수:
-                                                                                        <span class="views-ctn">
-                                                                                        132
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        댓글:
-                                                                                        <span class="reply">53</span>
-                                                                                    </span>
-                                                                                    <span>
-                                                                                        작성일
-                                                                                        <span class="Post_joinDate">
-                                                                                            24분 전
-                                                                                        </span>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-        
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </div>    
                                         </div>
-    
-                                        <!-- 페이지 네이션 -->
-                                        <nav class="pagination">
-                                            <ul class="pagination-list">
-                                                <!-- 처음 페이지로 이동하는 버튼 -->
-                                                <li class="pagination-first">
-                                                    <a href="#" class="pagination-first-link" rel="nofollow">
-                                                        <span class="pagination-first-icon" aria-hidden="true">«</span>
-                                                    </a>
-                                                </li>
-                                                <!-- 이전 페이지로 이동하는 버튼 -->
-                                                <li class="pagination-prev">
-                                                    <a href="#" class="pagination-prev-link" rel="prev nofollow">
-                                                        <span class="pagination-prev-icon" aria-hidden="true">‹</span>
-                                                    </a>
-                                                </li>
-                                                <!-- 페이지 번호 버튼 -->
-                                                <li class="pagination-page active"><a href="#" class="pagination-page-link">1</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">2</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">3</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">4</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">5</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">6</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">7</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">8</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">9</a></li>
-                                                <li class="pagination-page"><a href="#" class="pagination-page-link">10</a></li>
-                                                <!-- 다음 페이지로 이동하는 버튼 -->
-                                                <li class="pagination-next">
-                                                    <a href="#" class="pagination-next-link" rel="next nofollow">
-                                                        <span class="pagination-next-icon" aria-hidden="true">›</span>
-                                                    </a>
-                                                </li>
-                                                <!-- 마지막 페이지로 이동하는 버튼 -->
-                                                <li class="pagination-last">
-                                                    <a href="#" class="pagination-last-link" rel="nofollow">
-                                                        <span class="pagination-last-icon" aria-hidden="true">»</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            작성자
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            작성 날짜
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            이메일
+                                        </div>
+
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            제목
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            유형
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            성별
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            상태
+                                        </div>
+                                        <div
+                                            class="UserTable_cell__3kj0K headerCell"
+                                        >
+                                            Action
+                                        </div>
+                                    </div>
+
+                                    <!-- Example row (Initial data) -->
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상훈
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-01-01
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            sang@google.com
+                                        </div>
+
+                                        <div class="UserTable_cell__3kj0K">
+                                            비워드림이란 어떤
+                                            곳인가요?ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            회원 서비스
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            남
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            작성중
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상훈
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-01-01
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            sang@google.com
+                                        </div>
+
+                                        <div class="UserTable_cell__3kj0K">
+                                            서울 강남구
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            남
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            작성중
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상훈
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-01-01
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            sang@google.com
+                                        </div>
+
+                                        <div class="UserTable_cell__3kj0K">
+                                            서울 강남구
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            남
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            작성완료
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="UserTable_row__1Qg9b">
+                                        <div class="UserTable_cell__3kj0K">
+                                            <input
+                                                type="checkbox"
+                                                class="userCheckbox"
+                                            />
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            상훈
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            2024-01-01
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            sang@google.com
+                                        </div>
+
+                                        <div class="UserTable_cell__3kj0K">
+                                            서울 강남구
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            010-1234-1234
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            남
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            작성완료
+                                        </div>
+                                        <div class="UserTable_cell__3kj0K">
+                                            <button class="editBtn">
+                                                수정
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <nav class="pagination">
+                                <ul class="pagination-list">
+                                    <!-- 처음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-first">
+                                        <a
+                                            href="#"
+                                            class="pagination-first-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-first-icon"
+                                                aria-hidden="true"
+                                                >«</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 이전 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-prev">
+                                        <a
+                                            href="#"
+                                            class="pagination-prev-link"
+                                            rel="prev nofollow"
+                                        >
+                                            <span
+                                                class="pagination-prev-icon"
+                                                aria-hidden="true"
+                                                >‹</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 페이지 번호 버튼 -->
+                                    <li class="pagination-page active">
+                                        <a href="#" class="pagination-page-link"
+                                            >1</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >2</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >3</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >4</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >5</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >6</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >7</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >8</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >9</a
+                                        >
+                                    </li>
+                                    <li class="pagination-page">
+                                        <a href="#" class="pagination-page-link"
+                                            >10</a
+                                        >
+                                    </li>
+                                    <!-- 다음 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-next">
+                                        <a
+                                            href="#"
+                                            class="pagination-next-link"
+                                            rel="next nofollow"
+                                        >
+                                            <span
+                                                class="pagination-next-icon"
+                                                aria-hidden="true"
+                                                >›</span
+                                            >
+                                        </a>
+                                    </li>
+                                    <!-- 마지막 페이지로 이동하는 버튼 -->
+                                    <li class="pagination-last">
+                                        <a
+                                            href="#"
+                                            class="pagination-last-link"
+                                            rel="nofollow"
+                                        >
+                                            <span
+                                                class="pagination-last-icon"
+                                                aria-hidden="true"
+                                                >»</span
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                    
+                    </div>
+                    <!-- 승인 버튼 모달 -->
+                    <div id="authModal" class="modal">
+                        <div class="dim"></div>
+                        <div class="modal-wrap">
+                            <div class="modal-content">
+                                <p id="modalMessage">
+                                    결제 승인을 하시겠습니까?
+                                </p>
+                                <div class="button-container">
+                                    <button id="verifyBtn" class="verify-btn">
+                                        확인
+                                    </button>
+                                    <button class="cancel-btn">취소</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="editModal" class="modal">
+                        <div class="dim"></div>
+                        <div class="modal-wrap">
+                            <div class="modal-content">
+                                <h2>문의 상세 정보</h2>
+                                <form id="editForm">
+                                    <label for="editUserName">작성자</label>
+                                    <input
+                                        type="text"
+                                        id="editUserName"
+                                        name="editUserName"
+                                        readonly=""
+                                    />
+                                    <label for="editJoinDate">작성날짜</label>
+                                    <input
+                                        type="date"
+                                        id="editJoinDate"
+                                        name="editJoinDate"
+                                    />
+                                    <label for="editEmail">이메일</label>
+                                    <input
+                                        type="email"
+                                        id="editEmail"
+                                        name="editEmail"
+                                    />
+                                    <label for="editTitle">제목</label>
+                                    <input
+                                        type="text"
+                                        id="editTitle"
+                                        name="editTitle"
+                                    />
+                                    <label for="editContent">내용</label>
+                                    <textarea
+                                        id="editContent"
+                                        name="editContent"
+                                    ></textarea>
+
+                                    <label for="editFile">파일</label>
+                                    <input
+                                        type="file"
+                                        id="editFile"
+                                        name="editFile"
+                                    />
+
+                                    <label for="editStatus">상태</label>
+                                    <select id="editStatus" name="editStatus">
+                                        <option value="작성중">작성중</option>
+                                        <option value="작성완료">
+                                            작성완료
+                                        </option>
+                                    </select>
+                                    <div class="editButtonWrap">
+                                        <button
+                                            type="button"
+                                            class="verify-btn save"
+                                        >
+                                            저장
+                                        </button>
+                                        <button class="cancel-btn">취소</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 사이드바 버튼(click하면 사이드바 들어감) -->
                     <button
                         type="button"
@@ -1037,7 +849,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/admin/manager.js"></script>
     <script src="/static/js/admin/admin_post.js"></script>
-    
 </html>
