@@ -446,6 +446,8 @@ address, caption, em, i, var {
 
 @media (min-width: 1200px) {
     .section-prepaid .prepaid-list .flex-box li {
+        width: 100%;
+        margin-bottom: 0;
         border: 1px solid #e3e3e3;
         border-radius: 20px;
         padding: 30px 10px;
@@ -574,4 +576,356 @@ address, caption, em, i, var {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* **********충전계좌 입금********* */
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list>li+li {
+        margin-top: 80px;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+.section-prepaid .prepaid-list .sub-title {
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .sub-title {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box ul {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li>i {
+        display: block;
+        margin: 0 auto 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.ico-mail{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/mail.svg);
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-prepaid .prepaid-list .flex-box li p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li p {
+        font-size: 16px;
+        justify-content: center;
+    }
+}
+
+.mnophn-detail .box-right>.box-type5 .body1-tooltip, .section-prepaid .prepaid-list .flex-box li p strong {
+    display: inline-flex;
+    align-items: center;
+}
+
+.section-prepaid .prepaid-list .flex-box li .ico-call6 {
+    margin-left: 5px;
+}
+
+.ico-call6, .ico-phone-call, .ico-website {
+    width: 20px;
+    height: 20px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/call6.svg);
+}
+
+
+.section-prepaid .prepaid-list .after:after {
+    content: "";
+    margin: 0 6px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow16.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.section-prepaid .prepaid-list .flex-box li:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li+li {
+        margin-left: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li {
+        width: 100%;
+        margin-bottom: 0;
+        border: 1px solid #e3e3e3;
+        border-radius: 20px;
+        padding: 30px 10px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.ico-pc{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/pc.svg);
+}
+
+
+.ico-phone-call{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/phone-call.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-quick05{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/quick05.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-data-call{
+    background-image: url(https://www.freet.co.kr/assets/images/icon/phone-call.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .box06 .flex-box li p span, .section-prepaid .prepaid-list .box07 .flex-box li p.v3, .section-prepaid .prepaid-list .box08 .flex-box li p.v3 {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+}
+
+.section-prepaid .prepaid-list .box06 .flex-box li p span {
+    display: block;
+    font-weight: 500;
+}
+
+.section-prepaid .prepaid-list .box06 .flex-box li p {
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .section-prepaid .prepaid-list .flex-box li p strong:after {
+        margin: 0 10px;
+    }
+}
+
+
+/* *******************모달창******************* */
+
+.dim {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, .7);
+}
+
+
+
+@media (min-width: 1200px) {
+    .pop-layer .pop-wrap, .pop-layer .pop-wrap.v2 {
+        width: 360px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .pop-layer .pop-close-wrap {
+        margin-bottom: 15px;
+    }
+}
+
+.pop-layer .pop-close-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pop-layer .pop-close-wrap .pop-close {
+    position: static;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/close7.svg);
+}
+
+.pop-layer .pop-close {
+    font-size: 0;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) {
+    .pop-layer .pop-content {
+        padding: 40px;
+        overflow: hidden;
+        max-height: 650px;
+    }
+}
+
+.pop-layer .pop-content {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.t-l {
+    text-align: left;
+}
+
+@media (min-width: 1200px) {
+    .box-type p, .title-small {
+        font-size: 18px;
+    }
+}
+
+.title-small {
+    line-height: 1.63;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+.form-item.ntit input {
+    padding-top: 0;
+}
+
+@media (min-width: 1200px) {
+    input[type=text]{
+    height: 64px;
+    font-size: 18px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+
+    }
+}
+
+input{
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+}
+
+.pop-layer .btn-wrap {
+    margin-top: 20px;
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .pop-layer .btn-wrap .btn-type{
+        height: 50px;
+        width: 120px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn-type{
+        max-width: 200px;
+    }
+}
+
+
+.btn-type {
+    background: #f0543a;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+}
+
+.btn-type:hover{
+    background: #e2391d;
+    ;
+}
+
+
+
+.pop-layer .pop-wrap {
+    position: relative;
+}
+
+
+.pop-layer {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 103;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: 0 0;
+    cursor: pointer;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
 }

@@ -42,6 +42,7 @@
                     </section>
                     <section class="content-box">
                         <ul class="prepaid-list">
+                            <!-- 온라인 즉시 결제 -->
                             <li class="box01">
                                 <div class="title-box">
                                     <h3 class="title-type">온라인 즉시 결제</h3>
@@ -57,7 +58,7 @@
                                     >
                                 </div>
                                 <div class="flex-box">
-                                    <ul>
+                                    <!-- <ul>
                                         <li>
                                             <i class="ico-visa"></i>
                                             <strong>신용카드</strong>
@@ -82,10 +83,10 @@
                                             <i class="ico-wechat-pay"></i>
                                             <strong>WechatPay</strong>
                                         </li>
-                                        <!-- <li><i class="ico-union-pay"></i> <strong>Union Pay</strong></li> -->
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </li>
+                            <!-- 충전계좌 입금 -->
                             <li class="box02">
                                 <div class="title-box">
                                     <h3 class="title-type">충전계좌 입금</h3>
@@ -101,18 +102,20 @@
                                             <i class="ico-mail"></i>
 
                                             <p>
-                                                <strong
+                                                <strong class="after"
                                                     >080-730-0114<i
                                                         class="ico-call6"
                                                     ></i></strong
-                                                ><strong>문자 확인</strong>
+                                                ><a>문자 확인</a>
                                             </p>
                                         </li>
                                         <li>
                                             <i class="ico-pc"></i>
 
                                             <p>
-                                                <strong>마이페이지</strong>
+                                                <strong class="after"
+                                                    >마이페이지</strong
+                                                >
                                                 <!-- <a href="javascript:void(0)" class="underline" onclick="goCheckPhone(2);return false;">-->
                                                 <a
                                                     href="javascript:void(0);"
@@ -124,42 +127,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="banner-app">
-                                    <p>
-                                        프리티 APP으로 편리하게
-                                        <br class="mobile-only" />
-                                        서비스를 이용해 보세요.
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            <div class="qr-box">
-                                                <img
-                                                    src="https://www.freet.co.kr/assets/images/@temp/qr-googleplay.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <a
-                                                onclick="moveUrl('https://play.google.com/store/apps/details?id=freet.com.com.freetmobileapp&amp;hl=ko&amp;gl=US', 'Y')"
-                                            >
-                                                <i class="ico-googleplay"></i
-                                            ></a>
-                                        </li>
-                                        <li>
-                                            <div class="qr-box">
-                                                <img
-                                                    src="https://www.freet.co.kr/assets/images/@temp/qr-appstore.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <a
-                                                onclick="moveUrl('https://apps.apple.com/kr/app/%ED%94%84%EB%A6%AC%ED%85%94%EB%A0%88%EC%BD%A4-freet-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/id1520123515', 'Y')"
-                                            >
-                                                <i class="ico-appstore"></i
-                                            ></a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </li>
+                            <!-- 자동충전 -->
                             <li class="box03">
                                 <div class="title-box">
                                     <h3 class="title-type">자동 충전 설정</h3>
@@ -170,7 +139,6 @@
                                     <a
                                         href="javascript:void(0)"
                                         class="btn-type10"
-                                        onclick="preAutoChargePage();return false;"
                                         >자동충전 신청/해제하기</a
                                     >
                                 </div>
@@ -194,92 +162,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="box04">
-                                <div class="title-box">
-                                    <h3 class="title-type">편의점 충전</h3>
-                                    <p>
-                                        가까운 편의점에 방문하여 매장 점원에게
-                                        충전방법을 보여주세요.
-                                    </p>
-                                    <a
-                                        href="javascript:void(0)"
-                                        class="btn-type10"
-                                        onclick="goCheckPhone(4);return false;"
-                                        >편의점 충전방법 확인</a
-                                    >
-                                </div>
-                                <div class="flex-box">
-                                    <ul>
-                                        <li>
-                                            <i class="ico-gs-25"></i>
-                                            <strong>GS25</strong>
-                                        </li>
-                                        <li>
-                                            <i class="ico-cu"></i>
-                                            <strong>CU</strong>
-                                        </li>
-                                        <li>
-                                            <i class="ico-seven-eleven"></i>
-                                            <strong>세븐일레븐</strong>
-                                        </li>
-                                        <li>
-                                            <i class="ico-ministop"></i>
-                                            <strong>미니스탑</strong>
-                                        </li>
-                                        <li>
-                                            <i class="ico-cspace"></i>
-                                            <strong>CSPACE</strong>
-                                        </li>
-                                        <!-- 2023-05-12 추가 -->
-                                        <li>
-                                            <i class="ico-emart-24"></i
-                                            ><strong>이마트24</strong>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="box05">
-                                <div class="title-box">
-                                    <h3 class="title-type">선불카드</h3>
-                                    <p>
-                                        가입매장(선불카드 판매점)에서 구매하신
-                                        카드번호로 충전할 수 있습니다.
-                                    </p>
-                                    <a
-                                        href="javascript:void(0)"
-                                        class="btn-type10"
-                                        onclick="goCheckPhone(5);return false;"
-                                        >선불카드 충전</a
-                                    >
-                                </div>
-                                <h4 class="sub-title">선불카드 충전방법</h4>
-                                <div class="flex-box">
-                                    <ul>
-                                        <li>
-                                            <i class="ico-pc"></i>
 
-                                            <p>
-                                                <strong>마이페이지</strong>
-                                                <strong>선불요금충전</strong>
-                                                <!-- <a href="javascript:void(0)" class="underline" onclick="goCheckPhone(5);return false;"> -->
-                                                <strong>선불카드 충전</strong>
-                                            </p>
-                                        </li>
-
-                                        <li>
-                                            <i class="ico-data-call"></i>
-
-                                            <p>
-                                                <strong
-                                                    >폰에서 080-720-0114<i
-                                                        class="ico-call6"
-                                                    ></i></strong
-                                                ><strong>카드번호 입력</strong>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                             <li class="box06">
                                 <div class="title-box">
                                     <h3 class="title-type">ARS</h3>
@@ -294,9 +177,6 @@
                                                         class="ico-call6"
                                                     ></i
                                                 ></strong>
-                                                <span
-                                                    >(신용카드 결제 가능)</span
-                                                >
                                             </p>
                                         </li>
                                     </ul>
@@ -308,16 +188,17 @@
                 <!-- [E] 선불서비스 -->
             </div>
 
-            <div class="pop-layer pop-prepaid" id="pop-prepaid">
+            <div
+                class="pop-layer pop-prepaid"
+                id="pop-prepaid"
+                style="display: none"
+            >
                 <div class="dim"></div>
+                <!-- 온라인 즉시 결제 모달 -->
                 <div class="pop-wrap v2">
+                    <!--  -->
                     <div class="pop-close-wrap">
-                        <button
-                            class="pop-close"
-                            onclick="javascript:UI.layerPopUp({selId:'#pop-prepaid', st: 'close'});"
-                        >
-                            팝업닫기
-                        </button>
+                        <button class="pop-close">팝업닫기</button>
                     </div>
                     <div class="pop-content">
                         <h3 class="title-small t-l">
@@ -327,9 +208,10 @@
                             <input
                                 value=""
                                 class="input-delete"
-                                type="number"
+                                type="text"
                                 placeholder="휴대폰번호를 입력해주세요."
                                 id="telNo"
+                                onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                             />
                         </div>
                         <div class="btn-wrap">
@@ -479,4 +361,5 @@
             </script>
         </div>
     </body>
+    <script src="../../static/js/myPage/payment-method.js"></script>
 </html>
