@@ -84,12 +84,14 @@
     font-weight: 500;
     line-height: 1.67;
 }
+
 .plan-detail .plan-infomation .bottom-box .box-type2 .box-title dl dd {
     text-align: right;
     color: #9a9a9a;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.67;
+    margin-left: 120px;
 }
 .plan-detail .plan-infomation .bottom-box .box-type2 dl dd {
     text-align: left;
@@ -113,7 +115,7 @@
     margin-top: 5px;
 }
 .plan-detail .plan-infomation .plan-box .box-type3 {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .box-type3,
 .box-type3 .box-item {
@@ -176,12 +178,6 @@
     font-weight: 600;
     line-height: 1.56;
 }
-/* .box-type3 .box-item .box-content .caption a {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: left;
-} */
 
 .plan-detail .plan-infomation .plan-box .box-type3 .box-item .box-content p {
     margin-top: 5px;
@@ -195,7 +191,7 @@
     text-align: left;
 }
 .plan-detail .plan-infomation .plan-price {
-    margin-top: 25px;
+    margin-top: 50px;
     text-align: center;
 }
 .plan-detail .plan-infomation .plan-price .price {
@@ -294,17 +290,7 @@
 .btn-fixed-wrap .bottom-gra {
     position: relative;
 }
-/* .btn-fixed-wrap .bottom-gra:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    transform: translateY(-100%);
-    width: 100%;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 100%);
-} */
+
 .plan-detail .plan-content .btn-fixed-wrap .btn-wrap,
 .plan-detail .plan-content .plan-benefit .box-type3 .box-item .box-content {
     position: relative;
@@ -319,36 +305,14 @@
     display: flex;
     justify-content: center;
 }
-/* 이게 뭐임?? */
-.plan-detail .plan-content .btn-fixed-wrap .msg-tip {
-    position: absolute;
-    left: 10px;
-    top: -50px;
-}
-/*  */
-.btn-wrap [class^="btn-type"]:nth-child(n + 2) {
-    margin-left: 10px;
-}
-.btn-type-sm:hover,
-.btn-type:hover,
-.kakao-plus-event-container .open-url-btn:hover {
-    background: #e2391d;
-}
+
 .btn-wrap [class^="btn-type"],
 .tab-type li,
 .tab-type2 li {
     width: 100%;
 }
-.btn-type,
-.btn-type-sm,
-.kakao-plus-event-container .open-url-btn {
-    background: #f0543a;
-    color: #fff;
-}
-.btn-type,
-.btn-type-sm,
-.btn-type2,
-.kakao-plus-event-container .open-url-btn {
+
+.btn-type {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -356,30 +320,25 @@
     border-radius: 12px;
     font-weight: 600;
     width: 100%;
-    transition: background 0.2s ease;
+    background: #f0543a;
+    color: #fff;
 }
 .btn-type,
 .btn-type2 {
     height: 56px;
     font-size: 16px;
 }
-/* .plan-detail .plan-content .plan-benefit-wrap {
-    display: flex;
-    align-items: center;
-} */
-.plan-detail .plan-content .plan-benefit-wrap .plan-benefit:first-child {
-    order: 5;
-}
+
 .plan-detail .plan-content .plan-benefit,
 .plan-detail .plan-content .plan-tab {
     margin-top: 50px;
 }
-.plan-detail .plan-content .plan-benefit .title {
+/* .plan-detail .plan-content .plan-benefit .title {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.56;
     margin-bottom: 20px;
-}
+} */
 
 .box-type3 {
     flex-direction: column;
@@ -553,15 +512,3 @@ div span {
     font-size: 13px;
     font-weight: 600;
 }
-/* .delivery-price {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-}
-.delivery-price span {
-    margin-top: 20px;
-    font-weight: 800;
-    font-size: 15px;
-    color: #f0543a;
-} */
