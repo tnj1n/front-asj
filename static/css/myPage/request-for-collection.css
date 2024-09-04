@@ -738,3 +738,20 @@ strong {
     padding-bottom: 15px;
     border-width: 3px;
 }
+
+#requestAllList-planned{
+    display: none;
+}
+
+#requestAllList-completed{
+    display: none;
+    /* margin-top: 100px; */
+}
+
+#no-data-completed{
+    display: none;
+}
+
+#no-data-request{
+    display: none;
+}
