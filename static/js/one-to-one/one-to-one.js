@@ -226,12 +226,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function openModal() {
         modal.style.display = "flex"; // 모달 보이기
         document.body.style.overflow = "hidden"; // 배경 스크롤 비활성화
+        document.querySelector(".pop-wrap").style.animation = "popUp 0.5s";
+        setTimeout(() => {
+            modalCheck = true;
+        }, 500);
     }
 
     // 모달 닫기 함수
     function closeModal() {
-        modal.style.display = "none"; // 모달 숨기기
         document.body.style.overflow = ""; // 배경 스크롤 복원
+        document.querySelector(".pop-wrap").style.animation = "popDown 0.5s";
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 450);
     }
 
     // 취소 버튼 클릭 시 모달 닫기
