@@ -262,15 +262,7 @@
     background: #ffebe8;
     border-color: #f0543a;
 }
-.chk-list-custom > ul > li > label {
-    padding: 0;
-    justify-content: center;
-    cursor: pointer;
-}
-.chk-list-custom > ul > li > label {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
+
 .chk-list-custom > ul > li > label,
 .chk-list > ul > li > label {
     display: flex;
@@ -389,11 +381,6 @@ input[type="radio"] {
     margin-top: 12px;
 }
 
-.chk-list-custom > ul > li > label {
-    padding: 0;
-    justify-content: center;
-    cursor: pointer;
-}
 .chk-list-custom.v2 .detail {
     width: 100%;
     flex-direction: column;
@@ -426,11 +413,6 @@ input[type="radio"] {
     margin-left: 18px;
 }
 
-.chk-list-custom > ul > li > label {
-    padding: 0;
-    justify-content: center;
-    cursor: pointer;
-}
 .chk-list-custom > ul > li > label,
 .chk-list > ul > li > label {
     background: #f4f4f4;

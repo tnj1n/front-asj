@@ -603,3 +603,6 @@ input[type="radio"] {
 .section-usim .usim-order-list .total-wrap .t-r {
     text-align: right;
 }
+.btn-fixed-wrap {
+    position: inherit;
+}

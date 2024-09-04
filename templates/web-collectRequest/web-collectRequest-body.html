@@ -13,6 +13,14 @@
             href="/static/css/web-collectRequest/web-collectRequest-section2.css"
         />
         <link
+            rel="stylesheet"
+            href="/static/css/web-collectRequest/web-collectRequest-section3.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/static/css/web-collectRequest/web-collectRequest-section4.css"
+        />
+        <link
             rel="shortcut icon"
             href="https://www.freet.co.kr/static/assets/favicons/favicon.png"
             type="image/x-icon"
@@ -43,7 +51,11 @@
                             </div>
                         </div>
                         <!-- 배출 품목선택 -->
-                        <section class="content-wrap" id="section-step1">
+                        <section
+                            class="content-wrap"
+                            id="section-step1"
+                            style="display: _"
+                        >
                             <section class="usim-wrap">
                                 <div class="step-wrap">
                                     <ol>
@@ -556,8 +568,9 @@
                         <section
                             class="content-wrap"
                             id="section-step3"
-                            style="display: _"
+                            style="display: none"
                         ></section>
+                        <!--******************** 수거지 정보 입력 *************************-->
                         <!-- 수거지정보 입력 -->
                         <section
                             class="content-wrap"
@@ -652,12 +665,26 @@
                                         <div class="form-item">
                                             <input
                                                 type="text"
+                                                id="step4-addr1"
+                                                placeholder="&nbsp;"
+                                                disabled=""
+                                            />
+                                            <label for="" class="title"
+                                                >상세주소</label
+                                            >
+                                            <span
+                                                class="invalid-feedback"
+                                            ></span>
+                                        </div>
+                                        <div class="form-item">
+                                            <input
+                                                type="text"
                                                 class="step4-addr-input"
                                                 id="step4-addr2"
                                                 placeholder="&nbsp;"
                                             />
                                             <label for="" class="title"
-                                                >상세주소</label
+                                                >기타 요청사항</label
                                             >
                                             <span
                                                 class="invalid-feedback"
@@ -668,7 +695,7 @@
                                             id="step4-addressType"
                                             value="R"
                                         />
-                                        <div
+                                        <!-- <div
                                             id="findZipLayer2"
                                             style="
                                                 display: none;
@@ -683,7 +710,7 @@
                                             "
                                         >
                                             <img
-                                                src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png"
+                                                src="https://i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png"
                                                 id="btnCloseLayer"
                                                 style="
                                                     cursor: pointer;
@@ -694,39 +721,39 @@
                                                     width: 20px;
                                                     height: 20px;
                                                 "
-                                                onclick="closeDaumPostcode()"
+                                                
                                                 alt="닫기 버튼"
-                                            />
-                                        </div>
-                                        <div
-                                            class="btn-wrap step4-type-1"
-                                            style="display: none"
-                                        >
-                                            <a
-                                                href="javascript:void(0)"
-                                                class="btn-type4"
-                                                >주소 다시 확인해볼래요<i
-                                                    class="ico-arrow5"
-                                                ></i
-                                            ></a>
-                                        </div>
+                                            /> -->
                                     </div>
-                                    <div class="btn-fixed-wrap">
-                                        <div class="btn-wrap">
-                                            <a
-                                                href="javascript:void(0)"
-                                                class="btn-type step4-type-0"
-                                                >다음</a
-                                            >
-                                            <a
-                                                href="javascript:void(0)"
-                                                class="btn-type step4-type-1"
-                                                style="display: none"
-                                                >이 주소로 받을게요</a
-                                            >
-                                        </div>
+                                    <div
+                                        class="btn-wrap step4-type-1"
+                                        style="display: none"
+                                    >
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="btn-type4"
+                                            >주소 다시 확인해볼래요<i
+                                                class="ico-arrow5"
+                                            ></i
+                                        ></a>
                                     </div>
                                 </div>
+                                <div class="btn-fixed-wrap">
+                                    <div class="btn-wrap">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="btn-type step4-type-0"
+                                            >다음</a
+                                        >
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="btn-type step4-type-1"
+                                            style="display: none"
+                                            >이 주소로 받을게요</a
+                                        >
+                                    </div>
+                                </div>
+                                <!-- </div> -->
                             </section>
                             <aside class="aside-usim-order pc-only">
                                 <div class="title-bg">
@@ -763,13 +790,198 @@
                             class="content-wrap"
                             id="section-step5"
                             style="display: _"
-                        ></section>
-                        <!-- 기타 요청사항 -->
-                        <section
-                            class="content-wrap"
-                            id="section-step6"
-                            style="display: _"
-                        ></section>
+                        >
+                            <!--  -->
+                            <section
+                                class="content-wrap"
+                                id="section-step5"
+                                style=""
+                            >
+                                <section class="usim-wrap">
+                                    <div class="step-wrap">
+                                        <ol>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >1<em class="max">/5</em></i
+                                                >
+                                                <strong>유심선택</strong>
+                                            </li>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >2<em class="max">/5</em></i
+                                                >
+                                                <strong>약관동의</strong>
+                                            </li>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >3<em class="max">/5</em></i
+                                                >
+                                                <strong>배송정보 입력</strong>
+                                            </li>
+                                            <li class="active">
+                                                <i class="num"
+                                                    >4<em class="max">/5</em></i
+                                                >
+                                                <strong>결제</strong>
+                                            </li>
+                                            <li>
+                                                <i class="num"
+                                                    >5<em class="max">/5</em></i
+                                                >
+                                                <strong>주문 완료</strong>
+                                            </li>
+                                        </ol>
+                                        <span
+                                            class="bar"
+                                            style="width: 80%"
+                                        ></span>
+                                    </div>
+                                    <div class="title-wrap">
+                                        <h3 class="title-type">
+                                            유심 결제수단을 선택해주세요
+                                        </h3>
+                                    </div>
+                                    <div class="chk-list-custom">
+                                        <ul>
+                                            <li class="active">
+                                                <label for="item1">
+                                                    <div class="detail">
+                                                        <i class="ico-visa"></i>
+                                                        <p class="tit">
+                                                            신용카드
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="chk-box selected"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            id="item1"
+                                                            name="paymentMethod"
+                                                            value="card"
+                                                            checked=""
+                                                        />
+                                                        <label
+                                                            class="checkbox"
+                                                            for="item1"
+                                                        ></label>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="item2">
+                                                    <div class="detail">
+                                                        <i
+                                                            class="ico-laptop"
+                                                        ></i>
+                                                        <p class="tit">
+                                                            계좌이체
+                                                        </p>
+                                                    </div>
+                                                    <div class="chk-box">
+                                                        <input
+                                                            type="radio"
+                                                            id="item2"
+                                                            name="paymentMethod"
+                                                            value="bank"
+                                                        />
+                                                        <label
+                                                            class="checkbox"
+                                                            for="item2"
+                                                        ></label>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="item4">
+                                                    <div class="detail">
+                                                        <i
+                                                            class="ico-kakaopay"
+                                                        ></i>
+                                                        <p class="tit">
+                                                            카카오페이
+                                                        </p>
+                                                    </div>
+                                                    <div class="chk-box">
+                                                        <input
+                                                            type="radio"
+                                                            id="item4"
+                                                            name="paymentMethod"
+                                                            value="kakaopay"
+                                                        />
+                                                        <label
+                                                            class="checkbox"
+                                                            for="item4"
+                                                        ></label>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="item3">
+                                                    <div class="detail">
+                                                        <i
+                                                            class="ico-payco"
+                                                        ></i>
+                                                        <p class="tit">
+                                                            페이코
+                                                        </p>
+                                                    </div>
+                                                    <div class="chk-box">
+                                                        <input
+                                                            type="radio"
+                                                            id="item3"
+                                                            name="paymentMethod"
+                                                            value="payco"
+                                                        />
+                                                        <label
+                                                            class="checkbox"
+                                                            for="item3"
+                                                        ></label>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-fixed-wrap">
+                                        <div class="bottom-gra"></div>
+                                        <div class="btn-wrap">
+                                            <a href="" class="btn-type">다음</a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                            <!--  -->
+                            <aside class="aside-usim-order pc-only">
+                                <div class="title-bg">
+                                    <h3>주문상품</h3>
+                                </div>
+                                <div class="usim-order-list">
+                                    <ul class="order-list-container">
+                                        <li class="order-item">
+                                            <div class="row">
+                                                <p class="name">
+                                                    SKT 일반유심 (3in1)
+                                                </p>
+                                                <p class="num">1개</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="price">2,200원</p>
+                                                <p class="total">2,200원</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="total-wrap">
+                                        <p class="t-r">
+                                            총
+                                            <span class="cart-total-amt"
+                                                >2,200원</span
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </aside>
+                        </section>
+
                         <!--주문 완료 -->
                         <section
                             class="content-wrap"
