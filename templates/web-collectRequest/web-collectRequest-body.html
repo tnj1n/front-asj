@@ -25,7 +25,10 @@
             <div class="container">
                 <section id="contnet" class="section-usim bottom">
                     <div class="inner">
-                        <div class="page-header side pc-only">
+                        <div
+                            class="page-header side pc-only"
+                            style="width: 1200px"
+                        >
                             <h2 class="page-title"></h2>
                             <div class="location">
                                 <a href="" class="home">
@@ -40,7 +43,7 @@
                             <section class="usim-wrap">
                                 <div class="step-wrap">
                                     <ol>
-                                        <li>
+                                        <li class="active">
                                             <i class="num">
                                                 1
                                                 <em class="max">/5</em>
@@ -167,10 +170,149 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li id="usim-area"></li>
+                                    <li id="usim-area">
+                                        <div class="title-wrap">
+                                            <h3 class="title-type">
+                                                유심을 선택해주세요
+                                            </h3>
+                                        </div>
+                                        <a href="" class="info-text2">
+                                            내 휴대폰에 맞는 유심은
+                                            <i class="icon-question"></i>
+                                        </a>
+                                        <div class="chk-type">
+                                            <ul id="usim-list-container">
+                                                <li>
+                                                    <a href="">
+                                                        <div class="detail">
+                                                            <p class="tit">
+                                                                <strong
+                                                                    >일반유심
+                                                                    (3in1)</strong
+                                                                >
+                                                            </p>
+                                                            <p class="price">
+                                                                <strong
+                                                                    >2,200원</strong
+                                                                >
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <div class="detail">
+                                                            <p class="tit">
+                                                                <strong
+                                                                    >NFC유심
+                                                                    (3in1)</strong
+                                                                >
+                                                            </p>
+                                                            <p class="price">
+                                                                <strong
+                                                                    >4,400원</strong
+                                                                >
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
                                 </ul>
                             </section>
-                            <aside class="aside-usim"></aside>
+                            <aside class="aside-usim">
+                                <div class="tip-box pc-only">
+                                    <p class="tip-type2">
+                                        TIP<i class="ico-tip"></i>
+                                    </p>
+                                    <ul class="list-type small">
+                                        <li>
+                                            유심은 통신사별 3개, 총 9개까지 주문
+                                            가능합니다. (단, KT바로배송의 경우
+                                            1개씩만 주문할 수 있습니다.)
+                                        </li>
+                                        <li>
+                                            반드시 개통하실 요금제와 같은
+                                            통신망의 유심을 구매하셔야합니다.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="usim-cart open">
+                                    <div class="cart-wrap">
+                                        <ul
+                                            class="cart-list"
+                                            id="cart-list-container"
+                                        >
+                                            <li class="cart-item">
+                                                <div class="top">
+                                                    <p class="name">
+                                                        SKT 일반유심 (3in1)
+                                                    </p>
+                                                    <a
+                                                        href=""
+                                                        class="btn-delete"
+                                                        ><i
+                                                            class="ico-close2"
+                                                        ></i
+                                                    ></a>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="quantity-box">
+                                                        <button
+                                                            class="btn-minus"
+                                                        ></button>
+                                                        <input
+                                                            type="number"
+                                                            value="1"
+                                                        />
+                                                        <button
+                                                            class="btn-plus"
+                                                        ></button>
+                                                    </div>
+                                                    <div class="price">
+                                                        <strong>2,200원</strong>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="total-wrap">
+                                        <p>
+                                            총 수량
+                                            <span class="cart-total-count">
+                                                1개
+                                            </span>
+                                        </p>
+                                        <p class="focus">
+                                            총
+                                            <span class="cart-total-amt">
+                                                2,200원
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <a
+                                            href=""
+                                            class="btn-type full disabled"
+                                            id="order-cart-btn0"
+                                            style="display: none"
+                                            >주문하기</a
+                                        >
+                                        <a
+                                            href=""
+                                            class="btn-type full"
+                                            id="order-cart-btn"
+                                            style=""
+                                        >
+                                            <span class="cart-total-count">
+                                                1개
+                                            </span>
+                                            &nbsp;주문하기
+                                        </a>
+                                    </div>
+                                </div>
+                            </aside>
                         </section>
                         <!-- 약관동의 -->
                         <section

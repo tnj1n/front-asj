@@ -47,7 +47,7 @@ body {
 }
 body {
     line-height: 1.25;
-    font-family: "SUIT";
+    font-family: "SUIT", sans-serif;
     font-size: 15px;
     color: #111;
 }
@@ -135,14 +135,6 @@ option {
     white-space: nowrap;
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
 ::-webkit-scrollbar {
     display: none;
     width: 2px;
