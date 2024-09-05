@@ -18,6 +18,8 @@ const cartList = document.querySelector(".cart-list");
 const order = document.getElementById("order-cart-btn");
 const timeLists = document.querySelectorAll(".timeList");
 
+NodeList.prototype.filter = Array.prototype.filter;
+
 // console.log(labelAll);
 // console.log(content1);
 // console.log(contents);
@@ -101,14 +103,16 @@ individualCheckBoxes.forEach((checkBox) => {
         // updateCheckboxStyle(allCheckBox);
         const allChecked =
             individualCheckBoxes.filter((checkBox) => checkBox.checked)
-                .length === 3;
+                .length === 2;
         allCheckBox.checked = allChecked;
         // updateCheckboxStyle(allCheckBox);
         updateCheckboxStyle(checkBox);
         updateCheckboxStyle(allCheckBox);
+        if (allChecked) {
+            nextButtons[1].firstElementChild.classList.remove("disabled");
+        }
     });
 });
-nextButtons[1].firstElementChild.classList.remove("disabled");
 // 체크박스 스타일 업데이트 함수
 function updateCheckboxStyle(checkbox) {
     const checkboxLabel = checkbox.nextElementSibling;
