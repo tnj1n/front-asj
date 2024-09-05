@@ -1,0 +1,651 @@
+@charset "UTF-8";@font-face {
+    font-family: "SUIT";
+    font-weight: 300;
+    src: local("SUIT-Light"),url(./fonts/SUIT-Light.woff2)format("woff2"),url(./fonts/SUIT-Light.otf)format("wopentypeoff")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(./fonts/SUIT-Regular.woff2)format("woff2"),url(./fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(./fonts/SUIT-SemiBold.woff2)format("woff2"),url(/.fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(./fonts/SUIT-Bold.woff2)format("woff2"),url(./fonts/SUIT-Bold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    font-display: swap;
+    src: local("Pretendard Black"),url(./fonts/Pretendard-Black.woff2)format("woff2"),url(/.fonts/Pretendard-Black.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    font-display: swap;
+    src: local("Pretendard ExtraBold"),url(./fonts/Pretendard-ExtraBold.woff2)format("woff2"),url(./fonts/Pretendard-ExtraBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),url(./fonts/Pretendard-Bold.woff2)format("woff2"),url(./fonts/Pretendard-Bold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),url(./fonts/Pretendard-SemiBold.woff2)format("woff2"),url(./fonts/Pretendard-SemiBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: swap;
+    src: local("Pretendard Medium"),url(./fonts/Pretendard-Medium.woff2)format("woff2"),url(./fonts/Pretendard-Medium.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),url(./fonts/Pretendard-Regular.woff2)format("woff2"),url(./fonts/Pretendard-Regular.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    font-display: swap;
+    src: local("Pretendard Light"),url(./fonts/Pretendard-Light.woff2)format("woff2"),url(./fonts/Pretendard-Light.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    font-display: swap;
+    src: local("Pretendard ExtraLight"),url(./fonts/Pretendard-ExtraLight.woff2)format("woff2"),url(./fonts/Pretendard-ExtraLight.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    font-display: swap;
+    src: local("Pretendard Thin"),url(./fonts/Pretendard-Thin.woff2)format("woff2"),url(./fonts/Pretendard-Thin.woff)format("woff")
+}
+/* 스크롤 바************************************************************* */
+
+#wrap::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 2px;
+}
+#wrap::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #3f4970;
+    border-radius: 8px;
+}
+#wrap::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+
+  .select-type2 .nice-select .list::-webkit-scrollbar {
+    display: block;
+    width: 20px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-thumb {
+    background-color: #8a93b4;
+    border: 7px solid #fff;
+    border-radius: 12px;
+  }
+  .select-type2 .nice-select .list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+/* *********************************************************************** */
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+body {
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    font-size: 16px;
+    color: #111;
+}
+#content {
+    padding-bottom: 120px;
+    padding: 30px 0 80px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.page-header.side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header {
+    position: inherit;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 40px;
+}
+
+.page-header.side .page-title {
+    font-size: 28px;
+}
+
+.page-header .page-title {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.page-header.side .location {
+    margin-bottom: 0;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #343434;
+    margin-bottom: 20px;
+}
+
+.location .home {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/home.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.location a {
+    position: relative;
+    margin-right: 25px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.location a:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/arrow.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.section-mypage .content-wrap {
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+.content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-mypage .inner-box {
+    width: 100%;
+    margin: unset;
+}
+
+.inner-box {
+    max-width: 852px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tab-wrap.v3 {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.tab-wrap {
+    max-width: 504px;
+    margin: 0 auto;
+}
+
+.tab-type li {
+    width: 100%;
+}
+
+.tab-type {
+    border-radius: 30px;
+    display: flex;
+    background: #f1f3fb;
+}
+
+ul {
+    list-style: none;
+}
+
+.tab-type li.active a {
+    background: #3f4970;
+    color: #fff;
+}
+
+
+
+.tab-type li a, .tab-type li label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    border-radius: 21px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3f4970;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+}
+
+.tab-type li .tab-count {
+    margin-left: 5px;
+}
+
+.tab-type li .tab-count {
+    display: inline-block;
+    color: #3f4970;
+    padding: 1px 5px;
+    background-color: #fff;
+    border-radius: 1em;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tab-type li .tab-count {
+    margin-left: 5px;
+}
+
+.tab-type li .tab-count {
+    display: inline-block;
+    color: #3f4970;
+    padding: 1px 5px;
+    background-color: #fff;
+    border-radius: 1em;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.tab-type {
+    border-radius: 30px;
+}
+
+.tab-type li a, .tab-type li label {
+    height: 60px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.nodata-box, .nodata-box-brd {
+    height: auto;
+    margin-top: 80px;
+}
+.nodata-box.v2, .v2.nodata-box-brd {
+    margin-top: 120px;
+}
+
+.nodata-box, .nodata-box-brd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ico-empty {
+    width: 46px;
+    height: 41px;
+}
+
+.ico-empty {
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/empty.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.section-mypage .content-wrap .lnb {
+    width: 243px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.lnb-list {
+    display: block;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    padding: 0 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+.lnb-list .depth>li>a {
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.63;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lnb-list .depth>li>a:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/plus.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.lnb-list .depth2 {
+    display: none;
+    padding-bottom: 20px;
+}
+
+.lnb-list .depth2>li a {
+    font-size: 15px;
+    line-height: 1.67;
+    color: #343434;
+}
+
+.lnb-list .depth2>li+li {
+    margin-top: 8px;
+}
+
+.lnb-list .depth>li+li {
+    border-top: 1px solid #e3e3e3;
+}
+
+ul.depth2 {
+    display: none; /* 기본적으로 숨김 */
+    overflow: hidden;
+    transition: 0.2s ease-out; /* 스르륵 열리는 애니메이션 */
+}
+
+.lnb-list .depth2>li a:hover, .lnb-list .depth2>li a.active {
+    color: #f0543a;
+}
+
+.lnb-list .depth>li>a.active:after {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://qa.freet.co.kr/assets/images/icon/minus.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.main .article-promotion {
+    width: 390px !important;
+    float: right;
+    
+}
+.section-notice .allRequest {
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71;
+    display: flex;
+    align-items: center;
+}
+strong {
+    font-weight: 600;
+}
+.status-light {
+    background-color: #664af1;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.status-standard {
+    background-color: #ec464d;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.status-premium {
+    background-color: #f251ab;
+    margin-right: 4px;
+    color: #fff;
+}
+
+.board-type5 li .flag-type {
+    height: auto;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0 6px;
+    white-space: nowrap;
+}
+.plan-top {
+    display: flex;
+}
+.plan-top .tag-box {
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
+}
+.board-type5 li .plan-top .tag-box .tag-type2,
+.tag-type4 {
+    height: 22px;
+    padding: 0 6px;
+    font-size: 12px;
+    border-radius: 6px;
+    background: #f4f4f4;
+    color: #343434;
+}
+.tag-type,
+.tag-type5,
+.tag-type2,
+.tag-type4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8.5px;
+    height: 25px;
+    border-radius: 13px;
+    background: #f1f3fb;
+    color: #3f4970;
+    font-size: 13px;
+    font-weight: 600;
+}
+/* 목록 구분선 */
+/* .board-type5 {
+    border-top: 1px solid #111;
+    margin-top: 10px;
+} */
+.board-type5 li {
+    margin-top: 15px;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e3e3e3;
+}
+.board-type5 li a {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+    color: #111;
+}
+.board-type5 li span.num {
+    display: none;
+    min-width: 69px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71;
+    vertical-align: middle;
+}
+.board-type5 li div p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    line-height: 1.63;
+}
+.board-type5 li div span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6322;
+    color: #343434;
+    
+}
+.board-type5 li a .ico-arrow4 {
+    margin-left: auto;
+    
+}
+
+.btn-wrap .btn-download, .btn-wrap .btn-type3 {
+    width: auto;
+}
+
+.btn-download, .btn-type3 {
+    height: 48px;
+    background: #fff;
+    border-radius: 24px;
+}
+
+.main [class^=article] .btn-wrap {
+    margin-top: 30px;
+}
+.btn-wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.ico-arrow4 {
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ .price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f0543a;
+}
+
+/* .requestList1 > span {
+    display: block;
+    text-align: left;
+} */
+
+.requestList1,
+.requestList2 ,
+.requestList3 ,
+.requestList4 ,
+.requestList5  {
+    text-align: left;
+}
+
+#no-data-saving, #no-data-use {
+    display: none; /* 기본적으로 숨김 처리 */
+}

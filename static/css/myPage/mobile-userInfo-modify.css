@@ -1,0 +1,746 @@
+@charset "UTF-8";@font-face {
+    font-family: "SUIT";
+    font-weight: 300;
+    src: local("SUIT-Light"),url(./fonts/SUIT-Light.woff2)format("woff2"),url(./fonts/SUIT-Light.otf)format("wopentypeoff")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(./fonts/SUIT-Regular.woff2)format("woff2"),url(./fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(./fonts/SUIT-SemiBold.woff2)format("woff2"),url(/.fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(./fonts/SUIT-Bold.woff2)format("woff2"),url(./fonts/SUIT-Bold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    font-display: swap;
+    src: local("Pretendard Black"),url(./fonts/Pretendard-Black.woff2)format("woff2"),url(/.fonts/Pretendard-Black.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    font-display: swap;
+    src: local("Pretendard ExtraBold"),url(./fonts/Pretendard-ExtraBold.woff2)format("woff2"),url(./fonts/Pretendard-ExtraBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),url(./fonts/Pretendard-Bold.woff2)format("woff2"),url(./fonts/Pretendard-Bold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),url(./fonts/Pretendard-SemiBold.woff2)format("woff2"),url(./fonts/Pretendard-SemiBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: swap;
+    src: local("Pretendard Medium"),url(./fonts/Pretendard-Medium.woff2)format("woff2"),url(./fonts/Pretendard-Medium.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),url(./fonts/Pretendard-Regular.woff2)format("woff2"),url(./fonts/Pretendard-Regular.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    font-display: swap;
+    src: local("Pretendard Light"),url(./fonts/Pretendard-Light.woff2)format("woff2"),url(./fonts/Pretendard-Light.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    font-display: swap;
+    src: local("Pretendard ExtraLight"),url(./fonts/Pretendard-ExtraLight.woff2)format("woff2"),url(./fonts/Pretendard-ExtraLight.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    font-display: swap;
+    src: local("Pretendard Thin"),url(./fonts/Pretendard-Thin.woff2)format("woff2"),url(./fonts/Pretendard-Thin.woff)format("woff")
+}
+
+body {
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    font-size: 15px;
+    color: #111;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+* {
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    word-break: break-all;
+    margin: 0;
+    padding: 0;
+}
+
+.tool-box+.tool-box {
+    flex-wrap: wrap;
+    border-top: 1px solid #efefef;
+}
+.tool-box {
+    display: flex;
+    position: relative;
+    padding: 0 20px;
+    height: 60px;
+    background: #fff;
+    z-index: 101;
+}
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.box-type2 {
+    background: 0 0;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e3e3e3;
+}
+
+.section-mypage .box-type2#my_info1_01 dl {
+    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.67;
+}
+
+.box-type2 dl {
+    display: flex;
+    text-align: left;
+}
+
+.section-mypage .box-type2#my_info1_01 dl dt {
+    width: 110px;
+}
+
+.box-type2 dl dt {
+    width: 110px;
+    color: #94949a;
+}
+.box-type2 dl dd {
+    width: calc(100% - 110px);
+}
+
+.mt-05px, .section-mypage .box-type2#my_info1_01 dl+dl {
+    margin-top: 5px;
+}
+
+.section-mypage .box-type2#my_info1_01 dl {
+    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.67;
+}
+.justify-center {
+    justify-content: center !important;
+}
+
+
+.info-text2 {
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.info-text2 {
+    opacity: .7;
+    display: flex;
+    align-items: center;
+}
+
+
+.info-text, .info-text2 {
+    margin-top: 20px;
+    color: #343434;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.icon-question {
+    width: 16px;
+    height: 16px;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/icon-question.svg);
+}
+
+
+.info-text2 .icon-question {
+    margin-left: 5px;
+}
+
+.icon-question {
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #efefef;
+    margin: 40px 0;
+}
+
+.form-item {
+    margin-top: 12px;
+}
+
+.mt-3 {
+    margin-top: 30px !important;
+}
+
+.form-item .form-flex {
+    display: flex;
+}
+
+.form-item .form-flex input {
+    width: calc(100% - 108px);
+}
+
+.form-item input:disabled {
+    background: #fff;
+}
+
+.form-item input {
+    padding-top: 15px;
+}
+
+input:disabled {
+    opacity: 1;
+    color: #c3c3c9;
+}
+
+input[type=text] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    border-radius: 12px;
+}
+
+input{
+    appearance: none;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+}
+
+
+.form-item input:disabled+.title {
+    color: #c3c3c9;
+}
+
+.form-item input:not(:placeholder-shown)+.title {
+    font-size: 11px;
+    top: 9px;
+}
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+.section-mypage .btn-form.ip {
+    width: 98px !important;
+}
+
+
+.form-item .form-flex .btn-form {
+    margin-left: 10px;
+}
+
+.btn-form {
+    background: #3f4970;
+    color: #fff;
+    font-size: 14px;
+}
+.btn-form, .button-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 56px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+}
+
+
+.form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+.form-item input:disabled {
+    background: #fff;
+}
+
+.form-item input {
+    padding-top: 15px;
+}
+
+input:disabled {
+    opacity: 1;
+    color: #c3c3c9;
+}
+
+.form-item input:disabled+.title {
+    color: #c3c3c9;
+}
+
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    top: 19px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-item input {
+    padding-top: 15px;
+}
+
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    top: 19px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #94949a;
+}
+
+.mt-3 {
+    margin-top: 30px !important;
+}
+
+input[type=email], input[type=file], input[type=number], input[type=password], input[type=reset], input[type=search], input[type=submit], input[type=tel], input[type=text] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+.form-item input:not(:placeholder-shown)+.title {
+    font-size: 11px;
+    top: 9px;
+    color: #94949a;
+}
+
+.form-item input {
+    padding-top: 15px;
+}
+
+input:disabled {
+    opacity: 1;
+    color: #c3c3c9;
+}
+
+input{
+    width: 100%;
+}
+
+.chk-box {
+    display: inline-block;
+    text-align: left;
+}
+
+.chk-box input[type=checkbox], .chk-box input[type=radio] {
+    display: none;
+}
+
+input[type=checkbox], input[type=radio] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+input, select {
+    border-radius: 0;
+    border: 0;
+    font-size: 15px;
+}
+
+input{
+    font-size: 15px;
+}
+
+.chk-box.selected input[type=checkbox]+.checkbox {
+    background: #f0543a;
+    border-color: #f0543a;
+}
+
+.chk-box .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:before {
+    transition-delay: 0ms;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:after, .chk-box.selected input[type=checkbox]~.checkbox:before {
+    background: #fff;
+}
+
+.chk-box input[type=checkbox]:checked~.checkbox:before {
+    width: 7px;
+}
+
+.chk-box input[type=checkbox]+.checkbox:before {
+    -webkit-transform: translate(6px, 9px) rotate(45deg);
+    transform: translate(6px, 9px) rotate(45deg);
+    -webkit-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.chk-box input[type=checkbox]+.checkbox:after, .chk-box input[type=checkbox]+.checkbox:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:after {
+    transition-delay: 100ms;
+}
+
+.chk-box.selected input[type=checkbox]~.checkbox:after, .chk-box.selected input[type=checkbox]~.checkbox:before {
+    background: #fff;
+}
+
+.chk-box input[type=checkbox]:checked~.checkbox:after {
+    width: 10px;
+}
+
+.chk-box input[type=checkbox]+.checkbox:after {
+    -webkit-transform: translate(10px, 14px) rotate(-53deg);
+    transform: translate(10px, 14px) rotate(-53deg);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+
+.chk-box label {
+    cursor: pointer;
+    vertical-align: middle;
+    /* font-size: 16px; */
+}
+
+.f-bold {
+    font-weight: 600 !important;
+}
+
+.f2-h3-18--h4-16 {
+    line-height: 1.63 !important;
+    font-size: 16px !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.color-gray--40 {
+    color: #94949a;
+}
+
+.mt-10-10 {
+    margin-top: 10px !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+.t-s {
+    text-align: start;
+}
+
+.mt-2 {
+    margin-top: 20px !important;
+}
+
+.list-type {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #343434;
+    text-align: left;
+}
+
+.list-type li:first-child {
+    margin-top: 0;
+}
+
+.list-type li {
+    padding-left: 7px;
+}
+
+.list-type li, .tooltip-guide span, .tooltip-wrap {
+    position: relative;
+}
+
+.list-type li::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #94949a;
+    border-radius: 100%;
+}
+
+.section-mypage .my-page-button {
+    background: unset;
+    text-align: center;
+}
+
+.btn-wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-type-sm:hover, .btn-type:hover, .kakao-plus-event-container .open-url-btn:hover {
+    background: #e2391d;
+}
+
+
+.btn-wrap [class^=btn-type], .tab-type li, .tab-type2 li {
+    width: 100%;
+}
+
+.btn-type, .btn-type-sm, .kakao-plus-event-container .open-url-btn {
+    background: #f0543a;
+    color: #fff;
+}
+.btn-type, .btn-type-sm, .btn-type2, .kakao-plus-event-container .open-url-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+}
+
+.btn-type, .btn-type2 {
+    height: 56px;
+    font-size: 16px;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: 0 0;
+    cursor: pointer;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+}
+
+.section-mypage .inner-box, .section-mypage .inner-box2 {
+    width: 100%;
+    margin: unset;
+}
+
+#content.bottom {
+    padding-bottom: 126px;
+}
+
+#content {
+    padding: 30px 0 80px;
+}
+
+.inner {
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+ .tool-box+.tool-box {
+    flex-wrap: wrap;
+    border-top: 1px solid #efefef;
+}
+
+ .tool-box {
+    position: relative;
+    padding: 0 20px;
+    height: 60px;
+    background: #fff;
+    z-index: 101;
+}
+
+ .btn-box,  .tool-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .btn-box {
+    flex: 1 1 1%;
+    gap: 0 20px;
+}
+
+ .btn-box, .header .tool-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .tool-box a {
+    display: block;
+}
+
+.ico-back, .ico-bars, .ico-delivery, .ico-direct-lightning, .ico-home2, .ico-like, .ico-like2, .ico-menu, .ico-my, .ico-new-search, .ico-phone-airplane, .ico-search {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/back.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+ .tool-box .page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+@media (min-width: 1200px) {
+    .form-item input:focus + .title,
+    .form-item input:not(:placeholder-shown) + .title {
+        font-size: 13px;
+        color: #e2391d;
+        top: 9px;
+    }
+
+    .form-item input:not(:focus):not(:placeholder-shown) + .title {
+        color: #94949a;
+    }
+}
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+    color: #94949a;
+}
+
+.form-item.is-invalid input {
+    background: #ffebe8;
+    border-color: #f0543a;
+}
+
+
+    .form-item input:focus + .title,
+    .form-item input:not(:placeholder-shown) + .title {
+        font-size: 13px;
+        color: #e2391d;
+        top: 9px;
+    }
+
+    .form-item input:not(:focus):not(:placeholder-shown) + .title {
+        color: #94949a;
+    }
+
+
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+    color: #94949a;
+}
+
+.form-item input:focus + .title, .form-item, input:not(:placeholder-shown) + .title{
+    font-size: 11px;
+    color: #e2391d;
+    top: 9px;
+}
