@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>문의 목록 관리 페이지</title>
-        <link rel="stylesheet" href="/static/css/admin/admin_post.css" />
+        <link rel="stylesheet" href="/static/css/admin/admin_inquiry.css" />
     </head>
     <body>
         <div id="root">
@@ -430,18 +430,6 @@
                                             class="Filter_searchInput"
                                             placeholder="검색어 입력"
                                         />
-                                        <button
-                                            id="addServiceBtn"
-                                            class="addServiceBtn"
-                                        >
-                                            메일 전송
-                                        </button>
-                                        <button
-                                            id="deleteSelectedBtn"
-                                            class="deleteSelectedBtn"
-                                        >
-                                            문자 전송
-                                        </button>
                                     </div>
                                 </div>
                                 <div class="UserTable_container__1JHD1">
@@ -798,23 +786,37 @@
                                         id="editEmail"
                                         name="editEmail"
                                     />
-                                    <label for="editTitle">제목</label>
+                                    <label for="editTitle">사용자 제목</label>
                                     <input
                                         type="text"
                                         id="editTitle"
                                         name="editTitle"
                                     />
-                                    <label for="editContent">내용</label>
+                                    <label for="editContent">사용자 내용</label>
                                     <textarea
                                         id="editContent"
                                         name="editContent"
                                     ></textarea>
 
-                                    <label for="editFile">파일</label>
+                                    <label for="editFile">사용자 파일</label>
                                     <input
                                         type="file"
                                         id="editFile"
                                         name="editFile"
+                                    />
+                                    <label for="editReply">관리자 답변</label>
+                                    <textarea
+                                        id="editReply"
+                                        name="editReply"
+                                    ></textarea>
+
+                                    <label for="editAdminFile"
+                                        >관리자 파일</label
+                                    >
+                                    <input
+                                        type="file"
+                                        id="editAdminFile"
+                                        name="editAdminFile"
                                     />
 
                                     <label for="editStatus">상태</label>
@@ -849,5 +851,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/admin/admin_post.js"></script>
+    <script src="/static/js/admin/admin_inquiry.js"></script>
 </html>

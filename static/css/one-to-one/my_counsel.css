@@ -234,21 +234,11 @@ ol, ul {
 }
 
 /* inner box */
+.inner-box {
+    max-width: 852px;
+    margin: 0 auto;
+}
 
-@media (min-width: 769px) {
-    .inner-box {
-        max-width: 100%;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-@media (min-width: 1200px) {
-    .inner-box {
-        max-width: 852px;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
 .tab-wrap {
     margin-bottom: 30px;
 }
@@ -515,29 +505,186 @@ ol, ul {
     }
 }
 
-/* 더보기 버튼 */
-
-.btn-wrap-col, .btn-wrap.v2, .btn-wrap.v3 {
-    margin-top: 20px;
+/* 목록 리스트 */
+.board-type3.v2 {
+    border-top: 1px solid #111;
 }
-
 @media (min-width: 1200px) {
-    .btn-wrap.v3 {
-        margin-top: 40px;
+    .board-type3.v2 {
+        border-top: 1px solid #111;
     }
 }
 
+.board-type3 .board-item dl {
+    padding: 20px 0;
+}
+
+@media (min-width: 1200px) {
+    .board-type3 .board-item dl {
+        padding: 30px 0;
+    }
+}
+.board-type3 .board-item dl, .board-type5 li {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+@media (min-width: 1200px) {
+    .board-tit-type .price, .board-type3.v2 .board-item dl dt a, .board-type5 li a {
+        font-size: 20px;
+    }
+}
+.board-type3 .board-item dl dt a {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.63;
+    color: #111;
+    position: relative;
+}
+@media (min-width: 1200px) {
+    .board-type3 .board-item dl dt a {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.56;
+    }
+}
+
+.board-type3.v2 .board-item .tag-type2, .board-type3.v2 .board-item .tag-type4 {
+    margin-top: 3px;
+}
+.tag-type.v3, .v3.tag-type2, .v3.tag-type4, .v3.tag-type5 {
+    background: #f1f3fb;
+    color: #3f4970;
+}
+.tag-type2, .tag-type3, .tag-type4 {
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+@media (min-width: 1200px) {
+    .tag-type2, .tag-type4 {
+        height: 24px;
+        padding: 0 7px;
+        font-size: 13px;
+    }
+}
+
+.tag-type2 {
+    background: #f4f4f4;
+    color: #343434;
+}
+
+.tag-type2, .tag-type4, .tag-type5 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tag-type, .tag-type2, .tag-type4, .tag-type5 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f3fb;
+}
+.board-type3.v2 .board-item dl dt a p {
+    width: calc(100% - 70px);
+    margin-left: 5px;
+}
+@media (min-width: 1200px) {
+    .board-type3.v2 .board-item dl dt a p {
+        margin-left: 10px;
+    }
+}
+
+
+
+/* 여는 버튼 */
+@media (min-width: 1200px) {
+    .board-type3.v2 .board-item dl dt a .ico-up3 {
+        top: 7px;
+    }
+}
+
+.board-type3 .board-item.active dl dt a .ico-up2, .board-type3 .board-item.active dl dt a .ico-up3 {
+    transform: rotate(0);
+}
+
+.board-type3 .board-item dl dt a .ico-up2, .board-type3 .board-item dl dt a .ico-up3 {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    transform: rotate(180deg);
+    transition: all .2s;
+}
+
+.ico-up3 {
+    background-image: url(https://www.freet.co.kr/assets/images/icon/up3.svg);
+}
+
+.ico-arrow10, .ico-arrow11, .ico-arrow12, .ico-arrow13, .ico-arrow14, .ico-arrow15, .ico-arrow16, .ico-arrow9, .ico-down, .ico-up, .ico-up2, .ico-up3 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.board-type3 .board-item dl dd {
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+}
+
+@media (min-width: 1200px) {
+    .board-type3 .board-item dl dd {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.67;
+    }
+}
+@media (min-width: 1200px) {
+    .board-type3.v2 .board-item dl dd, 
+    .board-type3.v3 .board-item dl dd .number, 
+    .board-type3.v3 .board-item dl dd .qna-box, 
+    .board-type5 li div span {
+        font-size: 16px;
+    }
+}
+
+/* 기본 상태: 숨김 */
+ 
+#faqDetail {
+    max-height: 0; /* 최대 높이를 0으로 설정 */
+    /* opacity: 0; 기본적으로 투명하게 설정 */
+    overflow: hidden; /* 넘치는 콘텐츠 숨기기 */
+    transition: max-height 1.0s ease, opacity 0.5s ease; /* 애니메이션 설정 */
+    display: block; /* 요소가 블록 형태로 유지되도록 설정 */
+}
+
+/* 보이는 상태 */
+#faqDetail.show {
+    max-height: 1000px; /* 충분히 큰 값으로 설정 (요소의 높이에 맞게 조정) */
+    opacity: 1; /* 불투명도로 설정하여 표시 */
+}
+
+#faqDetail p{
+    margin-top: 10px;
+}
+
+/* 더보기 버튼 */
+.btn-wrap-col, .btn-wrap.v2, .btn-wrap.v3 {
+    margin-top: 20px;
+}
 .btn-wrap .btn-download, .btn-wrap .btn-type3 {
     width: auto;
 }
 
-
-@media (min-width: 1200px) {
-    .btn-download, .btn-type3 {
-        height: 48px;
-        background: #fff;
-        border-radius: 24px;
-    }
+.btn-wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 .btn-download, .btn-type3, .btn-type4, .btn-type5, .btn-type6, .btn-type7 {
     display: inline-flex;
@@ -551,12 +698,25 @@ ol, ul {
     border: 1px solid #94949a;
     color: #94949a;
     font-size: 13px;
-    line-height: 1;
+    line-height: 2.7;
     background: #fff;
     border-radius: 19px;
     padding: 0 20px;
 }
 
+@media (min-width: 1200px) {
+    .btn-wrap.v3 {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn-download, .btn-type3 {
+        height: 48px;
+        background: #fff;
+        border-radius: 24px;
+    }
+}
 
 @media (min-width: 1200px) {
     .btn-type3 {
@@ -564,3 +724,4 @@ ol, ul {
         padding: 0 39px;
     }
 }
+

@@ -821,37 +821,11 @@ button {
     width: 10%;
 }
 
-/* 일곱 열 */
+/* 마지막 열 */
 .headerCell:nth-child(8),
 .UserTable_cell__3kj0K:nth-child(8) {
     width: 10%;
 }
-
-/* 마지막 열*/
-.headerCell:nth-child(9),
-.UserTable_cell__3kj0K:nth-child(9) {
-    width: 9%;
-}
-
-
-/* 수정 버튼 */
-.editBtn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    width: 70%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.editBtn:hover {
-    opacity: 0.8;
-}
-
-
-
-
 
 /* modal 창 */
 

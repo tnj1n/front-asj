@@ -672,7 +672,7 @@ address, caption, em, i, var {
         height: 60px;
         padding: 6px 18px 4px;
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 550;
     }
 }
 .filter-wrap ul li:last-child {
@@ -964,6 +964,9 @@ input[type=number]:focus, input[type=text]:focus {
 #faqDetail.show {
     max-height: 1000px; /* 충분히 큰 값으로 설정 (요소의 높이에 맞게 조정) */
     opacity: 1; /* 불투명도로 설정하여 표시 */
+}
+#faqDetail p{
+    margin-top: 10px;
 }
 
 /* 더보기 버튼 */
