@@ -60,12 +60,7 @@ formItems.forEach((item) => {
 
         // 입력 필드에서 포커스가 벗어나면 is-invalid 클래스 제거
         input.addEventListener("blur", () => {
-            // 유효성 검사에 따라 is-invalid 제거
-            if (input.value.trim() !== "") {
-                item.classList.remove("is-invalid");
-            } else {
-                item.classList.add("is-invalid"); // 필드가 비어있으면 다시 추가
-            }
+            item.classList.remove("is-invalid");
         });
     }
 });

@@ -523,15 +523,7 @@ input[type=email], input[type=text] {
     border-radius: 12px;
 }
 
-.form-item label.title {
-    position: absolute;
-    left: 20px;
-    display: block;
-    transition: all .2s ease;
-    pointer-events: none;
-    font-weight: 600;
-    color: #94949a;
-}
+
 
 .chk-box {
     display: inline-block;
@@ -612,10 +604,13 @@ input, input[type=checkbox], input[type=radio], select, textarea {
 .chk-box input[type=checkbox]:checked~.checkbox:after {
     width: 10px;
 }
-
 .chk-box input[type=checkbox]+.checkbox:after {
+    -webkit-transform: translate(10px, 14px) rotate(-53deg);
     transform: translate(10px, 14px) rotate(-53deg);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
 }
+
 
 .chk-box input[type=checkbox]+.checkbox:after, .chk-box input[type=checkbox]+.checkbox:before {
     content: "";
@@ -686,7 +681,9 @@ input, input[type=checkbox], input[type=radio], select, textarea {
 }
 
 .chk-box input[type=checkbox]+.checkbox:before {
+    -webkit-transform: translate(6px, 9px) rotate(45deg);
     transform: translate(6px, 9px) rotate(45deg);
+    -webkit-transition-delay: 100ms;
     transition-delay: 100ms;
 }
 
@@ -1020,6 +1017,39 @@ ul.depth2 {
     }
 
     .form-item input:not(:focus):not(:placeholder-shown) + .title {
-        color: #000;
+        color: #94949a;
     }
 }
+.form-item label.title {
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+    color: #94949a;
+}
+
+.mt-5 {
+    margin-top: 50px !important;
+}
+
+.chk-box.selected input[type="checkbox"] ~ .checkbox::after, .chk-box.selected input[type="checkbox"] ~ .checkbox::before {
+    background: rgb(255, 255, 255);
+}
+.chk-box input[type=checkbox]+.checkbox:after, .chk-box input[type=checkbox]+.checkbox:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+}
+
+
+
+
