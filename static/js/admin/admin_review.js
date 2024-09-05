@@ -143,10 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const statusText = statusCell.textContent.trim();
 
             switch (statusText) {
-                case "작성완료":
+                case "게시":
                     statusCell.style.color = "green";
                     break;
-                case "작성중":
+                case "삭제":
                     statusCell.style.color = "red";
                     break;
                 default:

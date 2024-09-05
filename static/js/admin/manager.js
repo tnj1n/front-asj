@@ -110,31 +110,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// modal 창
+// Enter Modal 창
 document.addEventListener("DOMContentLoaded", () => {
     const correctCode = "123456"; // 올바른 인증번호
-    const modal = document.getElementById("authModal"); // 모달 창 요소
-    const verifyButton = document.getElementById("verifyBtn"); // 인증번호 확인 버튼
-    const inputs = document.querySelectorAll(".auth-input"); // 인증번호 입력 필드들
-    const modalContent = document.querySelector(".modal-content");
+    const enterModal = document.getElementById("enterModal"); // 모달 창 요소
+    const enterVerifyBtn = document.getElementById("enterVerify_btn"); // 인증번호 확인 버튼
+    const inputs = document.querySelectorAll(".enter-input"); // 인증번호 입력 필드들
+    const enterModalContent = document.querySelector(".enterModal_content");
     const modalWrap = document.querySelector(".modal-wrap");
     // 모달을 여는 함수
-    const openModal = () => {
-        modal.style.display = "flex"; // 모달을 화면에 보이도록 설정
+    const openEnterModal = () => {
+        enterModal.style.display = "flex"; // 모달을 화면에 보이도록 설정
         modalWrap.style.animation = "popUp 0.5s"; // 애니메이션을 적용하여 모달을 열기
         inputs[0].focus(); // 첫 번째 입력 필드에 포커스를 맞춤
     };
 
     // 모달을 닫는 함수
-    const closeModal = () => {
+    const closeEnterModal = () => {
         modalWrap.style.animation = "popDown 0.5s"; // 애니메이션을 적용하여 모달을 닫기
         setTimeout(() => {
-            modal.style.display = "none"; // 애니메이션이 끝난 후 모달을 화면에서 숨김
+            enterModal.style.display = "none"; // 애니메이션이 끝난 후 모달을 화면에서 숨김
         }, 450); // 애니메이션의 지속 시간과 맞추기
     };
 
     // 페이지 로드 시 모달을 자동으로 열기
-    openModal();
+    openEnterModal();
 
     // 입력 필드 처리
     inputs.forEach((input, index) => {
@@ -157,13 +157,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 inputs[index - 1].focus();
             } else if (e.key === "Enter") {
                 // 엔터 키가 눌렸을 때 확인 버튼 클릭
-                verifyButton.click();
+                enterVerifyBtn.click();
             }
         });
     });
 
     // 확인 버튼 클릭 시 인증번호 확인
-    verifyButton.addEventListener("click", () => {
+    enterVerifyBtn.addEventListener("click", () => {
         // 모든 입력 필드의 값을 합쳐서 인증번호 생성
         const enteredCode = Array.from(inputs)
             .map((input) => input.value)
@@ -173,10 +173,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (enteredCode.length === correctCode.length) {
             if (enteredCode === correctCode) {
                 // 인증번호가 올바를 때
-                closeModal(); // 모달 닫기
+                closeEnterModal(); // 모달 닫기
             } else {
                 // 인증번호가 틀릴 때
-                modalContent.classList.add("vibration");
+                enterModalContent.classList.add("vibration");
 
                 // 모든 입력 필드에 'vibration' 클래스 추가
                 inputs.forEach((input) => {
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     inputs.forEach((input) => {
                         input.classList.remove("vibration");
-                        modalContent.classList.remove("vibration");
+                        enterModalContent.classList.remove("vibration");
                     });
                 }, 400);
             }
