@@ -35,7 +35,7 @@
     <body>
         <div id="wrap" class="wrap-main">
             <div class="container">
-                <section id="contnet" class="section-usim bottom">
+                <section id="content" class="section-usim bottom">
                     <div class="inner">
                         <div
                             class="page-header side pc-only"
@@ -43,10 +43,10 @@
                         >
                             <h2 class="page-title"></h2>
                             <div class="location">
-                                <a href="" class="home">
+                                <a href="javascript:void(0)" class="home">
                                     <span class="hidden">HOME</span>
                                 </a>
-                                <a href=""> "유심·eSIM" </a>
+                                <a href="javascript:void(0)"> "유심·eSIM" </a>
                                 <strong>유심구매</strong>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                                             <ul>
                                                 <!-- 기본 상태는 아무것도 select 되어 있지 않아야됨 -->
                                                 <li
-                                                    class="select-telco active"
+                                                    class="select-telco"
                                                     id="freeS-button"
                                                 >
                                                     <label
@@ -186,20 +186,25 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li id="usim-area">
+                                    <li id="usim-area" style="display: none">
                                         <div class="title-wrap">
                                             <h3 class="title-type">
                                                 배출 품목을 확인해 주세요
                                             </h3>
                                         </div>
-                                        <a href="" class="info-text2">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="info-text2"
+                                        >
                                             나에게 맞는 구독제는
                                             <i class="icon-question"></i>
                                         </a>
                                         <div class="chk-type">
                                             <ul id="usim-list-container">
                                                 <li>
-                                                    <a href="">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                    >
                                                         <div class="detail">
                                                             <p class="tit">
                                                                 <strong
@@ -255,42 +260,49 @@
                                     </ul>
                                 </div>
                                 <div class="usim-cart open">
-                                    <div class="cart-wrap">
+                                    <div
+                                        class="cart-wrap"
+                                        style="display: block"
+                                    >
                                         <ul
                                             class="cart-list"
                                             id="cart-list-container"
+                                            style="display: none"
                                         >
-                                            <li class="cart-item">
-                                                <div class="top">
-                                                    <p class="name">
-                                                        SKT 일반유심 (3in1)
+                                            <div class="usim-order-list">
+                                                <ul
+                                                    class="order-list-container"
+                                                >
+                                                    <li class="order-item">
+                                                        <div class="row">
+                                                            <p class="name">
+                                                                SKT 일반유심
+                                                                (3in1)
+                                                            </p>
+                                                            <p class="num">
+                                                                1개
+                                                            </p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p class="price">
+                                                                2,200원
+                                                            </p>
+                                                            <p class="total">
+                                                                2,200원
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="total-wrap">
+                                                    <p class="t-r">
+                                                        총
+                                                        <span
+                                                            class="cart-total-amt"
+                                                            >2,200원</span
+                                                        >
                                                     </p>
-                                                    <a
-                                                        href=""
-                                                        class="btn-delete"
-                                                        ><i
-                                                            class="ico-close2"
-                                                        ></i
-                                                    ></a>
                                                 </div>
-                                                <div class="bottom">
-                                                    <div class="quantity-box">
-                                                        <button
-                                                            class="btn-minus"
-                                                        ></button>
-                                                        <input
-                                                            type="number"
-                                                            value="1"
-                                                        />
-                                                        <button
-                                                            class="btn-plus"
-                                                        ></button>
-                                                    </div>
-                                                    <div class="price">
-                                                        <strong>2,200원</strong>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            </div>
                                         </ul>
                                     </div>
                                     <div class="total-wrap">
@@ -309,17 +321,17 @@
                                     </div>
                                     <div class="btn-wrap">
                                         <a
-                                            href=""
+                                            href="javascript:void(0)"
                                             class="btn-type full disabled"
                                             id="order-cart-btn0"
                                             style="display: none"
                                             >주문하기</a
                                         >
                                         <a
-                                            href=""
-                                            class="btn-type full"
+                                            href="javascript:void(0)"
+                                            class="btn-type full disabled"
                                             id="order-cart-btn"
-                                            style=""
+                                            style="display: _"
                                         >
                                             <span class="cart-total-count">
                                                 1개
@@ -334,7 +346,7 @@
                         <section
                             class="content-wrap"
                             id="section-step2"
-                            style="display: _"
+                            style="display: none"
                         >
                             <section class="usim-wrap">
                                 <div class="step-wrap">
@@ -374,12 +386,14 @@
                                 </div>
                                 <div class="title-wrap">
                                     <h3 class="title-type">
-                                        유심 구매를 위한 이용 안내 및 동의
+                                        수거 신청을 위한 이용 안내 및 동의
                                     </h3>
                                 </div>
                                 <div class="agree-wrap">
                                     <div class="all-chk">
+                                        <!-- selected -->
                                         <div class="chk-box">
+                                            <!-- checked = checked -->
                                             <input
                                                 type="checkbox"
                                                 id="terms-check-all"
@@ -442,14 +456,14 @@
                                                         ></label
                                                     >
                                                 </div>
-                                                <a
+                                                <!-- <a
                                                     href="javascript:void(0)"
                                                     class="btn-arrow"
                                                     ><i class="ico-arrow4"></i
                                                     ><span class="hidden"
                                                         >팝업보기</span
                                                     ></a
-                                                >
+                                                > -->
                                             </li>
                                             <li>
                                                 <div class="chk-box">
@@ -473,14 +487,14 @@
                                                         ></label
                                                     >
                                                 </div>
-                                                <a
+                                                <!-- <a
                                                     href="javascript:void(0)"
                                                     class="btn-arrow"
                                                     ><i class="ico-arrow4"></i
                                                     ><span class="hidden"
                                                         >팝업보기</span
                                                     ></a
-                                                >
+                                                > -->
                                             </li>
                                             <li
                                                 id="terms-box-3"
@@ -563,19 +577,13 @@
                                 </div>
                             </aside>
                         </section>
-                        <!--******************** 수거 시간선택 *************************-->
-                        <!-- 수거 시간선택 -->
-                        <section
-                            class="content-wrap"
-                            id="section-step3"
-                            style="display: none"
-                        ></section>
+
                         <!--******************** 수거지 정보 입력 *************************-->
                         <!-- 수거지정보 입력 -->
                         <section
                             class="content-wrap"
-                            id="section-step4"
-                            style="display: _"
+                            id="section-step3"
+                            style="display: none"
                         >
                             <section class="usim-wrap">
                                 <div class="step-wrap">
@@ -725,7 +733,7 @@
                                                 alt="닫기 버튼"
                                             /> -->
                                     </div>
-                                    <div
+                                    <!-- <div
                                         class="btn-wrap step4-type-1"
                                         style="display: none"
                                     >
@@ -736,7 +744,7 @@
                                                 class="ico-arrow5"
                                             ></i
                                         ></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="btn-fixed-wrap">
                                     <div class="btn-wrap">
@@ -788,14 +796,14 @@
                         <!-- 수거 시간 -->
                         <section
                             class="content-wrap"
-                            id="section-step5"
-                            style="display: _"
+                            id="section-step4"
+                            style="display: none"
                         >
                             <!--  -->
                             <section
                                 class="content-wrap"
-                                id="section-step5"
-                                style=""
+                                id="section-step"
+                                style="display: _"
                             >
                                 <section class="usim-wrap">
                                     <div class="step-wrap">
@@ -843,13 +851,19 @@
                                     </div>
                                     <div class="chk-list-custom">
                                         <ul>
-                                            <li class="active">
+                                            <li class="timeList">
                                                 <label for="item1">
                                                     <div class="detail">
                                                         <i class="ico-visa"></i>
                                                         <p class="tit">
-                                                            신용카드
+                                                            09월 05일
                                                         </p>
+                                                        <div class="tit-detail">
+                                                            <span
+                                                                >06:00 ~
+                                                                22:00</span
+                                                            >
+                                                        </div>
                                                     </div>
                                                     <div
                                                         class="chk-box selected"
@@ -868,15 +882,21 @@
                                                     </div>
                                                 </label>
                                             </li>
-                                            <li>
+                                            <li class="timeList">
                                                 <label for="item2">
                                                     <div class="detail">
                                                         <i
                                                             class="ico-laptop"
                                                         ></i>
                                                         <p class="tit">
-                                                            계좌이체
+                                                            09월 05일
                                                         </p>
+                                                        <div class="tit-detail">
+                                                            <span
+                                                                >22:00 ~
+                                                                06:00</span
+                                                            >
+                                                        </div>
                                                     </div>
                                                     <div class="chk-box">
                                                         <input
@@ -892,15 +912,21 @@
                                                     </div>
                                                 </label>
                                             </li>
-                                            <li>
+                                            <li class="timeList">
                                                 <label for="item4">
                                                     <div class="detail">
                                                         <i
                                                             class="ico-kakaopay"
                                                         ></i>
                                                         <p class="tit">
-                                                            카카오페이
+                                                            09월 06일
                                                         </p>
+                                                        <div class="tit-detail">
+                                                            <span
+                                                                >06:00 ~
+                                                                22:00</span
+                                                            >
+                                                        </div>
                                                     </div>
                                                     <div class="chk-box">
                                                         <input
@@ -916,15 +942,21 @@
                                                     </div>
                                                 </label>
                                             </li>
-                                            <li>
+                                            <li class="timeList">
                                                 <label for="item3">
                                                     <div class="detail">
                                                         <i
                                                             class="ico-payco"
                                                         ></i>
                                                         <p class="tit">
-                                                            페이코
+                                                            09월 06일
                                                         </p>
+                                                        <div class="tit-detail">
+                                                            <span
+                                                                >22:00 ~
+                                                                06:00</span
+                                                            >
+                                                        </div>
                                                     </div>
                                                     <div class="chk-box">
                                                         <input
@@ -945,7 +977,11 @@
                                     <div class="btn-fixed-wrap">
                                         <div class="bottom-gra"></div>
                                         <div class="btn-wrap">
-                                            <a href="" class="btn-type">다음</a>
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="btn-type"
+                                                >다음</a
+                                            >
                                         </div>
                                     </div>
                                 </section>
@@ -985,9 +1021,108 @@
                         <!--주문 완료 -->
                         <section
                             class="content-wrap"
-                            id="section-step7"
-                            style="display: _"
-                        ></section>
+                            id="section-step5"
+                            style="display: none"
+                        >
+                            <!--  -->
+                            <section
+                                class="content-wrap"
+                                id="section-step"
+                                style="display: _"
+                            >
+                                <section class="usim-wrap">
+                                    <div class="step-wrap">
+                                        <ol>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >1<em class="max">/5</em></i
+                                                >
+                                                <strong>유심선택</strong>
+                                            </li>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >2<em class="max">/5</em></i
+                                                >
+                                                <strong>약관동의</strong>
+                                            </li>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >3<em class="max">/5</em></i
+                                                >
+                                                <strong>배송정보 입력</strong>
+                                            </li>
+                                            <li class="done">
+                                                <i class="num"
+                                                    >4<em class="max">/5</em></i
+                                                >
+                                                <strong>결제</strong>
+                                            </li>
+                                            <li class="active">
+                                                <i class="num"
+                                                    >5<em class="max">/5</em></i
+                                                >
+                                                <strong>주문 완료</strong>
+                                            </li>
+                                        </ol>
+                                        <span
+                                            class="bar"
+                                            style="width: 80%"
+                                        ></span>
+                                    </div>
+                                    <div class="title-wrap">
+                                        <div class="motion-img">
+                                            <img
+                                                src="https://www.freet.co.kr/assets/images/motion/paying.gif"
+                                            />
+                                        </div>
+                                        <h3 class="title-type">
+                                            유심 결제수단을 선택해주세요
+                                        </h3>
+                                    </div>
+                                    <div class="chk-list-custom"></div>
+                                    <div class="btn-fixed-wrap">
+                                        <div class="bottom-gra"></div>
+                                        <div class="btn-wrap">
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="btn-type"
+                                                >수거 요청목록 보기</a
+                                            >
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                            <!--                             
+                            <aside class="aside-usim-order pc-only">
+                                <div class="title-bg">
+                                    <h3>주문상품</h3>
+                                </div>
+                                <div class="usim-order-list">
+                                    <ul class="order-list-container">
+                                        <li class="order-item">
+                                            <div class="row">
+                                                <p class="name">
+                                                    SKT 일반유심 (3in1)
+                                                </p>
+                                                <p class="num">1개</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="price">2,200원</p>
+                                                <p class="total">2,200원</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="total-wrap">
+                                        <p class="t-r">
+                                            총
+                                            <span class="cart-total-amt"
+                                                >2,200원</span
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </aside> -->
+                        </section>
                     </div>
                 </section>
             </div>

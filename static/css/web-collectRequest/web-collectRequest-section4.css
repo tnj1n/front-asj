@@ -74,10 +74,7 @@
 .chk-list-custom .chk-box {
     display: none;
 }
-.chk-box {
-    display: inline-block;
-    text-align: left;
-}
+
 .chk-box.selected input[type="radio"] + .checkbox {
     background: #fff;
     border-color: #f0543a;
@@ -97,4 +94,29 @@
     padding: 0;
     justify-content: center;
     cursor: pointer;
+}
+.tit-detail {
+    margin-top: 5px;
+    /* background: #3f4970; */
+    background: #fff;
+    border-color: #f0543a;
+    padding: 3px;
+    border-radius: 5px;
+    /* border: 1px solid #3f4970; */
+}
+.tit-detail span {
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #f0543a;
+}
+.section-usim .loding-wrap .motion-img {
+    margin-bottom: 20px;
+}
+.motion-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
 }

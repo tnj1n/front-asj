@@ -39,24 +39,18 @@ input:disabled {
     opacity: 1;
     color: #c3c3c9;
 }
-input[type="text"] {
-    height: 56px;
-    padding: 0 20px;
-    border: 1px solid #efefef;
-    background: #f4f4f4;
-    color: #111;
-    border-radius: 12px;
-}
+
 .form-item input:not(:placeholder-shown) + .title {
     font-size: 13px;
 }
 .form-item input:disabled + .title {
     color: #c3c3c9;
 }
+.form-item input:focus + .title,
 .form-item input:not(:placeholder-shown) + .title {
-    font-size: 11px;
+    font-size: 13px;
+    color: #e2391d;
     top: 9px;
-    color: #94949a;
 }
 .form-item label.title {
     position: absolute;
@@ -90,9 +84,7 @@ input[type="text"] {
     position: relative;
     margin-top: 12px;
 }
-.form-item input {
-    padding-top: 17px;
-}
+
 input[type="email"],
 input[type="file"],
 input[type="number"],
@@ -120,14 +112,23 @@ input[type="text"] {
     background: #f4f4f4;
     color: #111;
     border-radius: 12px;
+    padding-top: 17px;
 }
-/* input,
+#count-order {
+    padding: 0 20px;
+    border: none;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+    /* padding-top: 17px; */
+}
+input,
 input[type="checkbox"],
 input[type="radio"],
 select,
 textarea {
     appearance: none;
-} */
+}
 .form-item label.title {
     font-size: 18px;
     top: 21px;
@@ -187,11 +188,7 @@ textarea {
     display: flex;
     justify-content: center;
 }
-.btn-wrap [class^="btn-type"],
-.tab-type li,
-.tab-type2 li {
-    width: 100%;
-}
+
 .btn-type4 {
     justify-content: center;
     color: #111;
@@ -288,14 +285,7 @@ textarea {
     width: 100%;
     transition: background 0.2s ease;
 }
-.btn-wrap [class^="btn-type"]:nth-child(n + 2) {
-    margin-left: 10px;
-}
-.btn-wrap [class^="btn-type"],
-.tab-type li,
-.tab-type2 li {
-    width: 100%;
-}
+
 .btn-type,
 .btn-type-sm,
 .btn-type2,
