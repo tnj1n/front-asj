@@ -1,0 +1,6 @@
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M10.004 3.796C9.027 2.655 7.637 2 6.169 2 3.321 2 1 4.442 1 7.459c0 1.201 0 4.397 6.194 8.626L10.004 18l2.802-1.915C19 11.856 19 8.66 19 7.459 19 4.442 16.688 2 13.83 2c-1.466 0-2.857.655-3.826 1.796z" id="w0gelsnena"/>
+    </defs>
+    <use stroke="#343434" stroke-width="1.5" xlink:href="#w0gelsnena" fill="none" fill-rule="evenodd"/>
+</svg>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1:1 상담문의</title>
+        <link rel="stylesheet" href="/static/css/one-to-one/one-to-one.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="wrap">
+                <!-- 처음 모달 창 -->
+                <div id="container">
+                    <div
+                        class="pop-layer pop-alert"
+                        id="pop-alert2"
+                        style="display: flex"
+                    >
+                        <div class="dim"></div>
+                        <div class="pop-wrap">
+                            <div class="pop-content v3">
+                                <p>
+                                    1:1 문의는 회원만 이용이 가능합니다.<br />
+                                    로그인 하시겠습니까?
+                                </p>
+                                <div class="btn-wrap">
+                                    <a
+                                        href="javascript:void(0);"
+                                        class="btn-type v3"
+                                        >취소</a
+                                    >
+                                    <a href="/login" class="btn-type"
+                                        >로그인하기</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="content" class="section-inquiry">
+                    <div class="inner">
+                        <div class="page-header side">
+                            <h2 class="page-title">1:1 상담문의</h2>
+                            <div class="location">
+                                <a href="/" class="home"
+                                    ><span class="hidden">HOME</span></a
+                                >
+                                <a href="/customer/helpDesk"> 고객센터 </a>
+                                <a href="javascript:void(0)"> 1:1 상담문의 </a>
+                                <strong> 상담문의 </strong>
+                            </div>
+                        </div>
+                        <section class="inner-box">
+                            <div class="tab-wrap">
+                                <ul class="tab-type js_tab">
+                                    <li class="active">
+                                        <a href="" class="choice">상담문의</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            onclick="goView()"
+                                            class="choice"
+                                            >나의 상담내역</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <form action="" id="frm">
+                                <div class="form-table">
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            상담유형
+                                            <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd">
+                                            <div class="form-col2">
+                                                <div class="select-type2">
+                                                    <select
+                                                        id="comType"
+                                                        name="comType"
+                                                        required=""
+                                                        style="display: none"
+                                                        class="selected"
+                                                    >
+                                                        <option
+                                                            class="title"
+                                                            value=""
+                                                        >
+                                                            통신사
+                                                        </option>
+                                                        <option value="freeS">
+                                                            SKT
+                                                        </option>
+                                                        <option value="freeC">
+                                                            KT
+                                                        </option>
+                                                        <option value="freeT">
+                                                            LGU+
+                                                        </option>
+                                                    </select>
+                                                    <div
+                                                        class="nice-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >통신사</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option"
+                                                            >
+                                                                통신사
+                                                            </li>
+                                                            <li
+                                                                data-value="freeS"
+                                                                class="option"
+                                                            >
+                                                                SKT
+                                                            </li>
+                                                            <li
+                                                                data-value="freeC"
+                                                                class="option"
+                                                            >
+                                                                KT
+                                                            </li>
+                                                            <li
+                                                                data-value="freeT"
+                                                                class="option"
+                                                            >
+                                                                LGU+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="select-type2">
+                                                    <select
+                                                        id="svcType"
+                                                        name="svcType"
+                                                        required=""
+                                                        style="display: none"
+                                                        class="selected"
+                                                    >
+                                                        <option
+                                                            class="title"
+                                                            value=""
+                                                            selected=""
+                                                        >
+                                                            선/후불
+                                                        </option>
+                                                        <option value="PP">
+                                                            선불
+                                                        </option>
+                                                        <option value="DP">
+                                                            후불
+                                                        </option>
+                                                    </select>
+                                                    <div
+                                                        class="nice-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >선/후불</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option"
+                                                            >
+                                                                선/후불
+                                                            </li>
+                                                            <li
+                                                                data-value="PP"
+                                                                class="option"
+                                                            >
+                                                                선불
+                                                            </li>
+                                                            <li
+                                                                data-value="DP"
+                                                                class="option"
+                                                            >
+                                                                후불
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item">
+                                                <div class="select-type2">
+                                                    <select
+                                                        id="inqType"
+                                                        name="inqType"
+                                                        required=""
+                                                        style="display: none"
+                                                        class="selected"
+                                                    >
+                                                        <option
+                                                            class="title"
+                                                            value=""
+                                                            selected=""
+                                                        >
+                                                            문의유형
+                                                        </option>
+                                                        <option value="1">
+                                                            가입관련
+                                                        </option>
+                                                        <option value="2">
+                                                            요금관련
+                                                        </option>
+                                                        <option value="7">
+                                                            변경관련
+                                                        </option>
+                                                        <option value="3">
+                                                            서비스관련
+                                                        </option>
+                                                        <option value="4">
+                                                            단말기관련
+                                                        </option>
+                                                        <option value="5">
+                                                            회사관련
+                                                        </option>
+                                                        <option value="6">
+                                                            기타
+                                                        </option>
+                                                    </select>
+                                                    <div
+                                                        class="nice-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >문의유형</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option"
+                                                            >
+                                                                문의유형
+                                                            </li>
+                                                            <li
+                                                                data-value="1"
+                                                                class="option"
+                                                            >
+                                                                가입관련
+                                                            </li>
+                                                            <li
+                                                                data-value="2"
+                                                                class="option"
+                                                            >
+                                                                요금관련
+                                                            </li>
+                                                            <li
+                                                                data-value="7"
+                                                                class="option"
+                                                            >
+                                                                변경관련
+                                                            </li>
+                                                            <li
+                                                                data-value="3"
+                                                                class="option"
+                                                            >
+                                                                서비스관련
+                                                            </li>
+                                                            <li
+                                                                data-value="4"
+                                                                class="option"
+                                                            >
+                                                                단말기관련
+                                                            </li>
+                                                            <li
+                                                                data-value="5"
+                                                                class="option"
+                                                            >
+                                                                회사관련
+                                                            </li>
+                                                            <li
+                                                                data-value="6"
+                                                                class="option"
+                                                            >
+                                                                기타
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            고객 정보
+                                            <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd">
+                                            <div class="form-col2-w">
+                                                <div class="form-item">
+                                                    <input
+                                                        type="text"
+                                                        id="writer"
+                                                        name="writer"
+                                                        placeholder=""
+                                                    />
+                                                    <label for="" class="title"
+                                                        >이름</label
+                                                    >
+                                                    <span
+                                                        class="invalid-feedback"
+                                                    ></span>
+                                                </div>
+                                                <div class="form-item">
+                                                    <div class="select-type2">
+                                                        <select
+                                                            id="custTelNo"
+                                                            name="custTelNo"
+                                                            required=""
+                                                            disabled="disabled"
+                                                            style="
+                                                                display: none;
+                                                            "
+                                                        >
+                                                            <option
+                                                                class="title"
+                                                                selected=""
+                                                                disabled=""
+                                                            >
+                                                                가입번호
+                                                            </option>
+                                                        </select>
+                                                        <div
+                                                            class="nice-select disabled"
+                                                        >
+                                                            <span
+                                                                class="current"
+                                                                >가입번호</span
+                                                            >
+                                                            <ul class="list">
+                                                                <li
+                                                                    data-value="가입번호"
+                                                                    class="option selected disabled"
+                                                                >
+                                                                    가입번호
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item">
+                                                <input
+                                                    type="text"
+                                                    id="homeTelNo"
+                                                    name="homeTelNo"
+                                                    placeholder="&nbsp;"
+                                                    onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+                                                    required=""
+                                                />
+                                                <label for="" class="title"
+                                                    >연락받을 번호</label
+                                                >
+                                                <span
+                                                    class="invalid-feedback"
+                                                ></span>
+                                            </div>
+                                            <div class="flex-end">
+                                                <div class="chk-box">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="check01"
+                                                        required=""
+                                                        disabled="disabled"
+                                                    />
+                                                    <label
+                                                        class="checkbox"
+                                                        for="check01"
+                                                    ></label>
+                                                    <label for="check01"
+                                                        >가입번호와 동일</label
+                                                    >
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            보안문자
+                                            <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd">
+                                            <div class="form-security">
+                                                <div class="security-box">
+                                                    <p>
+                                                        <img
+                                                            id="captcha"
+                                                            src="https://www.freet.co.kr/customer/captchaImg.do?rand=0.9573162934027037"
+                                                        />
+                                                    </p>
+                                                </div>
+                                                <button
+                                                    class="btn-link"
+                                                    id="reBtn"
+                                                    onclick="getCaptcha()"
+                                                >
+                                                    <i class="ico-reset2"></i>
+                                                </button>
+                                                <button
+                                                    class="btn-link"
+                                                    id="audioBtn"
+                                                    onclick="playCaptchaAudio()"
+                                                >
+                                                    <i class="ico-sound"></i>
+                                                </button>
+                                                <audio
+                                                    id="captchaAudio"
+                                                    style="display: none"
+                                                ></audio>
+                                            </div>
+                                            <div class="form-item ntit">
+                                                <input
+                                                    type="text"
+                                                    placeholder="보안 문자"
+                                                    id="captchaValue"
+                                                    name="captchaValue"
+                                                    data-gtm-form-interact-field-id="3"
+                                                />
+                                                <span
+                                                    class="invalid-feedback"
+                                                ></span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            제목 <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd">
+                                            <div class="form-item ntit">
+                                                <input
+                                                    type="text"
+                                                    class="title"
+                                                    name="title"
+                                                    placeholder="제목을 최대 50자 이내로 등록하세요."
+                                                    maxlength="50"
+                                                    required=""
+                                                    data-gtm-form-interact-field-id="2"
+                                                />
+                                                <span
+                                                    class="invalid-feedback"
+                                                ></span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            내용 <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd">
+                                            <div class="form-text-box">
+                                                <textarea
+                                                    id="contents"
+                                                    name="contents"
+                                                    placeholder="내용을 입력해주세요.(최소 10자 이상/1500자 이내)"
+                                                    minlength="10"
+                                                    maxlength="1500"
+                                                    required=""
+                                                    data-gtm-form-interact-field-id="1"
+                                                ></textarea>
+                                                <span class="maxlenth"
+                                                    ><strong class="max"
+                                                        ><em id="memoCnt"
+                                                            >0</em
+                                                        ></strong
+                                                    >
+                                                    / 1500</span
+                                                >
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <!-- 파일 -->
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">파일첨부</dt>
+                                        <dd class="form-dd">
+                                            <div class="form-item">
+                                                <div
+                                                    class="form-flex form-file"
+                                                >
+                                                    <input
+                                                        type="hidden"
+                                                        name="sysFile"
+                                                        id="sysFile"
+                                                        value=""
+                                                    />
+                                                    <input
+                                                        id="file-input"
+                                                        name="file-input"
+                                                        class="file-input"
+                                                        type="text"
+                                                        value=""
+                                                        placeholder="파일선택"
+                                                        disabled=""
+                                                    />
+                                                    <input
+                                                        id="file"
+                                                        name="file"
+                                                        type="file"
+                                                        accept=".jpg, .jpeg, .png"
+                                                    />
+                                                    <label
+                                                        for="file"
+                                                        class="btn-form"
+                                                        >등록</label
+                                                    >
+                                                </div>
+                                                <ul class="list-type">
+                                                    <li>
+                                                        첨부 파일 용량은 10MB를
+                                                        초과하실 수 없습니다.
+                                                    </li>
+                                                    <li>
+                                                        이미지(jpg, jpeg, gif,
+                                                        png)파일을 첨부하실 수
+                                                        있습니다.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <!-- 개인정보 수집 및 이용 동의 -->
+                                    <dl class="form-dl">
+                                        <dt class="form-dt">
+                                            개인정보 수집 및<br
+                                                class="pc-only"
+                                            />
+                                            이용 동의
+                                            <span class="focus">*</span>
+                                        </dt>
+                                        <dd class="form-dd terms">
+                                            <p>
+                                                상담문의를 희망하는 개인을
+                                                대상으로 아래와 같이 개인정보를
+                                                수집하고 있습니다.
+                                            </p>
+                                            <p>
+                                                - 목적 : 문의처리를 위한
+                                                본인확인<br />
+                                                - 항목 : 성명, 연락처<br />
+                                                - 보유기간 : 문의처리 완료시까지
+                                            </p>
+                                            <ul class="list-type">
+                                                <li>
+                                                    상담문의 처리를 위해 필요한
+                                                    최소한의 개인정보이므로
+                                                    동의해 주셔야 상담답변이
+                                                    가능합니다.
+                                                </li>
+                                                <li>
+                                                    동의안함을 선택할 경우,
+                                                    상담/문의게시판 이용이
+                                                    제한됩니다.
+                                                </li>
+                                            </ul>
+                                            <div class="box-type2">
+                                                <div class="chk-box">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="check02"
+                                                    />
+                                                    <label
+                                                        class="checkbox"
+                                                        for="check02"
+                                                    ></label>
+                                                    <label for="check02"
+                                                        ><strong
+                                                            >개인정보 수집에
+                                                            동의합니다.</strong
+                                                        ></label
+                                                    >
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <!-- 버튼 -->
+                                    <div class="btn-wrap">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="btn-type disabled"
+                                            id="procBtn"
+                                            >문의 접수하기</a
+                                        >
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <aside id="quick" class="quick up" style="bottom: 20px">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="btn-top">
+                        <i class="ico-top"></i>
+                        <span class="hidden">상단으로 이동</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </body>
+    <script src="/static/js/one-to-one/one-to-one.js"></script>
+</html>
