@@ -1,0 +1,247 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(/static/css/fonts/SUIT-Regular.woff2)format("woff2"),url(/static/css/fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(/static/css/fonts/SUIT-SemiBold.woff2)format("woff2"),url(/static/css/fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(/static/css/fonts/SUIT-Bold.woff2)format("woff2"),url(/static/css/fonts/SUIT-Bold.otf)format("opentype")
+}
+
+body {
+    background-color: #fff;
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    color: #111;
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    vertical-align: baseline;
+    word-break: break-all;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    #business-overview-content {
+        padding-bottom: 120px;
+    }
+}
+
+#business-overview-content {
+    padding: 30px 0 80px;
+}
+
+section {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .business-overview-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.business-overview-inner {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .business-overview-pc-only {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-page-header.business-overview-side.business-overview-sim {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-page-header.business-overview-side {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-page-header {
+        position: inherit;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-page-header.business-overview-side .business-overview-page-title {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-page-header .business-overview-page-title {
+        line-height: 1.2;
+    }
+}
+
+.business-overview-page-header .business-overview-page-title {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .business-overview-page-header.business-overview-side .business-overview-location {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-location {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #343434;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-location .business-overview-home {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background-image: url("/static/images/business_overview/busines_overview_home.png");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1200px) {
+    .business-overview-location a {
+        position: relative;
+        margin-right: 25px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.business-overview-hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+@media (min-width: 1200px) {
+    .business-overview-location a:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url("/static/images/business_overview/busines_overview_arrow.png");
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -18px;
+        top: 50%;
+        margin-top: -5px;
+        display: inline-block;
+        vertical-align: middle;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+::after {
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .business-overview-inner2 {
+        max-width: 1026px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.business-overview-inner2 {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    #business-overview-event-content {
+        width: 800px;
+        margin: auto;
+    }
+}
+
+#business-overview-event-content {
+    text-align: center;
+}
+
+#business-overview-event-content .business-overview-image-box {
+    vertical-align: top;
+}
+
+.image1 {
+    background-image: url("/static/images/business_overview/business_overview_1.png");
+}
+
+.image2 {
+    background-image: url("/static/images/business_overview/business_overview_2.png");
+}
+
+.image3 {
+    background-image: url("/static/images/business_overview/business_overview_3.png");
+}
+
+.image4 {
+    background-image: url("/static/images/business_overview/business_overview_4.png");
+}
+
+.image5 {
+    background-image: url("/static/images/business_overview/business_overview_5.png");
+}
+
+.business-overview-image-box {
+    width: 100%; /* 부모 컨테이너의 너비에 맞추기 */
+    height: 0;
+    padding-bottom: 56.25%; /* 1920x1080 비율 = 16:9 비율을 유지 */
+    background-size: cover; /* 요소 크기에 맞게 이미지 크기 조정 */
+    background-position: center; /* 이미지 중앙에 위치 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+}

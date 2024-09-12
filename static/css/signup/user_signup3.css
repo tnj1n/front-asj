@@ -1,0 +1,694 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(/static/css/fonts/SUIT-Regular.woff2)format("woff2"),url(/static/css/fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(/static/css/fonts/SUIT-SemiBold.woff2)format("woff2"),url(/static/css/fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(/static/css/fonts/SUIT-Bold.woff2)format("woff2"),url(/static/css/fonts/SUIT-Bold.otf)format("opentype")
+}
+
+body {
+    background-color: #fff;
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    color: #111;
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    vertical-align: baseline;
+    word-break: break-all;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    #user-signup3-content, #user-signup3-content.user-signup3-bottom {
+        padding-bottom: 120px;
+    }
+}
+
+#user-signup3-content {
+    padding: 30px 0 80px;
+}
+
+section {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.user-signup3-inner {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-pc-only {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-page-header {
+        position: inherit;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+.user-signup3-page-header {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-location {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #343434;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-location .user-signup3-home, .user-signup3-location a:after {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background-image: url("/static/images/user_signup3/user_signup3_home.png");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-location a {
+        position: relative;
+        margin-right: 25px;
+    }
+}
+
+.user-signup3-location a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.user-signup3-hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-location a:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url("/static/images/user_signup3/user_signup3_arrow.png");
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -18px;
+        top: 50%;
+        margin-top: -5px;
+        display: inline-block;
+        vertical-align: middle;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.user-signup3-location a::after {
+    box-sizing: border-box;
+}
+
+.user-signup3-location strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-page-header .user-signup3-page-title {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+}
+
+.user-signup3-page-header .user-signup3-page-title {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap {
+        max-width: 852px;
+        margin: 0 auto 60px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol {
+        border-radius: 3px;
+    }
+}
+
+.user-signup3-step-wrap ol {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f4f4f4;
+    align-items: center;
+    list-style: none;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done {
+        color: #111;
+        display: inline-flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li:not(:last-child) {
+        padding-right: 39px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li {
+        align-items: center;
+        font-size: 15px;
+    }
+}
+
+.user-signup3-step-wrap ol li {
+    position: relative;
+    padding-bottom: 11px;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done:before {
+        background-image: url("/static/images/user_signup3/user_signup3_arrow2.png");
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li:not(:last-child):before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -4px;
+        width: 12px;
+        height: 12px;
+        margin-top: -6px;
+    }
+}
+
+.user-signup3-step-wrap ol li:not(:last-child)::before {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done .user-signup3-num {
+        border-color: #f0543a;
+        background-color: #fff;
+        font-size: 0;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li .user-signup3-num {
+        width: 22px;
+        border-radius: 100%;
+    }
+}
+
+.user-signup3-step-wrap ol li .user-signup3-num {
+    display: inline-flex;
+    height: 22px;
+    border: 2px solid #c3c3c9;
+    background: #c3c3c9;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+.user-signup3-step-wrap ol li .user-signup3-num {
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done .user-signup3-num:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-image: url("/static/images/user_signup3/user_signup3_check.png");
+        background-size: cover;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-done .user-signup3-num::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done .user-signup3-num:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-image: url("/static/images/user_signup3/user_signup3_check.png");
+        background-size: cover;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-done .user-signup3-num::after  {
+    box-sizing: border-box;
+}
+
+.user-signup3-step-wrap ol li.user-signup3-done strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #f0543a;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-done::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done:not(:first-child):after {
+        width: auto;
+        left: -100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-done:after {
+        content: "";
+        height: 2px;
+        background: #f0543a;
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-done::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-active {
+        display: inline-flex;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-active {
+    color: #f0543a;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li {
+        font-size: 15px;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-active .user-signup3-num {
+    border-color: #f0543a;
+    background: #f0543a;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li .user-signup3-num {
+        font-size: 13px;
+        width: 22px;
+        border-radius: 100%;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-active strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-active:not(:first-child):after {
+        width: auto;
+        left: -100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-step-wrap ol li.user-signup3-active:after {
+        content: "";
+        height: 2px;
+        background: #f0543a;
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+    }
+}
+
+.user-signup3-step-wrap ol li.user-signup3-active::after {
+    box-sizing: border-box;
+}
+
+.user-signup3-step-wrap .user-signup3-bar {
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #f0543a;
+}
+
+.user-signup3-step-wrap {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-section-join .user-signup3-join-wrap {
+        max-width: 852px;
+        margin: 0 auto;
+    }
+}
+
+.user-signup3-section-join .user-signup3-join-wrap {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-title-wrap {
+        margin-bottom: 49px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-title-wrap .user-signup3-title-type {
+        font-size: 24px;
+        padding-right: 0;
+    }
+}
+
+.user-signup3-title-wrap .user-signup3-title-type {
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-section-join .user-signup3-join-wrap .user-signup3-form-box {
+        width: 504px;
+        margin: 0 auto;
+    }
+}
+
+.user-signup3-section-join .user-signup3-join-wrap .user-signup3-form-box .user-signup3-box-type2 {
+    margin-bottom: 30px;
+}
+
+.user-signup3-box-type2 {
+    background: 0 0;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e3e3e3;
+}
+
+.user-signup3-box-type2 dl {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-box-type2 dl dt {
+        width: 130px;
+    }
+}
+
+.user-signup3-box-type2 dl dt {
+    color: #94949a;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-box-type2 dl dd {
+        width: calc(100% - 130px);
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-box-type2 dl+dl {
+        margin-top: 10px;
+    }
+}
+
+.user-signup3-form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-form-item input {
+        padding-top: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    input[type="text"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+input[type="text"] {
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+.user-signup3-form-item input {
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-form-item label.user-signup3-title {
+        font-size: 18px;
+        top: 21px;
+    }
+}
+
+.user-signup3-form-item label.user-signup3-title {
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+    color: #94949a;
+}
+
+@media (min-width: 1200px) {
+    input[type="password"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+input[type="password"] {
+        padding: 0 20px;
+        border: 1px solid #efefef;
+        background: #f4f4f4;
+        color: #111;
+        border-radius: 12px;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-form-item .user-signup3-ico-eye {
+        top: 20px;
+        right: 15px;
+    }
+}
+
+.user-signup3-form-item .user-signup3-ico-eye {
+    position: absolute;
+    cursor: pointer;
+}
+
+.user-signup3-ico-eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url("/static/images/user_signup3/user_signup3_ico-eye.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-section-join .user-signup3-join-wrap .user-signup3-form-box .user-signup3-mt {
+        margin-top: 50px;
+    }
+}
+
+.user-signup3-mt {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-btn-fixed-wrap {
+        position: inherit;
+    }
+}
+
+.user-signup3-btn-fixed-wrap {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-btn-fixed-wrap .user-signup3-btn-wrap {
+        margin-top: 50px;
+        padding: 0;
+    }
+}
+
+.user-signup3-btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.user-signup3-disabled.user-signup3-btn-type {
+    pointer-events: none;
+    color: #fff;
+    opacity: .4;
+}
+
+.user-signup3-btn-wrap [class^=user-signup3-btn-type] {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-btn-type {
+        max-width: 200px;
+        height: 64px;
+        font-size: 20px;
+    }
+}
+
+.user-signup3-btn-type {
+    background: #f0543a;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+    text-decoration: none;
+}
+
+.user-signup3-ico-eye-on {
+    background-image: url("/static/images/user_signup3/user_signup3_ico-eye-on.png");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+input[type="text"]:focus {
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+@media (min-width: 1200px) {
+    .user-signup3-form-item input:focus~.user-signup3-title {
+        font-size: 13px;
+    }
+}
+
+.user-signup3-form-item input:focus~.user-signup3-title {
+    top: 9px;
+    color: #f0543a;
+}
+
+input[type="password"]:focus {
+    color: #111;
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+
