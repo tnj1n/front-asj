@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>문의 페이지</title>
+        <link rel="stylesheet" href="/static/css/inquiry/inquiry.css" />
+    </head>
+    <body>
+        <div id="inquiry-wrap">
+            <section id="content" class="section-customer">
+                <div class="inner">
+                    <div class="page-header side">
+                        <h2 class="page-title">고객지원센터</h2>
+                        <div class="location">
+                            <a href="/" class="home"
+                                ><span class="hidden">HOME</span></a
+                            >
+                            <a href="/">고객센터</a>
+                            <strong>고객지원센터 </strong>
+                        </div>
+                    </div>
+                </div>
+                <section class="line-banner-section">
+                    <div class="content-box">
+                        <div class="line-banner">
+                            <i class="ico-customer-title"></i>
+                            <h2 class="title">
+                                언제 어디서나 간편한<br />셀프서비스를
+                                이용해보세요😀
+                            </h2>
+                            <div class="bg-img"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="quick-search-section">
+                    <div class="content-box">
+                        <div class="quick-search">
+                            <ul>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060206')"
+                                        >1:1 문의</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060305')"
+                                        >자주 묻는 질문</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060304')"
+                                        >취소/교환/환불</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060203')"
+                                        >배송문의</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060503')"
+                                        >주문 결제</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="menuInfo.go('060105')"
+                                        >회원 서비스</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="search-box">
+                            <h2 class="search-box-title">
+                                고객님의 궁금증을 검색해보세요
+                            </h2>
+                            <div class="search-box-input">
+                                <input
+                                    type="text"
+                                    id="schKey"
+                                    placeholder="궁금한 사항을 입력해주세요"
+                                />
+                                <button
+                                    type="button"
+                                    title="검색"
+                                    class="btn-search"
+                                >
+                                    <i class="ico-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="faq-section">
+                    <div class="content-box">
+                        <div class="section-title">
+                            <h2 class="title">자주 묻는 질문</h2>
+                            <a href="/customer/faq/list" class="more"
+                                >전체보기 <i class="ico-arrow4"></i
+                            ></a>
+                        </div>
+                        <div class="faq-accordion" id="faqListHtml">
+                            <ul id="faqList">
+                                <li class="selected">
+                                    <div class="question">
+                                        어떻게 쓰레기를 수거하나요?
+                                    </div>
+                                    <div class="answer" tabindex="2">
+                                        <p>
+                                            비워드림은 사용자가 설정한 날짜와
+                                            시간에 맞춰 집 앞에 두어진 쓰레기를
+                                            수거합니다. <br />사용자는 매번
+                                            정해진 날에 쓰레기를 집 앞에 놓기만
+                                            하면 되고, 나머지 처리는 비워드림
+                                            팀이 알아서 진행합니다.
+                                            <br /><br />수거 과정은 빠르고
+                                            효율적이며, 사용자는 쓰레기를
+                                            처리하는 번거로움에서 완전히 해방될
+                                            수 있습니다. <br />또한, 수거 과정은
+                                            모두 비대면으로 이루어져 더욱
+                                            편리하고 안전합니다.<br /><br />
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="question">
+                                        분리수거를 해야 하나요?
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="3"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        <p>
+                                            아니요, 비워드림을 이용하는 고객은
+                                            직접 분리수거를 할 필요가
+                                            없습니다.<br />
+                                            비워드림 팀이 수거한 쓰레기는
+                                            자체적으로 분리하여 재활용 가능한
+                                            재료와 그렇지 않은 재료로 나누어
+                                            처리합니다. <br /><br />이는
+                                            사용자에게 시간과 노력을 절약해 줄
+                                            뿐만 아니라, 환경 보호에도 기여하는
+                                            방식입니다.<br />
+                                            저희는 엄격한 분리수거 절차를 통해
+                                            환경에 미치는 영향을 최소화하고
+                                            있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="question">
+                                        포인트는 어디에서 사용할 수 있나요?
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="4"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        적립된 포인트는 비워드림 웹사이트의 전용
+                                        상점에서 사용할 수 있습니다.
+                                        <br />상점에는 일상생활에서 유용하게
+                                        사용할 수 있는 다양한 제품들이 마련되어
+                                        있습니다. <br /><br />예를 들어,
+                                        친환경적인 생활용품, 에코백, 재활용
+                                        제품, 식품 등 다양한 카테고리의 상품들이
+                                        준비되어 있으며, <br />사용자들은
+                                        자신에게 필요한 제품을 포인트로 구매할
+                                        수 있습니다. <br />또한, 정기적으로
+                                        새로운 상품이 추가되므로, 상점을 자주
+                                        방문해 보시는 것도 좋습니다.
+                                        <br />
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="question">
+                                        분리수거를 포함한 쓰레기 처리는 어떻게
+                                        이루어지나요?
+                                    </div>
+                                    <div
+                                        class="answer"
+                                        tabindex="5"
+                                        style="overflow: hidden; outline: none"
+                                    >
+                                        비워드림은 환경 보호에 대한 책임감을
+                                        가지고, 수거된 쓰레기를 철저하게
+                                        분리하여 처리합니다. <br /><br />수거된
+                                        쓰레기는 재활용 가능한 자원과 그렇지
+                                        않은 자원으로 분리되어, 각각의 처리
+                                        공정을 거칩니다. <br /><br />재활용
+                                        가능한 자원은 지정된 시설로 보내져
+                                        새로운 자원으로 재활용되며, 그 외의
+                                        쓰레기는 안전하게 처리됩니다.
+                                        <br />저희는 항상 최신의 분리수거 기준을
+                                        따르고 있으며, 환경에 미치는 영향을
+                                        최소화하기 위해 지속적으로 노력하고
+                                        있습니다.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="cs-section">
+                    <div class="content-box">
+                        <div class="quick-link">
+                            <ul>
+                                <li>
+                                    <a href="/customer/inquiry/form">
+                                        <i class="ico-quick05"></i>
+                                        <div class="content">
+                                            <h3 class="title">1:1 문의하기</h3>
+                                            <p class="text">
+                                                궁금한 사항을 남겨 주시면
+                                                <br />답변 드립니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/customer/formDownload">
+                                        <i class="form-icon"></i>
+                                        <div class="content">
+                                            <h3 class="title">
+                                                각종서류 다운로드
+                                            </h3>
+                                            <p class="text">
+                                                신규 및 변경신청서 등
+                                                <br />받으실 수 있습니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/prepaidPhone/chargeInfo/list">
+                                        <i class="ico-pay-now"></i>
+                                        <div class="content">
+                                            <h3 class="title">구독서비스</h3>
+                                            <p class="text">
+                                                요금충전 및 잔액 등
+                                                <br />안내되어 있습니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/user/guide">
+                                        <i class="ico-shield"></i>
+                                        <div class="content">
+                                            <h3 class="title">
+                                                이용자피해예방가이드
+                                            </h3>
+                                            <p class="text">
+                                                통신서비스 피해 예방을
+                                                <br />위한 안내입니다.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <aside id="quick" class="quick up" style="bottom: 20px">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="btn-top">
+                        <i class="ico-top"></i>
+                        <span class="hidden">상단으로 이동</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </body>
+    <script src="/static/js/inquiry/inquiry.js"></script>
+</html>
