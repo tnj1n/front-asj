@@ -7,6 +7,7 @@
             rel="stylesheet"
             href="/static/css/mobile-home/mobile-home-body.css"
         />
+        <link rel="stylesheet" href="/static/css/common/common.css" />
         <link
             rel="shortcut icon"
             href="https://www.freet.co.kr/static/assets/favicons/favicon.png"
@@ -30,22 +31,23 @@
                                 <li class="grid-item-l">
                                     <a>
                                         <i class="ico-main-search"></i>
-                                        <p class="title">요금제 찾기</p>
+                                        <p class="title">수거 요청</p>
                                     </a>
                                 </li>
                                 <li class="grid-item-m">
                                     <a>
                                         <i class="ico-main-event"></i>
-                                        <p class="title">이벤트</p>
-                                    </a>
-                                </li>
-                                <li class="grid-item-m">
-                                    <a>
-                                        <i class="ico-main-self"></i>
-                                        <p class="title">유심(셀프) 개통</p>
+                                        <p class="title">나의 수거 목록</p>
                                     </a>
                                 </li>
                                 <li class="grid-item-s">
+                                    <a>
+                                        <i class="ico-main-self"></i>
+                                        <p class="title">1:1 문의</p>
+                                    </a>
+                                </li>
+                                <!-- 메뉴(유심 구매, 휴대폰, 고객지원) -->
+                                <!-- <li class="grid-item-s">
                                     <a>
                                         <i class="ico-main-uslm"></i>
                                         <p class="title">유심 구매</p>
@@ -62,7 +64,7 @@
                                         <i class="ico-main-cs"></i>
                                         <p class="title">고객지원</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <div class="mt-2">
@@ -215,7 +217,7 @@
                                             <li class="requestList2">
                                                 <div class="plan-top">
                                                     <span
-                                                        class="flag-type status-light"
+                                                        class="flag-type status-premium"
                                                     >
                                                         프리미엄
                                                     </span>
@@ -246,7 +248,7 @@
                                             <li class="requestList3">
                                                 <div class="plan-top">
                                                     <span
-                                                        class="flag-type status-light"
+                                                        class="flag-type status-standard"
                                                     >
                                                         스탠다드
                                                     </span>
@@ -280,7 +282,7 @@
                                             <li class="requestList4">
                                                 <div class="plan-top">
                                                     <span
-                                                        class="flag-type status-light"
+                                                        class="flag-type status-standard"
                                                     >
                                                         스탠다드
                                                     </span>
@@ -666,6 +668,17 @@
                     </article>
                 </main>
             </div>
+
+            <aside id="quick" class="quick up" style="bottom: 558.082px">
+                <ul>
+                    <li>
+                        <a href="" class="btn-top"
+                            ><i class="ico-top"></i
+                            ><span class="hidden">상단으로 이동</span></a
+                        >
+                    </li>
+                </ul>
+            </aside>
         </div>
     </body>
     <script src="/static/js/mobile-home/mobile-home-body.js"></script>
