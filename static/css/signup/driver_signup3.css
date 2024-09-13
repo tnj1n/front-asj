@@ -1,0 +1,1326 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(/static/css/fonts/SUIT-Regular.woff2)format("woff2"),url(/static/css/fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(/static/css/fonts/SUIT-SemiBold.woff2)format("woff2"),url(/static/css/fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(/static/css/fonts/SUIT-Bold.woff2)format("woff2"),url(/static/css/fonts/SUIT-Bold.otf)format("opentype")
+}
+
+body {
+    background-color: #fff;
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    color: #111;
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    vertical-align: baseline;
+    word-break: break-all;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    #driver-signup3-content, #driver-signup3-content.driver-signup3-bottom {
+        padding-bottom: 120px;
+    }
+}
+
+#driver-signup3-content {
+    padding: 30px 0 80px;
+}
+
+section {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.driver-signup3-inner {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-pc-only {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-page-header {
+        position: inherit;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+.driver-signup3-page-header {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-location {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #343434;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-location .driver-signup3-home, .driver-signup3-location a:after {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background-image: url("/static/images/driver_signup3/driver_signup3_home.png");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-location a {
+        position: relative;
+        margin-right: 25px;
+    }
+}
+
+.driver-signup3-location a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.driver-signup3-hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-location a:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url("/static/images/driver_signup3/driver_signup3_arrow.png");
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -18px;
+        top: 50%;
+        margin-top: -5px;
+        display: inline-block;
+        vertical-align: middle;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.driver-signup3-location a::after {
+    box-sizing: border-box;
+}
+
+.driver-signup3-location strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-page-header .driver-signup3-page-title {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+}
+
+.driver-signup3-page-header .driver-signup3-page-title {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap {
+        max-width: 852px;
+        margin: 0 auto 60px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol {
+        border-radius: 3px;
+    }
+}
+
+.driver-signup3-step-wrap ol {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f4f4f4;
+    align-items: center;
+    list-style: none;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done {
+        color: #111;
+        display: inline-flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li:not(:last-child) {
+        padding-right: 39px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li {
+        align-items: center;
+        font-size: 15px;
+    }
+}
+
+.driver-signup3-step-wrap ol li {
+    position: relative;
+    padding-bottom: 11px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done:before {
+        background-image: url("/static/images/driver_signup3/driver_signup3_arrow2.png");
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li:not(:last-child):before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -4px;
+        width: 12px;
+        height: 12px;
+        margin-top: -6px;
+    }
+}
+
+.driver-signup3-step-wrap ol li:not(:last-child)::before {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done .driver-signup3-num {
+        border-color: #f0543a;
+        background-color: #fff;
+        font-size: 0;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li .driver-signup3-num {
+        width: 22px;
+        border-radius: 100%;
+    }
+}
+
+.driver-signup3-step-wrap ol li .driver-signup3-num {
+    display: inline-flex;
+    height: 22px;
+    border: 2px solid #c3c3c9;
+    background: #c3c3c9;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+.driver-signup3-step-wrap ol li .driver-signup3-num {
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done .driver-signup3-num:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-image: url("/static/images/driver_signup3/driver_signup3_check.png");
+        background-size: cover;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-done .driver-signup3-num::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done .driver-signup3-num:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-image: url("/static/images/driver_signup3/driver_signup3_check.png");
+        background-size: cover;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-done .driver-signup3-num::after  {
+    box-sizing: border-box;
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-done strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #f0543a;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-done::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done:not(:first-child):after {
+        width: auto;
+        left: -100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-done:after {
+        content: "";
+        height: 2px;
+        background: #f0543a;
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-done::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-active {
+        display: inline-flex;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-active {
+    color: #f0543a;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li {
+        font-size: 15px;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-active .driver-signup3-num {
+    border-color: #f0543a;
+    background: #f0543a;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li .driver-signup3-num {
+        font-size: 13px;
+        width: 22px;
+        border-radius: 100%;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-active strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-active:not(:first-child):after {
+        width: auto;
+        left: -100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-step-wrap ol li.driver-signup3-active:after {
+        content: "";
+        height: 2px;
+        background: #f0543a;
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+    }
+}
+
+.driver-signup3-step-wrap ol li.driver-signup3-active::after {
+    box-sizing: border-box;
+}
+
+.driver-signup3-step-wrap .driver-signup3-bar {
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #f0543a;
+}
+
+.driver-signup3-step-wrap {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-section-join .driver-signup3-join-wrap {
+        max-width: 852px;
+        margin: 0 auto;
+    }
+}
+
+.driver-signup3-section-join .driver-signup3-join-wrap {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-title-wrap {
+        margin-bottom: 49px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-title-wrap .driver-signup3-title-type {
+        font-size: 24px;
+        padding-right: 0;
+    }
+}
+
+.driver-signup3-title-wrap .driver-signup3-title-type {
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-section-join .driver-signup3-join-wrap .driver-signup3-form-box {
+        width: 504px;
+        margin: 0 auto;
+    }
+}
+
+.driver-signup3-section-join .driver-signup3-join-wrap .driver-signup3-form-box .driver-signup3-box-type2 {
+    margin-bottom: 30px;
+}
+
+.driver-signup3-box-type2 {
+    background: 0 0;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e3e3e3;
+}
+
+.driver-signup3-box-type2 dl {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-box-type2 dl dt {
+        width: 130px;
+    }
+}
+
+.driver-signup3-box-type2 dl dt {
+    color: #94949a;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-box-type2 dl dd {
+        width: calc(100% - 130px);
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-box-type2 dl+dl {
+        margin-top: 10px;
+    }
+}
+
+.driver-signup3-form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-form-item input {
+        padding-top: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    input[type="text"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+input[type="text"] {
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+.driver-signup3-form-item input {
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-form-item label.driver-signup3-title {
+        font-size: 18px;
+        top: 21px;
+    }
+}
+
+.driver-signup3-form-item label.driver-signup3-title {
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+    color: #94949a;
+}
+
+@media (min-width: 1200px) {
+    input[type="password"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+input[type="password"] {
+        padding: 0 20px;
+        border: 1px solid #efefef;
+        background: #f4f4f4;
+        color: #111;
+        border-radius: 12px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-form-item .driver-signup3-ico-eye {
+        top: 20px;
+        right: 15px;
+    }
+}
+
+.driver-signup3-form-item .driver-signup3-ico-eye {
+    position: absolute;
+    cursor: pointer;
+}
+
+.driver-signup3-ico-eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url("/static/images/driver_signup3/driver_signup3_ico-eye.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-section-join .driver-signup3-join-wrap .driver-signup3-form-box .driver-signup3-mt {
+        margin-top: 50px;
+    }
+}
+
+.driver-signup3-mt {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-btn-fixed-wrap {
+        position: inherit;
+    }
+}
+
+.driver-signup3-btn-fixed-wrap {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-btn-fixed-wrap .driver-signup3-btn-wrap {
+        margin-top: 50px;
+        padding: 0;
+    }
+}
+
+.driver-signup3-btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.driver-signup3-disabled.driver-signup3-btn-type {
+    pointer-events: none;
+    color: #fff;
+    opacity: .4;
+}
+
+.driver-signup3-btn-wrap [class^=driver-signup3-btn-type] {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-btn-type {
+        max-width: 200px;
+        height: 64px;
+        font-size: 20px;
+    }
+}
+
+.driver-signup3-btn-type {
+    background: #f0543a;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+    text-decoration: none;
+}
+
+.driver-signup3-ico-eye-on {
+    background-image: url("/static/images/driver_signup3/driver_signup3_ico-eye-on.png");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+input[type="text"]:focus {
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-form-item input:focus~.driver-signup3-title {
+        font-size: 13px;
+    }
+}
+
+.driver-signup3-form-item input:focus~.driver-signup3-title {
+    top: 9px;
+    color: #f0543a;
+}
+
+input[type="password"]:focus {
+    color: #111;
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+.driver-signup3-content-box {
+    margin-top: 0;
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box {
+        width: 1026px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-form-flex-wrap {
+        display: flex;
+    }
+}
+
+.driver-signup3-content-box .driver-signup3-form-flex-wrap {
+    margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-form-flex-wrap .driver-signup3-select-type {
+        width: 243px;
+    }
+}
+
+.driver-signup3-content-box .driver-signup3-form-flex-wrap .driver-signup3-select-type {
+    display: inline-block;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-type {
+        height: 64px;
+    }
+}
+
+.driver-signup3-select-type {
+    position: relative;
+}
+
+#driver-signup3-bank {
+    display: none;
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+    border-radius: 0;
+    border: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-type .driver-signup3-nice-select {
+        font-size: 18px;
+        height: 64px;
+        line-height: 64px;
+    }
+}
+
+.driver-signup3-select-type .driver-signup3-nice-select {
+    background: #f4f4f4;
+    border-radius: 12px;
+}
+
+.driver-signup3-nice-select {
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    border: 1px solid #efefef;
+    color: #94949a;
+    padding: 0 20px;
+    outline: 0;
+    position: relative;
+    text-align: left !important;
+    transition: all .2s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-type .driver-signup3-nice-select .driver-signup3-nice-select-list {
+        max-height: 265px;
+    }
+}
+
+.driver-signup3-select-type .driver-signup3-nice-select .driver-signup3-nice-select-list {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
+    border: solid 1px #e3e3e3;
+}
+
+.driver-signup3-nice-select .driver-signup3-nice-select-list {
+    background-color: #fff;
+    box-sizing: content-box;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    transform-origin: 50% 0;
+    transform: translateY(-21px);
+    transition: all .2s cubic-bezier(.5,0,0,1.25), opacity .15s ease-out;
+    z-index: 9;
+    width: 100%;
+    overflow-y: auto;
+    font-weight: 600;
+    list-style: none;
+}
+
+.driver-signup3-select-type .driver-signup3-nice-select .driver-signup3-nice-select-list-option-choice.driver-signup3-nice-select-list-focus, .driver-signup3-select-type .driver-signup3-nice-select .driver-signup3-nice-select-list-option.driver-signup3-nice-select-list-selected.driver-signup3-nice-select-list-focus {
+    color: #111;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-type .driver-signup3-nice-select .driver-signup3-nice-select-list-option-choice {
+        font-size: 18px;
+        line-height: 40px;
+        min-height: 40px;
+    }
+}
+
+.driver-signup3-nice-select .driver-signup3-nice-select-list-option-choice.driver-signup3-nice-select-list-disabled {
+    background-color: transparent;
+    cursor: default;
+}
+
+.driver-signup3-nice-select .driver-signup3-nice-select-list-option-choice {
+    font-weight: 600;
+    list-style: none;
+    outline: 0;
+    padding: 0 20px;
+    text-align: left;
+    transition: all .2s;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-type .driver-signup3-nice-select .driver-signup3-nice-select-list-option {
+        font-size: 18px;
+        line-height: 40px;
+        min-height: 40px;
+    }
+}
+
+.driver-signup3-nice-select .driver-signup3-nice-select-list-option {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    outline: 0;
+    padding: 0 20px;
+    text-align: left;
+    transition: all .2s;
+}
+
+.driver-signup3-nice-select:after {
+    width: 20px;
+    height: 20px;
+    background-image: url("/static/images/driver_signup3/driver_signup3_arrow8.png")
+}
+
+::after {
+    box-sizing: border-box;
+}
+
+.driver-signup3-nice-select:after {
+    content: "";
+    display: block;
+    margin-top: -8px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transition: all .15s ease-in-out;
+}
+
+.driver-signup3-select-type .driver-signup3-nice-select.open {
+    background-color: #ffebe8;
+    border-color: #ff8c79;
+}
+
+.driver-signup3-select-type .driver-signup3-nice-select.open .driver-signup3-nice-select-list {
+    transform: translateY(8px);
+    max-height: 240px;
+    padding: 10px 0;
+    z-index: 11;
+}
+
+.driver-signup3-nice-select.open .driver-signup3-nice-select-list {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.driver-signup3-nice-select.open:after {
+    transform: rotate(-180deg);
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-depositor input[type="text"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+.driver-signup3-depositor input[type="text"] {
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+    appearance: none;
+    width: 243px;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-depositor {
+        margin-left: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-account-number input[type="text"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+.driver-signup3-account-number input[type="text"] {
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+    appearance: none;
+    width: 504px;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-form-flex-wrap .driver-signup3-account-number {
+        width: calc(100% - 522px);
+        margin-top: 0;
+        margin-left: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-account-number {
+        margin: 0 auto;
+    }
+}
+
+.driver-signup3-account-number {
+    position: relative;
+}
+
+.driver-signup3-enter-the-account {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-enter-the-account {
+        position: inherit;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+/* 계좌번호를 입력해주세요 태그 입력 */
+.driver-signup3-enter-the-account .driver-signup3-enter-the-account-title {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-enter-the-account .driver-signup3-enter-the-account-title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+}
+
+.driver-signup3-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+
+.driver-signup3-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.driver-signup3-collect-guide {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-collect-guide {
+        position: inherit;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+.driver-signup3-collect-guide .driver-signup3-collect-guide-title {
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-collect-guide .driver-signup3-collect-guide-title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+}
+
+.driver-signup3-depositor input[type="text"]:focus {
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+.driver-signup3-account-number input[type="text"]:focus {
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-collect-region-choice {
+        display: flex;
+    }
+}
+
+.driver-signup3-content-box .driver-signup3-collect-region-choice {
+    margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-collect-region-choice .driver-signup3-select-region {
+        width: 243px;
+    }
+}
+
+.driver-signup3-content-box .driver-signup3-collect-region-choice .driver-signup3-select-region {
+    display: inline-block;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-region {
+        height: 64px;
+    }
+}
+
+.driver-signup3-select-region {
+    position: relative;
+}
+
+#driver-signup3-sido {
+    display: none;
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+    border-radius: 0;
+    border: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-region .driver-signup3-region-nice-select {
+        font-size: 18px;
+        height: 64px;
+        line-height: 64px;
+    }
+}
+
+.driver-signup3-select-region .driver-signup3-region-nice-select {
+    background: #f4f4f4;
+    border-radius: 12px;
+}
+
+.driver-signup3-region-nice-select {
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    border: 1px solid #efefef;
+    color: #94949a;
+    padding: 0 20px;
+    outline: 0;
+    position: relative;
+    text-align: left !important;
+    transition: all .2s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-region .driver-signup3-region-nice-select .driver-signup3-current-list {
+        max-height: 265px;
+    }
+}
+
+.driver-signup3-select-region .driver-signup3-region-nice-select .driver-signup3-current-list {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1);
+    border: solid 1px #e3e3e3;
+}
+
+.driver-signup3-region-nice-select .driver-signup3-current-list {
+    background-color: #fff;
+    box-sizing: content-box;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    transform-origin: 50% 0;
+    transform: translateY(-21px);
+    transition: all .2s cubic-bezier(.5,0,0,1.25), opacity .15s ease-out;
+    z-index: 9;
+    width: 100%;
+    overflow-y: auto;
+    font-weight: 600;
+}
+
+.driver-signup3-current-list {
+    list-style: none;
+}
+
+.driver-signup3-select-region .driver-signup3-region-nice-select .option.focus, .driver-signup3-select-region .driver-signup3-region-nice-select .option.selected.focus {
+    color: #111;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-select-region .driver-signup3-region-nice-select .option {
+        font-size: 18px;
+        line-height: 40px;
+        min-height: 40px;
+    }
+}
+
+.driver-signup3-region-nice-select .option.disabled {
+    background-color: transparent;
+    cursor: default;
+}
+
+.driver-signup3-region-nice-select .option {
+    font-weight: 600;
+    list-style: none;
+    outline: 0;
+    padding: 0 20px;
+    text-align: left;
+    transition: all .2s;
+}
+
+
+.driver-signup3-region-nice-select .option[data-value="서울"] {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    outline: 0;
+    padding: 0 20px;
+    text-align: left;
+    transition: all .2s;
+}
+
+.driver-signup3-region-nice-select::after {
+    width: 20px;
+    height: 20px;
+    background-image: url("/static/images/driver_signup3/driver_signup3_arrow8.png");
+    content: "";
+    display: block;
+    margin-top: -8px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transition: all .15s ease-in-out;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-collect-region-choice .driver-signup3-select-region+.driver-signup3-select-region {
+        margin-left: 18px;
+    }
+}
+
+#driver-signup3-gugun {
+    display: none;
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+    border-radius: 0;
+    border: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.driver-signup3-select-region .driver-signup3-gugun-title {
+    display: none;
+}
+
+.driver-signup3-region-nice-select .option[data-value="시/군/구"] {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    outline: 0;
+    padding: 0 20px;
+    text-align: left;
+    transition: all .2s;
+}
+
+/* select-type2 = driver-signup3-select-region
+section-customer = driver-signup3-content-box
+form-search = driver-singup3-collect-region-choice-guide
+form-flex-wrap2 = driver-signup3-collect-region-choice */
+
+@media (min-width: 1200px) {
+    .driver-signup3-content-box .driver-signup3-collect-region-choice .driver-singup3-collect-region-choice-guide {
+        width: calc(100% - 522px);
+        margin-top: 0;
+        margin-left: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .driver-singup3-collect-region-choice-guide {
+        margin: 0 auto;
+    }
+}
+
+.driver-singup3-collect-region-choice-guide {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .driver-singup3-collect-region-choice-guide input[type="text"] {
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+.driver-singup3-collect-region-choice-guide input[type="text"] {
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    border-radius: 12px;
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+    color: #94949a;
+}
+
+.driver-signup3-region-nice-select.open:after {
+    transform: rotate(-180deg);
+}
+
+/* 드롭다운이 열릴 때 배경색과 테두리 색 변경 */
+.driver-signup3-region-nice-select.open {
+    background-color: #ffebe8; /* 배경색 */
+    border-color: #ff8c79;     /* 테두리 색 */
+}
+
+/* 드롭다운이 열려 있을 때 화살표 아이콘 회전 */
+.driver-signup3-region-nice-select.open:after {
+    transform: rotate(-180deg); /* 아이콘 회전 */
+    border-color: #ff8c79;     /* 화살표의 색상 */
+}
+
+.driver-signup3-form-flex-wrap {
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center;     /* 수직 중앙 정렬 */
+}
+
+.driver-signup3-account-number {
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center;     /* 수직 중앙 정렬 */
+    padding-top: 30px;
+}
+
+.driver-signup3-collect-region-choice {
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center;     /* 수직 중앙 정렬 */
+}
+
+.business-overview-image-box {
+    width: 100%; /* 부모의 크기에 맞춰 이미지 크기 조정 */
+    height: 100%; /* 원하는 높이 설정 */
+    background-size: cover; /* 비율을 유지하며 div를 꽉 채우도록 설정 */
+    background-position: center; /* 이미지가 중앙에 위치 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin: 10px;
+}

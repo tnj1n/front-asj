@@ -1,0 +1,638 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(/static/css/fonts/SUIT-Regular.woff2)format("woff2"),url(/static/css/fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(/static/css/fonts/SUIT-SemiBold.woff2)format("woff2"),url(/static/css/fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+body {
+    background-color: #fff;
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    font-size: 15px;
+    color: #111;
+}
+
+* {
+    box-sizing: border-box;
+    vertical-align: baseline;
+    word-break: break-all;
+    margin: 0;
+    padding: 0;
+}
+
+#mobile-content {
+    padding: 30px 0 80px;
+}
+
+section {
+    display: block;
+}
+
+.mobile-inner {
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+}
+
+
+.mobile-section-login .mobile-page-header {
+    display: block;
+}
+
+.mobile-page-header .t-c {
+    padding-right: 0;
+}
+
+.t-c {
+    text-align: center !important;
+}
+
+.mobile-page-header {
+    margin-bottom: 40px;
+}
+
+.mobile-location {
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mobile-hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.mobile-page-header .mobile-page-title.v2 {
+    font-size: 26px;
+}
+
+.mobile-page-header .mobile-page-title {
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.mobile-page-header .mobile-page-title~.mobile-sub-title {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #343434;
+}
+
+
+.mobile-section-login .mobile-login-wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mobile-form-item:first-child {
+    margin-top: 0;
+}
+
+.mobile-form-item {
+    position: relative;
+    margin-top: 12px;
+}
+
+.mobile-form-item input {
+    padding-top: 15px;
+}
+
+input[type="text"] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+input {
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    outline: 0;
+    font-family: "SUIT", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+input[type="text"]:focus {
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+    color: #111;
+}
+
+.mobile-form-item label.mobile-title {
+    position: absolute;
+    left: 20px;
+    top: 19px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #94949a;
+}
+
+.mobile-form-item input:focus~.mobile-title {
+    font-size: 11px;
+    top: 9px;
+    color: #f0543a;
+    position: absolute;
+    left: 20px;
+    display: block;
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+input#password {
+    padding-right: 40px !important;
+}
+
+input[type="password"] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+input#password {
+    padding-right: 40px !important;
+}
+
+input[type="password"] {
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
+    color: #111;
+    border-radius: 12px;
+}
+
+input[type="password"]:focus {
+    color: #111;
+    border-color: #ffc2b8;
+    background: #ffebe8;
+    outline: 0;
+}
+
+.mobile-form-item .mobile-ico-eye {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.mobile-ico-eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url("/static/images/web_login/ico-eye.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mobile-ico-eye-on {
+    background-image: url("/static/images/web_login/ico-eye-on.png");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+i {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-btn-wrap-login {
+    margin-top: 30px;
+}
+
+.mobile-btn-wrap-login {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-btn-wrap-login .mobile-btn-type-login {
+    width: 100%;
+}
+
+.mobile-btn-type-login {
+    background: #e2391d;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+    height: 56px;
+    font-size: 16px;
+}
+
+.mobile-btn-type-login a {
+    text-decoration: none;
+}
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-form-bottom {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-check-box-1 {
+    margin-left: 0;
+}
+
+.mobile-check-box {
+    display: inline-block;
+    text-align: left;
+}
+
+.mobile-check-box-1 input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+input, input[type=checkbox] {
+    appearance: none;
+}
+
+
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-form-bottom .mobile-check-box-1 label {
+    font-size: 14px;
+}
+
+.mobile-check-box-1 .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.mobile-check-box-1 label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.mobile-check-box-1 input[type="checkbox"]+.checkbox:before {
+    transform: translate(6px, 9px) rotate(45deg);
+    transition-delay: 100ms;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    transform-origin: left;
+    transition: all 150ms;
+}
+
+.mobile-check-box-1 input[type=checkbox]+.checkbox:after {
+    transform: translate(10px, 14px) rotate(-53deg);
+    transition-delay: 0ms;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    border-radius: 15px;
+    transform-origin: left;
+    transition: all 150ms;
+}
+
+.mobile-check-box-1 input[type=checkbox]:checked + .checkbox {
+    background: #f0543a;
+    border-color: #f0543a;
+}
+
+.mobile-check-box-1 input[type=checkbox]:checked + .checkbox:before {
+    width: 7px;
+}
+
+.mobile-check-box-1 input[type=checkbox]:checked + .checkbox:after {
+    width: 10px;
+}
+
+.mobile-check-box-2 {
+    display: none;
+    text-align: left;
+}
+
+.mobile-check-box-2+.mobile-check-box-2 {
+    margin-left: 30px;
+}
+
+.mobile-check-box-2 input[type="checkbox"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    appearance: none;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    border: 0;
+    font-family: "SUIT", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: inherit;
+}
+
+.mobile-check-box-2 .checkbox {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid #94949a;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.mobile-check-box-2 label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.mobile-list-type-1 {
+    font-size: 0;
+}
+
+.mobile-form-bottom ul {
+    list-style: none;
+}
+
+.mobile-list-type-1 li {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-form-bottom .mobile-list-type-1 li a {
+    font-weight: 600;
+    color: #94949a;
+    text-decoration: none;
+}
+
+.mobile-list-type-1 li+li {
+    padding-left: 9px;
+    margin-left: 9px;
+}
+
+.mobile-list-type-1 li+li:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    left: 0;
+    width: 1px;
+    height: 13px;
+    background: #e3e3e3;
+}
+
+.mobile-list-type-1 li:last-child::before {
+    box-sizing: border-box;
+}
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-form-bottom .mobile-list-type-1 li a {
+    font-weight: 600;
+    color: #94949a;
+    text-decoration: none;
+}
+
+.mobile-form-bottom-mobilewrap {
+    display: none;
+    margin-top: 30px;
+}
+
+.mobile-form-bottom-mobilewrap .mobile-list-type-2 {
+    font-size: 0;
+    list-style: none;
+}
+
+.mobile-list-type-2 li {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-form-bottom-mobilewrap .mobile-list-type-2 li a {
+    font-weight: 600;
+    color: #94949a;
+    text-decoration: none;
+}
+
+.mobile-list-type-2 li+li {
+    padding-left: 9px;
+    margin-left: 9px;
+}
+
+.mobile-list-type-2 li:last-child {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mobile-section-login .mobile-login-wrap .mobile-form-box .mobile-form-bottom-mobilewrap .mobile-list-type-2 li:last-child a {
+    font-weight: 600;
+    color: #94949a;
+    text-decoration: none;
+}
+
+.mobile-btn-wrap-join {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-btn-wrap-join .mobile-btn-type-join {
+    width: 100%;
+}
+
+.mobile-btn-type-join {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-weight: 600;
+}
+
+.mobile-btn-type-join a {
+    text-decoration: none;
+}
+
+.mobile-btn-type-join i {
+    margin-left: 4px;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.mobile-ico-plus {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url("/static/images/web_login/loginplus.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mobile-pop-layer-1 {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-pop-layer-1 .mobile-pop-dim {
+    display: block;
+}
+
+.mobile-pop-dim {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, .7);
+}
+
+.mobile-pop-layer-1 .mobile-pop-wrap {
+    position: relative;
+    width: calc(100% - 80px);
+        position: relative;
+        margin: 0 auto;
+        width: 360px;
+}
+
+.mobile-pop-wrap {
+    display: flex;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 360px;
+        height: 100%;
+}
+
+.mobile-pop-layer-1 .mobile-pop-content {
+    text-align: center;
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 85vh;
+    width: 350px; /* 너비 고정 */
+    height: 150px; /* 높이 고정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.mobile-pop-layer-1 .mobile-pop-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0; /* 여백 제거 */
+    white-space: normal; /* 줄바꿈 허용 */
+    word-break: break-word; /* 단어가 너무 길 경우 줄바꿈 처리 */
+}
+
+.mobile-pop-layer-1 .mobile-pop-btn-wrap {
+    margin-top: 20px;
+}
+
+.mobile-pop-btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-pop-layer-1 .mobile-pop-btn-wrap .mobile-pop-btn-type {
+    height: 42px;
+    font-size: 13px;
+    width: 100px;
+}
+
+.mobile-pop-btn-type {
+    background: #f0543a;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background .2s ease;
+}
+
+.mobile-pop-btn-wrap a {
+    text-decoration: none;
+}
+
+
+
+

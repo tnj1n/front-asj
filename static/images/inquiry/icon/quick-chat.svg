@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <circle fill="#321E1E" cx="16" cy="16" r="16"/>
+        <path d="m3.915 25.83-1.914 5.426L8.172 29.6l-4.257-3.77z" fill="#321E1E"/>
+        <text font-family="SUIT-ExtraBold, SUIT" font-size="11" font-weight="700" letter-spacing="-.6" fill="#FFD804">
+                        <tspan x="6.068" y="20">Talk</tspan>
+                    </text>
+    </g>
+</svg>

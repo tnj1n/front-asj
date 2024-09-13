@@ -1,0 +1,707 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "SUIT";
+    font-weight: 300;
+    src: local("SUIT-Light"),url(../fonts/SUIT-Light.woff2)format("woff2"),url(../fonts/SUIT-Light.otf)format("wopentypeoff")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 400;
+    src: local("SUIT-Regular"),url(../fonts/SUIT-Regular.woff2)format("woff2"),url(../fonts/SUIT-Regular.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 600;
+    src: local("SUIT-SemiBold"),url(../fonts/SUIT-SemiBold.woff2)format("woff2"),url(../fonts/SUIT-SemiBold.otf)format("opentype")
+}
+
+@font-face {
+    font-family: "SUIT";
+    font-weight: 700;
+    src: local("SUIT-Bold"),url(../fonts/SUIT-Bold.woff2)format("woff2"),url(../fonts/SUIT-Bold.otf)format("opentype")
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    font-display: swap;
+    src: local("Pretendard Black"),url(../fonts/Pretendard-Black.woff2)format("woff2"),url(../fonts/Pretendard-Black.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 800;
+    font-display: swap;
+    src: local("Pretendard ExtraBold"),url(../fonts/Pretendard-ExtraBold.woff2)format("woff2"),url(../fonts/Pretendard-ExtraBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Pretendard Bold"),url(../fonts/Pretendard-Bold.woff2)format("woff2"),url(../fonts/Pretendard-Bold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local("Pretendard SemiBold"),url(../fonts/Pretendard-SemiBold.woff2)format("woff2"),url(../fonts/Pretendard-SemiBold.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: swap;
+    src: local("Pretendard Medium"),url(../fonts/Pretendard-Medium.woff2)format("woff2"),url(../fonts/Pretendard-Medium.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local("Pretendard Regular"),url(../fonts/Pretendard-Regular.woff2)format("woff2"),url(../fonts/Pretendard-Regular.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 300;
+    font-display: swap;
+    src: local("Pretendard Light"),url(../fonts/Pretendard-Light.woff2)format("woff2"),url(../fonts/Pretendard-Light.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 200;
+    font-display: swap;
+    src: local("Pretendard ExtraLight"),url(../fonts/Pretendard-ExtraLight.woff2)format("woff2"),url(../fonts/Pretendard-ExtraLight.woff)format("woff")
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 100;
+    font-display: swap;
+    src: local("Pretendard Thin"),url(../fonts/Pretendard-Thin.woff2)format("woff2"),url(../fonts/Pretendard-Thin.woff)format("woff")
+}
+
+body {
+    background-color: #fff;
+}
+
+body {
+    line-height: 1.25;
+    font-family: "SUIT", sans-serif;
+    font-size: 16px;
+    color: #111;
+    min-width: 1200px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    word-break: break-all;
+
+}
+body {
+    display: block;
+}
+strong {
+    font-weight: 600;
+}
+
+#content {
+    padding: 30px 0 120px;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.page-header {
+    position: inherit;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 40px;
+}
+
+.page-header.side {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.page-header.side .page-title {
+    font-size: 28px;
+}
+
+.page-header .page-title {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.page-header.side .location {
+    margin-bottom: 0;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #343434;
+    margin-bottom: 20px;
+}
+
+.location .home {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/home.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.location a {
+    position: relative;
+    margin-right: 25px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.location a:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.section-customer .line-banner-section {
+    background-color: #f9f5d7;
+    padding: 0;
+}
+
+.section-customer .content-box, .content-box2 {
+    width: 1026px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.section-customer .line-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-customer .line-banner .ico-customer-title {
+    display: none;
+}
+
+.ico-customer-title {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    vertical-align: middle;
+    background-image: url(../images/icon/customer-title.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+address, caption, em, i, var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.section-customer .line-banner .title {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.section-customer .line-banner .bg-img {
+    flex: 0 0 352px;
+    width: 352px;
+    height: 212px;
+    background-image: url(https://www.freet.co.kr/assets/images/customer/bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.section-customer .quick-search-section {
+    padding: 40px 0 80px;
+}
+
+.section-customer .content-box, .content-box2 {
+    width: 1026px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-customer .quick-search ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.section-customer .quick-search ul a {
+    display: block;
+    font-size: 17px;
+    line-height: 1.6666666667;
+    padding: 16px 8px;
+    font-weight: 600;
+    color: #3f4970;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #f1f3fb;
+}
+
+.section-customer .search-box {
+    margin-top: 60px;
+}
+
+.section-customer .search-box-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+}
+
+.section-customer .search-box-input {
+    max-width: 678px;
+    margin: 5px auto 0;
+    position: relative;
+}
+
+.section-customer .search-box-input input {
+    font-size: 28px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    height: 64px;
+    border: 0;
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+    line-height: 1.6363636364;
+    margin-top: 0;
+}
+
+select, input, textarea {
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    border: 0;
+    font-family: "SUIT", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: inherit;
+}
+
+.section-customer .search-box-input button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    font-family: "SUIT", sans-serif;
+    color: inherit;
+}
+#schKey::placeholder {
+    color: #c3c3c9;
+}
+
+.ico-search {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/search.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.section-customer .faq-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.section-customer .content-box, .content-box2 {
+    width: 1026px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-customer .faq-section .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-customer .faq-section .section-title .title {
+    font-size: 20px;
+    line-height: 1.5555555556;
+    font-weight: 700;
+}
+
+.section-customer .faq-section .section-title .more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7857142857;
+    color: #111;
+}
+
+.section-customer .content-box {
+    margin-top: 0;
+}
+
+
+.ico-arrow4 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/arrow4.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section-customer .faq-section ul {
+    position: relative;
+}
+
+.section-customer .faq-section ul li {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 310px;
+}
+
+.section-customer .faq-section ul li .question {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6666666667;
+    padding-right: 20px;
+    gap: 0 10px;
+    word-break: keep-all;
+    cursor: pointer;
+    color: #94949a;
+}
+
+.section-customer .faq-section ul li.selected .question {
+    color: #111;
+}
+
+.section-customer .faq-section ul li .question::before {
+    content: "Q";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background-color: #c9cddf;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section-customer .faq-section ul li.selected .question::before {
+    background-color: #3f4970;
+}
+
+.section-customer .faq-section ul li .question::after {
+    content: "";
+    display: none;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/up3.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.section-customer .faq-section ul li.selected .question::after {
+    display: inline-block;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.section-customer .faq-section ul li .answer {
+    display: block;
+    margin-top: 20px;
+    padding: 20px 16px;
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.7142857143;
+    color: #343434;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    width: calc(100% - 348px);
+}
+
+
+.section-customer .faq-section ul li+li {
+    border-top: 1px solid #e3e3e3;
+}
+
+/* 스크롤 바************************************************************* */
+
+#wrap::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 2px;
+}
+#wrap::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #3f4970;
+    border-radius: 8px;
+}
+#wrap::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+
+  .answer::-webkit-scrollbar {
+    width: 7px;
+  }
+  .answer::-webkit-scrollbar-thumb {
+    background: rgb(63, 73, 112);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  .answer::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+/* *********************************************************************** */
+/* CS-section */
+.section-customer .cs-section {
+    padding: 35px 20px 80px;
+}
+
+.section-customer .content-box {
+    margin-top: 0;
+}
+
+.section-customer .cs-section .quick-link ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 18px;
+}
+
+.section-customer .cs-section .quick-link ul li a {
+    display: flex;
+    padding: 30px 18px;
+    gap: 0 15px;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+}
+
+.section-customer .cs-section .quick-link ul li a [class*=ico-] {
+    width: 40px;
+    height: 40px;
+}
+
+.ico-quick05 {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(https://www.freet.co.kr/assets/images/icon/quick05.svg) center no-repeat;
+    background-size: cover;
+}
+
+.section-customer .cs-section .quick-link ul li a .content {
+    flex: 1 1 1%;
+    width: 1%;
+    font-size: 15px;
+    line-height: 1.7142857143;
+}
+
+.section-customer .cs-section .quick-link ul li a .content .title {
+    color: #111;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6666666667;
+    font-size: 16px;
+    line-height: 1.625;
+    margin-bottom: 8px;
+}
+
+.section-customer .cs-section .quick-link ul li a .content .text {
+    letter-spacing: -0.03em;
+}
+
+
+.form-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/form.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-pay-now {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/pay-now.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ico-shield {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/shield.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* 위로 이동하는 버튼 */
+.quick.up {
+    transform: translateY(0);
+}
+
+.quick {
+    position: fixed;
+    right: auto;
+    left: 50%;
+    margin-left: 620px;
+    z-index: 101;
+    transition: .3s ease-out;
+}
+.quick ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.quick ul li+li {
+    margin-top: 8px;
+}
+
+.quick.up .btn-top {
+    opacity: 1;
+    border-image-source: linear-gradient(148deg, rgba(255, 255, 255, 0.71) 9%, rgba(255, 255, 255, 0.25) 95%);
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.quick ul li a {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.ico-top {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(https://www.freet.co.kr/assets/images/icon/top.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

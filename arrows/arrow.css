@@ -1,0 +1,188 @@
+element.style {
+    font-size: 15px;
+}
+
+.CarouselNavigation_CarouselNavigation__left__ZzsPB {
+    width: 31px;
+    height: 28px;
+    border: 1px solid hsla(225, 5%, 46%, .22) !important;
+    border-right: none !important;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.IconButton_IconButton__normalDisabled__lpQXR {
+    color: rgba(55, 56, 60, .16);
+}
+
+.IconButton_IconButton__disabled__6qJ2Q, .IconButton_IconButton__loading__hlErq {
+    pointer-events: none;
+}
+
+.IconButton_IconButton__root__IJlt6 {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.IconButton_IconButton__label__o4AtY {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+span{
+margin: 0;
+padding: 0;
+border: 0;
+box-sizing: border-box;
+}
+
+.SvgIcon_SvgIcon__root__OHiSO {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+}
+
+button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.IconButton_IconButton__label__o4AtY {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+}
+
+.CarouselNavigation_CarouselNavigation__left__ZzsPB svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.SvgIcon_SvgIcon__root__svg__ohdSc {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: inherit;
+}
+
+.CarouselHeader_CarouselHeader__5VBaX {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+aside{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.CarouselHeader_CarouselHeader__action__nal5g {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 14px;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.CarouselNavigation_CarouselNavigation__Llibu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.CarouselNavigation_CarouselNavigation__right__lB17m {
+    width: 31px;
+    height: 28px;
+    border: 1px solid hsla(225, 5%, 46%, .22) !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.IconButton_IconButton__interaction__7RjPt {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #171719;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    will-change: opacity;
+
+}
+

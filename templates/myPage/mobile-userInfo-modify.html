@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="../../static/css/myPage/mobile-userInfo-modify.css"
+        />
+        <title>회원 정보 수정</title>
+    </head>
+    <body>
+        <div id="wrap" class="wrap-main">
+            <div class="container">
+                <section id="content" class="section-mypage bottom">
+                    <div class="inner">
+                        <div class="tool-box">
+                            <div class="btn-box">
+                                <a href="javascript:void(0)" class="btn-back">
+                                    <i class="ico-back"></i>
+                                    <span class="hidden">뒤로가기</span>
+                                </a>
+                            </div>
+                            <h1 class="page-title">회원정보</h1>
+                        </div>
+                        <section class="content-wrap">
+                            <div class="inner-box">
+                                <input
+                                    type="hidden"
+                                    id="authenMsgInfo"
+                                    name="authenMsgInfo"
+                                    value="인증받은 정보가 현재정보와 일치하지 않아서 변경이 불가합니다."
+                                />
+
+                                <div id="detailHtml">
+                                    <div class="box-type2" id="my_info1_01">
+                                        <dl>
+                                            <dt>아이디</dt>
+                                            <dd>카카오 가입 계정</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>이름</dt>
+                                            <dd
+                                                id="userNameTxt"
+                                                data-name="8BF94EF75B6BC4A4A29DB7B6F1C57044F755E4AAB3EAC531EB434CEB9A09DFD0DBF7AE8161D5AE4BF34D9F066D11ADB7JmJx96BVMDfOWyhVa3C/lw=="
+                                            >
+                                                안*진
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>휴대폰번호</dt>
+                                            <dd
+                                                id="telNoTxt"
+                                                data-name="90AD8B90AFF785927AF862A56FF06299F01689F169F57D250D5C7DC19DC0D438CB776C485D6E6483017BB1CC40F6E1908bhGO2x0NJ3NUyFuXdeIdw=="
+                                            >
+                                                010-79**-90**
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <a
+                                        href="javascript:void(0)"
+                                        onclick="cert('mobile'); return false;"
+                                        class="info-text2 justify-center"
+                                    >
+                                        <span
+                                            >이름 또는 휴대폰번호가
+                                            변경되었나요</span
+                                        >
+                                        <i class="icon-question"></i>
+                                    </a>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-box">
+                                    <div id="detailFormHtml">
+                                        <div class="form-item mt-3">
+                                            <div class="form-flex">
+                                                <input
+                                                    type="text"
+                                                    id="zipCode"
+                                                    placeholder="&nbsp;"
+                                                    value="-"
+                                                    disabled=""
+                                                />
+                                                <label for="" class="title"
+                                                    >우편번호</label
+                                                >
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    type="submit"
+                                                    onclick="javascript:openAddressPopup()"
+                                                    class="btn-form ip"
+                                                    >주소찾기</a
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <input
+                                                type="text"
+                                                id="address1"
+                                                placeholder="&nbsp;"
+                                                value=""
+                                                disabled=""
+                                            />
+                                            <label for="" class="title"
+                                                >기본주소</label
+                                            >
+                                        </div>
+                                        <div class="form-item">
+                                            <input
+                                                type="text"
+                                                id="address2"
+                                                placeholder="&nbsp;"
+                                                value=""
+                                            />
+                                            <label for="" class="title"
+                                                >상세주소</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-item mt-3"
+                                            id="emailVld"
+                                        >
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                placeholder="&nbsp;"
+                                                value="qmdpfr@naver.com"
+                                                maxlength="25"
+                                                oninput="validateInput.maxLengthCheck(this)"
+                                                onblur="validateInput.emailChk('#emailVld', '#email', null);"
+                                            />
+                                            <label for="" class="title"
+                                                >이메일</label
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="chk-box flex selected">
+                                        <input
+                                            type="checkbox"
+                                            id="check02"
+                                            checked="checked"
+                                        />
+                                        <label
+                                            class="checkbox"
+                                            for="check02"
+                                        ></label>
+                                        <a
+                                            href="javascript:void(0)"
+                                            onclick="agreePop('HT_EBIA');return false;"
+                                        >
+                                            <label
+                                                class="f2-h3-18--h4-16 f-bold underline"
+                                            >
+                                                <span
+                                                    >고객 혜택 제공을 위한
+                                                    개인정보 수집 및 이용
+                                                    동의</span
+                                                >
+                                                <span class="color-gray--40"
+                                                    >(선택)</span
+                                                >
+                                            </label>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="chk-box flex ml-0 mt-10-10 selected"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            id="check03"
+                                            checked="checked"
+                                        />
+                                        <label
+                                            class="checkbox"
+                                            for="check03"
+                                        ></label>
+                                        <a
+                                            href="javascript:void(0)"
+                                            onclick="agreePop('HT_EMA');return false;"
+                                        >
+                                            <label
+                                                class="f2-h3-18--h4-16 f-bold underline"
+                                            >
+                                                <span
+                                                    >마케팅 및 광고 수신
+                                                    동의</span
+                                                >
+                                                <span class="color-gray--40"
+                                                    >(선택)</span
+                                                >
+                                            </label>
+                                        </a>
+                                    </div>
+                                    <ul class="list-type t-s mt-2">
+                                        <li>
+                                            선택사항에 동의하지 않으셔도 프리티
+                                            서비스는 이용하실 수 있습니다.
+                                        </li>
+                                        <li>
+                                            고객 혜택 제공을 위한 개인정보 수집
+                                            및 이용동의 및 마케팅/광고 수신 동의
+                                            시 다양할 할인 안내 및 이벤트 혜택을
+                                            받을 수 있습니다.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a
+                                    href="/mypage/info/profile/withdrawMem"
+                                    class="info-text2 justify-center mt-5"
+                                >
+                                    <span>회원탈퇴를 원하시나요</span>
+                                    <i class="icon-question"></i>
+                                </a>
+                                <div class="btn-wrap my-page-button">
+                                    <button
+                                        type="submit"
+                                        class="btn-type"
+                                        onclick="javascript:applyChange()"
+                                    >
+                                        변경하기
+                                    </button>
+                                </div>
+                            </div>
+                            <form id="frmCertify" method="get"></form>
+                            <!--lnb (s)-->
+
+                            <!-- lnb -->
+
+                            <!--lnb (e)-->
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <script src="../../static/js/myPage/mobile-userInfo-modify.js"></script>
+</html>
