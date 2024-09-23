@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="../../static/css/myPage/payment-modify.css"
+        />
+        <title>결제 수단 변경</title>
+    </head>
+    <body>
+        <div id="wrap" class="wrap-main">
+            <div class="container">
+                <section id="content" class="section-mypage bottom">
+                    <div class="inner">
+                        <div class="page-header side pc-only">
+                            <h2 class="page-title">결제 수단 변경</h2>
+                            <div class="location">
+                                <a href="javascript:void(0)" class="home">
+                                    <span class="hidden">HOME</span>
+                                </a>
+                                <a href="javascript:void(0)">마이페이지</a>
+                                <strong>결제 수단 변경</strong>
+                            </div>
+                        </div>
+                        <section class="content-wrap">
+                            <div class="inner-box">
+                                <input
+                                    type="hidden"
+                                    id="authenMsgInfo"
+                                    name="authenMsgInfo"
+                                    value="인증받은 정보가 현재정보와 일치하지 않아서 변경이 불가합니다."
+                                />
+
+                                <!-- 카드 정보 표시 부분 -->
+                                <div id="detailHtml">
+                                    <div class="box-type2" id="my_info1_01">
+                                        <dl>
+                                            <dt>소유자 이름</dt>
+                                            <dd>안*진</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>은행명</dt>
+                                            <dd>신한은행</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>카드 번호</dt>
+                                            <dd>1111 2222 3333 4444</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>카드 유효기간</dt>
+                                            <dd>2026년 09월</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>카드 종류</dt>
+                                            <dd>신용카드</dd>
+                                        </dl>
+                                    </div>
+                                    <div
+                                        class="btn-wrap my-page-button"
+                                        id="payment-modify"
+                                    >
+                                        <button
+                                            type="button"
+                                            class="btn-type"
+                                            onclick="toggleCardForm()"
+                                        >
+                                            변경하기
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 카드 정보 입력 폼 -->
+                                <div id="cardFormHtml" style="display: none">
+                                    <div class="form-box">
+                                        <div id="detailFormHtml">
+                                            <!-- 소유자 이름 입력 -->
+                                            <div class="form-item mt-3">
+                                                <input
+                                                    type="text"
+                                                    id="cardOwner"
+                                                    name="cardOwner"
+                                                    placeholder=""
+                                                    value=""
+                                                />
+                                                <label
+                                                    for="cardOwner"
+                                                    class="title"
+                                                    >소유자 이름</label
+                                                >
+                                            </div>
+                                            <!-- 은행명 입력 -->
+                                            <div class="form-item">
+                                                <input
+                                                    type="text"
+                                                    id="bankName"
+                                                    name="bankName"
+                                                    placeholder=""
+                                                    value=""
+                                                />
+                                                <label
+                                                    for="bankName"
+                                                    class="title"
+                                                    >은행명</label
+                                                >
+                                            </div>
+                                            <!-- 카드 번호 입력 -->
+                                            <div class="form-item">
+                                                <input
+                                                    type="text"
+                                                    id="cardNumber"
+                                                    name="cardNumber"
+                                                    placeholder=""
+                                                    value=""
+                                                    maxlength="19"
+                                                    pattern="\d{4} \d{4} \d{4} \d{4}"
+                                                    oninput="formatCardNumber(this)"
+                                                />
+                                                <label
+                                                    for="cardNumber"
+                                                    class="title"
+                                                    >카드 번호</label
+                                                >
+                                            </div>
+                                            <!-- 유효기간 입력 -->
+                                            <div class="form-item">
+                                                <input
+                                                    type="text"
+                                                    id="expiryDate"
+                                                    name="expiryDate"
+                                                    placeholder=""
+                                                    value=""
+                                                    maxlength="5"
+                                                    pattern="\d{2}/\d{2}"
+                                                />
+                                                <label
+                                                    for="expiryDate"
+                                                    class="title"
+                                                    >유효기간</label
+                                                >
+                                            </div>
+                                            <!-- 카드 종류 선택 -->
+                                            <!-- <div class="select-option-wrapper">
+                                                <span
+                                                    class="f2-h2-20--h3-18 f-bold"
+                                                    >신용카드 종류를
+                                                    선택해주세요.</span
+                                                >
+                                                <div class="select-type2">
+                                                    <div
+                                                        class="nice-select card-type-select"
+                                                        tabindex="0"
+                                                    >
+                                                        <span class="current"
+                                                            >카드 종류</span
+                                                        >
+                                                        <ul class="list">
+                                                            <li
+                                                                data-value=""
+                                                                class="option selected"
+                                                            >
+                                                                카드 종류
+                                                            </li>
+                                                            <li
+                                                                data-value="visa"
+                                                                class="option"
+                                                            >
+                                                                Visa
+                                                            </li>
+                                                            <li
+                                                                data-value="mastercard"
+                                                                class="option"
+                                                            >
+                                                                MasterCard
+                                                            </li>
+                                                            <li
+                                                                data-value="amex"
+                                                                class="option"
+                                                            >
+                                                                American Express
+                                                            </li>
+                                                            <li
+                                                                data-value="discover"
+                                                                class="option"
+                                                            >
+                                                                Discover
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="line"></div>
+                                        <div class="chk-box flex selected">
+                                            <input
+                                                type="checkbox"
+                                                id="check02"
+                                                checked="checked"
+                                            />
+                                            <label
+                                                class="checkbox"
+                                                for="check02"
+                                            ></label>
+                                            <a
+                                                href="javascript:void(0)"
+                                                onclick="agreePop('HT_EBIA');return false;"
+                                            >
+                                                <label
+                                                    class="f2-h3-18--h4-16 f-bold underline"
+                                                >
+                                                    <span
+                                                        >고객 혜택 제공을 위한
+                                                        개인정보 수집 및 이용
+                                                        동의</span
+                                                    >
+                                                    <span class="color-gray--40"
+                                                        >(선택)</span
+                                                    >
+                                                </label>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="chk-box flex ml-0 mt-10-10 selected"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="check03"
+                                                checked="checked"
+                                            />
+                                            <label
+                                                class="checkbox"
+                                                for="check03"
+                                            ></label>
+                                            <a
+                                                href="javascript:void(0)"
+                                                onclick="agreePop('HT_EMA');return false;"
+                                            >
+                                                <label
+                                                    class="f2-h3-18--h4-16 f-bold underline"
+                                                >
+                                                    <span
+                                                        >마케팅 및 광고 수신
+                                                        동의</span
+                                                    >
+                                                    <span class="color-gray--40"
+                                                        >(선택)</span
+                                                    >
+                                                </label>
+                                            </a>
+                                        </div>
+                                        <ul class="list-type t-s mt-2">
+                                            <li>
+                                                선택사항에 동의하지 않으셔도
+                                                프리티 서비스는 이용하실 수
+                                                있습니다.
+                                            </li>
+                                            <li>
+                                                고객 혜택 제공을 위한 개인정보
+                                                수집 및 이용동의 및 마케팅/광고
+                                                수신 동의 시 다양한 할인 안내 및
+                                                이벤트 혜택을 받을 수 있습니다.
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="btn-wrap my-page-button">
+                                        <button
+                                            type="button"
+                                            class="btn-type"
+                                            onclick="applyChange()"
+                                        >
+                                            저장하기
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="btn-type cancel"
+                                            id="cancel"
+                                            onclick="toggleCardForm()"
+                                        >
+                                            취소
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <!-- 기존의 변경하기 버튼을 유지하거나 필요에 따라 삭제 -->
+                            </div>
+                            <form id="frmCertify" method="get"></form>
+                            <!-- lnb (s) -->
+                            <aside class="lnb">
+                                <!-- 기존 lnb 내용 유지 -->
+                                <div class="my-member-info" style="">
+                                    <div class="info-select-box v2">
+                                        <div class="icon-box">
+                                            <i class="ico-call5"></i>
+                                        </div>
+                                        <div class="text-box">
+                                            <strong class="tit"
+                                                >등록된 회선이 없습니다</strong
+                                            >
+                                            <p class="desc">
+                                                프리티 회선이 있으시다면 등록해
+                                                주세요!
+                                            </p>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <a
+                                                href="javascript:void(0)"
+                                                onclick="javascript:openValidatePop('open')"
+                                                class="btn-type v2"
+                                            >
+                                                회선등록하기
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <nav class="lnb-list">
+                                    <ul class="depth">
+                                        <li>
+                                            <a
+                                                href="javascript:void(0)"
+                                                class="active"
+                                                >나의 기본정보</a
+                                            >
+                                            <ul
+                                                class="depth2"
+                                                style="display: block"
+                                            >
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060101');return false;"
+                                                        class="active"
+                                                        id="menu_060101"
+                                                        >회원정보</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060103');return false;"
+                                                        id="menu_060103"
+                                                        >회선 등록</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060105');return false;"
+                                                        id="menu_060105"
+                                                        >개인정보열람</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060106');return false;"
+                                                        id="menu_060106"
+                                                        >나의 혜택 조회</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060107');return false;"
+                                                        id="menu_060107"
+                                                        >나의 추천현황</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                >서비스 조회/변경</a
+                                            >
+                                            <ul class="depth2">
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060201');return false;"
+                                                        id="menu_060201"
+                                                        >유심 이용 휴대폰
+                                                        등록</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060203');return false;"
+                                                        id="menu_060203"
+                                                        >번호 변경</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060205');return false;"
+                                                        id="menu_060205"
+                                                        >유심 변경</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060206');return false;"
+                                                        id="menu_060206"
+                                                        >부가서비스 조회/신청</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                >요금조회 및 납부</a
+                                            >
+                                            <ul
+                                                class="depth2"
+                                                id="feeMenuMypage"
+                                            >
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060301');return false;"
+                                                        id="menu_060301"
+                                                        >실시간 요금조회</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060302');return false;"
+                                                        id="menu_060302"
+                                                        >청구요금조회</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060303');return false;"
+                                                        id="menu_060303"
+                                                        >납부금액/미납 조회</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060304');return false;"
+                                                        id="menu_060304"
+                                                        >청구서 관리</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060305');return false;"
+                                                        id="menu_060305"
+                                                        >납부방법변경</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060306');return false;"
+                                                        id="menu_060306"
+                                                        >휴대폰 소액결제</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060307');return false;"
+                                                        id="menu_060307"
+                                                        >미환급금 조회</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                >선불 요금충전/관리</a
+                                            >
+                                            <ul class="depth2">
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060401');return false;"
+                                                        id="menu_060401"
+                                                        >선불요금 충전</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060402');return false;"
+                                                        id="menu_060402"
+                                                        >선불 데이터 충전</a
+                                                    >
+                                                </li>
+                                                <li class="dp-no-show">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060403');return false;"
+                                                        id="menu_060403"
+                                                        >가상계좌충전확인</a
+                                                    >
+                                                </li>
+                                                <li class="dp-no-show">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060404');return false;"
+                                                        id="menu_060404"
+                                                        >요금충전내역</a
+                                                    >
+                                                </li>
+                                                <li class="dp-no-show">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060405');return false;"
+                                                        id="menu_060405"
+                                                        >적립금변경이력</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                >일시정지/분실</a
+                                            >
+                                            <ul class="depth2">
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060501');return false;"
+                                                        id="menu_060501"
+                                                        >일시정지 신청/해제</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060502');return false;"
+                                                        id="menu_060502"
+                                                        >분실신고</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('060503');return false;"
+                                                        id="menu_060503"
+                                                        >해지신청</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                >나의 관심 상품</a
+                                            >
+                                            <ul class="depth2">
+                                                <li>
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        onclick="menuInfo.go('0607');return false;"
+                                                        id="menu_0607"
+                                                        >나의 관심 상품</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                            <script type="text/javascript">
+                                var MENU_NO = "060101";
+                                var USER_AUTH_INFO_SVC_TYPE = null;
+
+                                $(document).ready(function () {
+                                    if (USER_AUTH_INFO_SVC_TYPE == "DP") {
+                                        $(".dp-no-show").hide();
+                                    }
+                                    selectMenu(MENU_NO);
+                                    hideMenuDepth();
+                                }); //document.ready
+
+                                function hideMenuDepth() {
+                                    if (
+                                        $("#feeMenuMypage").find("li").length ==
+                                        0
+                                    ) {
+                                        $("#feeMenuMypage")
+                                            .closest("li")
+                                            .hide();
+                                    }
+                                }
+
+                                // 카드 정보 변경 버튼 클릭 시 폼 표시/숨기기
+                                function toggleCardForm() {
+                                    var detailHtml =
+                                        document.getElementById("detailHtml");
+                                    var cardFormHtml =
+                                        document.getElementById("cardFormHtml");
+                                    if (cardFormHtml.style.display === "none") {
+                                        detailHtml.style.display = "none";
+                                        cardFormHtml.style.display = "block";
+                                    } else {
+                                        detailHtml.style.display = "block";
+                                        cardFormHtml.style.display = "none";
+                                    }
+                                }
+
+                                // 카드 번호 포맷팅 함수 (예: 1111222233334444 → 1111 2222 3333 4444)
+                                function formatCardNumber(input) {
+                                    var value = input.value
+                                        .replace(/\D/g, "")
+                                        .substring(0, 16);
+                                    var formattedValue = value.replace(
+                                        /(\d{4})(?=\d)/g,
+                                        "$1 "
+                                    );
+                                    input.value = formattedValue;
+                                }
+
+                                // 변경하기 함수 예시
+                                function applyChange() {
+                                    // 여기서 입력된 카드 정보를 서버로 전송하는 로직을 추가하세요.
+                                    alert("카드 정보가 변경되었습니다.");
+                                    toggleCardForm();
+                                }
+                            </script>
+                            <!-- lnb -->
+                            <!--lnb (e)-->
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="../../static/js/myPage/payment-modify.js"></script>
+    </body>
+</html>
