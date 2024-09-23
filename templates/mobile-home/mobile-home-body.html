@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 430px; margin: 0 auto">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="/static/css/mobile-home/mobile-home-body.css"
+        />
+        <link rel="stylesheet" href="/static/css/common/common.css" />
+        <link
+            rel="shortcut icon"
+            href="https://www.freet.co.kr/static/assets/favicons/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://www.freet.co.kr/assets/css/font.css?v=20240726"
+        />
+        <title>홈화면 바디</title>
+    </head>
+    <body>
+        <!-- 전체를 감싸고 있는 div -->
+        <div id="wrap" class="wrap-main" style="padding-top: 59.5877px">
+            <div class="container">
+                <main id="main" class="main">
+                    <article class="article-menu">
+                        <div class="grid-wrap">
+                            <ul>
+                                <li class="grid-item-l">
+                                    <a>
+                                        <i class="ico-main-search"></i>
+                                        <p class="title">수거 요청</p>
+                                    </a>
+                                </li>
+                                <li class="grid-item-m">
+                                    <a>
+                                        <i class="ico-main-event"></i>
+                                        <p class="title">나의 수거 목록</p>
+                                    </a>
+                                </li>
+                                <li class="grid-item-s">
+                                    <a>
+                                        <i class="ico-main-self"></i>
+                                        <p class="title">1:1 문의</p>
+                                    </a>
+                                </li>
+                                <!-- 메뉴(유심 구매, 휴대폰, 고객지원) -->
+                                <!-- <li class="grid-item-s">
+                                    <a>
+                                        <i class="ico-main-uslm"></i>
+                                        <p class="title">유심 구매</p>
+                                    </a>
+                                </li>
+                                <li class="grid-item-s">
+                                    <a>
+                                        <i class="ico-main-phone"></i>
+                                        <p class="title">휴대폰</p>
+                                    </a>
+                                </li>
+                                <li class="grid-item-s">
+                                    <a>
+                                        <i class="ico-main-cs"></i>
+                                        <p class="title">고객지원</p>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div class="mt-2">
+                            <img
+                                src="https://www.freet.co.kr/upload/eventimg/MW_freet_award_02_v0.1.jpg"
+                                class="mobile-only"
+                            />
+                        </div>
+                    </article>
+                    <article class="article-promotion">
+                        <div class="main-title">
+                            <h2 class="title-type">수거 요청🥳</h2>
+                        </div>
+                        <div
+                            class="category-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                        >
+                            <ul
+                                class="swiper-wrapper"
+                                id="promotion-tags-container"
+                                aria-live="polite"
+                                style="
+                                    transition-duration: 300ms;
+                                    transform: translate3d(0px, 0px, 0px);
+                                "
+                            >
+                                <li
+                                    class="swiper-slide swiper-slide-active active"
+                                    id="tag0"
+                                    role="group"
+                                    aria-label="1 / 9"
+                                >
+                                    <a class="btn-type6">전체</a>
+                                </li>
+
+                                <li
+                                    class="swiper-slide swiper-slide-next"
+                                    id="tag66"
+                                    role="group"
+                                    aria-label="2 / 9"
+                                >
+                                    <a class="btn-type6">마포구</a>
+                                </li>
+
+                                <li
+                                    class="swiper-slide"
+                                    id="tag12"
+                                    role="group"
+                                    aria-label="3 / 9"
+                                >
+                                    <a class="btn-type6">서대문구</a>
+                                </li>
+
+                                <li
+                                    class="swiper-slide"
+                                    id="tag51"
+                                    role="group"
+                                    aria-label="4 / 9"
+                                >
+                                    <a class="btn-type6">용산구</a>
+                                </li>
+
+                                <li
+                                    class="swiper-slide"
+                                    id="tag18"
+                                    role="group"
+                                    aria-label="5 / 9"
+                                >
+                                    <a class="btn-type6">은평구</a>
+                                </li>
+
+                                <li
+                                    class="swiper-slide"
+                                    id="tag78"
+                                    role="group"
+                                    aria-label="6 / 9"
+                                >
+                                    <a class="btn-type6">영등포구</a>
+                                </li>
+                            </ul>
+                            <button
+                                class="gra-next"
+                                tabindex="0"
+                                aria-label="Next slide"
+                                aria-controls="promotion-tags-container"
+                                aria-disabled="false"
+                            >
+                                next
+                            </button>
+                            <button
+                                class="gra-prev swiper-button-disabled"
+                                tabindex="-1"
+                                aria-label="Previous slide"
+                                aria-controls="promotion-tags-container"
+                                aria-disabled="true"
+                                disabled=""
+                            >
+                                prev
+                            </button>
+                            <span
+                                class="swiper-notification"
+                                aria-live="assertive"
+                                aria-atomic="true"
+                            ></span>
+                        </div>
+                        <div class="promotion-area">
+                            <!-- 수거 요청 목록 레이아웃 -->
+                            <section class="contet-box">
+                                <div class="allRequest">
+                                    <!-- <span>
+                                        <strong id="count">총</strong>
+                                        <strong id="totalCount">617</strong>
+                                        개
+                                    </span> -->
+                                    <ul class="board-type5">
+                                        <div id="requestAllList">
+                                            <li class="requestList1">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-light"
+                                                    >
+                                                        라이트
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >강남구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거요청</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList2">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-premium"
+                                                    >
+                                                        프리미엄
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >송파구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거요청</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 송파구
+                                                            올림픽로 25
+                                                        </p>
+                                                        <span>5번 출구</span>
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList3">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-standard"
+                                                    >
+                                                        스탠다드
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >서대문구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거요청</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList4">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-standard"
+                                                    >
+                                                        스탠다드
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >강남구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거요청</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 강남구
+                                                            테헤란로 26길
+                                                        </p>
+                                                        <span
+                                                            >제일비전타워
+                                                            13층</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                            <li class="requestList5">
+                                                <div class="plan-top">
+                                                    <span
+                                                        class="flag-type status-light"
+                                                    >
+                                                        라이트
+                                                    </span>
+                                                    <div class="tag-box">
+                                                        <span class="tag-type2"
+                                                            >오늘</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >마포구</span
+                                                        >
+                                                        <span class="tag-type2"
+                                                            >수거요청</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <a>
+                                                    <span class="num">617</span>
+                                                    <div>
+                                                        <p>
+                                                            서울특별시 마포구
+                                                            동교로 247
+                                                        </p>
+                                                        <span
+                                                            >1층
+                                                            랜디스도넛</span
+                                                        >
+                                                    </div>
+                                                    <i class="ico-arrow4"></i>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <ul class="board-type5"></ul>
+                            </section>
+                            <!-- 수거 요청 목록 레이아웃 -->
+                            <div class="btn-wrap">
+                                <a class="btn-type3">수거요청 전체보기</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-benefit">
+                        <div class="benefit-list">
+                            <ul>
+                                <li>
+                                    <a href="" onclick="">
+                                        <div class="icon-box">
+                                            <i class="ico-main-plan1"></i>
+                                        </div>
+                                        <dl>
+                                            <dt>3사 유심 판매! N스토어</dt>
+                                            <dd>
+                                                <span class="notranslate"
+                                                    >프리티</span
+                                                >
+                                                "공식 판매처!"
+                                                <br />
+                                                "네이버 포인트 적립도 받으세요!"
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" onclick="">
+                                        <div class="icon-box">
+                                            <i class="ico-main-plan2"></i>
+                                        </div>
+                                        <dl>
+                                            <dt>
+                                                <span class="notranslate"
+                                                    >프리티</span
+                                                >
+                                                해외 유심
+                                            </dt>
+                                            <dd>
+                                                해외 여행의 필수 아이템!<br />
+                                                이제
+                                                <span class="notranslate"
+                                                    >프리티</span
+                                                >에서 준비하세요!
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="icon-box">
+                                            <i class="ico-main-plan3"></i>
+                                        </div>
+                                        <dl>
+                                            <dt>
+                                                <span class="notranslate"
+                                                    >프리티</span
+                                                >
+                                                App 다운로드
+                                            </dt>
+                                            <dd>
+                                                새로워진
+                                                <span class="notranslate"
+                                                    >프리티</span
+                                                >
+                                                앱,<br />
+                                                유심개통도 모바일앱으로 하세요!
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" onclick="">
+                                        <div class="icon-box">
+                                            <i class="ico-main-plan4"></i>
+                                        </div>
+                                        <dl>
+                                            <dt>
+                                                <span class="notranslate"
+                                                    >프리티</span
+                                                >
+                                                평생할인혜택
+                                            </dt>
+                                            <dd>
+                                                우수장기고객을 위한 다양한
+                                                혜택!<br />
+                                                요금할인에서 알뜰기변까지
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="article-review">
+                        <div class="main-title">
+                            <h2 class="title-type">고객님의 소중한 후기🫶</h2>
+                        </div>
+                        <div class="review-area" role="toolbar">
+                            <ul
+                                id="review-container"
+                                class="slick-initialized slick-slider slick-dotted"
+                            >
+                                <div
+                                    aria-live="polite"
+                                    class="slick-list draggable"
+                                >
+                                    <div
+                                        class="slick-track"
+                                        style="
+                                            opacity: 1;
+                                            width: 862px;
+                                            transform: translate3d(
+                                                0px,
+                                                0px,
+                                                0px
+                                            );
+                                        "
+                                        role="listbox"
+                                    >
+                                        <li
+                                            class="review-item slick-slide slick-current slick-active"
+                                            data-slick-index="0"
+                                            aria-hidden="false"
+                                            style="width: 391px"
+                                            tabindex="-1"
+                                            role="option"
+                                            aria-describedby="slick-slide60"
+                                        >
+                                            <a href="" onclick="" tabindex="0">
+                                                <div class="review-top">
+                                                    <div class="box">
+                                                        <div class="star-grade">
+                                                            <span
+                                                                class="star"
+                                                                style="
+                                                                    width: 100%;
+                                                                "
+                                                                >5</span
+                                                            >
+                                                        </div>
+                                                        <div class="info">
+                                                            <span class="name"
+                                                                >이*아</span
+                                                            >
+                                                            <span class="date"
+                                                                >2024.08.22</span
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="tag-type3"
+                                                        style="display: _"
+                                                        >우수리뷰</span
+                                                    >
+                                                </div>
+                                                <div class="review-cont">
+                                                    <p>
+                                                        안녕하세요~ 저는 평소
+                                                        배달을 자주 시켜 먹는
+                                                        편입니다. 배달로 인해
+                                                        재활용 쓰레기가 많이
+                                                        나오는 편이지만 음식물을
+                                                        완전히 제거하고
+                                                        분리수러를 해야하는
+                                                        부분에서 제 스스로가
+                                                        완벽하게 분리수거를 하지
+                                                        못하는 것 같아 이를
+                                                        해결할 방법을 알아보던
+                                                        중 지인의 추천으로
+                                                        비워드림에 가입하게
+                                                        되었습니다!! 작년 8월에
+                                                        가입해서 지금 1년째
+                                                        사용중인데 처음에는
+                                                        분리수거를 하지 않은
+                                                        행위에 대한 여러 가지
+                                                        우려가 있었지만, 실제
+                                                        사용해보니 기대 이상으로
+                                                        만족스러워서 후기까지
+                                                        남기게 되었네요 ㅎㅎ 1.
+                                                    </p>
+                                                    <span class="text-more"
+                                                        >더보기</span
+                                                    >
+                                                </div>
+                                                <div class="review-bottom">
+                                                    <div class="plan">
+                                                        <span
+                                                            class="flag-type status-light"
+                                                            >라이트</span
+                                                        >
+                                                    </div>
+                                                    <div class="photo"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="review-item slick-slide"
+                                            data-slick-index="1"
+                                            aria-hidden="true"
+                                            style="width: 391px"
+                                            tabindex="-1"
+                                            role="option"
+                                            aria-describedby="slick-slide61"
+                                        >
+                                            <a href="" onclick="" tabindex="-1">
+                                                <div class="review-top">
+                                                    <div class="box">
+                                                        <div class="star-grade">
+                                                            <span
+                                                                class="star"
+                                                                style="
+                                                                    width: 100%;
+                                                                "
+                                                                >5</span
+                                                            >
+                                                        </div>
+                                                        <div class="info">
+                                                            <span class="name"
+                                                                >박*정</span
+                                                            >
+                                                            <span class="date"
+                                                                >2024.08.14</span
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="tag-type3"
+                                                        style="display: _"
+                                                        >우수리뷰</span
+                                                    >
+                                                </div>
+                                                <div class="review-cont">
+                                                    <p>
+                                                        안녕하세요~ 비워드림을
+                                                        이용한지 6개월 정도
+                                                        되었습니다. 매주 한번씩
+                                                        6개월 동안 저희집 수거
+                                                        박스를 챙겨주신 기사님
+                                                        덕분에 귀찮음이 많아
+                                                        항상 미루던 분리수거가
+                                                        없어져, 요즘 집이
+                                                        꺠끗합니다^^. 이번주
+                                                        수거일에 깜빡하고
+                                                        수거박스 내놓는걸
+                                                        깜빡했는데, 기사님이
+                                                        문자를 주셨더라구요~
+                                                        덕분에 수거 박스 내놓을
+                                                        수 있었습니다! 요즘
+                                                        날씨가 많이 더운데
+                                                        화이팅 하십쇼~
+                                                    </p>
+                                                    <span class="text-more"
+                                                        >더보기</span
+                                                    >
+                                                </div>
+                                                <div class="review-bottom">
+                                                    <div class="plan">
+                                                        <span
+                                                            class="flag-type status-light"
+                                                            >프리미엄</span
+                                                        >
+                                                    </div>
+                                                    <div class="photo"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+
+                                <ul class="slick-dots" role="tablist">
+                                    <li
+                                        class="slick-active"
+                                        aria-hidden="false"
+                                        role="presentation"
+                                        aria-selected="true"
+                                        aria-controls="navigation60"
+                                        id="slick-slide60"
+                                    >
+                                        <button
+                                            type="button"
+                                            data-role="none"
+                                            role="button"
+                                            tabindex="0"
+                                        >
+                                            1
+                                        </button>
+                                    </li>
+                                    <li
+                                        aria-hidden="true"
+                                        role="presentation"
+                                        aria-selected="false"
+                                        aria-controls="navigation61"
+                                        id="slick-slide61"
+                                    >
+                                        <button
+                                            type="button"
+                                            data-role="none"
+                                            role="button"
+                                            tabindex="0"
+                                        >
+                                            2
+                                        </button>
+                                    </li>
+                                </ul>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="" class="btn-type3" onclick=""
+                                    >이용후기 전체보기</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+
+            <aside id="quick" class="quick up" style="bottom: 558.082px">
+                <ul>
+                    <li>
+                        <a href="" class="btn-top"
+                            ><i class="ico-top"></i
+                            ><span class="hidden">상단으로 이동</span></a
+                        >
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </body>
+    <script src="/static/js/mobile-home/mobile-home-body.js"></script>
+</html>
