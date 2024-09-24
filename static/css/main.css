@@ -188,11 +188,11 @@ ul {
     border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
-    background: #f4f4f4;
+    background: #E6E3FF;
     padding: 20px 10px;
 }
 .main .article-menu .grid-wrap .grid-item-l a {
-    background: #f0543a;
+    background: #6ADB7B;
     font-size: 22px;
     font-weight: 600;
     color: #fff;
@@ -286,6 +286,7 @@ a {
     width: 251px;
     height: 161px;
     float: left;
+    color: #fff;
 }
 
 .main .article-menu .grid-wrap [class^=grid-item] {
@@ -307,7 +308,7 @@ a {
 .main .article-menu .grid-wrap .grid-item-m a {
     align-items: inherit;
     padding: 30px;
-    background: #ffe4c9;
+    background: #478947;
 }
 
 .main .article-menu .grid-wrap .grid-item-m a [class^=ico-main] {
@@ -479,7 +480,7 @@ img {
 }
 
 .active .btn-type6, .btn-type6.active {
-    background: #f0543a;
+    background: #6ADB7B;
     color: #fff;
 }
 .btn-download, .btn-type3, .btn-type4, .btn-type5, .btn-type6, .btn-type7 {
@@ -768,7 +769,7 @@ input, select, strong {
 .phone-item .phone-price .price, .plan-icon-list li {
     display: inline-flex;
     align-items: baseline;
-    color: #f0543a;
+    color: #6ADB7B;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.63;
@@ -836,19 +837,19 @@ strong {
     font-weight: 600;
 }
 .status-light {
-    background-color: #664af1;
+    background-color: #fe864a;
     margin-right: 4px;
     color: #fff;
 }
 
 .status-standard {
-    background-color: #ec464d;
+    background-color: #72c0fe;
     margin-right: 4px;
     color: #fff;
 }
 
 .status-premium {
-    background-color: #f251ab;
+    background-color: #8282f5;
     margin-right: 4px;
     color: #fff;
 }
@@ -983,7 +984,7 @@ strong {
 .plan-item .plan-price .price {
     font-size: 18px;
     font-weight: 600;
-    color: #f0543a;
+    color: #6ADB7B;
 }
 
 .plan-item .plan-price .price strong {
@@ -1270,8 +1271,8 @@ strong {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #ffebe8;
-    color: #f0543a;
+    background: #F3F9E8;
+    color: #6ADB7B;
     font-size: 12px;
     font-weight: 600;
 }
@@ -1465,7 +1466,7 @@ strong {
 }
 
 .active .btn-type6, .btn-type6.active {
-    background: #f0543a;
+    background: #6ADB7B;
     color: #fff;
 }
 
@@ -1487,6 +1488,7 @@ strong {
 .banner .banner-inner{
     width: 520px;
     height: 340px;
+    background-image: url(../css/images/banner.png);
 }
 
 div.arrows-right {
