@@ -1,5 +1,3 @@
-//////////////////////////////////////////////////////////////수거 요청 html
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,6 +8,7 @@
             href="https://www.freet.co.kr/static/assets/favicons/favicon.png"
             type="image/x-icon"
         />
+        <link rel="stylesheet" href="/static/css/common/common.css" />
         <link
             rel="stylesheet"
             type="text/css"
@@ -72,7 +71,7 @@
                                         <option
                                             value=""
                                             selected=""
-                                            disabled=""
+                                            class="disabled"
                                         >
                                             시/군/구
                                         </option>
@@ -137,7 +136,9 @@
                                         class="nice-select selected"
                                         tabindex="0"
                                     >
-                                        <span class="current">시/군/구</span>
+                                        <span class="current disabled"
+                                            >시/군/구</span
+                                        >
                                         <ul class="list">
                                             <li
                                                 data-value=""
@@ -305,14 +306,6 @@
                                     <li id="tag_" class="active">
                                         <a href="" onclick="">전체</a>
                                     </li>
-
-                                    <li id="tag_66" class="tagVal">
-                                        <a href="" onclick="">서울</a>
-                                    </li>
-
-                                    <li id="tag_12" class="tagVal">
-                                        <a href="" onclick="">강남구</a>
-                                    </li>
                                 </div>
                             </ul>
                             <!-- 토글 버튼 -->
@@ -368,24 +361,29 @@
                                     <ul class="board-type5">
                                         <div id="requestAllList">
                                             <li class="requestList1">
-                                                <div class="plan-top">
-                                                    <span
-                                                        class="flag-type status-light"
-                                                    >
-                                                        라이트
-                                                    </span>
-                                                    <div class="tag-box">
-                                                        <span class="tag-type2"
-                                                            >오늘</span
+                                                <ul class="board-type5">
+                                                    <div class="plan-top">
+                                                        <span
+                                                            class="flag-type status-light"
                                                         >
-                                                        <span class="tag-type2"
-                                                            >강남구</span
-                                                        >
-                                                        <span class="tag-type2"
-                                                            >수거요청</span
-                                                        >
+                                                            라이트
+                                                        </span>
+                                                        <div class="tag-box">
+                                                            <span
+                                                                class="tag-type2"
+                                                                >오늘</span
+                                                            >
+                                                            <span
+                                                                class="tag-type2"
+                                                                >강남구</span
+                                                            >
+                                                            <span
+                                                                class="tag-type2"
+                                                                >수거요청</span
+                                                            >
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </ul>
                                                 <a>
                                                     <span class="num">617</span>
                                                     <div>
@@ -404,7 +402,7 @@
                                             <li class="requestList2">
                                                 <div class="plan-top">
                                                     <span
-                                                        class="flag-type status-light"
+                                                        class="flag-type status-premium"
                                                     >
                                                         프리미엄
                                                     </span>
@@ -435,7 +433,7 @@
                                             <li class="requestList3">
                                                 <div class="plan-top">
                                                     <span
-                                                        class="flag-type status-light"
+                                                        class="flag-type status-standard"
                                                     >
                                                         스탠다드
                                                     </span>
@@ -469,7 +467,7 @@
                                             <li class="requestList4">
                                                 <div class="plan-top">
                                                     <span
-                                                        class="flag-type status-light"
+                                                        class="flag-type status-standard"
                                                     >
                                                         스탠다드
                                                     </span>
@@ -551,25 +549,3 @@
     </body>
     <script src="/static/js/mobile-allRequest/mobile-allRequest-body.js"></script>
 </html>
-
-//////////////////////////////////////////////////////////////수거 요청 js
-const selectDivs = document.querySelectorAll(".nice-select");
-const selectList = document.querySelectorAll(".list > li");
-console.log(selectDivs);
-console.log(selectList);
-
-// 지역 선택 div 선택
-selectDivs.forEach((selectDiv) => {
-    selectDiv.addEventListener("click", (e) => {
-        const target = e.target;
-        // 'open' 클래스가 있는지 확인
-        if (target.classList.contains("open")) {
-            // 클래스가 있으면 제거
-            target.classList.remove("open");
-        } else {
-            // 클래스가 없으면 추가
-            target.classList.add("open");
-        }
-    });
-});
-
