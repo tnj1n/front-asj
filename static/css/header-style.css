@@ -1,88 +1,88 @@
-@charset "UTF-8";@font-face {
+@charset "UTF-8";
+@font-face {
     font-family: "SUIT";
     font-weight: 300;
-    src: local("SUIT-Light"),url(./fonts/SUIT-Light.woff2)format("woff2"),url(./fonts/SUIT-Light.otf)format("wopentypeoff")
+    src: local("SUIT-Light"),url(../fonts/SUIT-Light.woff2)format("woff2"),url(../fonts/SUIT-Light.otf)format("wopentypeoff")
 }
 
 @font-face {
     font-family: "SUIT";
     font-weight: 400;
-    src: local("SUIT-Regular"),url(./fonts/SUIT-Regular.woff2)format("woff2"),url(./fonts/SUIT-Regular.otf)format("opentype")
+    src: local("SUIT-Regular"),url(../fonts/SUIT-Regular.woff2)format("woff2"),url(../fonts/SUIT-Regular.otf)format("opentype")
 }
 
 @font-face {
     font-family: "SUIT";
     font-weight: 600;
-    src: local("SUIT-SemiBold"),url(./fonts/SUIT-SemiBold.woff2)format("woff2"),url(/.fonts/SUIT-SemiBold.otf)format("opentype")
+    src: local("SUIT-SemiBold"),url(../fonts/SUIT-SemiBold.woff2)format("woff2"),url(../fonts/SUIT-SemiBold.otf)format("opentype")
 }
 
 @font-face {
     font-family: "SUIT";
     font-weight: 700;
-    src: local("SUIT-Bold"),url(./fonts/SUIT-Bold.woff2)format("woff2"),url(./fonts/SUIT-Bold.otf)format("opentype")
+    src: local("SUIT-Bold"),url(../fonts/SUIT-Bold.woff2)format("woff2"),url(../fonts/SUIT-Bold.otf)format("opentype")
 }
-
 @font-face {
     font-family: "Pretendard";
     font-weight: 900;
     font-display: swap;
-    src: local("Pretendard Black"),url(./fonts/Pretendard-Black.woff2)format("woff2"),url(/.fonts/Pretendard-Black.woff)format("woff")
+    src: local("Pretendard Black"),url(../fonts/Pretendard-Black.woff2)format("woff2"),url(../fonts/Pretendard-Black.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 800;
     font-display: swap;
-    src: local("Pretendard ExtraBold"),url(./fonts/Pretendard-ExtraBold.woff2)format("woff2"),url(./fonts/Pretendard-ExtraBold.woff)format("woff")
+    src: local("Pretendard ExtraBold"),url(../fonts/Pretendard-ExtraBold.woff2)format("woff2"),url(../fonts/Pretendard-ExtraBold.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 700;
     font-display: swap;
-    src: local("Pretendard Bold"),url(./fonts/Pretendard-Bold.woff2)format("woff2"),url(./fonts/Pretendard-Bold.woff)format("woff")
+    src: local("Pretendard Bold"),url(../fonts/Pretendard-Bold.woff2)format("woff2"),url(../fonts/Pretendard-Bold.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 600;
     font-display: swap;
-    src: local("Pretendard SemiBold"),url(./fonts/Pretendard-SemiBold.woff2)format("woff2"),url(./fonts/Pretendard-SemiBold.woff)format("woff")
+    src: local("Pretendard SemiBold"),url(../fonts/Pretendard-SemiBold.woff2)format("woff2"),url(../fonts/Pretendard-SemiBold.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 500;
     font-display: swap;
-    src: local("Pretendard Medium"),url(./fonts/Pretendard-Medium.woff2)format("woff2"),url(./fonts/Pretendard-Medium.woff)format("woff")
+    src: local("Pretendard Medium"),url(../fonts/Pretendard-Medium.woff2)format("woff2"),url(../fonts/Pretendard-Medium.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 400;
     font-display: swap;
-    src: local("Pretendard Regular"),url(./fonts/Pretendard-Regular.woff2)format("woff2"),url(./fonts/Pretendard-Regular.woff)format("woff")
+    src: local("Pretendard Regular"),url(../fonts/Pretendard-Regular.woff2)format("woff2"),url(../fonts/Pretendard-Regular.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 300;
     font-display: swap;
-    src: local("Pretendard Light"),url(./fonts/Pretendard-Light.woff2)format("woff2"),url(./fonts/Pretendard-Light.woff)format("woff")
+    src: local("Pretendard Light"),url(../fonts/Pretendard-Light.woff2)format("woff2"),url(../fonts/Pretendard-Light.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 200;
     font-display: swap;
-    src: local("Pretendard ExtraLight"),url(./fonts/Pretendard-ExtraLight.woff2)format("woff2"),url(./fonts/Pretendard-ExtraLight.woff)format("woff")
+    src: local("Pretendard ExtraLight"),url(../fonts/Pretendard-ExtraLight.woff2)format("woff2"),url(../fonts/Pretendard-ExtraLight.woff)format("woff")
 }
 
 @font-face {
     font-family: "Pretendard";
     font-weight: 100;
     font-display: swap;
-    src: local("Pretendard Thin"),url(./fonts/Pretendard-Thin.woff2)format("woff2"),url(./fonts/Pretendard-Thin.woff)format("woff")
+    src: local("Pretendard Thin"),url(../fonts/Pretendard-Thin.woff2)format("woff2"),url(../fonts/Pretendard-Thin.woff)format("woff")
 }
 element.style {
     padding-top: 80px;
@@ -488,7 +488,7 @@ a {
     height: 20px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/util_01.svg) center no-repeat;
+    background: url(../images/util_01.svg) center no-repeat;
     background-size: cover;
 }
 address, caption, em, i, var {
@@ -501,7 +501,7 @@ address, caption, em, i, var {
     height: 20px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/util_02.svg) center no-repeat;
+    background: url(../images/util_02.svg) center no-repeat;
     background-size: cover;
 }
 
@@ -527,7 +527,7 @@ address, caption, em, i, var {
     height: 20px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/util_03.svg) center no-repeat;
+    background: url(../images/util_03.svg) center no-repeat;
     background-size: cover;
 }
 
@@ -554,7 +554,7 @@ address, caption, em, i, var {
     height: 20px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/util_04.svg) center no-repeat;
+    background: url(../images/util_04.svg) center no-repeat;
     background-size: cover;
 }
 
@@ -581,7 +581,7 @@ address, caption, em, i, var {
     width: 20px;
     height: 20px;
     vertical-align: middle;
-    background-image: url(./images/bars.svg);
+    background-image: url(../images/bars.svg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -681,7 +681,7 @@ address, caption, em, i, var {
     height: 40px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/my-menu01.svg) center no-repeat;
+    background: url(../images/my-menu01.svg) center no-repeat;
     background-size: cover;
 }
 
@@ -690,7 +690,7 @@ address, caption, em, i, var {
     height: 40px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/my-menu02.svg) center no-repeat;
+    background: url(../images/my-menu02.svg) center no-repeat;
     background-size: cover;
 }
 .ico-mymenu03 {
@@ -698,7 +698,7 @@ address, caption, em, i, var {
     height: 40px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/my-menu03.svg) center no-repeat;
+    background: url(../images/my-menu03.svg) center no-repeat;
     background-size: cover;
 }
 .ico-mymenu04 {
@@ -706,7 +706,7 @@ address, caption, em, i, var {
     height: 40px;
     display: inline-block;
     vertical-align: middle;
-    background: url(./images/my-menu04.svg) center no-repeat;
+    background: url(../images/my-menu04.svg) center no-repeat;
     background-size: cover;
 }
 
@@ -805,7 +805,7 @@ address, caption, em, i, var {
     width: 19px;
     height: 16px;
     vertical-align: middle;
-    background-image: url(./images/arrow5.svg);
+    background-image: url(../images/arrow5.svg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -829,7 +829,7 @@ i{
 }
 
 .gnb-wrap .util-wrap .gnb-my.active .ico-util04 {
-    background: url(./images/util_04_on.svg) center no-repeat;
+    background: url(../images/util_04_on.svg) center no-repeat;
 }
 
 .gnb-wrap .list-depth2>li.active>a {
